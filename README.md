@@ -32,16 +32,16 @@ The framework integrates:
 
 ```text
 main-paper/
-  RLA_CRC_main_paper.pdf
+  main_RLA-ECNN-CRC-PCE_paper_v1.pdf
 
 annexes/
-  Annex_A_Foundations.pdf
-  Annex_B_ECNN_ECU.pdf
-  Annex_C_PopperChi.pdf
-  Annex_D_CaseStudies.pdf
-  Annex_E_EpistemicArtifacts.pdf
-  Annex_F_PrototypeCode.pdf
-  Annex_G_iKant_MetaController.pdf
+  annex_A_RLA-CRC_foundations_v1.pdf
+  annex_B_RLA_biological-case-bryophyte_v1.pdf
+  annex_C_ECNN_formalisation_v1.pdf
+  annex_D_RLA-ECNN_PCE-bridge_v1.pdf
+  annex_E_ECU-UCE_specification_v1.pdf
+  annex_F_proto-epistemic-architectures_v1.pdf
+  annex_G_methodology-experiments_v1.pdf
 ```
 
 ---
