@@ -3,6 +3,7 @@
 ### *A Unified Architecture for Epistemic AI, Ethical–Compliance Reasoning, and Self-Critical Neural Systems*
 
 **Gianluca Conte**
+
 Independent Researcher
 https://www.linkedin.com/in/contegianluca/
 contegianluca@hotmail.com
