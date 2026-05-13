@@ -39,6 +39,7 @@ The framework integrates:
 ```text
 main-paper/
   main_RLA-ECNN-CRC-PCE_paper_v1.pdf
+  SlideDeck - RLA ECNN, bridge PCE (Dec2025 v1).pdf
 
 annexes/
   annex_A_RLA-CRC_foundations_v1.pdf
