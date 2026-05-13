@@ -1,13 +1,10 @@
-# RLA–CRC Epistemic Framework
+# RLA-CRC-ECNN Epistemic Framework
 
 ### *A Unified Architecture for Epistemic AI, Ethical–Compliance Reasoning, and Self-Critical Neural Systems*
 
 **Gianluca Conte**
-
 Independent Researcher
-
 https://www.linkedin.com/in/contegianluca/
-
 contegianluca@hotmail.com
 
 ---
@@ -53,25 +50,20 @@ annexes/
 ## Core Concepts
 
 ### 1. Reticular Local Abstraction (RLA)
-
 * Systems are represented not as monoliths but as *reticula* of partially overlapping abstractions.
 * Emphasises **non-injectivity**, **locality**, and **epistemic closure**.
 * Supports multi-level reasoning across biological, cognitive, and socio-technical domains.
 
 ### 2. Compact Reticular Computability (CRC)
-
 * A finitary form of computation aligned with RLA.
 * Ensures:
-
   * bounded resources,
   * local computability,
   * compatibility with Turing-level expressiveness.
 
 ### 3. Epistemic Neural Components (ECNN / ECU)
-
 * Neural modules with **explicit epistemic channels**.
 * Outputs include:
-
   * predicted label
   * confidence
   * epistemic status *(unknown / contradiction)*
@@ -80,19 +72,15 @@ annexes/
 * Designed to avoid silent overconfidence.
 
 ### 4. Popper–χ Challenge Framework
-
 * A falsification-oriented evaluation methodology.
 * Includes:
-
   * adversarial challenge suites,
   * epistemic metrics (calibration, unknown-rate, contradiction-rate),
   * system-level behaviour tracking.
 
 ### 5. Epistemic Artefacts
-
 * Unified representation of any epistemic output in the framework.
 * Structure includes:
-
   * decision + confidence,
   * epistemic status,
   * rationale/argumentation graph,
@@ -100,23 +88,18 @@ annexes/
   * metadata for evaluation and reproducibility.
 
 ### 6. iKant Meta-Controller (Annex G)
-
 An epistemic meta-controller for **ethics and compliance** domains:
-
 * Maintains:
-
   * **W** (world model),
   * **S** (self-model),
   * **N** (normative kernel: ethics ⊃ compliance),
   * **H** (epistemic history).
 
 * Produces:
-
   * **A_glob**: case-level global ethical–compliance decisions
   * **A_crit**: system-level critical diagnostics
 
 * Includes:
-
   * meta-norms,
   * policy constraints,
   * Kant-inspired structural principles (universalizability, respect-for-persons, system-level coherence).
@@ -124,11 +107,9 @@ An epistemic meta-controller for **ethics and compliance** domains:
 ---
 
 ## Key Features
-
 * Explicit treatment of **unknowns**, **uncertainty**, **contradiction detection**.
 * Multi-domain integration: GDPR, 231, NIS2, DORA, SOX, FCPA, plus ethical principles.
 * Separation of:
-
   * beliefs,
   * policies,
   * norms,
@@ -139,9 +120,7 @@ An epistemic meta-controller for **ethics and compliance** domains:
 ---
 
 ## Prototypes (Annex F)
-
 Minimal code examples included:
-
 * generation and parsing of epistemic artefacts,
 * simple ECNN/ECU components,
 * toy challenge suites,
@@ -153,7 +132,6 @@ These prototypes are intentionally small but illustrate how the theoretical cons
 ---
 
 ## Intended Use Cases
-
 * AI governance and audit
 * Ethical and compliance decision support
 * Research on epistemic AI architectures
@@ -163,7 +141,6 @@ These prototypes are intentionally small but illustrate how the theoretical cons
 ---
 
 ## Limitations
-
 * Not production-ready: this is a **research framework**.
 * Normative kernels require domain expertise (legal, ethical, organisational).
 * Strong dependence on the quality of upstream neural modules.
@@ -172,10 +149,8 @@ These prototypes are intentionally small but illustrate how the theoretical cons
 ---
 
 ## Licensing & Contributions
-
 * Intended for open research use.
 * Contributions welcomed, especially:
-
   * new challenge suites,
   * improved epistemic artefact formats,
   * experimental ECNN/ECU implementations,
@@ -184,7 +159,6 @@ These prototypes are intentionally small but illustrate how the theoretical cons
 ---
 
 ## Contact
-
 **Gianluca Conte**
 Independent Researcher
 https://www.linkedin.com/in/contegianluca/
