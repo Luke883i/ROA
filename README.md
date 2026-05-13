@@ -18,19 +18,14 @@ This repository provides a full research framework for designing **epistemically
 It combines theory, formal models, evaluation tools, and minimal prototypes.
 
 The framework integrates:
-
 * **RLA — Reticular Local Abstraction**
   A modelling paradigm based on overlapping local abstractions rather than a single global representation.
-
 * **CRC — Compact Reticular Computability**
   A formal account of computation under finiteness, epistemic closure and non-injective mappings.
-
 * **ECNN / ECU — Epistemic Neural Components**
   Neural units that output: prediction, confidence, epistemic status *(unknown/contradiction)*, argumentation fragments, and action recommendations.
-
 * **Popper–χ — Epistemic Evaluation Harness**
   Challenge-based evaluation focused on overconfidence, calibration, robustness, and the ability to admit “I do not know”.
-
 * **iKant — Epistemic Meta-Controller for Ethics & Compliance**
   A meta-level controller that reasons over world models, self-models, and normative kernels (ethics ⊃ compliance), producing both case-level decisions and system-level critical diagnostics.
 
