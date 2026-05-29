@@ -38,7 +38,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 |    |_ 🗎 annex_G_methodology-experiments_v1.pdf
 |
 |___ 📁 Reply to Wolfram
-     |_ 🗎 ANNEX 1 - Reply_Wolfram_metaphisics_position_through_RLA_ECNN_lens.pdf
+     |_ 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
 
 ```
 ---
