@@ -21,11 +21,14 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ## 1. Repository hierarchy
 
 ```text
-Entry Point Principale
-Reticular Observer Architectures for Governable AI-Assisted Work
+
+Reticular Observer Architectures for Governable AI-Assisted Work.pdf
 |
-|_ Cartella RLA-CRC-ECNN
+|
+|_ RLA-CRC-ECNN (folder)
 |  |_ _Main_RLA-ECNN-CRC-PCE_paper_v1.pdf
+|  |_ _Slidedeck_RLA-ECNN_bridge_PCE.pdf
+|  |
 |  |_ annex_A_RLA-CRC_foundations_v1.pdf
 |  |_ annex_B_RLA_biological-case-bryophyte_v1.pdf
 |  |_ annex_C_ECNN_formalisation_v1.pdf
@@ -34,16 +37,14 @@ Reticular Observer Architectures for Governable AI-Assisted Work
 |  |_ annex_F_proto-epistemic-architectures_v1.pdf
 |  |_ annex_G_methodology-experiments_v1.pdf
 |
-|_ Cartella Wolfram saga
+|
+|_ Reply to Wolfram
+|  |_ AI as Observer Compiler - from Ruliad to RLA ECNN.pd
 |  |_ ANNEX 1 - Reply_Wolfram_metaphisics_position_through_RLA_ECNN_lens.pdf
-|  |_ ANNEX 2 - RLA-ECNN_bridge_PCE_SlideDeck_Dec2025_v1.pdf
-|  |_ AI as Observer Compiler - from Ruliad to RLA ECNN.pdf
+|  
 |
 |_ Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
-|
-|_ Submission / orientation
-   |_ RLA - Cover Letter.pdf
-   |_ RLA - Cover Letter.docx
+
 ```
 
 Recommended GitHub layout:
