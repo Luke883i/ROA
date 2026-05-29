@@ -1,270 +1,264 @@
 # RLA-ECNN / ROA Corpus
 
-**Entrypoint:** `Reticular Observer Architectures for Governable AI-Assisted Work`
+**Main entry point:** `Reticular Observer Architectures for Governable AI-Assisted Work`
 
-This repository is a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are not treated as isolated answers, but as the result of explicit, bounded, auditable epistemic structures.
-
-The core move is simple:
+This repository contains a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are treated not as isolated answers, but as products of explicit, bounded, reconstructable, auditable epistemic structures.
 
 ```text
-prompt -> answer                         # weak pattern
-bounded material -> observer structure -> typed artefacts -> validation -> proof / witness / review / governance
+prompt -> answer
 ```
 
-The framework does **not** claim a completed mathematical theory, empirical validation, legal certification, production readiness, or artificial consciousness. It proposes a methodological and architectural discipline for making AI-assisted work reconstructable, horizon-relative, falsifiable, and governable.
+is replaced by:
+
+```text
+bounded material -> observer structure -> typed artefacts -> validation state -> proof / witness / review / governance
+```
+
+The corpus is programmatic and criticisable. It does **not** claim completed mathematical proof, empirical validation, production readiness, legal certification, or artificial consciousness. Its aim is narrower: to make AI-assisted work horizon-relative, falsifiable, debt-aware, reification-aware, and governable.
 
 ---
 
-## 1. Core thesis
+## 1. Repository hierarchy
 
-Modern AI can generate fluent outputs, but in scientific, legal, technical, and organisational settings the hard problem is usually not fluency. It is:
+```text
+Entry Point Principale
+Reticular Observer Architectures for Governable AI-Assisted Work
+|
+|_ Cartella RLA-CRC-ECNN
+|  |_ _Main_RLA-ECNN-CRC-PCE_paper_v1.pdf
+|  |_ annex_A_RLA-CRC_foundations_v1.pdf
+|  |_ annex_B_RLA_biological-case-bryophyte_v1.pdf
+|  |_ annex_C_ECNN_formalisation_v1.pdf
+|  |_ annex_D_RLA-ECNN_PCE-bridge_v1.pdf
+|  |_ annex_E_ECU-UCE_specification_v1.pdf
+|  |_ annex_F_proto-epistemic-architectures_v1.pdf
+|  |_ annex_G_methodology-experiments_v1.pdf
+|
+|_ Cartella Wolfram saga
+|  |_ ANNEX 1 - Reply_Wolfram_metaphisics_position_through_RLA_ECNN_lens.pdf
+|  |_ ANNEX 2 - RLA-ECNN_bridge_PCE_SlideDeck_Dec2025_v1.pdf
+|  |_ AI as Observer Compiler - from Ruliad to RLA ECNN.pdf
+|
+|_ Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+|
+|_ Submission / orientation
+   |_ RLA - Cover Letter.pdf
+   |_ RLA - Cover Letter.docx
+```
 
-- what evidence supports the output;
+Recommended GitHub layout:
+
+```text
+docs/
+  entrypoint/
+  RLA-CRC-ECNN/
+  Wolfram-saga/
+  A-OSP/
+  submission/
+```
+
+---
+
+## 2. What the corpus argues
+
+The central problem is not whether AI can produce fluent outputs. The hard problem is whether a human or organisation can reconstruct:
+
+- which evidence supports each claim;
 - which transformations occurred;
-- which distinctions were collapsed;
+- which distinctions were preserved or collapsed;
 - which labels were induced;
-- which objects were reified;
-- which claims remain unknown, contradictory, unsupported, or outside scope;
-- whether the result is merely generated, reviewed, witnessed, approved, or proof-grade.
+- which induced labels became manipulable objects;
+- which objects are validated, provisional, blocked, or rolled back;
+- which claims are unknown, contradictory, unsupported, or outside scope.
 
-The corpus answers with a four-layer stack:
-
-```text
-RLA  -> structural grammar
-CRC  -> computability discipline under a declared horizon
-ECNN -> epistemic convolution over semantic / artefactual fields
-ROA  -> governance layer: reification, debt, proof state, terminal states
-```
-
-The central contribution of the entrypoint paper is **controlled reification + epistemic debt propagation** as first-class, typed, auditable transitions. A pattern does not gain authority merely because it receives a label. When a label becomes a manipulable object, it incurs debt: validation state, provenance, allowed-use constraints, counterexamples, and rollback path must travel downstream with it.
-
----
-
-## 2. Minimal vocabulary
-
-| Term | Compressed meaning |
-|---|---|
-| **RLA** | Reticular Local Abstraction: models a domain as levels, languages, encodings, transmissions, horizons, and collapse policies. |
-| **CRC** | Compact Reticular Computability: conditions under which a reticulum is computably operable under a declared epistemic horizon. |
-| **CRC-basic** | Compact, computably operable reticulum under a horizon. |
-| **CRC-strong** | CRC-basic plus Turing-like critical structure and non-trivial macro-emergence; supports undecidability-propagation arguments. |
-| **ECNN** | Epistemic Convolutional Network / Method: CNN-inspired local-operator + pooling gesture generalized to semantic, legal, scientific, technical, narrative, graph, or artefactual fields. |
-| **ECU / UCE** | Epistemic Computational Unit: bounded transducer constrained by an epistemic matrix, emitting structured artefacts, not oracle truth. |
-| **ROA** | Reticular Observer Architecture: finite, horizon-relative architecture for producing and governing epistemic artefacts. |
-| **Controlled reification** | Promotion of a pattern, relation, abstraction, or label into a manipulable object, only with trace, validation state, allowed use, and rollback. |
-| **Epistemic debt** | Residual obligation created by unsupported transformations, missing provenance, unstable labels, modal drift, or unvalidated reification. |
-| **Blocking debt** | Dischargeable state: an object may exist but must not be used downstream until review/evidence/escalation closes the obligation. |
-| **Mandatory abstention** | Irreducible terminal state: the question must end in unknown or horizon-exceeded under the declared horizon. |
-| **A-OSP** | Implementation witness: browser-native, text-first, proof-aware epistemic operating environment. |
-| **iKant** | Normative meta-control pattern; a governance component, not a moral agent. |
-
----
-
-## 3. Document hierarchy
+The corpus answers with a layered framework:
 
 ```text
-RLA-ECNN / ROA corpus
-|
-|-- ENTRYPOINT
-|   `Reticular Observer Architectures for Governable AI-Assisted Work`
-|   Purpose: defensible governance compression of the whole corpus.
-|   Focus: controlled reification, epistemic debt propagation, mandatory abstention,
-|          blocking debt, proof-aware AI-assisted work.
-|
-|-- THEORETICAL FOUNDATION
-|   |-- `_Main_RLA-ECNN-CRC-PCE_paper_v1.pdf`
-|   |   Purpose: conceptual manifesto for RLA, CRC, ECNN, ECU/UCE, and proto-consciousness conjecture.
-|   |
-|   |-- `annex_A_RLA-CRC_foundations_v1.pdf`
-|   |   Purpose: formal core: levels, transmissions, epistemic horizons, IOA, EC, TC,
-|   |            compact reticula, collapse/emergence metrics.
-|   |
-|   |-- `annex_C_ECNN_formalisation_v1.pdf`
-|   |   Purpose: ECNN formalisation: CNN layers as reticular levels, epistemic head,
-|   |            unknown/contradiction, training and falsifiability metrics.
-|   |
-|   |-- `annex_E_ECU-UCE_specification_v1.pdf`
-|   |   Purpose: ECU/UCE specification: epistemic matrices, artefacts, deterministic
-|   |            bounded transducers, LLM-based epistemic neurons under constraints.
-|
-|-- CASES, BRIDGES, EXPERIMENTS
-|   |-- `annex_B_RLA_biological-case-bryophyte_v1.pdf`
-|   |   Purpose: natural CRC case: compact RLA topology for a generalist bryophyte.
-|   |
-|   |-- `annex_D_RLA-ECNN_PCE-bridge_v1.pdf`
-|   |   Purpose: bridge between RLA/CRC, ECNN, cellular automata, and Wolfram/PCE;
-|   |            explicitly epistemic, not ontological.
-|   |
-|   |-- `annex_F_proto-epistemic-architectures_v1.pdf`
-|   |   Purpose: prototype designs: bryophyte simulator, ECNN benchmarks, ECUs,
-|   |            UCE orchestration, RLA-CA exploration, Popper-chi harness.
-|   |
-|   |-- `annex_G_methodology-experiments_v1.pdf`
-|   |   Purpose: iKant / normative meta-controller: ethics-compliance layers,
-|   |            world/self/norm state, governance outputs, challenge suites.
-|
-|-- OBSERVER / WOLFRAM LINE
-|   |-- `AI as Observer Compiler - from Ruliad to RLA ECNN.docx`
-|   |   Purpose: full observer-compiler synthesis: Ruliad as maximal horizon,
-|   |            bounded observers, CRC-basic/strong, ECNN, reification debt,
-|   |            Popper-chi, A-OSP, iKant.
-|   |
-|   |-- `ANNEX 1 - Reply_Wolfram_metaphisics_position_through_RLA_ECNN_lens.pdf`
-|   |   Purpose: chapter-aligned reply to Wolfram using horizons, transmissions,
-|   |            demarcation rule, operational objectivity, and A-OSP witness.
-|   |
-|   |-- `ANNEX 2 - RLA-ECNN_bridge_PCE_SlideDeck_Dec2025_v1.pdf`
-|   |   Purpose: slide-deck version of the RLA/ECNN/PCE bridge.
-|
-|-- IMPLEMENTATION WITNESS
-|   `3. Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.docx`
-|   Purpose: A-OSP as proof-aware, browser-native, text-first epistemic operating
-|            environment: typed stripes, schema registry, EQL, bounded model calls,
-|            proof contracts, Error Truth, authority matrices, app lenses, guards.
-|
-|-- SUBMISSION / ORIENTATION
-|   |-- `RLA - Cover Letter.docx`
-|   |-- `RLA - Cover Letter.pdf`
-|   Purpose: submission-level orientation to the corpus, central question, annex roles,
-|            programmatic status, and requested peer-review focus.
+RLA  -> grammar of bounded observation
+CRC  -> computability under declared epistemic horizons
+ECNN -> epistemic convolution over semantic / scientific / artefactual fields
+ROA  -> governance layer: controlled reification + epistemic debt propagation
+A-OSP -> implementation witness for proof-aware AI-assisted work
 ```
+
+The strongest entrypoint claim is **not** that RLA, CRC, ECNN, provenance, abstention, or neural-symbolic reasoning are individually unprecedented. The defensible novelty is the operational layer in which **controlled reification** and **epistemic debt propagation** become first-class, typed, auditable transitions.
+
+A pattern does not become authoritative because it receives a label. When a label becomes a risk object, legal issue, scientific variable, graph node, control, policy category, or artefact type, the system has reified it. That promotion creates obligations: provenance, validation state, allowed-use constraints, debt metadata, counterexamples, and rollback path. Those obligations must propagate downstream until discharged or blocked.
 
 ---
 
-## 4. Mermaid map
+## 3. Scientific spine
+
+### 3.1 RLA — Reticular Local Abstraction
+
+RLA models a bounded observer as a finite reticulum of levels, languages, encodings, transmissions, horizons, and collapse policies.
+
+```text
+level -> transmission -> level -> transmission -> level
+```
+
+A transmission may preserve distinctions, preserve them only on critical subsets, or collapse them. RLA is therefore a grammar for multi-level scientific, legal, technical, narrative, or organisational modelling.
+
+### 3.2 CRC — Compact Reticular Computability
+
+CRC asks when a reticulum is computably operable under a declared horizon.
+
+```text
+CRC-basic  = compact, computably operable reticulum under horizon H
+CRC-strong = CRC-basic + Turing-like critical structure + macro-emergence
+```
+
+CRC does not replace classical computability. It situates computation inside multi-level observer structures where abstraction, transmission, collapse, and validation matter.
+
+### 3.3 ECNN — Epistemic Convolution
+
+ECNN is **CNN-inspired, not necessarily a classical CNN**. It generalises the convolutional gesture:
+
+```text
+field -> local operators -> pattern maps -> pooling / collapse -> candidate labels -> epistemic artefacts
+```
+
+The field may be visual, textual, legal, scientific, technical, software, graph-based, narrative, or organisational. The epistemic head emits not only answers, but also unknown, contradiction, horizon-exceeded, review-required, and debt-open states.
+
+### 3.4 ECU / UCE — Epistemic computational units
+
+An ECU/UCE is a bounded epistemic transducer:
+
+```text
+representation + epistemic matrix -> structured epistemic artefact
+```
+
+In LLM-based regimes, the model is not an oracle. It is a constrained processor governed by prompt version, decoding policy, context boundary, schema, parser, validator, provenance, and audit trail.
+
+### 3.5 ROA — Reticular Observer Architecture
+
+ROA is the governance compression of RLA/CRC/ECNN. It adds the operational question:
+
+```text
+When a pattern becomes an object, what debt is created, where does it propagate, and when must downstream use stop?
+```
+
+This is the core of the entrypoint paper.
+
+### 3.6 A-OSP — Implementation witness
+
+A-OSP is not the theory. It is an implementation witness: a browser-native, text-first, proof-aware epistemic operating environment. Its design principle is:
+
+```text
+model output != proof
+UI green != proof
+export != witness
+review != approval
+```
+
+Durable epistemic state lives in typed, append-only, read-backable artefacts; model calls are bounded processors, not owners of truth.
+
+---
+
+## 4. Document navigation
+
+| Need | Start here | Then read |
+|---|---|---|
+| **Fast orientation** | `Reticular Observer Architectures...` | this README, then cover letter |
+| **Core theory** | `annex_A_RLA-CRC_foundations_v1.pdf` | main RLA-ECNN paper, Annex C, Annex E |
+| **AI / ML architecture** | `annex_C_ECNN_formalisation_v1.pdf` | Annex E, Annex F, entrypoint paper |
+| **Scientific modelling case** | `annex_B_RLA_biological-case-bryophyte_v1.pdf` | Annex A, main paper |
+| **Experiments / prototypes** | `annex_F_proto-epistemic-architectures_v1.pdf` | Annex C, Annex E |
+| **Governance / compliance** | `Reticular Observer Architectures...` | Annex G, A-OSP whitepaper |
+| **Wolfram / Ruliad / PCE** | `AI as Observer Compiler...` | Wolfram reply, Annex D, slide deck |
+| **Implementation architecture** | `A-OSP Whitepaper...` | entrypoint paper, Annex F, Annex G |
+
+---
+
+## 5. Corpus map
 
 ```mermaid
 graph TD
-    ROA[Entrypoint: Reticular Observer Architectures for Governable AI-Assisted Work]
+    ROA[Entrypoint: Reticular Observer Architectures]
 
-    ROA --> RLA[RLA: levels, transmissions, horizons, collapse]
-    ROA --> CRC[CRC: computability under declared horizon]
-    ROA --> ECNN[ECNN: epistemic convolution over semantic fields]
-    ROA --> GOV[Governance: controlled reification + epistemic debt]
+    ROA --> RLA[RLA-CRC-ECNN folder]
+    ROA --> WOLFRAM[Wolfram saga]
+    ROA --> AOSP[A-OSP whitepaper]
 
-    RLA --> AnnexA[Annex A: RLA/CRC foundations]
-    RLA --> MainPaper[Main RLA-ECNN-CRC-PCE paper]
-    RLA --> Bryo[Annex B: bryophyte CRC case]
+    RLA --> MAIN[Main RLA-ECNN-CRC-PCE paper]
+    RLA --> A[Annex A: foundations]
+    RLA --> B[Annex B: bryophyte case]
+    RLA --> C[Annex C: ECNN]
+    RLA --> D[Annex D: PCE bridge]
+    RLA --> E[Annex E: ECU/UCE]
+    RLA --> F[Annex F: prototypes]
+    RLA --> G[Annex G: iKant / governance]
 
-    CRC --> AnnexA
-    CRC --> PCE[Annex D: RLA/ECNN/PCE bridge]
-    CRC --> Proto[Annex F: prototypes and experiments]
+    WOLFRAM --> OC[AI as Observer Compiler]
+    WOLFRAM --> WR[Wolfram metaphysics reply]
+    WOLFRAM --> SD[PCE bridge slide deck]
 
-    ECNN --> AnnexC[Annex C: ECNN formalisation]
-    ECNN --> ECU[Annex E: ECU/UCE specification]
-    ECNN --> ObserverCompiler[AI as Observer Compiler]
-
-    GOV --> IKant[Annex G: iKant / normative meta-control]
-    GOV --> AOSP[A-OSP Whitepaper]
-    GOV --> ObserverCompiler
-
-    ObserverCompiler --> WolframReply[Annex 1: Wolfram metaphysics reply]
-    ObserverCompiler --> SlideDeck[Annex 2: RLA/ECNN/PCE slide deck]
-
-    Cover[Cover Letter] --> ROA
+    ROA --> CR[Controlled reification]
+    ROA --> ED[Epistemic debt propagation]
+    CR --> AOSP
+    ED --> AOSP
 ```
 
 ---
 
-## 5. Reading paths
-
-| Reader | Path |
-|---|---|
-| **Fast orientation** | `Reticular Observer Architectures...` -> this README -> cover letter. |
-| **Peer reviewer / editor** | `Reticular Observer Architectures...` -> Annex A -> Annex C -> Annex E -> Annex F. |
-| **AI governance / compliance** | `Reticular Observer Architectures...` -> A-OSP whitepaper -> Annex G -> AI as Observer Compiler. |
-| **Machine learning / neural-symbolic AI** | Annex C -> Annex E -> Annex F -> entrypoint paper. |
-| **Philosophy of science / computability** | Main RLA-ECNN paper -> Annex A -> Annex D -> Wolfram reply. |
-| **Biology / scientific modelling** | Annex B -> Main RLA-ECNN paper -> Annex A. |
-| **Wolfram / Ruliad / PCE** | AI as Observer Compiler -> Wolfram reply -> Annex D -> slide deck. |
-| **Implementation / product architecture** | A-OSP whitepaper -> entrypoint paper -> Annex F -> Annex G. |
-
----
-
-## 6. End-to-end framework in one page
-
-1. **Bounded observers** do not access total reality or total formal possibility. They stabilise local worlds by choosing horizons, languages, variables, encodings, measurements, collapse policies, validation rules, and terminal states.
-2. **RLA** models this as a reticulum of levels and transmissions. A transmission can preserve distinctions, preserve them only on critical subsets, or collapse them.
-3. **CRC** asks when such a reticulum is computably operable under a horizon. CRC-basic is the practical compactness tier; CRC-strong is the stronger tier where undecidability propagation and emergence claims become relevant.
-4. **ECNN** generalises the convolutional gesture: scan a field, extract local patterns, pool/collapse information, induce candidate labels, and emit epistemic artefacts. The field may be visual, textual, legal, scientific, software, graph-based, or organisational.
-5. **ECU/UCE** units are bounded epistemic transducers. They receive a local representation plus an epistemic matrix and emit structured artefacts: answer, confidence/strength, rationale, policies, unknown, contradiction, horizon-exceeded, review-required, or debt-open.
-6. **Controlled reification** governs the moment when a pattern or label becomes an object: risk, control, claim, gap, scientific variable, legal issue, graph node, policy category, or kernel.
-7. **Epistemic debt** records what remains unpaid after transformations: missing trace, information loss, unstable label, unvalidated object, modal drift, inference gap, scale-transfer error, or missing review.
-8. **Debt propagation** is the governance analogue of undecidability propagation: unsupported distinctions propagate downstream unless discharged; non-injective collapse can block a formal limit but create debt if collapsed distinctions remain relevant.
-9. **Terminal states** are explicit: answer, unknown, contradiction, horizon-exceeded, review-required, debt-open, blocked, or approved. A refusal can be a correct computation; a fluent unsupported answer can be an epistemic failure.
-10. **A-OSP** shows one implementation path: source-of-truth as typed, append-only, diffable, read-backable artefact substrate; model calls are bounded processors, not owners of truth.
-11. **iKant** shows one normative meta-control pattern: track world model, self model, normative kernel, epistemic history, local/global/critical artefacts, and human review boundaries.
-12. **Popper-chi** is the falsification discipline: test unknown discipline, contradiction handling, horizon boundaries, modal drift, false reification, collapse traceability, provenance preservation, provider divergence, and downstream review effort.
-
----
-
-## 7. Claim discipline
-
-| Construct | Status | Safe formulation |
-|---|---|---|
-| ROA | Definition / thesis | Finite, horizon-relative architecture for producing and governing epistemic artefacts. |
-| RLA | Formal grammar | Multi-level grammar of levels, languages, encodings, transmissions, and horizons. |
-| CRC-basic | Formal-operational tier | Compact reticulum computably operable as a unit under a declared horizon. |
-| CRC-strong | Stronger tier, partly open | CRC-basic plus Turing-like critical structure and macro-emergence; proof obligations remain. |
-| ECNN | Design abstraction | CNN-inspired epistemic convolution, not necessarily a classical CNN. |
-| ECU/UCE | Design pattern | Bounded transducer under matrix, prompt/schema/parser/validator/provenance constraints. |
-| Controlled reification | Central governance concept | Pattern-to-object promotion with validation state, debt, allowed use, rollback. |
-| D_reif(rate) | Minimal metric | Rate of downstream use of reified objects lacking authoritative validation. |
-| Mandatory abstention | Structural terminal regime | Unknown/horizon-exceeded is required when the workflow question is undecidable under the horizon. |
-| Blocking debt | Procedural terminal regime | Object exists but cannot be used downstream until debt is discharged. |
-| A-OSP | Implementation witness | Implementability illustration, not independent empirical validation. |
-| iKant | Normative meta-control | Computational governance pattern, not moral agency. |
-
----
-
-## 8. Repository positioning
-
-This corpus is best read as a **programmatic but criticisable research scaffold**. It is valuable if it lets reviewers, engineers, and researchers ask sharper questions:
-
-- Which horizon is declared?
-- Which distinctions are preserved or collapsed?
-- Which candidate labels became objects?
-- Which objects are validated, provisional, blocked, or rolled back?
-- Which debt remains open?
-- Which terminal state is epistemically mandatory?
-- What is proof, what is projection, what is export, what is witness, and what is approval?
-
-The final aim is not merely better AI answers. It is governance of the artificial observers through which answers are produced.
-
----
-
-## 9. Suggested repository layout
+## 6. End-to-end logic
 
 ```text
-/docs
-  /entrypoint
-    Reticular Observer Architectures for Governable AI-Assisted Work.docx
-  /theory
-    _Main_RLA-ECNN-CRC-PCE_paper_v1.pdf
-    annex_A_RLA-CRC_foundations_v1.pdf
-    annex_C_ECNN_formalisation_v1.pdf
-    annex_E_ECU-UCE_specification_v1.pdf
-  /cases-bridges-experiments
-    annex_B_RLA_biological-case-bryophyte_v1.pdf
-    annex_D_RLA-ECNN_PCE-bridge_v1.pdf
-    annex_F_proto-epistemic-architectures_v1.pdf
-    annex_G_methodology-experiments_v1.pdf
-  /observer-wolfram
-    AI as Observer Compiler - from Ruliad to RLA ECNN.docx
-    ANNEX 1 - Reply_Wolfram_metaphisics_position_through_RLA_ECNN_lens.pdf
-    ANNEX 2 - RLA-ECNN_bridge_PCE_SlideDeck_Dec2025_v1.pdf
-  /implementation-witness
-    3. Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.docx
-  /submission
-    RLA - Cover Letter.docx
-    RLA - Cover Letter.pdf
+1. Observers are bounded.
+2. Bounded observers stabilise local worlds through horizons, languages, encodings, transmissions, and collapse.
+3. RLA formalises this multi-level observer grammar.
+4. CRC asks when the reticulum is computably operable under a declared horizon.
+5. ECNN generalises convolution from numerical fields to semantic and artefactual fields.
+6. ECU/UCE units emit structured epistemic artefacts, not oracle truth.
+7. Labels can become objects: this is reification.
+8. Reification is useful only when controlled, traced, validated, and reversible.
+9. Every unsupported transformation creates epistemic debt.
+10. Debt propagates downstream until discharged, blocked, or rolled back.
+11. Some questions require mandatory abstention rather than forced output.
+12. A-OSP shows how this discipline can be implemented as proof-aware AI-assisted work.
 ```
 
 ---
 
-## 10. Citation note
+## 7. Minimal vocabulary
 
-When citing the corpus, cite the entrypoint paper first, then cite individual annexes or implementation witnesses only for their local technical claims.
+| Term | Meaning |
+|---|---|
+| **Epistemic horizon** | Declared boundary of admissible questions, sources, operations, and answer types. |
+| **Transmission** | Mapping between levels; may preserve or collapse distinctions. |
+| **Collapse** | Deliberate information loss or coarse-graining. |
+| **Unknown** | Evidence insufficient under the declared horizon. |
+| **Contradiction** | Incompatible claims or states detected inside the horizon. |
+| **Horizon-exceeded** | The question exceeds the declared representational or validation boundary. |
+| **Controlled reification** | Pattern-to-object promotion with trace, validation, debt, allowed use, and rollback. |
+| **Epistemic debt** | Residual obligation caused by missing proof, unstable labels, modal drift, information loss, or unvalidated reuse. |
+| **Blocking debt** | Object exists but must not be used downstream until debt is discharged. |
+| **Mandatory abstention** | Terminal state required when no sound answer exists under the declared horizon. |
+| **Proof-aware work** | Work where proof, projection, export, witness, review, and approval are not confused. |
+
+---
+
+## 8. Claim discipline
+
+| Construct | Safe status |
+|---|---|
+| ROA | Defensible entrypoint thesis and governance framework. |
+| RLA | Formal grammar for multi-level bounded observation. |
+| CRC-basic | Operational computability tier under a declared horizon. |
+| CRC-strong | Stronger, proof-sensitive tier; some obligations remain open. |
+| ECNN | CNN-inspired epistemic method; not necessarily a classical CNN. |
+| ECU/UCE | Bounded epistemic transducer; LLM may instantiate it only under constraints. |
+| Controlled reification | Central contribution of the entrypoint paper. |
+| Epistemic debt propagation | Central governance mechanism. |
+| Popper-chi | Proposed falsification discipline; needs public challenge suites and results. |
+| A-OSP | Implementation witness, not independent validation of the theory. |
+| iKant | Normative meta-control pattern, not moral agency. |
+
+---
+
+## 9. Suggested citation
+
+Cite the entrypoint paper first. Cite annexes only for local technical claims.
 
 ```bibtex
 @misc{conte2026roa,
