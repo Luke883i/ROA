@@ -46,18 +46,6 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 |_ 🗎 Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf  🌟
 
 ```
-
-Recommended GitHub layout:
-
-```text
-docs/
-  entrypoint/
-  RLA-CRC-ECNN/
-  Wolfram-saga/
-  A-OSP/
-  submission/
-```
-
 ---
 
 ## 2. What the corpus argues
