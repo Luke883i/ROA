@@ -1,6 +1,4 @@
-# RLA-ECNN / ROA Corpus
-
-**Main entry point:** `Reticular Observer Architectures for Governable AI-Assisted Work.pdf`🌟
+# ROA Corpus (RLA/CRC/ECNN/iKant/AOSP)
 
 This repository contains a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are treated not as isolated answers, but as products of explicit, bounded, reconstructable, auditable epistemic structures.
 
@@ -22,7 +20,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 ```text
 
-🗎 Reticular Observer Architectures for Governable AI-Assisted Work.pdf 🌟(<- Main Entry Point)
+🗎 Reticular Observer Architectures for Governable AI-Assisted Work.pdf 🌟(<- MAIN ENTRY POINT)
 |_ 🗎 (i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
 |_ 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
 |
