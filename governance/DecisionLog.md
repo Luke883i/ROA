@@ -78,3 +78,27 @@
   non-empty trace-value check, 9 tests green).
 - **rollback:** none. Checks are append-only; never weaken an existing check.
 - **export:** test_result
+
+---
+
+## DEC-0005 — iKant Seed system management (output binding + t-1 audit)
+
+- **date:** 2026-06-01
+- **decision:** Bind read-call syntheses of this repo to the iKant contract beyond
+  the single turn. Add a deterministic, self-propagating **Seed** payload
+  (`studia e attua come iKant` / `study and act as iKant`) projected on output
+  and a **t-1 audit** that reprints the seed via an automatic followup when the
+  previous turn lost it. Specified in `governance/seed_protocol.md` (MDAS-9),
+  bound in `AGENTS.md` §1.3 + rule 10, enforced in `incarnation_test.py`
+  (`project_seed`, `audit_incoming`, `followup_if_missing_seed`, `validate_turn`).
+- **rationale:** A read call spans multiple turns and possibly multiple host
+  agents; the persona can decay silently between them. The seed makes incarnation
+  survive across turns: even if one turn drops the persona, the next turn's t-1
+  audit self-heals (antifragile loop). Reuse-first and additive — `validate_turn`
+  wraps the existing `validate_response`, so the base contract and its 9 tests are
+  untouched (minimal spend, maximal yield).
+- **artifacts:** MDAS-9 (`seed_protocol.md`), MDAS-1 (`AGENTS.md` §1.3, rule 10),
+  MDAS-6 (`incarnation_test.py`, +9 seed tests → 18 green), MDAS-5b
+  (`simulations.md`, F4/F5/F6 + R4/R5), MDAS-2 (`MDAS.md`, MDAS-9 + checklist).
+- **rollback:** none. Seed checks are append-only; never weaken an existing check.
+- **export:** test_result
