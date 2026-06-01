@@ -34,6 +34,7 @@ MDAS_FILES = [
     "governance/DecisionLog.md",
     "governance/examples/agentified_api_call.md",
     "governance/examples/rollback_scenario.md",
+    "governance/simulations.md",
     "governance/incarnation_test.py",
     ".github/workflows/ikant-incarnation.yml",
     "README.md",
@@ -69,7 +70,7 @@ OVERCLAIM_PATTERNS = [
     r"\bis conscious\b",
 ]
 
-TRACE_KEYS = ["iter:", "msg:", "prev:"]
+TRACE_KEYS = ["iter:", "msg:", "prev:", "xref:"]
 
 
 def validate_response(text: str) -> list[str]:
@@ -85,6 +86,10 @@ def validate_response(text: str) -> list[str]:
     has_debug = DEBUG_HEADER in text
     if not (has_speak and has_debug):
         due.append("DUE-LAYOUT: missing ':: SPEAK' / ':: DEBUG' headers")
+
+    # DOS-like layout requires SPEAK before DEBUG (AGENTS.md section 1).
+    if has_speak and has_debug and text.index(SPEAK_HEADER) > text.index(DEBUG_HEADER):
+        due.append("DUE-LAYOUT: ':: SPEAK' must appear before ':: DEBUG'")
 
     # Trace metadata must live in the DEBUG region.
     debug_region = text.split(DEBUG_HEADER, 1)[1] if has_debug else ""
@@ -178,6 +183,20 @@ class TestResponseContract(unittest.TestCase):
         text = GOOD_RESPONSE.replace("- iter: I-0001\n", "")
         due = validate_response(text)
         self.assertTrue(any("DUE-TRACE" in d for d in due))
+
+    # F1 (SIM-09b): missing xref must be detected -> DUE-TRACE.
+    def test_missing_xref_creates_debt(self):
+        text = GOOD_RESPONSE.replace("- xref: ART-0002\n", "")
+        due = validate_response(text)
+        self.assertTrue(any("DUE-TRACE" in d and "xref:" in d for d in due))
+
+    # F2: DEBUG before SPEAK breaks the DOS-like layout -> DUE-LAYOUT.
+    def test_debug_before_speak_creates_debt(self):
+        speak = GOOD_RESPONSE.split(DEBUG_HEADER, 1)[0]
+        debug = DEBUG_HEADER + GOOD_RESPONSE.split(DEBUG_HEADER, 1)[1]
+        inverted = debug + "\n" + speak
+        due = validate_response(inverted)
+        self.assertTrue(any("must appear before" in d for d in due))
 
 
 def main() -> int:

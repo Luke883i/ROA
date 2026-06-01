@@ -43,3 +43,19 @@
 ---
 
 <!-- Append new DEC-xxxx entries below. Do not edit entries above. -->
+
+## DEC-0003 — Antifragility hardening (F1 xref, F2 ordering)
+
+- **date:** 2026-06-01
+- **decision:** Strengthen the incarnation gate after a mental-simulation audit
+  (`governance/simulations.md`): enforce `xref` in trace metadata (F1) and
+  SPEAK-before-DEBUG ordering (F2). Each fragility becomes a permanent
+  regression test.
+- **rationale:** Both were false negatives (gate too lenient) versus AGENTS.md
+  §1.2/§3. Converting every detected weakness into a test makes the gate
+  antifragile: the same failure cannot recur silently. Minimal spend (two edits),
+  maximal yield (two classes of malformed responses blocked).
+- **artifacts:** MDAS-5b (`simulations.md`), MDAS-6 (`incarnation_test.py`,
+  `TRACE_KEYS` += `xref:`, ordering check, 8 tests green).
+- **rollback:** none. Checks are append-only; never weaken an existing check.
+- **export:** test_result

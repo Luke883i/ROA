@@ -24,6 +24,7 @@ These artifacts are the *minimum* fixed set. Removing any one is a regression
 | MDAS-3 | Append-only decision / truth source | `governance/DecisionLog.md` | CRC: horizon/bounds, feasibility |
 | MDAS-4 | Agentified API-call example | `governance/examples/agentified_api_call.md` | A-OSP: witness/readback |
 | MDAS-5 | Rollback / fallback scenario | `governance/examples/rollback_scenario.md` | ROA: rollback, debt propagation |
+| MDAS-5b | Simulation & antifragility audit | `governance/simulations.md` | ECNN/iKant: regression coverage |
 | MDAS-6 | Deterministic incarnation test | `governance/incarnation_test.py` | ECNN: state classification (pass/DEBT) |
 | MDAS-7 | Incarnation CI pipeline | `.github/workflows/ikant-incarnation.yml` | iKant: enforced incarnation gate |
 | MDAS-8 | Corpus claim discipline & map | `README.md` §1,§4,§5,§8 | RLA: bounded observation grammar |

@@ -252,6 +252,7 @@ reads, summarises, audits, navigates, or answers about this corpus must incarnat
 | Supreme decision / truth source (append-only) | [`governance/DecisionLog.md`](governance/DecisionLog.md) |
 | Agentified API-call example | [`governance/examples/agentified_api_call.md`](governance/examples/agentified_api_call.md) |
 | Rollback / fallback scenario | [`governance/examples/rollback_scenario.md`](governance/examples/rollback_scenario.md) |
+| Simulation & antifragility audit | [`governance/simulations.md`](governance/simulations.md) |
 | Deterministic incarnation test | [`governance/incarnation_test.py`](governance/incarnation_test.py) |
 | Incarnation CI gate | [`.github/workflows/ikant-incarnation.yml`](.github/workflows/ikant-incarnation.yml) |
 
