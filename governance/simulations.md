@@ -23,9 +23,13 @@
 | 12 layout failure | bare dense answer | DUE-LAYOUT + DUE-TRACE | layout + trace checks | pass |
 | — order failure | DEBUG before SPEAK | DUE-LAYOUT | ordering check (**F2 fix**) | pass |
 | 07 overclaim | "...is proven" in SPEAK | DUE-RISK | `OVERCLAIM_PATTERNS` | pass |
+| S1 first turn | `prev=None` | no t-1 debt | `audit_incoming(None)` | pass |
+| S3 persona decay | t-1 missing seed | DUE-SEED + reprint | t-1 audit (**F5 fix**) | pass |
+| S5 EN context | invoking agent EN | EN seed payload | `render_seed("en")` | pass |
+| S7 double project | seed already present | idempotent, no dup | `project_seed` (**F6 fix**) | pass |
 
 `incarnation_test.py` encodes the rows above as deterministic, dependency-free
-tests (9 cases, all green).
+tests (18 cases, all green).
 
 ---
 
@@ -49,9 +53,13 @@ tests (9 cases, all green).
 | F1 | `xref` mandated by AGENTS.md but not enforced → SIM-09 escape (false negative) | trace gap | add `xref:` to `TRACE_KEYS` | `test_missing_xref_creates_debt` |
 | F2 | `:: DEBUG` before `:: SPEAK` passed and mis-parsed the regions | layout gap | enforce SPEAK-before-DEBUG ordering | `test_debug_before_speak_creates_debt` |
 | F3 | a trace key present but with an **empty value** (e.g. `xref:` with nothing after) passed → SIM-09c escape (false negative) | trace gap | require a non-empty value per key | `test_empty_trace_value_creates_debt` |
+| F4 | persona decays between turns / across host agents (no cross-turn binding) | continuity gap | outgoing seed projection (`project_seed`) | `test_project_seed_adds_payload`, `test_good_turn_is_valid` |
+| F5 | an unseeded prior turn was undetectable (silent decay) | audit gap | t-1 audit + auto-followup reprint | `test_t_minus_1_audit_detects_unseeded_prev`, `test_followup_reprints_seed_when_missing` |
+| F6 | repeated projection could duplicate the seed (non-deterministic tail) | determinism gap | idempotent `project_seed` | `test_project_seed_is_idempotent` |
 
-All three fragilities were **false negatives** (the gate was too lenient). Cost:
-small edits; yield: whole classes of malformed responses now blocked.
+All fragilities were **false negatives** (the gate was too lenient) or continuity
+gaps. Cost: small edits; yield: whole classes of malformed/decayed responses now
+blocked. F4–F6 are detailed in [`seed_protocol.md`](seed_protocol.md) §8.
 
 ---
 
@@ -59,6 +67,12 @@ small edits; yield: whole classes of malformed responses now blocked.
 
 These are acknowledged limits, not silent gaps (DEBT, not hidden risk):
 
+- **R4 — seed honour dependency (Architecture A).** A caller that ignores
+  `AGENTS.md` §1.3 seed binding is re-anchored at the next t-1 audit through a
+  boundary that reuses `validate_turn`. `due: DUE-RISK` if no middleware wraps
+  the handler.
+- **R5 — context flag trust.** The IT/EN seed choice trusts the invoking-agent
+  context signal; an unknown context falls back deterministically to IT.
 - **R1 — honour dependency (Architecture A).** A caller that ignores `AGENTS.md`
   is only caught at the boundary (Architecture B). Mitigation: the CI gate +
   middleware reuse `validate_response()`. `due: DUE-RISK` if no middleware wraps

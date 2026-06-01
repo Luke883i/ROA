@@ -28,6 +28,7 @@ These artifacts are the *minimum* fixed set. Removing any one is a regression
 | MDAS-6 | Deterministic incarnation test | `governance/incarnation_test.py` | ECNN: state classification (pass/DEBT) |
 | MDAS-7 | Incarnation CI pipeline | `.github/workflows/ikant-incarnation.yml` | iKant: enforced incarnation gate |
 | MDAS-8 | Corpus claim discipline & map | `README.md` §1,§4,§5,§8 | RLA: bounded observation grammar |
+| MDAS-9 | Seed protocol (output binding + t-1 audit) | `governance/seed_protocol.md` | iKant: cross-turn incarnation continuity |
 
 **Binding precedence:** `DecisionLog.md` (truth) → `AGENTS.md` (rules) →
 `MDAS.md` (set) → examples/tests. Lower layers may never override higher ones.
@@ -65,6 +66,7 @@ inbound call ──> [iKant middleware] ──> handler ──> [iKant middlewar
                       │                                   │
                       ├─ inject AGENTS.md persona          ├─ assert SPEAK/DEBUG contract
                       ├─ run anti-injection gate           ├─ assert trace metadata
+                      ├─ t-1 audit: reprint seed if lost   ├─ project + assert outgoing seed
                       └─ stamp DEBUG.TRACE                  └─ else: emit DEBT + block/fallback
 ```
 
@@ -156,6 +158,7 @@ ENV CONTRACT
 [ ] DEBT + DUE rules (incl. DUE-TRACE/SIM/ART/EXPORT/LEGACY/ABSORB)
 [ ] rollback / supersession rule
 [ ] export discipline (answer != proof)
+[ ] seed protocol: outgoing projection + t-1 audit + auto-followup (idempotent)
 [ ] overclaim / reification / continuity guards
 [ ] simple conversation stays usable; audit mode stays expressive
 [ ] DEBUG never becomes a second answer
