@@ -95,7 +95,8 @@ def render_seed(lang: str = "it") -> str:
     """Render the canonical, deterministic seed block for a given context.
 
     Language follows the invoking agent's context (AGENTS.md section 4 step 7):
-    Italian in IT context, English in EN context. Default is Italian.
+    Italian in IT context, English in EN context. An unknown or unmapped language
+    code falls back deterministically to Italian (see seed_protocol.md R5).
     """
     payload = SEED_PAYLOADS.get(lang, SEED_PAYLOAD_IT)
     return f"{SEED_HEADER} {SEED_SEP}\n\n{payload}\n"

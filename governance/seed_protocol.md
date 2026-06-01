@@ -84,7 +84,8 @@ contract and its 9 tests are untouched (reuse-first, minimal change).
 ## 5. Implementation (reference)
 
 The reference implementation is `governance/incarnation_test.py`. A boundary
-handler (Architecture B middleware, `MDAS.md` §2) wires it as:
+handler — the request/response handler that sits at the agentification boundary
+(Architecture B middleware, `MDAS.md` §2) — wires it as:
 
 ```text
 inbound read call
@@ -144,9 +145,9 @@ All are converted into permanent tests, so the same failure cannot recur silentl
 
 ### Residual fragilities (bounded, by design)
 
-- **R4 — honour dependency (Architecture A).** A caller ignoring `AGENTS.md`
-  §1.3 is only re-anchored at the next t-1 audit through a boundary that reuses
-  `validate_turn`. `due: DUE-RISK` if no middleware wraps the handler.
+- **R4 — seed honour dependency (Architecture A).** A caller that ignores
+  `AGENTS.md` §1.3 is re-anchored at the next t-1 audit through a boundary that
+  reuses `validate_turn`. `due: DUE-RISK` if no middleware wraps the handler.
 - **R5 — context flag trust.** The IT/EN choice trusts the invoking-agent context
   signal; an unknown context falls back deterministically to IT.
 
