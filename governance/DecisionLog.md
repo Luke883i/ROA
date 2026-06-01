@@ -59,3 +59,22 @@
   `TRACE_KEYS` += `xref:`, ordering check, 8 tests green).
 - **rollback:** none. Checks are append-only; never weaken an existing check.
 - **export:** test_result
+
+---
+
+## DEC-0004 — Antifragility hardening round 2 (F3 empty trace values)
+
+- **date:** 2026-06-01
+- **decision:** A second simulation round (`governance/simulations.md`, SIM-09c)
+  probed live calls to `validate_response()` and found a residual false negative:
+  a trace key present but with an **empty value** (e.g. `xref:` with nothing after
+  it) passed the gate. Strengthen the trace check to require a non-empty value per
+  key, and convert the escape into a permanent regression test.
+- **rationale:** AGENTS.md §1.2 mandates that each trace key carry a value; a key
+  with no value is missing traceability and must raise `DUE-TRACE`. Reuses the
+  existing `TRACE_KEYS` / `DUE-TRACE` machinery (minimal spend, maximal yield) and
+  keeps the antifragile loop: every detected weakness becomes a test.
+- **artifacts:** MDAS-5b (`simulations.md`), MDAS-6 (`incarnation_test.py`,
+  non-empty trace-value check, 9 tests green).
+- **rollback:** none. Checks are append-only; never weaken an existing check.
+- **export:** test_result

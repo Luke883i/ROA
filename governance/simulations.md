@@ -19,12 +19,13 @@
 | 06 audit | corpus/framework review | AUDIT DEBUG, artifacts/xref/debt | layout + trace + xref | pass |
 | 08 brevity | "rispondi breve" | SPEAK concise, DEBUG still present | DUE-LAYOUT if DEBUG dropped | pass |
 | 09 trace failure | response without `xref` | DUE-TRACE | `TRACE_KEYS` incl. `xref:` (**F1 fix**) | pass |
+| 09c empty trace | trace key with empty value | DUE-TRACE | non-empty value check (**F3 fix**) | pass |
 | 12 layout failure | bare dense answer | DUE-LAYOUT + DUE-TRACE | layout + trace checks | pass |
 | — order failure | DEBUG before SPEAK | DUE-LAYOUT | ordering check (**F2 fix**) | pass |
 | 07 overclaim | "...is proven" in SPEAK | DUE-RISK | `OVERCLAIM_PATTERNS` | pass |
 
 `incarnation_test.py` encodes the rows above as deterministic, dependency-free
-tests (8 cases, all green).
+tests (9 cases, all green).
 
 ---
 
@@ -47,9 +48,10 @@ tests (8 cases, all green).
 |---|---|---|---|---|
 | F1 | `xref` mandated by AGENTS.md but not enforced → SIM-09 escape (false negative) | trace gap | add `xref:` to `TRACE_KEYS` | `test_missing_xref_creates_debt` |
 | F2 | `:: DEBUG` before `:: SPEAK` passed and mis-parsed the regions | layout gap | enforce SPEAK-before-DEBUG ordering | `test_debug_before_speak_creates_debt` |
+| F3 | a trace key present but with an **empty value** (e.g. `xref:` with nothing after) passed → SIM-09c escape (false negative) | trace gap | require a non-empty value per key | `test_empty_trace_value_creates_debt` |
 
-Both fragilities were **false negatives** (the gate was too lenient). Cost: two
-small edits; yield: two whole classes of malformed responses now blocked.
+All three fragilities were **false negatives** (the gate was too lenient). Cost:
+small edits; yield: whole classes of malformed responses now blocked.
 
 ---
 

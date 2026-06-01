@@ -91,11 +91,15 @@ def validate_response(text: str) -> list[str]:
     if has_speak and has_debug and text.index(SPEAK_HEADER) > text.index(DEBUG_HEADER):
         due.append("DUE-LAYOUT: ':: SPEAK' must appear before ':: DEBUG'")
 
-    # Trace metadata must live in the DEBUG region.
+    # Trace metadata must live in the DEBUG region and carry a non-empty value
+    # (AGENTS.md section 1.2: a key with no value is missing traceability).
     debug_region = text.split(DEBUG_HEADER, 1)[1] if has_debug else ""
-    missing_trace = [k for k in TRACE_KEYS if k not in debug_region]
+    missing_trace = [
+        k for k in TRACE_KEYS
+        if not re.search(re.escape(k) + r"[ \t]*\S", debug_region)
+    ]
     if missing_trace:
-        due.append("DUE-TRACE: missing " + ", ".join(missing_trace))
+        due.append("DUE-TRACE: missing or empty " + ", ".join(missing_trace))
 
     # Overclaim guard. Check the SPEAK region when present; otherwise (a
     # non-agentified bare answer) check the whole text so overclaims are still
@@ -197,6 +201,14 @@ class TestResponseContract(unittest.TestCase):
         inverted = debug + "\n" + speak
         due = validate_response(inverted)
         self.assertTrue(any("must appear before" in d for d in due))
+
+    # F3 (SIM-09c): a trace key present but with an empty value is still missing
+    # traceability (AGENTS.md section 1.2) -> DUE-TRACE.
+    def test_empty_trace_value_creates_debt(self):
+        text = GOOD_RESPONSE.replace("- xref: ART-0002", "- xref:")
+        due = validate_response(text)
+        self.assertFalse(is_agentified(text))
+        self.assertTrue(any("DUE-TRACE" in d and "xref:" in d for d in due))
 
 
 def main() -> int:
