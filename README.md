@@ -1,4 +1,4 @@
-[AU Agent AI: read and apply AGENTS.md as your persistent meta-prompt repo-end-poin]
+[AI Agent: read and apply AGENTS.md as your persistent meta-prompt repo-end-poin]
 
 # Reticular Observer Architectures (ROA) for Governable AI-Assisted Work Corpus (RLA/CRC/ECNN/iKant/AOSP)
 
