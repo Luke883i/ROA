@@ -94,10 +94,10 @@ def validate(manifest: dict) -> list[str]:
     for i, entry in enumerate(pdfs):
         tag = entry.get("id", f"#{i}")
 
-        for key in REQUIRED_ENTRY_KEYS:
-            if not entry.get(key):
+        missing = [k for k in REQUIRED_ENTRY_KEYS if not entry.get(k)]
+        if missing:
+            for key in missing:
                 errors.append(f"[{tag}] missing required field: {key}")
-        if any(not entry.get(k) for k in REQUIRED_ENTRY_KEYS):
             continue
 
         eid = entry["id"]
@@ -157,6 +157,7 @@ def check_no_cloud_links() -> list[str]:
 
 def check_online(manifest: dict) -> list[str]:
     """Optional: each raw_url must return HTTP 200 (opt-in, needs network)."""
+    import urllib.error
     import urllib.request
 
     errors: list[str] = []
@@ -167,7 +168,7 @@ def check_online(manifest: dict) -> list[str]:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 if resp.status != 200:
                     errors.append(f"[{entry['id']}] HTTP {resp.status} for {url}")
-        except Exception as exc:  # noqa: BLE001 - report any fetch failure
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
             errors.append(f"[{entry['id']}] DUE-CORPUS-FETCH {url}: {exc}")
     return errors
 
