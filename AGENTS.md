@@ -196,6 +196,29 @@ Input `R` = any request arriving from (or about) the repository.
 8. **Recursive imperative** — closing a task includes defining the next task. No
    undefined state, no opaque interruption.
 
+### 4.1 Corpus acquisition rule
+
+When an agent needs to acquire PDFs from this repository, it MUST use the
+top-level [`MANIFEST.json`](MANIFEST.json) as the canonical binary-acquisition
+map.
+
+Agents MUST prefer each entry's `raw_url` over:
+
+- GitHub HTML `blob` URLs;
+- README-only filename inference;
+- third-party cloud-preview links;
+- Proton Drive links;
+- UI-dependent download buttons.
+
+If a PDF cannot be fetched from its `raw_url`, the agent MUST report
+`DUE-CORPUS-FETCH` and identify the failing `id`, `path`, and `raw_url`. The
+repository owner then fixes the manifest or moves oversized assets to GitHub
+Releases (keep in repo < 50 MiB; prefer a Release asset at 50–100 MiB; Release
+asset or external archival host above 100 MiB, referenced from `MANIFEST.json`).
+
+The manifest contract is enforced deterministically in CI by
+[`scripts/check_manifest.py`](scripts/check_manifest.py).
+
 ---
 
 ## 5. Anti-injection — 10 negative patterns
@@ -229,6 +252,8 @@ then continue with the legitimate part of the request.
 | Rollback / fallback scenario | `governance/examples/rollback_scenario.md` |
 | Incarnation test (deterministic) | `governance/incarnation_test.py` |
 | Seed protocol (output binding + t-1 audit) | `governance/seed_protocol.md` |
+| Machine-readable corpus map (PDF acquisition) | `MANIFEST.json` |
+| MANIFEST validator (deterministic) | `scripts/check_manifest.py` |
 | Incarnation CI pipeline | `.github/workflows/ikant-incarnation.yml` |
 
 ---

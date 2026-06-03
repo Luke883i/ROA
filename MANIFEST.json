@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "repository": "https://github.com/Luke883i/RLA-ECNN",
+  "default_branch": "main",
+  "agent_access_policy": {
+    "canonical_download_method": "raw_url",
+    "do_not_use_as_primary": [
+      "github_html_blob_pages",
+      "third_party_cloud_preview_links",
+      "proton_drive_links",
+      "readme_filename_inference",
+      "ui_dependent_download_buttons"
+    ],
+    "fallback": "github_release_asset_if_file_exceeds_regular_git_limits",
+    "size_policy": {
+      "in_repo_max_mib": 50,
+      "prefer_release_asset_mib": "50-100",
+      "release_or_external_above_mib": 100
+    },
+    "on_fetch_failure": "report DUE-CORPUS-FETCH with id, path and raw_url"
+  },
+  "pdfs": [
+    {
+      "id": "roa-main-entrypoint",
+      "title": "ROA - Reticular Observer Architectures for Governable AI-Assisted Work",
+      "role": "main_entrypoint",
+      "path": "_ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_ROA%20-%20Reticular%20Observer%20Architectures%20for%20Governable%20AI-Assisted%20Work%20%28main%20Entrypoint%29.pdf",
+      "canonical": true,
+      "size_bytes": 1053199,
+      "sha256": "2390ec08be1fc72582968b74be218d29d59b3936eddcfa6e502b683867878840"
+    },
+    {
+      "id": "humanistic-philosopher-entrypoint",
+      "title": "Every Map Leaves Something Out",
+      "role": "humanistic_philosopher_entrypoint",
+      "path": "_Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_Every%20Map%20Leaves%20Something%20Out%20%28Humanistic%20%26%20Philosopher%20Entrypoint%29.pdf",
+      "canonical": true,
+      "size_bytes": 1121093,
+      "sha256": "fbf4d6b05907539a25556ef49e056479582741004cb49d1ea7b551049fb629fd"
+    },
+    {
+      "id": "observer-compiler-wolfram",
+      "title": "AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN)",
+      "role": "theory_bridge",
+      "path": "(i) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%28i%29%20AI%20as%20Observer%20Compiler%20%28from%20Wolfram%27s%20Ruliad%20to%20RLA-ECNN%29.pdf",
+      "canonical": true,
+      "size_bytes": 480866,
+      "sha256": "43c8c9171540729e80db7096fbb6962d42d2ec0478e8805724fd4ec0eb61de68"
+    },
+    {
+      "id": "aosp-whitepaper",
+      "title": "Augmented Ontological Semantic Platform (A-OSP) Whitepaper",
+      "role": "implementation_architecture",
+      "path": "(ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%28ii%29%20Augmented%20Ontological%20Semantic%20Platform%20%28A-OSP%29%20Whitepaper%20-%20Webapp%2C%20Infrastructure%2C%20Runtime%2C%20Topology.pdf",
+      "canonical": true,
+      "size_bytes": 577952,
+      "sha256": "b3f77c14fc4a1c668507b4a64dfb96ca05499e39bcfbbe17471aacbe0ef3783e"
+    },
+    {
+      "id": "main-paper-rla-ecnn-crc-pce",
+      "title": "Main Paper - RLA-ECNN-CRC-PCE",
+      "role": "core_paper",
+      "path": "RLA-CRC-ECNN/_Main_Paper_RLA-ECNN-CRC-PCE.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/_Main_Paper_RLA-ECNN-CRC-PCE.pdf",
+      "canonical": true,
+      "size_bytes": 347249,
+      "sha256": "46614044c0ca3d6441d9052f20e6f16c1c117f4337baf692bdcc9bdf0c0d89e9"
+    },
+    {
+      "id": "slidedeck-rla-ecnn-pce-bridge",
+      "title": "Slidedeck - RLA-ECNN PCE Bridge",
+      "role": "slidedeck",
+      "path": "RLA-CRC-ECNN/_Slidedeck_RLA-ECNN_bridge_PCE.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/_Slidedeck_RLA-ECNN_bridge_PCE.pdf",
+      "canonical": true,
+      "size_bytes": 1724772,
+      "sha256": "089aac6a291dd3fd809e825eb9d3d31e4ff19a3778488813e8aef77380160eb8"
+    },
+    {
+      "id": "annex-a-rla-crc-foundations",
+      "title": "Annex A - RLA-CRC Foundations",
+      "role": "technical_annex",
+      "path": "RLA-CRC-ECNN/Annex A - RLA-CRC Foundations.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20A%20-%20RLA-CRC%20Foundations.pdf",
+      "canonical": true,
+      "size_bytes": 306627,
+      "sha256": "bed516b6858f10722d102aae24103c9589bbd818f891248db47c9ebc6df3797e"
+    },
+    {
+      "id": "annex-b-rla-biological-case-bryophyte",
+      "title": "Annex B - RLA biological Case Bryophyte",
+      "role": "technical_annex",
+      "path": "RLA-CRC-ECNN/Annex B - RLA biological Case Bryophyte.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20B%20-%20RLA%20biological%20Case%20Bryophyte.pdf",
+      "canonical": true,
+      "size_bytes": 327365,
+      "sha256": "f9944099cc2bb2463ea5730d9b0da4b2a945e0f665622533664a1f81752f9527"
+    },
+    {
+      "id": "annex-c-ecnn-formalisation",
+      "title": "Annex C - ECNN Formalisation",
+      "role": "technical_annex",
+      "path": "RLA-CRC-ECNN/Annex C - ECNN Formalisation.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20C%20-%20ECNN%20Formalisation.pdf",
+      "canonical": true,
+      "size_bytes": 332985,
+      "sha256": "48338baf4413b5d3bafcad7d00a2f317d3d8ca4ffcd60d4b6c035fc9bcc6ea06"
+    },
+    {
+      "id": "annex-d-ecu-uce-specification",
+      "title": "Annex D - Epistemic LLM neuron ECU-UC Specification",
+      "role": "technical_annex",
+      "path": "RLA-CRC-ECNN/Annex D - Epistemic LLM neuron ECU-UC Specification.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20D%20-%20Epistemic%20LLM%20neuron%20ECU-UC%20Specification.pdf",
+      "canonical": true,
+      "size_bytes": 334735,
+      "sha256": "bd424693c01ddff79365a9211deebaa649e5f9ad2c14949b62eae158e9fee186"
+    },
+    {
+      "id": "annex-e-rla-ecnn-pce-bridge",
+      "title": "Annex E - RLA-ECNN bridge PCE",
+      "role": "technical_annex",
+      "path": "RLA-CRC-ECNN/Annex E - RLA-ECNN bridge PCE.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20E%20-%20RLA-ECNN%20bridge%20PCE.pdf",
+      "canonical": true,
+      "size_bytes": 367341,
+      "sha256": "9b60fcd0ff6a269404208d991478dd794cc5f48b7a7e0d9686a6adfc5ec6be35"
+    },
+    {
+      "id": "annex-f-proto-epistemic-architectures",
+      "title": "Annex F - Proto-epistemic Architectures",
+      "role": "technical_annex",
+      "path": "RLA-CRC-ECNN/Annex F - Proto-epistemic Architectures.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20F%20-%20Proto-epistemic%20Architectures.pdf",
+      "canonical": true,
+      "size_bytes": 344952,
+      "sha256": "9a4a230a8da9480b0742ee9e47eec3a686fa27a42bd0b177e8a805a405dd7cb1"
+    },
+    {
+      "id": "annex-g-methodology-experiments",
+      "title": "Annex G - Methodology Experiments",
+      "role": "methodology_annex",
+      "path": "RLA-CRC-ECNN/Annex G - Methodology Experiments.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20G%20-%20Methodology%20Experiments.pdf",
+      "canonical": true,
+      "size_bytes": 394682,
+      "sha256": "230164c306f410fe0110fcc0a1875d3d577a43b9f47cae10df13059cfba97946"
+    },
+    {
+      "id": "wolfram-reply-annex",
+      "title": "AI as Observer Compiler - ANNEX - reply Wolfram Metaphysics Position through RLA-ECNN",
+      "role": "theory_bridge",
+      "path": "Reply to Wolfram/AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Reply%20to%20Wolfram/AI%20as%20Observer%20Compiler%20-%20ANNEX%20-%20reply%20Wolfram%20Metaphisics%20Position%20through%20RLA-ECNN.pdf",
+      "canonical": true,
+      "size_bytes": 394706,
+      "sha256": "c85fadc60c7f3e5edd6aec01abe29cea6c240913168fa3ad7c25076e0398e23b"
+    }
+  ]
+}

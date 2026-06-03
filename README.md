@@ -51,6 +51,43 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ```
 ---
 
+## 1.1 Machine-readable corpus access
+
+AI agents should **not** infer PDF download URLs from GitHub HTML pages and
+should **not** rely on third-party cloud-preview links. Use the machine-readable
+manifest:
+
+```text
+https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/MANIFEST.json
+```
+
+Each PDF entry in `MANIFEST.json` contains:
+
+- `id`: stable identifier for the document;
+- `title`: human-readable title;
+- `role`: document role in the corpus;
+- `path`: repository path;
+- `raw_url`: direct `raw.githubusercontent.com` download URL;
+- `canonical`: whether the file is part of the primary corpus;
+- `size_bytes` / `sha256`: optional integrity metadata.
+
+Canonical rule:
+
+```text
+README       = human orientation
+AGENTS.md    = agent behaviour
+MANIFEST.json = binary acquisition map
+raw_url      = direct PDF download
+```
+
+For oversized future PDFs (> 50 MiB), GitHub recommends Releases over regular Git
+history (it warns above 50 MiB and blocks above 100 MiB). Such files should be
+distributed as GitHub Release assets and referenced from `MANIFEST.json`, which
+remains the single point of access for agents. The manifest is validated in CI by
+`scripts/check_manifest.py`.
+
+---
+
 ## 2. What the corpus argues
 
 The central problem is not whether AI can produce fluent outputs. The hard problem is whether a human or organisation can reconstruct:
