@@ -22,11 +22,15 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 ```text
 
-🗎 Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
+🗎 _ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
+🗎 _Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
+|
+|
 |_ 🗎 (i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
 |_ 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
 |
-|___ 📁 RLA-CRC-ECNN 
+|    
+|___ 📁 RLA-CRC-ECNN Corpus
 |     |_ 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf (<- Core Paper RLA-CRC-ECNN)
 |     |_ 🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf
 |     |_ 🗎 annex_A_RLA-CRC_foundations_v1.pdf
