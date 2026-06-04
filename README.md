@@ -49,9 +49,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ## 1. Repository hierarchy
 
 ```text
-
-**Suggested reading order: ➪(1)➪(2)➪(3)➪(4)**
-
+Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
        📁 ./root
        |
 ➪(1)  |_ 🗎 Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
@@ -62,7 +60,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ➪(4)  |_ 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
        |
        |    
-       |___ 📁 RLA-CRC-ECNN Corpus
+       |___ 📁 RLA-CRC-ECNN Full Corpus
        |     |_ 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf (<- CORE PAPER RLA-CRC-ECNN)
        |     |_ 🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf
        |     |_ 🗎 annex_A_RLA-CRC_foundations_v1.pdf
@@ -77,7 +75,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
        |     |_ 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
        |
        |
-       | GITHUB REPOSITORY LOCAL SYSTEM MANAGEMENT (no scientific claim, only operation):
+GITHUB REPOSITORY LOCAL SYSTEM MANAGEMENT (no scientific claim, only operation):
        |
        |___ 📁 .github/workflows
        |___ 📁 governance
