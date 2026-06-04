@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministically generate MANIFEST.json and text sidecars."""
+"""Deterministically generate Operation/MANIFEST.json and text sidecars."""
 
 from __future__ import annotations
 
@@ -29,6 +29,7 @@ except ImportError as exc:  # pragma: no cover - exercised in real usage
     ) from exc
 
 AUTOSEEDED_ROLE = "UNREVIEWED_AUTOSEEDED"
+OPERATION_DIR_NAME = "Operation"
 
 
 def discover_pdfs() -> list[str]:
@@ -37,13 +38,18 @@ def discover_pdfs() -> list[str]:
     for path in sorted(REPO_ROOT.rglob("*.pdf")):
         if any(part == ".git" for part in path.parts):
             continue
-        pdfs.append(path.relative_to(REPO_ROOT).as_posix())
+        rel = path.relative_to(REPO_ROOT)
+        if rel.parts and rel.parts[0] == OPERATION_DIR_NAME:
+            continue
+        pdfs.append(rel.as_posix())
     return pdfs
 
 
 def normalize_filename(name: str) -> str:
     """Normalize a filename for resilient seed-to-file matching."""
-    return name.lstrip("_")
+    value = name.lstrip("_").strip()
+    value = re.sub(r"^\(\d+\)\s*(?:🗎\s*)?", "", value)
+    return value
 
 
 def resolve_pdf_path(seed_path: str, available_paths: list[str]) -> str:
@@ -247,7 +253,7 @@ def check_outputs(manifest_text: str, sidecars: dict[str, str]) -> int:
 
     current_manifest = MANIFEST_PATH.read_text(encoding="utf-8")
     if current_manifest != manifest_text:
-        errors.append(diff_hint("MANIFEST.json", current_manifest, manifest_text))
+        errors.append(diff_hint("Operation/MANIFEST.json", current_manifest, manifest_text))
 
     expected_paths = set(sidecars)
     actual_paths = set()
@@ -264,13 +270,13 @@ def check_outputs(manifest_text: str, sidecars: dict[str, str]) -> int:
         if expected_text is None:
             errors.append(
                 f"Unexpected generated sidecar on disk: {relpath}\n"
-                "Run `python scripts/build_manifest.py` to remove stale files."
+                "Run `python Operation/scripts/build_manifest.py` to remove stale files."
             )
             continue
         if not abs_path.exists():
             errors.append(
                 f"Missing generated sidecar: {relpath}\n"
-                "Run `python scripts/build_manifest.py` to regenerate it."
+                "Run `python Operation/scripts/build_manifest.py` to regenerate it."
             )
             continue
         current_text = abs_path.read_text(encoding="utf-8")
@@ -283,7 +289,7 @@ def check_outputs(manifest_text: str, sidecars: dict[str, str]) -> int:
             print(error, file=sys.stderr)
             print(file=sys.stderr)
         return 1
-    print("MANIFEST.json and text sidecars are up to date.")
+    print("Operation/MANIFEST.json and text sidecars are up to date.")
     return 0
 
 
@@ -306,12 +312,12 @@ def write_outputs(manifest_text: str, sidecars: dict[str, str]) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Generate MANIFEST.json and corpus text sidecars deterministically."
+        description="Generate Operation/MANIFEST.json and Operation/corpus text sidecars deterministically."
     )
     parser.add_argument(
         "--check",
         action="store_true",
-        help="fail if MANIFEST.json or generated sidecars differ from the expected output",
+        help="fail if Operation/MANIFEST.json or generated sidecars differ from the expected output",
     )
     args = parser.parse_args(argv)
 

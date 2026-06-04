@@ -66,29 +66,35 @@ class BuildManifestTestCase(unittest.TestCase):
     def temporary_repo(self, manifest: dict):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
-            (root / "MANIFEST.json").write_text(
+            operation = root / build_manifest.OPERATION_DIR_NAME
+            operation.mkdir(parents=True, exist_ok=True)
+            (operation / "MANIFEST.json").write_text(
                 json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8",
             )
 
             original_paths: dict[object, dict[str, Path]] = {}
             for module in (build_manifest, manifest_common):
-                original_paths[module] = {
-                    "REPO_ROOT": module.REPO_ROOT,
-                    "MANIFEST_PATH": module.MANIFEST_PATH,
-                    "TEXT_ROOT": module.TEXT_ROOT,
-                }
-                module.REPO_ROOT = root
-                module.MANIFEST_PATH = root / "MANIFEST.json"
-                module.TEXT_ROOT = root / "corpus" / "text"
+                original_paths[module] = {}
+                if hasattr(module, "REPO_ROOT"):
+                    original_paths[module]["REPO_ROOT"] = module.REPO_ROOT
+                    module.REPO_ROOT = root
+                if hasattr(module, "OPERATION_ROOT"):
+                    original_paths[module]["OPERATION_ROOT"] = module.OPERATION_ROOT
+                    module.OPERATION_ROOT = operation
+                if hasattr(module, "MANIFEST_PATH"):
+                    original_paths[module]["MANIFEST_PATH"] = module.MANIFEST_PATH
+                    module.MANIFEST_PATH = operation / "MANIFEST.json"
+                if hasattr(module, "TEXT_ROOT"):
+                    original_paths[module]["TEXT_ROOT"] = module.TEXT_ROOT
+                    module.TEXT_ROOT = operation / "corpus" / "text"
 
             try:
                 yield root
             finally:
                 for module, values in original_paths.items():
-                    module.REPO_ROOT = values["REPO_ROOT"]
-                    module.MANIFEST_PATH = values["MANIFEST_PATH"]
-                    module.TEXT_ROOT = values["TEXT_ROOT"]
+                    for name, value in values.items():
+                        setattr(module, name, value)
 
     def test_autoseeds_unseeded_pdf_and_sidecar(self):
         manifest = manifest_template(
@@ -116,7 +122,7 @@ class BuildManifestTestCase(unittest.TestCase):
             self.assertEqual("new_doc.pdf", autoseeded["path"])
             self.assertIn("text_url", autoseeded)
             self.assertIn("text_sha256", autoseeded)
-            self.assertIn("corpus/text/new-doc.md", sidecars)
+            self.assertIn("Operation/corpus/text/new-doc.md", sidecars)
 
     def test_seeded_pdf_is_not_duplicated_after_path_resolution(self):
         manifest = manifest_template(
@@ -137,7 +143,33 @@ class BuildManifestTestCase(unittest.TestCase):
 
             self.assertEqual(1, len(output["pdfs"]))
             self.assertEqual("_existing.pdf", output["pdfs"][0]["path"])
-            self.assertEqual({"corpus/text/seeded-doc.md"}, set(sidecars))
+            self.assertEqual({"Operation/corpus/text/seeded-doc.md"}, set(sidecars))
+
+    def test_seeded_pdf_resolves_numbered_entrypoint_prefix(self):
+        manifest = manifest_template(
+            [
+                {
+                    "id": "entrypoint",
+                    "title": "Entrypoint",
+                    "role": "main_entrypoint",
+                    "path": "_ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf",
+                }
+            ]
+        )
+        with self.temporary_repo(manifest) as root:
+            write_pdf(
+                root
+                / "(2) 🗎 ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf"
+            )
+
+            manifest_text, _ = build_manifest.build_outputs()
+            output = json.loads(manifest_text)
+
+            self.assertEqual(1, len(output["pdfs"]))
+            self.assertEqual(
+                "(2) 🗎 ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf",
+                output["pdfs"][0]["path"],
+            )
 
     def test_generation_is_idempotent(self):
         manifest = manifest_template(
@@ -157,10 +189,10 @@ class BuildManifestTestCase(unittest.TestCase):
             first_manifest, first_sidecars = build_manifest.build_outputs()
             self.assertEqual(0, build_manifest.write_outputs(first_manifest, first_sidecars))
             snapshot_one = {
-                "manifest": (root / "MANIFEST.json").read_text(encoding="utf-8"),
+                "manifest": (root / "Operation" / "MANIFEST.json").read_text(encoding="utf-8"),
                 "sidecars": {
                     path.relative_to(root).as_posix(): path.read_text(encoding="utf-8")
-                    for path in sorted((root / "corpus" / "text").glob("*.md"))
+                    for path in sorted((root / "Operation" / "corpus" / "text").glob("*.md"))
                 },
             }
 
@@ -168,10 +200,10 @@ class BuildManifestTestCase(unittest.TestCase):
             self.assertEqual(0, build_manifest.check_outputs(second_manifest, second_sidecars))
             self.assertEqual(0, build_manifest.write_outputs(second_manifest, second_sidecars))
             snapshot_two = {
-                "manifest": (root / "MANIFEST.json").read_text(encoding="utf-8"),
+                "manifest": (root / "Operation" / "MANIFEST.json").read_text(encoding="utf-8"),
                 "sidecars": {
                     path.relative_to(root).as_posix(): path.read_text(encoding="utf-8")
-                    for path in sorted((root / "corpus" / "text").glob("*.md"))
+                    for path in sorted((root / "Operation" / "corpus" / "text").glob("*.md"))
                 },
             }
 
@@ -193,6 +225,19 @@ class BuildManifestTestCase(unittest.TestCase):
             self.assertEqual(
                 ["A/Test Doc.pdf", "B/_Test_Doc.pdf"],
                 [entry["path"] for entry in output["pdfs"]],
+            )
+
+    def test_discovery_excludes_operation_folder(self):
+        manifest = manifest_template([])
+        with self.temporary_repo(manifest) as root:
+            write_pdf(root / "visible.pdf")
+            write_pdf(root / build_manifest.OPERATION_DIR_NAME / "hidden.pdf")
+
+            paths = build_manifest.discover_pdfs()
+
+            self.assertIn("visible.pdf", paths)
+            self.assertFalse(
+                any(path.startswith(f"{build_manifest.OPERATION_DIR_NAME}/") for path in paths)
             )
 
 

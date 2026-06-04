@@ -8,9 +8,19 @@ import json
 from pathlib import Path
 from urllib.parse import quote
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-MANIFEST_PATH = REPO_ROOT / "MANIFEST.json"
-TEXT_ROOT = REPO_ROOT / "corpus" / "text"
+def _discover_repo_root(start: Path) -> Path:
+    """Resolve repository root by walking parents until a .git directory exists."""
+    current = start.resolve()
+    for candidate in (current, *current.parents):
+        if (candidate / ".git").exists():
+            return candidate
+    raise RuntimeError("Could not locate repository root (.git not found).")
+
+
+OPERATION_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = _discover_repo_root(OPERATION_ROOT)
+MANIFEST_PATH = OPERATION_ROOT / "MANIFEST.json"
+TEXT_ROOT = OPERATION_ROOT / "corpus" / "text"
 RAW_HOST = "https://raw.githubusercontent.com/"
 
 
@@ -26,7 +36,7 @@ def expected_raw_url(repository: str, branch: str, path: str) -> str:
 
 def sidecar_relpath(entry_id: str) -> str:
     """Repository-relative path for a generated text sidecar."""
-    return f"corpus/text/{entry_id}.md"
+    return f"Operation/corpus/text/{entry_id}.md"
 
 
 def sidecar_abspath(entry_id: str) -> Path:
@@ -45,5 +55,5 @@ def sha256_file(path: Path) -> str:
 
 
 def load_manifest() -> dict:
-    """Load ``MANIFEST.json`` from the repository root."""
+    """Load canonical ``Operation/MANIFEST.json``."""
     return json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))

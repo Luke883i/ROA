@@ -1,14 +1,24 @@
 name: iKant incarnation gate
 
 # MDAS-7: enforce iKant agentification on every push/PR.
-# Runs the deterministic incarnation test (governance/incarnation_test.py),
+# Runs the deterministic incarnation test (Operation/governance/incarnation_test.py),
 # which validates MDAS completeness and the SPEAK/DEBUG response contract.
 
 on:
   push:
     branches: ["**"]
+    paths:
+      - "README.md"
+      - "Operation/AGENTS.md"
+      - "Operation/governance/**"
+      - ".github/workflows/ikant-incarnation.yml"
   pull_request:
     branches: ["**"]
+    paths:
+      - "README.md"
+      - "Operation/AGENTS.md"
+      - "Operation/governance/**"
+      - ".github/workflows/ikant-incarnation.yml"
   workflow_dispatch:
 
 permissions:
@@ -27,4 +37,4 @@ jobs:
           python-version: "3.12"
 
       - name: Run iKant incarnation test
-        run: python governance/incarnation_test.py
+        run: python Operation/governance/incarnation_test.py
