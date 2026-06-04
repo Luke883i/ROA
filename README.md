@@ -50,16 +50,16 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 ```text
 
-Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
+**Suggested reading order: ➪(1)➪(2)➪(3)➪(4)**
 
        📁 ./root
        |
-➪(1)  |_ 🗎 _Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
-➪(2)  |_ 🗎 _ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
+➪(1)  |_ 🗎 Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
+➪(2)  |_ 🗎 ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
        |
        |
-➪(3)  |_ 🗎 _(i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
-➪(4)  |_ 🗎 _(ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+➪(3)  |_ 🗎 (i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
+➪(4)  |_ 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
        |
        |    
        |___ 📁 RLA-CRC-ECNN Corpus
