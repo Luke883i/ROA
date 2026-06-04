@@ -1,7 +1,10 @@
 # Reticular Observer Architectures (ROA) for Governable AI-Assisted Work Corpus (RLA/CRC/ECNN/iKant/A-OSP)
 
-> **ATTENTION PLEASE — HUMAN READERS AND AI AGENTS**
->
+
+<details>
+  <summary>**ATTENTION PLEASE — HUMAN READERS AND AI AGENTS**</summary>
+  
+    
 > This is **not** a coding repository.
 >
 > It is a **PDF-born theoretical corpus** injected into GitHub as an epistemic container for governed, inspectable, agent-readable knowledge.
@@ -11,6 +14,9 @@
 > - all non-PDF operational infrastructure lives in `Operation/`
 >
 > **Ground truth for machine corpus access:** `Operation/MANIFEST.json`.
+
+</details>
+
 
 This repository contains a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are treated not as isolated answers, but as products of explicit, bounded, reconstructable, auditable epistemic structures.
 
@@ -59,8 +65,9 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
     └── scripts/
 ```
 
-### 1.1 Machine-readable corpus access
-
+<details>
+  <summary>**1.1 Machine-readable corpus access**</summary>
+    
 Canonical manifest URL:
 
 ```text
@@ -84,7 +91,12 @@ Lifecycle:
 - Pushes on `main` touching `*.pdf` trigger regeneration (`.github/workflows/regenerate-corpus.yml`) and commit only if `Operation/MANIFEST.json` or `Operation/corpus/text/*.md` changed.
 - New PDFs are auto-seeded with deterministic IDs and `role: "UNREVIEWED_AUTOSEEDED"` pending human curation.
 
-### 1.2 Semantic reticulum navigation for AI agents
+</details>
+
+
+
+<details>
+  <summary>**1.2 Semantic reticulum navigation for AI agents**</summary>
 
 The corpus is a **typed graph** (reticulum), not a flat file list. Documents are nodes (`id`, `role`) and edges encode reading order and cross-reference.
 
@@ -115,6 +127,7 @@ Traversal protocol:
 4. Follow role edges (entrypoint → core/annex chain; theory bridge ↔ Wolfram reply).
 5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
 
+</details>
 ---
 
 ## 2. What the corpus argues
