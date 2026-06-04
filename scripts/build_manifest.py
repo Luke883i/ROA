@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import difflib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -26,6 +27,8 @@ except ImportError as exc:  # pragma: no cover - exercised in real usage
         "pypdf is required to build MANIFEST.json sidecars. "
         "Install requirements-dev.txt first."
     ) from exc
+
+AUTOSEEDED_ROLE = "UNREVIEWED_AUTOSEEDED"
 
 
 def discover_pdfs() -> list[str]:
@@ -64,6 +67,61 @@ def resolve_pdf_path(seed_path: str, available_paths: list[str]) -> str:
         f"Could not uniquely resolve PDF for seeded path {seed_path!r}; "
         f"matches={normalized_matches or exact_name_matches or 'none'}"
     )
+
+
+def human_title_from_path(path: str) -> str:
+    """Derive a human-review placeholder title from a PDF filename."""
+    stem = Path(path).stem.lstrip("_").replace("_", " ")
+    title = re.sub(r"\s+", " ", stem).strip()
+    if title and title == title.lower():
+        title = title.title()
+    return title or "Untitled PDF"
+
+
+def derive_entry_id(path: str, used_ids: set[str]) -> str:
+    """Derive a deterministic, unique manifest id from a PDF filename."""
+    stem = Path(path).stem.lower().lstrip("_")
+    slug = re.sub(r"[^a-z0-9]+", "-", stem)
+    slug = re.sub(r"-+", "-", slug).strip("-") or "pdf"
+
+    candidate = slug
+    suffix = 2
+    while candidate in used_ids:
+        candidate = f"{slug}-{suffix}"
+        suffix += 1
+    used_ids.add(candidate)
+    return candidate
+
+
+def iter_seed_entries(seed_manifest: dict, available_pdfs: list[str]) -> list[dict]:
+    """Return seeded entries with repository paths resolved to on-disk PDFs."""
+    resolved_entries: list[dict] = []
+    for seed_entry in seed_manifest["pdfs"]:
+        actual_path = resolve_pdf_path(seed_entry["path"], available_pdfs)
+        resolved_entry = dict(seed_entry)
+        resolved_entry["path"] = actual_path
+        resolved_entries.append(resolved_entry)
+    return resolved_entries
+
+
+def autoseed_entries(seed_entries: list[dict], available_pdfs: list[str]) -> list[dict]:
+    """Return deterministic placeholder entries for PDFs missing from the manifest."""
+    seeded_paths = {entry["path"] for entry in seed_entries}
+    used_ids = {entry["id"] for entry in seed_entries}
+    auto_entries: list[dict] = []
+
+    for pdf_path in available_pdfs:
+        if pdf_path in seeded_paths:
+            continue
+        auto_entries.append(
+            {
+                "id": derive_entry_id(pdf_path, used_ids),
+                "title": human_title_from_path(pdf_path),
+                "role": AUTOSEEDED_ROLE,
+                "path": pdf_path,
+            }
+        )
+    return auto_entries
 
 
 def json_line(key: str, value: str) -> str:
@@ -119,28 +177,30 @@ def build_outputs() -> tuple[str, dict[str, str]]:
     available_pdfs = discover_pdfs()
     repository = seed_manifest["repository"]
     branch = seed_manifest["default_branch"]
+    seed_entries = iter_seed_entries(seed_manifest, available_pdfs)
+    all_entries = seed_entries + autoseed_entries(seed_entries, available_pdfs)
 
     sidecars: dict[str, str] = {}
     pdf_entries: list[dict] = []
 
-    for seed_entry in seed_manifest["pdfs"]:
-        actual_path = resolve_pdf_path(seed_entry["path"], available_pdfs)
+    for entry_seed in all_entries:
+        actual_path = entry_seed["path"]
         pdf_path = REPO_ROOT / actual_path
         pdf_bytes = pdf_path.read_bytes()
         pdf_sha256 = sha256_bytes(pdf_bytes)
         raw_url = expected_raw_url(repository, branch, actual_path)
-        sidecar_text = render_sidecar(seed_entry, actual_path, raw_url, pdf_sha256)
+        sidecar_text = render_sidecar(entry_seed, actual_path, raw_url, pdf_sha256)
         sidecar_bytes = sidecar_text.encode("utf-8")
-        sidecar_path = sidecar_relpath(seed_entry["id"])
+        sidecar_path = sidecar_relpath(entry_seed["id"])
         sidecars[sidecar_path] = sidecar_text
 
         entry = {
-            "id": seed_entry["id"],
-            "title": seed_entry["title"],
-            "role": seed_entry["role"],
+            "id": entry_seed["id"],
+            "title": entry_seed["title"],
+            "role": entry_seed["role"],
             "path": actual_path,
             "raw_url": raw_url,
-            "canonical": seed_entry.get("canonical", True),
+            "canonical": entry_seed.get("canonical", True),
             "size_bytes": len(pdf_bytes),
             "sha256": pdf_sha256,
             "text_url": expected_raw_url(repository, branch, sidecar_path),

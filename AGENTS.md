@@ -202,7 +202,8 @@ When an agent needs to acquire PDFs from this repository, it MUST use the
 top-level [`MANIFEST.json`](MANIFEST.json) as the canonical binary-acquisition
 map.
 
-Agents MUST prefer each entry's `raw_url` over:
+Agents MUST prefer each entry's `text_url` when present, then fall back to
+`raw_url`. Agents MUST prefer those manifest-declared URLs over:
 
 - GitHub HTML `blob` URLs;
 - README-only filename inference;
@@ -217,7 +218,20 @@ Releases (keep in repo < 50 MiB; prefer a Release asset at 50–100 MiB; Release
 asset or external archival host above 100 MiB, referenced from `MANIFEST.json`).
 
 The manifest contract is enforced deterministically in CI by
-[`scripts/check_manifest.py`](scripts/check_manifest.py).
+[`scripts/check_manifest.py`](scripts/check_manifest.py), while
+[`scripts/build_manifest.py`](scripts/build_manifest.py) deterministically
+regenerates `MANIFEST.json` plus `corpus/text/*.md`.
+
+Lifecycle:
+
+- pull requests keep the offline drift gate (`build_manifest.py --check` +
+  `check_manifest.py`);
+- after merge, a push to `main` that changes any `*.pdf` path triggers the
+  regeneration workflow, which rebuilds corpus artifacts and commits them back
+  only when `MANIFEST.json` or `corpus/text/` actually changed;
+- newly discovered PDFs are auto-seeded with deterministic placeholder metadata,
+  including `role: "UNREVIEWED_AUTOSEEDED"`, which signals that a human must
+  later curate `title` / `role` semantics without breaking machine access.
 
 ---
 
