@@ -38,12 +38,15 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 ```text
 Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
+
 ./root
+|
 ├── README.md
-├── (1) 🗎 Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf
-├── (2) 🗎 ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf
-├── (3) 🗎 (i) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
-├── (4) 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+├── (1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf
+├── (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf
+├── (3) (i) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
+├── (4) (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+|
 ├── RLA-CRC-ECNN/
 │   ├── _Main_Paper_RLA-ECNN-CRC-PCE.pdf
 │   ├── _Slidedeck_RLA-ECNN_bridge_PCE.pdf
@@ -54,8 +57,10 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 │   ├── Annex E - RLA-ECNN bridge PCE.pdf
 │   ├── Annex F - Proto-epistemic Architectures.pdf
 │   └── Annex G - Methodology Experiments.pdf
+|
 ├── Reply to Wolfram/
 │   └── AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
+|
 └── Operation/
     ├── AGENTS.md
     ├── MANIFEST.json
