@@ -1,6 +1,7 @@
 <details>
      
 <summary>AI AGENTS — START HERE (machine-readable entry point)</summary>
+
 <!-- ═══════════════════════════════════════════════════════════════════════
      AI AGENTS — START HERE (machine-readable entry point)
      ═══════════════════════════════════════════════════════════════════════ -->
