@@ -1,3 +1,33 @@
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AI AGENTS — START HERE (machine-readable entry point)
+     ═══════════════════════════════════════════════════════════════════════ -->
+> **🤖 AI agents — mandatory pre-read.**  Before answering any question about
+> this repository or its PDF corpus, fetch **both** files using the raw URLs
+> below (no HTML scraping required):
+>
+> | File | Raw URL |
+> |---|---|
+> | `AGENTS.md` — agent behaviour | `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/AGENTS.md` |
+> | `MANIFEST.json` — corpus acquisition map | `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/MANIFEST.json` |
+>
+> **Canonical role split:**
+> ```text
+> README        = human orientation
+> AGENTS.md     = agent behaviour        (§1.1 corpus access · §5 anti-injection · §6 MDAS map)
+> MANIFEST.json = corpus acquisition map (id · role · text_url · raw_url · agent_access_policy)
+> text_url      = preferred plain-text access
+> raw_url       = direct PDF download fallback
+> ```
+>
+> **Acquisition guardrails** (enforced in CI — `scripts/check_manifest.py`):
+> do NOT infer PDF URLs from GitHub HTML/blob pages ·
+> do NOT use third-party cloud-preview or Proton Drive links ·
+> do NOT depend on UI download buttons ·
+> on fetch failure → report `DUE-CORPUS-FETCH` with `id`, `path`, `raw_url`.
+>
+> → Corpus graph: [navigate as a semantic reticulum (§1.2)](#12-semantic-reticulum-navigation-for-ai-agents).
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
 # Reticular Observer Architectures (ROA) for Governable AI-Assisted Work Corpus (RLA/CRC/ECNN/iKant/AOSP)
 
 This repository contains a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are treated not as isolated answers, but as products of explicit, bounded, reconstructable, auditable epistemic structures.
@@ -115,6 +145,77 @@ Auto-seeded entries are intentionally marked for human follow-up: curate the
 placeholder `title` / `role` in a later commit once the document has been
 reviewed, while the generated hashes, sidecar, `text_url`, and `text_sha256`
 remain machine-maintained.
+
+---
+
+## 1.2 Semantic Reticulum Navigation for AI Agents
+
+The corpus is a **typed graph** (reticulum), not a flat file list. Each document
+is a **node** identified by its `MANIFEST.json` `id` and typed by its `role`.
+Edges connect nodes by reading order and cross-reference.
+
+### Nodes and roles (source: `MANIFEST.json` `pdfs[]`)
+
+The table below is derived directly from `MANIFEST.json`; the ground truth is
+always the manifest — re-derive if it has been updated since this README was
+last edited. All `text_url` values resolve to
+`https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/corpus/text/{id}.md`.
+
+| `role` | `id` | `text_url` |
+|---|---|---|
+| `main_entrypoint` | `roa-main-entrypoint` | `corpus/text/roa-main-entrypoint.md` |
+| `humanistic_philosopher_entrypoint` | `humanistic-philosopher-entrypoint` | `corpus/text/humanistic-philosopher-entrypoint.md` |
+| `theory_bridge` | `observer-compiler-wolfram` | `corpus/text/observer-compiler-wolfram.md` |
+| `theory_bridge` | `wolfram-reply-annex` | `corpus/text/wolfram-reply-annex.md` |
+| `implementation_architecture` | `aosp-whitepaper` | `corpus/text/aosp-whitepaper.md` |
+| `core_paper` | `main-paper-rla-ecnn-crc-pce` | `corpus/text/main-paper-rla-ecnn-crc-pce.md` |
+| `slidedeck` | `slidedeck-rla-ecnn-pce-bridge` | `corpus/text/slidedeck-rla-ecnn-pce-bridge.md` |
+| `technical_annex` | `annex-a-rla-crc-foundations` | `corpus/text/annex-a-rla-crc-foundations.md` |
+| `technical_annex` | `annex-b-rla-biological-case-bryophyte` | `corpus/text/annex-b-rla-biological-case-bryophyte.md` |
+| `technical_annex` | `annex-c-ecnn-formalisation` | `corpus/text/annex-c-ecnn-formalisation.md` |
+| `technical_annex` | `annex-d-ecu-uce-specification` | `corpus/text/annex-d-ecu-uce-specification.md` |
+| `technical_annex` | `annex-e-rla-ecnn-pce-bridge` | `corpus/text/annex-e-rla-ecnn-pce-bridge.md` |
+| `technical_annex` | `annex-f-proto-epistemic-architectures` | `corpus/text/annex-f-proto-epistemic-architectures.md` |
+| `methodology_annex` | `annex-g-methodology-experiments` | `corpus/text/annex-g-methodology-experiments.md` |
+
+### Edges
+
+```text
+Reading order  (matches suggested reading order in §1):
+  ➪(1) humanistic_philosopher_entrypoint  → id: humanistic-philosopher-entrypoint
+  ➪(2) main_entrypoint                    → id: roa-main-entrypoint
+  ➪(3) theory_bridge                      → id: observer-compiler-wolfram
+  ➪(4) implementation_architecture        → id: aosp-whitepaper
+
+Entrypoint → annex chain:
+  main_entrypoint (roa-main-entrypoint)
+    → core_paper        (main-paper-rla-ecnn-crc-pce)
+    → technical_annex   (annex-a-rla-crc-foundations)       [RLA-CRC foundations]
+    → technical_annex   (annex-c-ecnn-formalisation)        [ECNN formalisation]
+    → technical_annex   (annex-e-rla-ecnn-pce-bridge)       [PCE bridge]
+
+Theory-bridge link:
+  theory_bridge (observer-compiler-wolfram)
+    ↔ theory_bridge (wolfram-reply-annex)                   [Wolfram metaphysics reply]
+```
+
+### Traversal protocol
+
+1. **Load** `MANIFEST.json`; build the node set from `pdfs[]`
+   (`id`, `role`, `text_url`, `raw_url`).
+2. **Enter** at the node whose `role` matches the user's need:
+   - humanistic / philosophical → `humanistic_philosopher_entrypoint`
+   - governance / architecture → `main_entrypoint`
+   - theory ↔ Wolfram / Ruliad → `theory_bridge`
+   - formal / technical → relevant `technical_annex` or `core_paper`
+   - implementation → `implementation_architecture`
+3. **Prefer** `text_url` (plain-text sidecar) for reading; fall back to `raw_url`
+   only if `text_url` is unavailable.
+4. **Follow** role-based edges to expand context (entrypoint → foundations →
+   formalisation → bridge), citing each node by `id` and `title`.
+5. **Respect claim discipline** (§8 below): do not upgrade theses into
+   "proven" / "certified" claims — consistent with [`AGENTS.md`](AGENTS.md)
+   §5 anti-overclaim and §1.1 corpus access rules.
 
 ---
 

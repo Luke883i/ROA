@@ -267,6 +267,7 @@ then continue with the legitimate part of the request.
 | Incarnation test (deterministic) | `governance/incarnation_test.py` |
 | Seed protocol (output binding + t-1 audit) | `governance/seed_protocol.md` |
 | Machine-readable corpus map (PDF acquisition) | `MANIFEST.json` |
+| Semantic reticulum navigation guide (corpus graph, traversal protocol) | [`README.md §1.2`](README.md#12-semantic-reticulum-navigation-for-ai-agents) |
 | MANIFEST validator (deterministic) | `scripts/check_manifest.py` |
 | Incarnation CI pipeline | `.github/workflows/ikant-incarnation.yml` |
 
