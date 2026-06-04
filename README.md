@@ -24,8 +24,8 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 
        📁 ./root
        |
-➪(1)  🗎 _Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
-➪(2)  🗎 _ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
+➪(1)  |_ 🗎 _Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
+➪(2)  |_ 🗎 _ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
        |
        |
 ➪(3)  |_ 🗎 _(i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
