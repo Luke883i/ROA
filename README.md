@@ -1,5 +1,3 @@
-[AI Agent: read and apply .AGENTS.md as your persistent meta-prompt repo-end-poin]
-
 # Reticular Observer Architectures (ROA) for Governable AI-Assisted Work Corpus (RLA/CRC/ECNN/iKant/AOSP)
 
 This repository contains a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are treated not as isolated answers, but as products of explicit, bounded, reconstructable, auditable epistemic structures.
@@ -18,36 +16,39 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 ---
 
-## 1. Repository hierarchy
+## 1. Repository hierarchy [suggested reading order: (1) -> (4)]
 
 ```text
 
-🗎 _ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
-🗎 _Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
-|
-|
-|_ 🗎 (i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
-|_ 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
-|
-|    
-|___ 📁 RLA-CRC-ECNN Corpus
-|     |_ 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf (<- Core Paper RLA-CRC-ECNN)
-|     |_ 🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf
-|     |_ 🗎 annex_A_RLA-CRC_foundations_v1.pdf
-|     |_ 🗎 annex_B_RLA_biological-case-bryophyte_v1.pdf
-|     |_ 🗎 annex_C_ECNN_formalisation_v1.pdf
-|     |_ 🗎 annex_D_RLA-ECNN_PCE-bridge_v1.pdf
-|     |_ 🗎 annex_E_ECU-UCE_specification_v1.pdf
-|     |_ 🗎 annex_F_proto-epistemic-architectures_v1.pdf
-|     |_ 🗎 annex_G_methodology-experiments_v1.pdf
-| 
-|___ 📁 Reply to Wolfram
-|     |_ 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
-|
-|
-| Github repository local agent.md system management (no scientific claim, only operation):
-|___ .github/workflows
-|___ governance
+       📁 ./root
+       |
+➪(1)  🗎 _Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf (<- HUMANISTIC & PHILOSOPHER ENTRYPOINT)
+➪(2)  🗎 _ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf (<- MAIN ENTRY POINT)
+       |
+       |
+➪(3)  |_ 🗎 _(i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
+➪(4)  |_ 🗎 _(ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+       |
+       |    
+       |___ 📁 RLA-CRC-ECNN Corpus
+       |     |_ 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf (<- CORE PAPER RLA-CRC-ECNN)
+       |     |_ 🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf
+       |     |_ 🗎 annex_A_RLA-CRC_foundations_v1.pdf
+       |     |_ 🗎 annex_B_RLA_biological-case-bryophyte_v1.pdf
+       |     |_ 🗎 annex_C_ECNN_formalisation_v1.pdf
+       |     |_ 🗎 annex_D_RLA-ECNN_PCE-bridge_v1.pdf
+       |     |_ 🗎 annex_E_ECU-UCE_specification_v1.pdf
+       |     |_ 🗎 annex_F_proto-epistemic-architectures_v1.pdf
+       |     |_ 🗎 annex_G_methodology-experiments_v1.pdf
+       | 
+       |___ 📁 Reply to Wolfram
+       |     |_ 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
+       |
+       |
+       | Github repository local agent.md system management (no scientific claim, only operation):
+       |___ .github/workflows
+       |___ governance
+
 ```
 ---
 
