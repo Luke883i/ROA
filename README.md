@@ -93,6 +93,23 @@ remains the single point of access for agents. The manifest is validated in CI b
 `scripts/check_manifest.py`, and generated plain-text sidecars make the preferred
 agent read order `text_url` → `raw_url` → release asset.
 
+Lifecycle:
+
+- pull requests still run the offline drift gate (`python scripts/build_manifest.py --check`
+  plus `python scripts/check_manifest.py`);
+- after merge, any push to `main` that changes a `*.pdf` path triggers the
+  `regenerate-corpus.yml` bot, which reruns `python scripts/build_manifest.py`
+  and commits updated `MANIFEST.json` / `corpus/text/*.md` only when generation
+  actually changes them;
+- a newly discovered PDF that is missing from `MANIFEST.json` is auto-seeded
+  with a deterministic filename-derived `id`, a placeholder human-readable
+  `title`, and `role: "UNREVIEWED_AUTOSEEDED"`.
+
+Auto-seeded entries are intentionally marked for human follow-up: curate the
+placeholder `title` / `role` in a later commit once the document has been
+reviewed, while the generated hashes, sidecar, `text_url`, and `text_sha256`
+remain machine-maintained.
+
 ---
 
 ## 2. What the corpus argues
