@@ -1,3 +1,5 @@
+<details>
+<summary>AI AGENTS — START HERE (machine-readable entry point)</summary>
 <!-- ═══════════════════════════════════════════════════════════════════════
      AI AGENTS — START HERE (machine-readable entry point)
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -27,6 +29,7 @@
 >
 > → Corpus graph: [navigate as a semantic reticulum (§1.2)](#12-semantic-reticulum-navigation-for-ai-agents).
 <!-- ═══════════════════════════════════════════════════════════════════════ -->
+</details>
 
 # Reticular Observer Architectures (ROA) for Governable AI-Assisted Work Corpus (RLA/CRC/ECNN/iKant/AOSP)
 
