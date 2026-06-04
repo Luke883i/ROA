@@ -13,18 +13,21 @@ deterministic, no external dependencies, robust. By default it runs fully
 
 1. **Schema** — top-level keys and ``agent_access_policy`` are present.
 2. **Entries** — every PDF entry carries ``id``/``title``/``role``/``path``/
-   ``raw_url`` (the required contract fields), with unique ids and paths.
+   ``raw_url``/``text_url``/``text_sha256`` (the required contract fields),
+   with unique ids and paths.
 3. **Files** — every ``path`` exists in the repository.
 4. **raw_url shape** — each ``raw_url`` is the canonical
    ``raw.githubusercontent.com`` URL for ``repository`` + ``default_branch`` +
    percent-encoded ``path`` (no GitHub HTML ``blob`` pages).
-5. **Integrity** — when present, ``size_bytes`` and ``sha256`` match the file.
+5. **Integrity** — ``size_bytes``/``sha256`` match the PDF bytes and
+   ``text_sha256`` matches the generated sidecar bytes.
 6. **No third-party cloud links** — agent-facing docs (README.md, AGENTS.md,
    MANIFEST.json) must not carry Proton Drive / cloud-preview links as canonical
    download sources.
 
 With ``--online`` it additionally issues an HTTP HEAD to each ``raw_url`` and
-requires HTTP 200. Network access is not assumed in CI, so it is opt-in.
+``text_url`` and requires HTTP 200. Network access is not assumed in CI, so it
+is opt-in.
 
 Run directly (``python scripts/check_manifest.py``). Exit code 0 = pass,
 non-zero = regression.
@@ -34,17 +37,20 @@ from __future__ import annotations
 
 import argparse
 import hashlib
-import json
-import os
 import re
 import sys
-from urllib.parse import quote
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MANIFEST_PATH = os.path.join(REPO_ROOT, "MANIFEST.json")
+from manifest_common import (
+    MANIFEST_PATH,
+    REPO_ROOT,
+    expected_raw_url,
+    load_manifest,
+    sidecar_abspath,
+    sidecar_relpath,
+)
 
 REQUIRED_TOP_KEYS = ["schema_version", "repository", "default_branch", "pdfs"]
-REQUIRED_ENTRY_KEYS = ["id", "title", "role", "path", "raw_url"]
+REQUIRED_ENTRY_KEYS = ["id", "title", "role", "path", "raw_url", "text_url", "text_sha256"]
 
 # Agent-facing documents that must not advertise third-party cloud-share links
 # as canonical download sources (the manifest's raw_url is the only canonical
@@ -54,20 +60,6 @@ FORBIDDEN_LINK_PATTERNS = [
     r"https?://[^\s\"')]*proton\.(me|drive)[^\s\"')]*",
     r"https?://drive\.proton\.me[^\s\"')]*",
 ]
-
-RAW_HOST = "https://raw.githubusercontent.com/"
-
-
-def _owner_repo(repository: str) -> str:
-    """Extract ``owner/repo`` from a GitHub repository URL."""
-    return repository.rstrip("/").removeprefix("https://github.com/")
-
-
-def expected_raw_url(repository: str, branch: str, path: str) -> str:
-    """Canonical raw URL for a repo path (percent-encoded, no HTML blob page)."""
-    owner_repo = _owner_repo(repository)
-    return f"{RAW_HOST}{owner_repo}/{branch}/{quote(path)}"
-
 
 def validate(manifest: dict) -> list[str]:
     """Return a list of error strings. Empty list means the manifest is valid."""
@@ -103,6 +95,8 @@ def validate(manifest: dict) -> list[str]:
         eid = entry["id"]
         path = entry["path"]
         raw_url = entry["raw_url"]
+        text_url = entry["text_url"]
+        text_sha256 = entry["text_sha256"]
 
         if eid in seen_ids:
             errors.append(f"[{tag}] duplicate id")
@@ -111,8 +105,8 @@ def validate(manifest: dict) -> list[str]:
             errors.append(f"[{tag}] duplicate path: {path}")
         seen_paths.add(path)
 
-        abspath = os.path.join(REPO_ROOT, path)
-        if not os.path.exists(abspath):
+        abspath = REPO_ROOT / path
+        if not abspath.exists():
             errors.append(f"[{tag}] path does not exist: {path}")
             continue
 
@@ -124,10 +118,29 @@ def validate(manifest: dict) -> list[str]:
         if "/blob/" in raw_url:
             errors.append(f"[{tag}] raw_url points to a GitHub HTML blob page: {raw_url}")
 
+        sidecar_rel = sidecar_relpath(eid)
+        expected_text_url = expected_raw_url(repository, branch, sidecar_rel)
+        if text_url != expected_text_url:
+            errors.append(
+                f"[{tag}] text_url mismatch\n    have: {text_url}\n    want: {expected_text_url}"
+            )
+        if "/blob/" in text_url:
+            errors.append(f"[{tag}] text_url points to a GitHub HTML blob page: {text_url}")
+
+        sidecar_path = sidecar_abspath(eid)
+        if not sidecar_path.exists():
+            errors.append(f"[{tag}] text sidecar does not exist: {sidecar_rel}")
+        else:
+            sidecar_data = sidecar_path.read_bytes()
+            if not sidecar_data:
+                errors.append(f"[{tag}] text sidecar is empty: {sidecar_rel}")
+            digest = hashlib.sha256(sidecar_data).hexdigest()
+            if text_sha256 != digest:
+                errors.append(f"[{tag}] text_sha256 mismatch: manifest != file ({digest})")
+
         data = None
         if "size_bytes" in entry or "sha256" in entry:
-            with open(abspath, "rb") as fh:
-                data = fh.read()
+            data = abspath.read_bytes()
         if "size_bytes" in entry and data is not None and entry["size_bytes"] != len(data):
             errors.append(
                 f"[{tag}] size_bytes mismatch: manifest {entry['size_bytes']} != file {len(data)}"
@@ -144,32 +157,37 @@ def check_no_cloud_links() -> list[str]:
     """Ensure agent-facing docs carry no third-party cloud-share download links."""
     errors: list[str] = []
     for rel in AGENT_FACING_DOCS:
-        path = os.path.join(REPO_ROOT, rel)
-        if not os.path.exists(path):
+        path = REPO_ROOT / rel
+        if not path.exists():
             continue
-        with open(path, encoding="utf-8") as fh:
-            text = fh.read()
+        text = path.read_text(encoding="utf-8")
         for pat in FORBIDDEN_LINK_PATTERNS:
             for m in re.finditer(pat, text, re.IGNORECASE):
                 errors.append(f"{rel}: forbidden third-party cloud link: {m.group(0)}")
     return errors
 
 
-def check_online(manifest: dict) -> list[str]:
-    """Optional: each raw_url must return HTTP 200 (opt-in, needs network)."""
+def _check_online_url(entry_id: str, label: str, url: str) -> list[str]:
+    """HEAD-check a single manifest URL."""
     import urllib.error
     import urllib.request
 
+    req = urllib.request.Request(url, method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            if resp.status != 200:
+                return [f"[{entry_id}] HTTP {resp.status} for {label} {url}"]
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
+        return [f"[{entry_id}] DUE-CORPUS-FETCH {label} {url}: {exc}"]
+    return []
+
+
+def check_online(manifest: dict) -> list[str]:
+    """Optional: each raw_url and text_url must return HTTP 200."""
     errors: list[str] = []
     for entry in manifest["pdfs"]:
-        url = entry["raw_url"]
-        req = urllib.request.Request(url, method="HEAD")
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                if resp.status != 200:
-                    errors.append(f"[{entry['id']}] HTTP {resp.status} for {url}")
-        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:
-            errors.append(f"[{entry['id']}] DUE-CORPUS-FETCH {url}: {exc}")
+        errors += _check_online_url(entry["id"], "raw_url", entry["raw_url"])
+        errors += _check_online_url(entry["id"], "text_url", entry["text_url"])
     return errors
 
 
@@ -182,11 +200,10 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    if not os.path.exists(MANIFEST_PATH):
+    if not MANIFEST_PATH.exists():
         print("FAIL: MANIFEST.json not found at repository root", file=sys.stderr)
         return 1
-    with open(MANIFEST_PATH, encoding="utf-8") as fh:
-        manifest = json.load(fh)
+    manifest = load_manifest()
 
     errors = validate(manifest)
     errors += check_no_cloud_links()
@@ -202,7 +219,7 @@ def main(argv: list[str] | None = None) -> int:
     n = len(manifest["pdfs"])
     print(f"MANIFEST.json OK: {n} PDF entries validated (offline).")
     if args.online:
-        print("All raw_url endpoints returned HTTP 200.")
+        print("All raw_url and text_url endpoints returned HTTP 200.")
     return 0
 
 

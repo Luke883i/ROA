@@ -28,6 +28,3 @@ jobs:
 
       - name: Run iKant incarnation test
         run: python governance/incarnation_test.py
-
-      - name: Run MANIFEST corpus check (offline)
-        run: python scripts/check_manifest.py

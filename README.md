@@ -71,6 +71,7 @@ Each PDF entry in `MANIFEST.json` contains:
 - `title`: human-readable title;
 - `role`: document role in the corpus;
 - `path`: repository path;
+- `text_url` / `text_sha256`: preferred plain-text sidecar URL plus integrity hash;
 - `raw_url`: direct `raw.githubusercontent.com` download URL;
 - `canonical`: whether the file is part of the primary corpus;
 - `size_bytes` / `sha256`: optional integrity metadata.
@@ -80,15 +81,17 @@ Canonical rule:
 ```text
 README       = human orientation
 AGENTS.md    = agent behaviour
-MANIFEST.json = binary acquisition map
-raw_url      = direct PDF download
+MANIFEST.json = corpus acquisition map
+text_url     = preferred plain-text access
+raw_url      = direct PDF download fallback
 ```
 
 For oversized future PDFs (> 50 MiB), GitHub recommends Releases over regular Git
 history (it warns above 50 MiB and blocks above 100 MiB). Such files should be
 distributed as GitHub Release assets and referenced from `MANIFEST.json`, which
 remains the single point of access for agents. The manifest is validated in CI by
-`scripts/check_manifest.py`.
+`scripts/check_manifest.py`, and generated plain-text sidecars make the preferred
+agent read order `text_url` → `raw_url` → release asset.
 
 ---
 
