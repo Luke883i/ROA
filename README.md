@@ -44,8 +44,8 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 ├── README.md
 ├── (1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf
 ├── (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf
-├── (3) (i) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
-├── (4) (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+├── (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
+├── (4) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
 |
 ├── RLA-CRC-ECNN/
 │   ├── _Main_Paper_RLA-ECNN-CRC-PCE.pdf
