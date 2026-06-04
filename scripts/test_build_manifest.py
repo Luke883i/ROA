@@ -71,9 +71,9 @@ class BuildManifestTestCase(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            originals: dict[object, dict[str, Path]] = {}
+            original_paths: dict[object, dict[str, Path]] = {}
             for module in (build_manifest, manifest_common):
-                originals[module] = {
+                original_paths[module] = {
                     "REPO_ROOT": module.REPO_ROOT,
                     "MANIFEST_PATH": module.MANIFEST_PATH,
                     "TEXT_ROOT": module.TEXT_ROOT,
@@ -85,7 +85,7 @@ class BuildManifestTestCase(unittest.TestCase):
             try:
                 yield root
             finally:
-                for module, values in originals.items():
+                for module, values in original_paths.items():
                     module.REPO_ROOT = values["REPO_ROOT"]
                     module.MANIFEST_PATH = values["MANIFEST_PATH"]
                     module.TEXT_ROOT = values["TEXT_ROOT"]

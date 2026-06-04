@@ -79,7 +79,7 @@ def human_title_from_path(path: str) -> str:
 
 
 def derive_entry_id(path: str, used_ids: set[str]) -> str:
-    """Derive a deterministic, unique manifest id from a PDF filename."""
+    """Derive a deterministic, unique manifest id and reserve it in ``used_ids``."""
     stem = Path(path).stem.lower().lstrip("_")
     slug = re.sub(r"[^a-z0-9]+", "-", stem)
     slug = re.sub(r"-+", "-", slug).strip("-") or "pdf"

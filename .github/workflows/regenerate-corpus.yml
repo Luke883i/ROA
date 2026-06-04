@@ -33,7 +33,8 @@ jobs:
 
       - name: Commit regenerated corpus artifacts
         run: |
-          if [ -z "$(git status --porcelain -- MANIFEST.json corpus/text)" ]; then
+          status="$(git status --porcelain -- MANIFEST.json corpus/text)"
+          if [ -z "$status" ]; then
             echo "No regenerated corpus changes."
             exit 0
           fi
