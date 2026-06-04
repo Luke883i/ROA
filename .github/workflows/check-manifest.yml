@@ -28,5 +28,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install manifest build dependencies
+        run: python -m pip install -r requirements-dev.txt
+
       - name: Validate MANIFEST.json
         run: python scripts/check_manifest.py
+
+      - name: Verify generated manifest artifacts
+        run: python scripts/build_manifest.py --check
