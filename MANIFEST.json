@@ -44,8 +44,8 @@
       "id": "observer-compiler-wolfram",
       "title": "AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN)",
       "role": "theory_bridge",
-      "path": "(i) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%28i%29%20AI%20as%20Observer%20Compiler%20%28from%20Wolfram%27s%20Ruliad%20to%20RLA-ECNN%29.pdf",
+      "path": "_(i) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_%28i%29%20AI%20as%20Observer%20Compiler%20%28from%20Wolfram%27s%20Ruliad%20to%20RLA-ECNN%29.pdf",
       "canonical": true,
       "size_bytes": 480866,
       "sha256": "43c8c9171540729e80db7096fbb6962d42d2ec0478e8805724fd4ec0eb61de68"
@@ -54,8 +54,8 @@
       "id": "aosp-whitepaper",
       "title": "Augmented Ontological Semantic Platform (A-OSP) Whitepaper",
       "role": "implementation_architecture",
-      "path": "(ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%28ii%29%20Augmented%20Ontological%20Semantic%20Platform%20%28A-OSP%29%20Whitepaper%20-%20Webapp%2C%20Infrastructure%2C%20Runtime%2C%20Topology.pdf",
+      "path": "_(ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_%28ii%29%20Augmented%20Ontological%20Semantic%20Platform%20%28A-OSP%29%20Whitepaper%20-%20Webapp%2C%20Infrastructure%2C%20Runtime%2C%20Topology.pdf",
       "canonical": true,
       "size_bytes": 577952,
       "sha256": "b3f77c14fc4a1c668507b4a64dfb96ca05499e39bcfbbe17471aacbe0ef3783e"
