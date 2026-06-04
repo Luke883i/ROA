@@ -16,9 +16,11 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 ---
 
-## 1. Repository hierarchy [suggested reading order: (1) -> (4)]
+## 1. Repository hierarchy
 
 ```text
+
+Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 
        📁 ./root
        |
@@ -46,6 +48,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
        |
        |
        |     Github repository local agent.md system management (no scientific claim, only operation):
+       |
        |___ .github/workflows
        |___ governance
 
