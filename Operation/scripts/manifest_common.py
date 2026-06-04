@@ -8,8 +8,17 @@ import json
 from pathlib import Path
 from urllib.parse import quote
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-OPERATION_ROOT = REPO_ROOT / "Operation"
+def _discover_repo_root(start: Path) -> Path:
+    """Resolve repository root by walking parents until a .git directory exists."""
+    current = start.resolve()
+    for candidate in (current, *current.parents):
+        if (candidate / ".git").exists():
+            return candidate
+    raise RuntimeError("Could not locate repository root (.git not found).")
+
+
+OPERATION_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = _discover_repo_root(OPERATION_ROOT)
 MANIFEST_PATH = OPERATION_ROOT / "MANIFEST.json"
 TEXT_ROOT = OPERATION_ROOT / "corpus" / "text"
 RAW_HOST = "https://raw.githubusercontent.com/"

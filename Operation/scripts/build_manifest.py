@@ -29,6 +29,7 @@ except ImportError as exc:  # pragma: no cover - exercised in real usage
     ) from exc
 
 AUTOSEEDED_ROLE = "UNREVIEWED_AUTOSEEDED"
+OPERATION_DIR_NAME = "Operation"
 
 
 def discover_pdfs() -> list[str]:
@@ -38,7 +39,7 @@ def discover_pdfs() -> list[str]:
         if any(part == ".git" for part in path.parts):
             continue
         rel = path.relative_to(REPO_ROOT)
-        if rel.parts and rel.parts[0] == "Operation":
+        if rel.parts and rel.parts[0] == OPERATION_DIR_NAME:
             continue
         pdfs.append(rel.as_posix())
     return pdfs

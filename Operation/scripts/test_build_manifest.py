@@ -66,7 +66,7 @@ class BuildManifestTestCase(unittest.TestCase):
     def temporary_repo(self, manifest: dict):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
-            operation = root / "Operation"
+            operation = root / build_manifest.OPERATION_DIR_NAME
             operation.mkdir(parents=True, exist_ok=True)
             (operation / "MANIFEST.json").write_text(
                 json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
@@ -231,12 +231,14 @@ class BuildManifestTestCase(unittest.TestCase):
         manifest = manifest_template([])
         with self.temporary_repo(manifest) as root:
             write_pdf(root / "visible.pdf")
-            write_pdf(root / "Operation" / "hidden.pdf")
+            write_pdf(root / build_manifest.OPERATION_DIR_NAME / "hidden.pdf")
 
             paths = build_manifest.discover_pdfs()
 
             self.assertIn("visible.pdf", paths)
-            self.assertNotIn("Operation/hidden.pdf", paths)
+            self.assertFalse(
+                any(path.startswith(f"{build_manifest.OPERATION_DIR_NAME}/") for path in paths)
+            )
 
 
 if __name__ == "__main__":
