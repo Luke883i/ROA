@@ -47,10 +47,16 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
        |     |_ 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
        |
        |
-       |     Github repository local agent.md system management (no scientific claim, only operation):
+       | GITHUB REPOSITORY LOCAL SYSTEM MANAGEMENT (no scientific claim, only operation):
        |
-       |___ .github/workflows
-       |___ governance
+       |___ 📁 .github/workflows
+       |___ 📁 governance
+       |___ 📁 corpus/text
+       |___ 📁 scripts
+       |_ AGENTS.md
+       |_ MANIFEST.json
+       |_ README.md
+       |_ requirements-dev.txt
 
 ```
 ---
