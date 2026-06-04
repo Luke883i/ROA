@@ -102,3 +102,26 @@
   (`simulations.md`, F4/F5/F6 + R4/R5), MDAS-2 (`MDAS.md`, MDAS-9 + checklist).
 - **rollback:** none. Seed checks are append-only; never weaken an existing check.
 - **export:** test_result
+
+---
+
+## DEC-0006 — Root landing refactor (`Operation/` container + manifest relocation)
+
+- **date:** 2026-06-04
+- **decision:** Keep root as a minimal landing surface (PDF entrypoints, PDF
+  folders, single `README.md`, technical dot entries) and move all non-PDF
+  operational assets into `Operation/` (`AGENTS.md`, `MANIFEST.json`,
+  `requirements-dev.txt`, `governance/`, `corpus/text/`, `scripts/`). Canonical
+  machine map is now `Operation/MANIFEST.json`.
+- **rationale:** Human first contact should be corpus-first and cognitively
+  minimal, while agent/tooling infrastructure remains fully available but
+  encapsulated. The split reduces root noise without changing PDF artifacts or
+  canonical raw acquisition for PDFs.
+- **artifacts:** `README.md` (root landing rewrite), `Operation/AGENTS.md`,
+  `Operation/MANIFEST.json`, `Operation/scripts/*`, `.github/workflows/*`,
+  `Operation/governance/incarnation_test.py`.
+- **rollback:** Revert this commit to restore pre-refactor root placement; if
+  partial rollback is needed, move `Operation/*` assets back to root and rerun
+  `python Operation/scripts/build_manifest.py` / CI path references before
+  reopening merge.
+- **export:** artifact_manifest

@@ -1,16 +1,26 @@
 name: MANIFEST corpus check
 
 # Enforce the machine-readable corpus contract on every push/PR.
-# Runs the deterministic, dependency-free MANIFEST.json validator
-# (scripts/check_manifest.py): paths exist, raw_url shape is canonical,
+# Runs the deterministic, dependency-free Operation/MANIFEST.json validator
+# (Operation/scripts/check_manifest.py): paths exist, raw_url shape is canonical,
 # size/sha256 match, and agent-facing docs carry no third-party cloud links.
 # Runs offline so it needs no network access.
 
 on:
   push:
     branches: ["**"]
+    paths:
+      - "**/*.pdf"
+      - "README.md"
+      - "Operation/**"
+      - ".github/workflows/check-manifest.yml"
   pull_request:
     branches: ["**"]
+    paths:
+      - "**/*.pdf"
+      - "README.md"
+      - "Operation/**"
+      - ".github/workflows/check-manifest.yml"
   workflow_dispatch:
 
 permissions:
@@ -29,10 +39,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install manifest build dependencies
-        run: python -m pip install -r requirements-dev.txt
+        run: python -m pip install -r Operation/requirements-dev.txt
 
-      - name: Validate MANIFEST.json
-        run: python scripts/check_manifest.py
+      - name: Validate Operation/MANIFEST.json
+        run: python Operation/scripts/check_manifest.py
 
       - name: Verify generated manifest artifacts
-        run: python scripts/build_manifest.py --check
+        run: python Operation/scripts/build_manifest.py --check

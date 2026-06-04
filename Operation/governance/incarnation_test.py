@@ -4,7 +4,7 @@
 This is MDAS-6: the single source of truth for the SPEAK/DEBUG contract and for
 MDAS completeness. It is consumed both by CI (``.github/workflows/
 ikant-incarnation.yml``) and, conceptually, by the Architecture B middleware
-described in ``governance/MDAS.md``.
+described in ``Operation/governance/MDAS.md``.
 
 Design goals (see AGENTS.md): minimal, deterministic, no external dependencies,
 robust. It validates two things:
@@ -17,9 +17,9 @@ robust. It validates two things:
 3. **Seed protocol** — output binding: every turn carries a deterministic seed
    payload (projection), and the previous turn (t-1) is audited for the seed,
    with an automatic followup reprinting it when missing (self-healing). See
-   ``governance/seed_protocol.md``.
+   ``Operation/governance/seed_protocol.md``.
 
-Run directly (``python governance/incarnation_test.py``) or via unittest.
+Run directly (``python Operation/governance/incarnation_test.py``) or via unittest.
 Exit code 0 = pass, non-zero = regression.
 """
 
@@ -29,18 +29,18 @@ import os
 import re
 import unittest
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# --- MDAS-1: fixed artifact set (mirrors governance/MDAS.md section 1) --------
+# --- MDAS-1: fixed artifact set (mirrors Operation/governance/MDAS.md section 1) --------
 MDAS_FILES = [
-    "AGENTS.md",
-    "governance/MDAS.md",
-    "governance/DecisionLog.md",
-    "governance/examples/agentified_api_call.md",
-    "governance/examples/rollback_scenario.md",
-    "governance/simulations.md",
-    "governance/seed_protocol.md",
-    "governance/incarnation_test.py",
+    "Operation/AGENTS.md",
+    "Operation/governance/MDAS.md",
+    "Operation/governance/DecisionLog.md",
+    "Operation/governance/examples/agentified_api_call.md",
+    "Operation/governance/examples/rollback_scenario.md",
+    "Operation/governance/simulations.md",
+    "Operation/governance/seed_protocol.md",
+    "Operation/governance/incarnation_test.py",
     ".github/workflows/ikant-incarnation.yml",
     "README.md",
 ]
@@ -249,7 +249,7 @@ class TestMDASCompleteness(unittest.TestCase):
             self.assertTrue(os.path.exists(path), f"MDAS artifact missing: {rel}")
 
     def test_agents_concept_coverage(self):
-        with open(os.path.join(REPO_ROOT, "AGENTS.md"), encoding="utf-8") as fh:
+        with open(os.path.join(REPO_ROOT, "Operation/AGENTS.md"), encoding="utf-8") as fh:
             agents = fh.read()
         for concept in REQUIRED_AGENTS_CONCEPTS:
             self.assertIn(concept, agents, f"AGENTS.md missing concept: {concept}")

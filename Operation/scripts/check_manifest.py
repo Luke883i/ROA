@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""MANIFEST.json validator — deterministic corpus-acquisition gate.
+"""Operation/MANIFEST.json validator — deterministic corpus-acquisition gate.
 
 This is the operational bridge between "the agent knows a PDF exists" and "the
 agent can fetch it deterministically" (see the issue: machine-readable corpus
-access). It enforces the contract declared in ``MANIFEST.json`` so the corpus
+access). It enforces the contract declared in ``Operation/MANIFEST.json`` so the corpus
 stays robust, minimal, scalable and antifragile: every fragility is converted
 into a permanent regression check.
 
-Design goals (mirroring ``governance/incarnation_test.py``): minimal,
+Design goals (mirroring ``Operation/governance/incarnation_test.py``): minimal,
 deterministic, no external dependencies, robust. By default it runs fully
 **offline** so it is safe in CI:
 
@@ -22,14 +22,14 @@ deterministic, no external dependencies, robust. By default it runs fully
 5. **Integrity** — ``size_bytes``/``sha256`` match the PDF bytes and
    ``text_sha256`` matches the generated sidecar bytes.
 6. **No third-party cloud links** — agent-facing docs (README.md, AGENTS.md,
-   MANIFEST.json) must not carry Proton Drive / cloud-preview links as canonical
+   Operation/MANIFEST.json) must not carry Proton Drive / cloud-preview links as canonical
    download sources.
 
 With ``--online`` it additionally issues an HTTP HEAD to each ``raw_url`` and
 ``text_url`` and requires HTTP 200. Network access is not assumed in CI, so it
 is opt-in.
 
-Run directly (``python scripts/check_manifest.py``). Exit code 0 = pass,
+Run directly (``python Operation/scripts/check_manifest.py``). Exit code 0 = pass,
 non-zero = regression.
 """
 
@@ -55,7 +55,7 @@ REQUIRED_ENTRY_KEYS = ["id", "title", "role", "path", "raw_url", "text_url", "te
 # Agent-facing documents that must not advertise third-party cloud-share links
 # as canonical download sources (the manifest's raw_url is the only canonical
 # acquisition map). Tokens are matched only when they look like a live link.
-AGENT_FACING_DOCS = ["README.md", "AGENTS.md", "MANIFEST.json"]
+AGENT_FACING_DOCS = ["README.md", "Operation/AGENTS.md", "Operation/MANIFEST.json"]
 FORBIDDEN_LINK_PATTERNS = [
     r"https?://[^\s\"')]*proton\.(me|drive)[^\s\"')]*",
     r"https?://drive\.proton\.me[^\s\"')]*",
@@ -192,7 +192,7 @@ def check_online(manifest: dict) -> list[str]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Validate MANIFEST.json")
+    parser = argparse.ArgumentParser(description="Validate Operation/MANIFEST.json")
     parser.add_argument(
         "--online",
         action="store_true",
@@ -201,7 +201,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if not MANIFEST_PATH.exists():
-        print("FAIL: MANIFEST.json not found at repository root", file=sys.stderr)
+        print("FAIL: Operation/MANIFEST.json not found", file=sys.stderr)
         return 1
     manifest = load_manifest()
 
@@ -211,13 +211,13 @@ def main(argv: list[str] | None = None) -> int:
         errors += check_online(manifest)
 
     if errors:
-        print("MANIFEST.json validation FAILED:", file=sys.stderr)
+        print("Operation/MANIFEST.json validation FAILED:", file=sys.stderr)
         for err in errors:
             print(f"  - {err}", file=sys.stderr)
         return 1
 
     n = len(manifest["pdfs"])
-    print(f"MANIFEST.json OK: {n} PDF entries validated (offline).")
+    print(f"Operation/MANIFEST.json OK: {n} PDF entries validated (offline).")
     if args.online:
         print("All raw_url and text_url endpoints returned HTTP 200.")
     return 0

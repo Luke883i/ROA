@@ -198,9 +198,15 @@ Input `R` = any request arriving from (or about) the repository.
 
 ### 4.1 Corpus acquisition rule
 
-When an agent needs to acquire PDFs from this repository, it MUST use the
-top-level [`MANIFEST.json`](MANIFEST.json) as the canonical binary-acquisition
-map.
+When an agent needs to acquire PDFs from this repository, it MUST use
+[`MANIFEST.json`](MANIFEST.json) in `Operation/` as the canonical
+binary-acquisition map.
+
+Canonical raw URL:
+
+```text
+https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json
+```
 
 Agents MUST prefer each entry's `text_url` when present, then fall back to
 `raw_url`. Agents MUST prefer those manifest-declared URLs over:
@@ -220,15 +226,15 @@ asset or external archival host above 100 MiB, referenced from `MANIFEST.json`).
 The manifest contract is enforced deterministically in CI by
 [`scripts/check_manifest.py`](scripts/check_manifest.py), while
 [`scripts/build_manifest.py`](scripts/build_manifest.py) deterministically
-regenerates `MANIFEST.json` plus `corpus/text/*.md`.
+regenerates `MANIFEST.json` plus `corpus/text/*.md` in `Operation/`.
 
 Lifecycle:
 
-- pull requests keep the offline drift gate (`build_manifest.py --check` +
-  `check_manifest.py`);
+- pull requests keep the offline drift gate (`python Operation/scripts/build_manifest.py --check` +
+  `python Operation/scripts/check_manifest.py`);
 - after merge, a push to `main` that changes any `*.pdf` path triggers the
   regeneration workflow, which rebuilds corpus artifacts and commits them back
-  only when `MANIFEST.json` or `corpus/text/` actually changed;
+  only when `Operation/MANIFEST.json` or `Operation/corpus/text/` actually changed;
 - newly discovered PDFs are auto-seeded with deterministic placeholder metadata,
   including `role: "UNREVIEWED_AUTOSEEDED"`, which signals that a human must
   later curate `title` / `role` semantics without breaking machine access.
@@ -267,9 +273,9 @@ then continue with the legitimate part of the request.
 | Incarnation test (deterministic) | `governance/incarnation_test.py` |
 | Seed protocol (output binding + t-1 audit) | `governance/seed_protocol.md` |
 | Machine-readable corpus map (PDF acquisition) | `MANIFEST.json` |
-| Semantic reticulum navigation guide (corpus graph, traversal protocol) | [`README.md §1.2`](README.md#12-semantic-reticulum-navigation-for-ai-agents) |
+| Semantic reticulum navigation guide (corpus graph, traversal protocol) | [`../README.md §1.2`](../README.md#12-semantic-reticulum-navigation-for-ai-agents) |
 | MANIFEST validator (deterministic) | `scripts/check_manifest.py` |
-| Incarnation CI pipeline | `.github/workflows/ikant-incarnation.yml` |
+| Incarnation CI pipeline | `../.github/workflows/ikant-incarnation.yml` |
 
 ---
 
