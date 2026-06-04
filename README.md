@@ -64,6 +64,7 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
        |
 ➪(3)  |_ 🗎 (i) AI as Observer Compiler - from Wolfram's Ruliad to RLA-ECNN.pdf 
 ➪(4)  |_ 🗎 (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+       |_ 🗎 (iii) Full Bibliografy Corpus RLA-CRC-(Briophita)-ECNN-ROA in APA standard.pdf
        |
        |    
        |___ 📁 RLA-CRC-ECNN Full Corpus
