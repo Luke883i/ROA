@@ -45,7 +45,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
        |     |_ 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
        |
        |
-       | Github repository local agent.md system management (no scientific claim, only operation):
+       |     Github repository local agent.md system management (no scientific claim, only operation):
        |___ .github/workflows
        |___ governance
 
