@@ -93,6 +93,8 @@ GITHUB REPOSITORY LOCAL SYSTEM MANAGEMENT (no scientific claim, only operation):
 
 ```
 ---
+<details>
+<summary>Machine-readable corpus accesso</summary>
 
 ## 1.1 Machine-readable corpus access
 
@@ -150,6 +152,12 @@ reviewed, while the generated hashes, sidecar, `text_url`, and `text_sha256`
 remain machine-maintained.
 
 ---
+
+</details>
+
+
+<details>
+<summary>Semantic Reticulum Navigation for AI Agents</summary>
 
 ## 1.2 Semantic Reticulum Navigation for AI Agents
 
@@ -221,6 +229,8 @@ Theory-bridge link:
    §5 anti-overclaim and §1.1 corpus access rules.
 
 ---
+</details>
+
 
 ## 2. What the corpus argues
 
