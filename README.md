@@ -112,7 +112,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 
 
 
-## 1. Repository hierarchy and reading order
+## Repository hierarchy and reading order
 
 ```text
 Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
@@ -151,8 +151,39 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
     ├── corpus/text/
     └── scripts/
 ```
+<details>
+  <summary>Corpus map</summary>
+  
+```mermaid
+graph TD
+    ROA[Entrypoint: Reticular Observer Architectures]
 
-## 2. What the corpus argues
+    ROA --> RLA[RLA-CRC-ECNN folder]
+    ROA --> WOLFRAM[Wolfram saga]
+    ROA --> AOSP[A-OSP whitepaper]
+
+    RLA --> MAIN[Main RLA-ECNN-CRC-PCE paper]
+    RLA --> A[Annex A: foundations]
+    RLA --> B[Annex B: bryophyte case]
+    RLA --> C[Annex C: ECNN]
+    RLA --> D[Annex D: PCE bridge]
+    RLA --> E[Annex E: ECU/UCE]
+    RLA --> F[Annex F: prototypes]
+    RLA --> G[Annex G: iKant / governance]
+
+    WOLFRAM --> OC[AI as Observer Compiler]
+    WOLFRAM --> WR[Wolfram metaphysics reply]
+    WOLFRAM --> SD[PCE bridge slide deck]
+
+    ROA --> CR[Controlled reification]
+    ROA --> ED[Epistemic debt propagation]
+    CR --> AOSP
+    ED --> AOSP
+```
+</details>
+
+
+## What the corpus argues
 
 The central problem is not whether AI can produce fluent outputs. The hard problem is whether a human or organisation can reconstruct:
 
@@ -178,7 +209,7 @@ The defensible novelty is the operational layer where **controlled reification**
 
 
 
-## 3. Scientific spine
+## Scientific spine
 
 ### RLA — Reticular Local Abstraction
 RLA models bounded observers as finite reticula of levels, languages, encodings, transmissions, horizons, and collapse policies.
@@ -211,7 +242,7 @@ review != approval
 
 
 
-## 4. Navigation by need
+## Navigation by need
 
 | Need | Start here | Then read |
 |---|---|---|
@@ -224,39 +255,8 @@ review != approval
 | Wolfram / Ruliad / PCE | Observer Compiler (3) | Wolfram reply, Annex D, slide deck |
 | Implementation architecture | A-OSP whitepaper (4) | entrypoint, Annex F, Annex G |
 
----
 
-## 5. Corpus map
-
-```mermaid
-graph TD
-    ROA[Entrypoint: Reticular Observer Architectures]
-
-    ROA --> RLA[RLA-CRC-ECNN folder]
-    ROA --> WOLFRAM[Wolfram saga]
-    ROA --> AOSP[A-OSP whitepaper]
-
-    RLA --> MAIN[Main RLA-ECNN-CRC-PCE paper]
-    RLA --> A[Annex A: foundations]
-    RLA --> B[Annex B: bryophyte case]
-    RLA --> C[Annex C: ECNN]
-    RLA --> D[Annex D: PCE bridge]
-    RLA --> E[Annex E: ECU/UCE]
-    RLA --> F[Annex F: prototypes]
-    RLA --> G[Annex G: iKant / governance]
-
-    WOLFRAM --> OC[AI as Observer Compiler]
-    WOLFRAM --> WR[Wolfram metaphysics reply]
-    WOLFRAM --> SD[PCE bridge slide deck]
-
-    ROA --> CR[Controlled reification]
-    ROA --> ED[Epistemic debt propagation]
-    CR --> AOSP
-    ED --> AOSP
-```
-
-
-## 6. End-to-end logic
+## End-to-end logic
 
 ```text
 1. Observers are bounded.
@@ -275,7 +275,7 @@ graph TD
 
 
 
-## 7. Minimal vocabulary
+## Minimal vocabulary
 
 | Term | Meaning |
 |---|---|
@@ -293,7 +293,7 @@ graph TD
 
 
 
-## 8. Claim discipline
+## Claim discipline
 
 | Construct | Safe status |
 |---|---|
@@ -308,15 +308,3 @@ graph TD
 | Popper-chi | Proposed falsification discipline; needs challenge suites/results. |
 | A-OSP | Implementation witness, not independent theory validation. |
 | iKant | Normative meta-control pattern, not moral agency. |
-
-
-## 9. Suggested citation
-
-```bibtex
-@misc{conte2026roa,
-  author = {Gianluca Conte},
-  title = {Reticular Observer Architectures for Governable AI-Assisted Work: A Reticular Framework for Epistemic Abstraction, Computability, and Proof-Aware Systems},
-  year = {2026},
-  note = {RLA-ECNN / ROA research corpus}
-}
-```
