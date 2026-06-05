@@ -118,13 +118,16 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 
 
 📁 ./root
-├── README.md
+|
+├── 🗎 README.md
+|
 |
 |   [✨ENTRYPOINT CORPUS✨]
-├── 🗎 (1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf     ➩ [HUMANISTIC & PHILOSOPHER ENTRYPOINT]
-├── 🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf     ➩ [MAIN ENTRYPOINT]
+├── 🗎 (1) Every Map Leaves Something Out.pdf     ➩ [HUMANISTIC & PHILOSOPHER ENTRYPOINT]
+├── 🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf     ➩ [MAIN ENTRYPOINT]
 ├── 🗎 (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
 ├── 🗎 (4) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+|
 |
 |   [✨MAIN THEORETICAL CORPUS✨]
 ├──📁 RLA-CRC-ECNN
@@ -138,17 +141,18 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 │   ├── 🗎 Annex F - Proto-epistemic Architectures.pdf
 │   └── 🗎 Annex G - Methodology Experiments.pdf
 |
+|
 ├──📁 Reply to Wolfram/
 │   └── 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
 |
 |
 └──📁 Operation/
-    ├── AGENTS.md
-    ├── MANIFEST.json
-    ├── requirements-dev.txt
-    ├── governance/
-    ├── corpus/text/
-    └── scripts/
+    ├── 🗎 AGENTS.md
+    ├── 🗎 MANIFEST.json
+    ├── 🗎 requirements-dev.txt
+    ├──📁 governance/
+    ├──📁 corpus/text/
+    └──📁 scripts/
 ```
 <details>
   <summary>Corpus map</summary>
