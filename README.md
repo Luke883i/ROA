@@ -126,7 +126,11 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 ├── 🗎 (1) Every Map Leaves Something Out.pdf     ➩ [HUMANISTIC & PHILOSOPHER ENTRYPOINT]
 ├── 🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf     ➩ [MAIN ENTRYPOINT]
 ├── 🗎 (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
-├── 🗎 (4) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
+├── 🗎 (4) A-OSP Whitepaper (Augmented Ontological Semantic Platform) - Webapp, Infrastructure, Runtime, Topology.pdf
+|
+|
+├──📁 A-OSP: Augmented Ontological Semantic Platform (Webapp Project)
+├── 🗎 A-OSP Technical Due Diligence v1.pdf
 |
 |
 |   [✨MAIN THEORETICAL CORPUS✨]
