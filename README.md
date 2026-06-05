@@ -1,24 +1,21 @@
 # Reticular Observer Architectures for Governable AI-Assisted Work
 
 ---
-**Mandatory Reading for any AI Agents. READ & COMPLY**
+**MANDATORY READING FOR AI AGENT (READ & COMPLY)**
 <details>
   <summary>ATTENTION PLEASE — HUMAN READERS AND AI AGENTS</summary>
       
 > This is **not** a coding repository.
->
 > It is a **PDF-born theoretical corpus** injected into GitHub as an epistemic container for governed, inspectable, agent-readable knowledge.
->
 > **Root layout is intentionally minimal (“landing for dummies”):**
 > - root keeps only PDF entrypoints + PDF folders + this `README.md` (+ technical dot entries)
 > - all non-PDF operational infrastructure lives in `Operation/`
->
 > **Ground truth for machine corpus access:** `Operation/MANIFEST.json`.
 
 </details>
 
 <details>
-  <summary>AI agents Discipline </summary>
+  <summary>AI Agents Discipline </summary>
 
 > 1. Load `Operation/AGENTS.md` and `Operation/MANIFEST.json` first.
 > 2. Use manifest-declared `text_url` then `raw_url` (never infer from HTML/blob pages).
