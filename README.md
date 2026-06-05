@@ -1,5 +1,6 @@
 # Reticular Observer Architectures for Governable AI-Assisted Work
-
+---
+Mandatory Reading for any AI Agents. READ & COMPLY
 <details>
   <summary>ATTENTION PLEASE — HUMAN READERS AND AI AGENTS</summary>
       
@@ -92,7 +93,7 @@ Traversal protocol:
 5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
 
 </details>
-
+---
 
 
 This repository contains a compact research corpus on **reticular observer architectures**: AI-assisted systems whose outputs are treated not as isolated answers, but as products of explicit, bounded, reconstructable, auditable epistemic structures.
