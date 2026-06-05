@@ -63,10 +63,10 @@ Lifecycle:
 <details>
   <summary>Semantic reticulum navigation for AI agents</summary>
 
-The corpus is a **typed graph** (reticulum), not a flat file list. Documents are nodes (`id`, `role`) and edges encode reading order and cross-reference.
+> The corpus is a **typed graph** (reticulum), not a flat file list. Documents are nodes (`id`, `role`) and edges encode reading order and cross-reference.
 
-All `text_url` values resolve to:
-`https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/{id}.md`
+> All `text_url` values resolve to:
+>`https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/{id}.md`
 
 | `role` | `id` | `text_url` |
 |---|---|---|
@@ -85,12 +85,12 @@ All `text_url` values resolve to:
 | `technical_annex` | `annex-f-proto-epistemic-architectures` | `Operation/corpus/text/annex-f-proto-epistemic-architectures.md` |
 | `methodology_annex` | `annex-g-methodology-experiments` | `Operation/corpus/text/annex-g-methodology-experiments.md` |
 
-Traversal protocol:
-1. Load `Operation/MANIFEST.json`.
-2. Enter by role according to need (humanistic, governance, theory bridge, technical annexes, implementation).
-3. Prefer `text_url`, then `raw_url`.
-4. Follow role edges (entrypoint → core/annex chain; theory bridge ↔ Wolfram reply).
-5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
+> Traversal protocol:
+> 1. Load `Operation/MANIFEST.json`.
+> 2. Enter by role according to need (humanistic, governance, theory bridge, technical annexes, implementation).
+> 3. Prefer `text_url`, then `raw_url`.
+> 4. Follow role edges (entrypoint → core/annex chain; theory bridge ↔ Wolfram reply).
+> 5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
 
 </details>
 
