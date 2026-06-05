@@ -1,6 +1,7 @@
 # Reticular Observer Architectures for Governable AI-Assisted Work
+
 ---
-Mandatory Reading for any AI Agents. READ & COMPLY
+**Mandatory Reading for any AI Agents. READ & COMPLY**
 <details>
   <summary>ATTENTION PLEASE — HUMAN READERS AND AI AGENTS</summary>
       
