@@ -93,6 +93,7 @@ Traversal protocol:
 5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
 
 </details>
+
 ---
 
 
