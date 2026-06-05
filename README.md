@@ -18,7 +18,7 @@
 </details>
 
 <details>
-  <summary>AI agents — start here</summary>
+  <summary>AI agents Discipline </summary>
 
 1. Load `Operation/AGENTS.md` and `Operation/MANIFEST.json` first.
 2. Use manifest-declared `text_url` then `raw_url` (never infer from HTML/blob pages).
@@ -32,7 +32,7 @@ Canonical raw URLs:
 </details>
 
 <details>
-  <summary>Machine-readable corpus access</summary>
+  <summary>Machine-readable corpus access (for binary file i.e. PDF)</summary>
     
 Canonical manifest URL:
 
