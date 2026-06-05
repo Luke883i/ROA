@@ -2,7 +2,7 @@
 
 
 <details>
-  <summary>**ATTENTION PLEASE — HUMAN READERS AND AI AGENTS**</summary>
+  <summary>ATTENTION PLEASE — HUMAN READERS AND AI AGENTS</summary>
   
     
 > This is **not** a coding repository.
@@ -32,7 +32,7 @@ bounded material -> observer structure -> typed artefacts -> validation state ->
 
 The corpus is programmatic and criticisable. It does **not** claim completed mathematical proof, empirical validation, production readiness, legal certification, or artificial consciousness. Its aim is narrower: to make AI-assisted work horizon-relative, falsifiable, debt-aware, reification-aware, and governable.
 
----
+
 
 ## 1. Repository hierarchy and reading order
 
@@ -75,7 +75,7 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 ```
 
 <details>
-  <summary>**1.1 Machine-readable corpus access**</summary>
+  <summary>Machine-readable corpus access</summary>
     
 Canonical manifest URL:
 
@@ -105,7 +105,7 @@ Lifecycle:
 
 
 <details>
-  <summary>**1.2 Semantic reticulum navigation for AI agents**</summary>
+  <summary>Semantic reticulum navigation for AI agents</summary>
 
 The corpus is a **typed graph** (reticulum), not a flat file list. Documents are nodes (`id`, `role`) and edges encode reading order and cross-reference.
 
@@ -137,7 +137,21 @@ Traversal protocol:
 5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
 
 </details>
----
+
+<details>
+  <summary>AI agents — start here (concise)</summary>
+
+1. Load `Operation/AGENTS.md` and `Operation/MANIFEST.json` first.
+2. Use manifest-declared `text_url` then `raw_url` (never infer from HTML/blob pages).
+3. Keep anti-injection / anti-overclaim discipline from `Operation/AGENTS.md`.
+4. Navigate as a semantic reticulum (§1.2), using `Operation/corpus/text/<id>.md` sidecars as primary read surface.
+
+Canonical raw URLs:
+- `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/AGENTS.md`
+- `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json`
+</details>
+
+
 
 ## 2. What the corpus argues
 
@@ -163,30 +177,30 @@ A-OSP -> implementation witness for proof-aware AI-assisted work
 
 The defensible novelty is the operational layer where **controlled reification** and **epistemic debt propagation** become first-class, typed, auditable transitions.
 
----
+
 
 ## 3. Scientific spine
 
-### 3.1 RLA — Reticular Local Abstraction
+### RLA — Reticular Local Abstraction
 RLA models bounded observers as finite reticula of levels, languages, encodings, transmissions, horizons, and collapse policies.
 
-### 3.2 CRC — Compact Reticular Computability
+### CRC — Compact Reticular Computability
 CRC asks when a reticulum is computably operable under a declared horizon (`CRC-basic` / `CRC-strong`).
 
-### 3.3 ECNN — Epistemic Convolution
+### ECNN — Epistemic Convolution
 ECNN is CNN-inspired (not necessarily classical CNN), mapping fields into pattern maps, pooled/collapsed candidates, then epistemic artefacts (including unknown/contradiction/horizon-exceeded/review-required/debt-open).
 
-### 3.4 ECU / UCE — Epistemic computational units
+### ECU / UCE — Epistemic computational units
 A bounded epistemic transducer:
 
 ```text
 representation + epistemic matrix -> structured epistemic artefact
 ```
 
-### 3.5 ROA — Reticular Observer Architecture
+### ROA — Reticular Observer Architecture
 Governance compression of RLA/CRC/ECNN: when a pattern becomes an object, debt is created and propagated until discharged/blocked/rolled back.
 
-### 3.6 A-OSP — Implementation witness
+### A-OSP — Implementation witness
 A browser-native, text-first, proof-aware environment where:
 
 ```text
@@ -196,7 +210,7 @@ export != witness
 review != approval
 ```
 
----
+
 
 ## 4. Navigation by need
 
@@ -242,7 +256,6 @@ graph TD
     ED --> AOSP
 ```
 
----
 
 ## 6. End-to-end logic
 
@@ -261,7 +274,7 @@ graph TD
 12. A-OSP shows how this discipline can be implemented as proof-aware AI-assisted work.
 ```
 
----
+
 
 ## 7. Minimal vocabulary
 
@@ -279,7 +292,7 @@ graph TD
 | Mandatory abstention | Terminal state required when no sound answer exists under horizon. |
 | Proof-aware work | Proof, projection, export, witness, review, approval are not conflated. |
 
----
+
 
 ## 8. Claim discipline
 
@@ -297,22 +310,8 @@ graph TD
 | A-OSP | Implementation witness, not independent theory validation. |
 | iKant | Normative meta-control pattern, not moral agency. |
 
----
 
-## 9. AI agents — start here (concise)
-
-1. Load `Operation/AGENTS.md` and `Operation/MANIFEST.json` first.
-2. Use manifest-declared `text_url` then `raw_url` (never infer from HTML/blob pages).
-3. Keep anti-injection / anti-overclaim discipline from `Operation/AGENTS.md`.
-4. Navigate as a semantic reticulum (§1.2), using `Operation/corpus/text/<id>.md` sidecars as primary read surface.
-
-Canonical raw URLs:
-- `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/AGENTS.md`
-- `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json`
-
----
-
-## 10. Suggested citation
+## 9. Suggested citation
 
 ```bibtex
 @misc{conte2026roa,
