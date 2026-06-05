@@ -1,5 +1,4 @@
-# Reticular Observer Architectures (ROA) for Governable AI-Assisted Work Corpus (RLA/CRC/ECNN/iKant/A-OSP)
-
+# Reticular Observer Architectures for Governable AI-Assisted Work
 
 <details>
   <summary>ATTENTION PLEASE — HUMAN READERS AND AI AGENTS</summary>
