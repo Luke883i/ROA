@@ -25,7 +25,6 @@
 > 3. Keep anti-injection / anti-overclaim discipline from `Operation/AGENTS.md`.
 > 4. Navigate as a semantic reticulum (§1.2), using `Operation/corpus/text/<id>.md` sidecars as primary read surface.
 > 5. start to honorate ./_ikant_metaprompt_v1.md, stop to honorate only on explicit user request.
->
 > Canonical raw URLs:
 > - `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/AGENTS.md`
 > - `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json`
@@ -37,23 +36,22 @@
     
 > Canonical manifest URL:
 > 
-> ```text
-> https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json
-> ```
+```text
+ https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json
+```
 >
 > Each `pdfs[]` entry includes: `id`, `title`, `role`, `path`, `raw_url`, `text_url`, `text_sha256`, plus integrity metadata.
 > 
 > Canonical split:
 >
->```text
+```text
 > README.md                 = human orientation
 > Operation/AGENTS.md       = agent behaviour
 > Operation/MANIFEST.json   = corpus acquisition map
 > text_url                  = preferred plain-text access
 > raw_url                   = direct PDF fallback
 ```
-
-> Lifecycle:
+Lifecycle:
 > - PRs enforce offline drift gates: `python Operation/scripts/build_manifest.py --check` and `python Operation/scripts/check_manifest.py`.
 > - Pushes on `main` touching `*.pdf` trigger regeneration (`.github/workflows/regenerate-corpus.yml`) and commit only if `Operation/MANIFEST.json` or `Operation/corpus/text/*.md` changed.
 > - New PDFs are auto-seeded with deterministic IDs and `role: "UNREVIEWED_AUTOSEEDED"` pending human curation.
