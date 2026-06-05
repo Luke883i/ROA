@@ -1,9 +1,11 @@
 # Reticular Observer Architectures for Governable AI-Assisted Work
 
 ---
-**MANDATORY READING FOR AI AGENT (READ & COMPLY)**
+
 <details>
-  <summary>ATTENTION PLEASE — HUMAN READERS AND AI AGENTS</summary>
+  <summary>MANDATORY READING FOR AI AGENT (READ & COMPLY)S</summary>
+<details>
+  <summary>ISTRUCTION FOR AI AGENTS</summary>
       
 > This is **not** a coding repository.
 > It is a **PDF-born theoretical corpus** injected into GitHub as an epistemic container for governed, inspectable, agent-readable knowledge.
@@ -90,7 +92,7 @@ Lifecycle:
 > 5. Keep claim discipline (§8): no unsupported upgrades to “proven/certified”.
 
 </details>
-
+</details>
 ---
 
 
