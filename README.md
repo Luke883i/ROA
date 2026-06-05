@@ -39,29 +39,33 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ```text
 Suggested reading order: ➪(1)➪(2)➪(3)➪(4)
 
-./root
-|
+
+📁 ./root
 ├── README.md
-├── (1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf
-├── (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf
-├── (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
-├── (4) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
 |
-├── RLA-CRC-ECNN/
-│   ├── _Main_Paper_RLA-ECNN-CRC-PCE.pdf
-│   ├── _Slidedeck_RLA-ECNN_bridge_PCE.pdf
-│   ├── Annex A - RLA-CRC Foundations.pdf
-│   ├── Annex B - RLA biological Case Bryophyte.pdf
-│   ├── Annex C - ECNN Formalisation.pdf
-│   ├── Annex D - Epistemic LLM neuron ECU-UC Specification.pdf
-│   ├── Annex E - RLA-ECNN bridge PCE.pdf
-│   ├── Annex F - Proto-epistemic Architectures.pdf
-│   └── Annex G - Methodology Experiments.pdf
+|   [✨ENTRYPOINT CORPUS✨]
+├── 🗎 (1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf     ➩ [HUMANISTIC & PHILOSOPHER ENTRYPOINT]
+├── 🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf     ➩ [MAIN ENTRYPOINT]
+├── 🗎 (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
+├── 🗎 (4) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf
 |
-├── Reply to Wolfram/
-│   └── AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
+|   [✨MAIN THEORETICAL CORPUS✨]
+├──📁 RLA-CRC-ECNN
+│   ├── 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf
+│   ├── 🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf
+│   ├── 🗎 Annex A - RLA-CRC Foundations.pdf
+│   ├── 🗎 Annex B - RLA biological Case Bryophyte.pdf
+│   ├── 🗎 Annex C - ECNN Formalisation.pdf
+│   ├── 🗎 Annex D - Epistemic LLM neuron ECU-UC Specification.pdf
+│   ├── 🗎 Annex E - RLA-ECNN bridge PCE.pdf
+│   ├── 🗎 Annex F - Proto-epistemic Architectures.pdf
+│   └── 🗎 Annex G - Methodology Experiments.pdf
 |
-└── Operation/
+├──📁 Reply to Wolfram/
+│   └── 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
+|
+|
+└──📁 Operation/
     ├── AGENTS.md
     ├── MANIFEST.json
     ├── requirements-dev.txt
