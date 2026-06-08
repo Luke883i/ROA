@@ -2,8 +2,8 @@
 id: "humanistic-philosopher-entrypoint"
 title: "Every Map Leaves Something Out"
 role: "humanistic_philosopher_entrypoint"
-source_path: "(1) 🗎 Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%281%29%20%F0%9F%97%8E%20Every%20Map%20Leaves%20Something%20Out%20%28Humanistic%20%26%20Philosopher%20Entrypoint%29.pdf"
+source_path: "(1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%281%29%20Every%20Map%20Leaves%20Something%20Out%20%28Humanistic%20%26%20Philosopher%20Entrypoint%29.pdf"
 source_sha256: "fbf4d6b05907539a25556ef49e056479582741004cb49d1ea7b551049fb629fd"
 extraction_status: "success"
 ---
