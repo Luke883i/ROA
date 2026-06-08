@@ -3,7 +3,7 @@
 ---
 <details>
   <summary>MANDATORY READING FOR AI AGENT (READ & COMPLY)S</summary>
-  
+---
 <details>
   <summary>ISTRUCTION FOR AI AGENTS</summary>
       
