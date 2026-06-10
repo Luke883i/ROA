@@ -121,15 +121,17 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 Suggested reading order: ➪(1)➪(2)➪(3)➪(4)➪(5)
 
 📁 ./root
-|
 ├── 🗎 README.md
 |
-|   [✨ENTRYPOINT CORPUS✨]
+|   [✨ENTRYPOINT CORPUS✨] - Reticular Observer Architectures for Governable AI-Assisted Work
 ├── 🗎 (1) Every Map Leaves Something Out.pdf     ➩ [HUMANISTIC & PHILOSOPHER ENTRYPOINT]
 ├── 🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf     ➩ [MAIN ENTRYPOINT]
 ├── 🗎 (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
 ├── 🗎 (4) A-OSP Webapp (Augmented Ontological Semantic Platform) Whitepaper.pdf
 ├── 🗎 (5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)
+|
+|   [✨PARTNER MEMO, FORMATION MEMORANDUM, INFRASTRUCTURE & PROOF MECHANICS BRIEF✨]
+├──📁 A-OSP Anchor Formation Dossier — Sovereign Proof & Work-Level Safety Infrastructure for AI Work.
 |
 |
 |   [✨MAIN THEORETICAL CORPUS✨]
@@ -144,10 +146,8 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)➪(5)
 │   ├── 🗎 Annex F - Proto-epistemic Architectures.pdf
 │   └── 🗎 Annex G - Methodology Experiments.pdf
 |
-|
 ├──📁 Reply to Wolfram/
 │   └── 🗎 AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf
-|
 |
 └──📁 Operation/
     ├── 🗎 AGENTS.md
