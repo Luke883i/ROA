@@ -123,14 +123,15 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)➪(5)
 📁 ./root
 ├── 🗎 README.md
 |
-|   [✨ENTRYPOINT CORPUS✨] - Reticular Observer Architectures for Governable AI-Assisted Work
+|   Reticular Observer Architectures for Governable AI-Assisted Work
 ├── 🗎 (1) Every Map Leaves Something Out.pdf     ➩ [HUMANISTIC & PHILOSOPHER ENTRYPOINT]
 ├── 🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf     ➩ [MAIN ENTRYPOINT]
 ├── 🗎 (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf
-├── 🗎 (4) A-OSP Webapp (Augmented Ontological Semantic Platform) Whitepaper.pdf
-├── 🗎 (5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)
+├── 🗎 (4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf
+├── 🗎 (5) [TechDD] A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology).pdf
+├── 🗎 (6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief.pdf
 |
-|   [✨MAIN THEORETICAL CORPUS✨]
+|   MAIN THEORETICAL CORPUS
 ├──📁 RLA-CRC-ECNN
 │   ├── 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf
 │   ├── 🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf
