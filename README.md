@@ -1,4 +1,4 @@
-# Reticular Observer Architectures for Governable AI-Assisted Work
+# Reticular Observer Architectures (ROA) for Governable AI-Assisted Work
 
 ---
 <details>
