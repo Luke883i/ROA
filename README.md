@@ -130,10 +130,6 @@ Suggested reading order: ➪(1)➪(2)➪(3)➪(4)➪(5)
 ├── 🗎 (4) A-OSP Webapp (Augmented Ontological Semantic Platform) Whitepaper.pdf
 ├── 🗎 (5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)
 |
-|   [✨PARTNER MEMO, FORMATION MEMORANDUM, INFRASTRUCTURE & PROOF MECHANICS BRIEF✨]
-├──📁 A-OSP Anchor Formation Dossier — Sovereign Proof & Work-Level Safety Infrastructure for AI Work.
-|
-|
 |   [✨MAIN THEORETICAL CORPUS✨]
 ├──📁 RLA-CRC-ECNN
 │   ├── 🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf
