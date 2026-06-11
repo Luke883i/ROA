@@ -118,7 +118,6 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ## Repository hierarchy and reading order
 
 ```text
-Suggested reading order: ➪(1)➪(2)➪(3)➪(4)➪(5)
 
 📁 ./root
 ├── 🗎 README.md
