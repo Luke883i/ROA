@@ -3,7 +3,7 @@ id: "annex-c-ecnn-formalisation"
 title: "Annex C - ECNN Formalisation"
 role: "technical_annex"
 source_path: "RLA-CRC-ECNN/Annex C - ECNN Formalisation.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20C%20-%20ECNN%20Formalisation.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20C%20-%20ECNN%20Formalisation.pdf"
 source_sha256: "48338baf4413b5d3bafcad7d00a2f317d3d8ca4ffcd60d4b6c035fc9bcc6ea06"
 extraction_status: "success"
 ---

@@ -3,7 +3,7 @@ id: "roa-main-entrypoint"
 title: "ROA - Reticular Observer Architectures for Governable AI-Assisted Work"
 role: "main_entrypoint"
 source_path: "(2) Reticular Observer Architectures (ROA) for Governable AI-Assisted Work.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%282%29%20Reticular%20Observer%20Architectures%20%28ROA%29%20for%20Governable%20AI-Assisted%20Work.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/%282%29%20Reticular%20Observer%20Architectures%20%28ROA%29%20for%20Governable%20AI-Assisted%20Work.pdf"
 source_sha256: "bc278d5602ca14bf656f0a60108a857b3a35dbbe07f63621406e49d2a26d24d0"
 extraction_status: "success"
 ---

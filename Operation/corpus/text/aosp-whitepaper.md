@@ -3,7 +3,7 @@ id: "aosp-whitepaper"
 title: "Augmented Ontological Semantic Platform (A-OSP) Whitepaper"
 role: "implementation_architecture"
 source_path: "(4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%284%29%20%5BWP%5D%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20WHITEPAPER.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/%284%29%20%5BWP%5D%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20WHITEPAPER.pdf"
 source_sha256: "f27584cfc0156ac0000d74c676efa8a81f601aef3fc08eb9be45c07cec8a9e9b"
 extraction_status: "success"
 ---

@@ -3,7 +3,7 @@ id: "annex-a-rla-crc-foundations"
 title: "Annex A - RLA-CRC Foundations"
 role: "technical_annex"
 source_path: "RLA-CRC-ECNN/Annex A - RLA-CRC Foundations.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20A%20-%20RLA-CRC%20Foundations.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20A%20-%20RLA-CRC%20Foundations.pdf"
 source_sha256: "bed516b6858f10722d102aae24103c9589bbd818f891248db47c9ebc6df3797e"
 extraction_status: "success"
 ---

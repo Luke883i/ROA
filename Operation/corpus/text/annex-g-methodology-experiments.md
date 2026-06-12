@@ -3,7 +3,7 @@ id: "annex-g-methodology-experiments"
 title: "Annex G - Methodology Experiments"
 role: "methodology_annex"
 source_path: "RLA-CRC-ECNN/Annex G - Methodology Experiments.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20G%20-%20Methodology%20Experiments.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20G%20-%20Methodology%20Experiments.pdf"
 source_sha256: "230164c306f410fe0110fcc0a1875d3d577a43b9f47cae10df13059cfba97946"
 extraction_status: "success"
 ---

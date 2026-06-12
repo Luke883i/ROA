@@ -3,7 +3,7 @@ id: "annex-f-proto-epistemic-architectures"
 title: "Annex F - Proto-epistemic Architectures"
 role: "technical_annex"
 source_path: "RLA-CRC-ECNN/Annex F - Proto-epistemic Architectures.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20F%20-%20Proto-epistemic%20Architectures.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20F%20-%20Proto-epistemic%20Architectures.pdf"
 source_sha256: "9a4a230a8da9480b0742ee9e47eec3a686fa27a42bd0b177e8a805a405dd7cb1"
 extraction_status: "success"
 ---

@@ -3,7 +3,7 @@ id: "full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa"
 title: "Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA"
 role: "UNREVIEWED_AUTOSEEDED"
 source_path: "Full Bibliografy Corpus ROA Corpus.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Full%20Bibliografy%20Corpus%20ROA%20Corpus.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Full%20Bibliografy%20Corpus%20ROA%20Corpus.pdf"
 source_sha256: "e9fec8c8e250ff40549b049401b3f8bb8a227b9ca1874e9e270516f340f0dc04"
 extraction_status: "success"
 ---

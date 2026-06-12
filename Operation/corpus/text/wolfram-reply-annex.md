@@ -3,7 +3,7 @@ id: "wolfram-reply-annex"
 title: "AI as Observer Compiler - ANNEX - reply Wolfram Metaphysics Position through RLA-ECNN"
 role: "theory_bridge"
 source_path: "Reply to Wolfram/AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Reply%20to%20Wolfram/AI%20as%20Observer%20Compiler%20-%20ANNEX%20-%20reply%20Wolfram%20Metaphisics%20Position%20through%20RLA-ECNN.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Reply%20to%20Wolfram/AI%20as%20Observer%20Compiler%20-%20ANNEX%20-%20reply%20Wolfram%20Metaphisics%20Position%20through%20RLA-ECNN.pdf"
 source_sha256: "c85fadc60c7f3e5edd6aec01abe29cea6c240913168fa3ad7c25076e0398e23b"
 extraction_status: "success"
 ---

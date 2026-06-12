@@ -3,7 +3,7 @@ id: "5-a-osp-webapp-technical-due-diligence-v1-infrastructure-runtime-topology"
 title: "(5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)"
 role: "UNREVIEWED_AUTOSEEDED"
 source_path: "(5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology).pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%285%29%20A-OSP%20Webapp%20Technical%20Due%20Diligence%20v1%20%28Infrastructure%2C%20Runtime%2C%20Topology%29.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/%285%29%20A-OSP%20Webapp%20Technical%20Due%20Diligence%20v1%20%28Infrastructure%2C%20Runtime%2C%20Topology%29.pdf"
 source_sha256: "087ffc5597dd61b04d8aab181c920928fee8e998915da472f09575a0fd4a1f37"
 extraction_status: "success"
 ---
