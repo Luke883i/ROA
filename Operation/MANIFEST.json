@@ -228,6 +228,18 @@
       "sha256": "0d667cacad5daf8d0752091b29b3f26441d922e49648187cb5cf4b0d48d4f1a2",
       "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/6-cipm-a-osp-core-idea-proof-mechanics-brief.md",
       "text_sha256": "6ccd1df4ce1314e2fe9a324a3b2825d930ec4de86dd2acd334366c133980f349"
+    },
+    {
+      "id": "7-a-osp-value-propositions-brief-view",
+      "title": "(7) A-OSP Value Propositions Brief View",
+      "role": "UNREVIEWED_AUTOSEEDED",
+      "path": "(7) A-OSP Value Propositions Brief View.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%287%29%20A-OSP%20Value%20Propositions%20Brief%20View.pdf",
+      "canonical": true,
+      "size_bytes": 668527,
+      "sha256": "07b7c218df70479579c4dcaeed2705a6081f1cb2c7ec9b27397231f8ffdc37c6",
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/7-a-osp-value-propositions-brief-view.md",
+      "text_sha256": "f4e5eb476821c7ba0a33eb8418ea15b0471aa527656784454839dd9169a0cc6f"
     }
   ]
 }
