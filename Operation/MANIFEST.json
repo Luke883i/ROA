@@ -29,13 +29,13 @@
       "id": "roa-main-entrypoint",
       "title": "ROA - Reticular Observer Architectures for Governable AI-Assisted Work",
       "role": "main_entrypoint",
-      "path": "(2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%282%29%20ROA%20-%20Reticular%20Observer%20Architectures%20for%20Governable%20AI-Assisted%20Work%20%28main%20Entrypoint%29.pdf",
+      "path": "(2) Reticular Observer Architectures (ROA) for Governable AI-Assisted Work.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%282%29%20Reticular%20Observer%20Architectures%20%28ROA%29%20for%20Governable%20AI-Assisted%20Work.pdf",
       "canonical": true,
-      "size_bytes": 1053199,
-      "sha256": "2390ec08be1fc72582968b74be218d29d59b3936eddcfa6e502b683867878840",
+      "size_bytes": 5240177,
+      "sha256": "bc278d5602ca14bf656f0a60108a857b3a35dbbe07f63621406e49d2a26d24d0",
       "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/roa-main-entrypoint.md",
-      "text_sha256": "41ba8fb7f0bfc4865e472e2084e9ff445fc13321d170dd9598da14262c0e75b6"
+      "text_sha256": "cbffe52b75d3ecef07bd8a4a022e6539c823f7e7febf3a7cbc25e4163ae7063e"
     },
     {
       "id": "humanistic-philosopher-entrypoint",
@@ -65,13 +65,13 @@
       "id": "aosp-whitepaper",
       "title": "Augmented Ontological Semantic Platform (A-OSP) Whitepaper",
       "role": "implementation_architecture",
-      "path": "(4) A-OSP Webapp (Augmented Ontological Semantic Platform) Whitepaper.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%284%29%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20Whitepaper.pdf",
+      "path": "(4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%284%29%20%5BWP%5D%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20WHITEPAPER.pdf",
       "canonical": true,
-      "size_bytes": 577952,
-      "sha256": "b3f77c14fc4a1c668507b4a64dfb96ca05499e39bcfbbe17471aacbe0ef3783e",
+      "size_bytes": 570324,
+      "sha256": "f27584cfc0156ac0000d74c676efa8a81f601aef3fc08eb9be45c07cec8a9e9b",
       "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/aosp-whitepaper.md",
-      "text_sha256": "f6d10c82eebccc4169d0fa3f2136b590d31e08fcd54a95374e3fce0359b98b9c"
+      "text_sha256": "099bc0145ca733586c2e506ea0984c9aaf6fb06d111064b61b40d29faca06cc7"
     },
     {
       "id": "main-paper-rla-ecnn-crc-pce",
@@ -209,13 +209,25 @@
       "id": "full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa",
       "title": "Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA",
       "role": "UNREVIEWED_AUTOSEEDED",
-      "path": "_Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_Full%20APA%20Bibliografy%20Corpus%20RLA-CRC%28Briophita%29-ECNN-ROA.pdf",
+      "path": "Full Bibliografy Corpus ROA Corpus.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Full%20Bibliografy%20Corpus%20ROA%20Corpus.pdf",
       "canonical": true,
-      "size_bytes": 61398,
-      "sha256": "650d3a03652316d7655010b30b7e334f7f2bcdd03affa35f5b0db64c8d08b6a4",
+      "size_bytes": 92218,
+      "sha256": "e9fec8c8e250ff40549b049401b3f8bb8a227b9ca1874e9e270516f340f0dc04",
       "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa.md",
-      "text_sha256": "00d8d216579a22462982a884d67981f3534380603c32dd963ccf350af025d453"
+      "text_sha256": "77d03b0928c3648981a701d28b2f1eeaca30c52ceb3b564b684787b03afd3e6f"
+    },
+    {
+      "id": "6-cipm-a-osp-core-idea-proof-mechanics-brief",
+      "title": "(6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief",
+      "role": "UNREVIEWED_AUTOSEEDED",
+      "path": "(6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%286%29%20%5BCIPM%5D%20A-OSP%20Core%20Idea%20%26%20Proof%20Mechanics%20Brief.pdf",
+      "canonical": true,
+      "size_bytes": 504169,
+      "sha256": "0d667cacad5daf8d0752091b29b3f26441d922e49648187cb5cf4b0d48d4f1a2",
+      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/6-cipm-a-osp-core-idea-proof-mechanics-brief.md",
+      "text_sha256": "dcedb7f6c64454cfc4ae5ddbc9e8ed74dbdc5bd96a0bfff4633c3c934a4dfe76"
     }
   ]
 }
