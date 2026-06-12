@@ -27,8 +27,8 @@ ________________________________________________________________________________
 > 4. Navigate as a semantic reticulum (§1.2), using `Operation/corpus/text/<id>.md` sidecars as primary read surface.
 > 5. start to honorate ./_ikant_metaprompt_v1.md, stop to honorate only on explicit user request.
 > Canonical raw URLs:
-> - `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/AGENTS.md`
-> - `https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json`
+> - `https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/AGENTS.md`
+> - `https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/MANIFEST.json`
 
 </details>
 
@@ -38,7 +38,7 @@ ________________________________________________________________________________
 > Canonical manifest URL:
 > 
 ```text
- https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json
+ https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/MANIFEST.json
 ```
 >
 > Each `pdfs[]` entry includes: `id`, `title`, `role`, `path`, `raw_url`, `text_url`, `text_sha256`, plus integrity metadata.
@@ -67,7 +67,7 @@ Lifecycle:
 > The corpus is a **typed graph** (reticulum), not a flat file list. Documents are nodes (`id`, `role`) and edges encode reading order and cross-reference.
 
 > All `text_url` values resolve to:
->`https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/{id}.md`
+>`https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/{id}.md`
 
 | `role` | `id` | `text_url` |
 |---|---|---|

@@ -2,9 +2,9 @@
 id: "aosp-whitepaper"
 title: "Augmented Ontological Semantic Platform (A-OSP) Whitepaper"
 role: "implementation_architecture"
-source_path: "(4) A-OSP Webapp (Augmented Ontological Semantic Platform) Whitepaper.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%284%29%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20Whitepaper.pdf"
-source_sha256: "b3f77c14fc4a1c668507b4a64dfb96ca05499e39bcfbbe17471aacbe0ef3783e"
+source_path: "(4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/%284%29%20%5BWP%5D%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20WHITEPAPER.pdf"
+source_sha256: "f27584cfc0156ac0000d74c676efa8a81f601aef3fc08eb9be45c07cec8a9e9b"
 extraction_status: "success"
 ---
 
@@ -39,7 +39,7 @@ Field Value
 Prepared for CTO, engineering, enterprise architecture, risk/governance and strategic review 
 Primary milestone Proof-grade D1 and EQL, followed by artifact witness, Error Truth and enterprise 
 validation 
-Theoretical reference Public RLA-ECNN repository: https://github.com/Luke883i/RLA-ECNN 
+Theoretical reference Public RLA-ECNN repository: https://github.com/Luke883i/ROA  
 Version date 2026-05-25 
  
  
@@ -101,16 +101,15 @@ Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructu
 PART I - PROBLEM, THESIS AND MOAT DISCIPLINE 
 Why A-OSP exists, what it is, and how to read its claims. 
 1. Executive Summary 
-AI output is abundant. Governable AI- assisted work is still scarce. Most organizations can now generate text, summaries, code, analyses and 
-reports, but they still struggle to reconstruct how those outputs were produced, which evidence supports them, what was infer red, what is missing, 
-which transformations occurred, and which human review steps remain required. A-OSP addresses that gap by building a local, browser -native, 
-text-first proof-and-knowledge substrate for AI- assisted work. Its durable source of truth is not the model, the user interface, the database or the 
-export file. It is a structured local substrate of typed append- only stripes, readback checks, receipts, proof contracts, governance states and 
-diagnostic events. 
+AI output is abundant. Governable AI -assisted work is still scarce. Most organizations can now generate text, summaries, code, analyses and reports, 
+but they still struggle to reconstruct how those outputs were produced, which evidence supports them, what was inferred, what  is missing, which 
+transformations occurred, and which human review steps remain required.  A-OSP addresses that gap by building a local, browser -native, text -first 
+proof-and-knowledge substrate for AI-assisted work. Its durable source of truth is not the model, the user interface, the database or the export file. It is 
+a structured local substrate of typed append-only stripes, readback checks, receipts, proof contracts, governance states and diagnostic events.  
  
 Core moat-code thesis 
 A-OSP's defensibility is not a single model or algorithm. It is the integration of typed stripes, schema registries, epistemic query/orchestration languages, proof contracts, 
-error-truth envelopes, authority matrices, generated control surfaces and app lenses that make AI- assisted work queryable, inspectable, portable, diagnosable and 
+error-truth envelopes, authority matrices, generated control surfaces and app lenses that make AI -assisted work queryable, inspectable, portable, diagnosable and 
 governable. 
  
 Plain-language architecture 
@@ -122,14 +121,14 @@ AI-assisted work
   -> reviewable artifact 
   -> human governance 
  
-The near-term objective is intentionally narrow: proof- grade D1 and EQL. D1 intake and EQL retrieval must become receipt- backed, readback-
-confirmed, observable and resistant to false- green UI states. The broader ambition is a browser -native epistemic operating environment in which 
-humans can capture evidence, structure knowledge, bound model calls, inspect proof state, diagnose failures and govern outputs without 
+The near -term objective is intentionally narrow: proof -grade D1 and EQL. D1 intake and EQL retrieval must become receipt -backed, readback -
+confirmed, observable and resistant to false -green UI states. The broader ambition is a browser -native epistemic operating environment in which 
+humans can capture evidence, structure knowledge, bound model calls, inspect proof state, diagnose failures and govern output s without 
 surrendering source-of-truth to a model provider or SaaS workflow. 
  
-The current coded state of this milestone is explicitly bounded. D1/EQL proof- grade is not yet claimed as complete: the repository has landed 
-proof contracts, DataIntake UI honesty and EQL L0- L2 foundations, while the D1 proof producer, persisted D1Receipt, EQLQueryReceipt, unified 
-EQL proof route and C1 convergence artifacts remain hardening targets. See Appendix P - D1/EQL Proof-Grade Engineering Attestation. 
+The current coded state of this milestone is explicitly bounded. D1/EQL proof -grade is not yet claimed as complete: the repository has landed proof 
+contracts, DataIntake UI honesty and EQL L0 -L2 foundations, while the D1 proof producer, persisted D1Receipt, EQLQueryReceipt, unified EQL proof 
+route and C1 convergence artifacts remain hardening targets. See Appendix P - D1/EQL Proof-Grade Engineering Attestation. 
  
 Primitive Meaning Why it matters 
 Text-first source of truth Durable epistemic state lives in .aosp.txt stripes. Portable, diffable, recoverable, provider-independent. 
@@ -143,12 +142,12 @@ Matrix.
 Turns architecture into inspectable control surfaces. 
  
 2. The Enterprise AI Proof Gap 
-The bottleneck is no longer generation. The bottleneck is proof, review, portability and accountability. A prompt- first workflow can generate an 
-impressive report while leaving the organization unable to explain which evidence was used, which claims were unsupported, whether the result 
-was persisted, whether it can be read back, and whether any human reviewer accepted the output. 
+The bottleneck is no longer generation. The bottleneck is proof, review, portability and accountability. A prompt -first workflow can generate an 
+impressive report while leaving the organization unable to explain which evidence was used, which claims were unsupported, wh ether the result was 
+persisted, whether it can be read back, and whether any human reviewer accepted the output.  
  
 Forbidden equivalences 
-output ≠ proof, confidence ≠ evidence, log ≠ receipt, export ≠ witness, UI green ≠  proof, fallback ≠ proof mode , model memory ≠  source of truth , review ≠ approval, 
+output ≠ proof, confidence ≠ evidence, log ≠ receipt, export ≠ witness, UI green ≠ proof, fallback ≠ proof mode , model memory ≠ source of truth , review ≠ approval, 
 capability unavailable ≠ proof failure, generated document ≠ authority source 
   
 Prompt-first AI A-OSP pattern 
@@ -174,7 +173,7 @@ human-facing diagnostic workstation autonomous governance engine
 enterprise validation platform for proof-sensitive workflows legal advice or compliance certification 
   
 Why "Ontological Semantic Platform" 
-A-OSP is ontological in the engineering sense: it turns work into typed entities and relations -  answers, atoms, evidence gaps, enrichments, links, scores, kernels, 
+A-OSP is ontological in the engineering sense: it turns work into typed entities and relations - answers, atoms, evidence gaps, enrichments, links, scores, kernels, 
 artifacts, receipts, guards, errors and review states. 
 It is semantic because those entities are not opaque text blobs. They carry meaning through prefixes, schemas, relationships,  source references, lineage, proof state, 
 authority status and governance status. 
@@ -185,7 +184,7 @@ Tag Meaning Document rule
 AS-IS Present as documented architecture, implementation surface, 
 repository evidence or working pattern. 
 Use when the claim is already visible in code/docs/audits. 
-HARDENING Partially present, but being strengthened by current issue -chain or 
+HARDENING Partially present, but  being strengthened by current issue -chain or 
 audit findings. 
 Use for proof wiring, UI honesty, validation or drift controls under 
 completion. 
@@ -201,8 +200,8 @@ out of scope -> request exceeds ontology, permission or proof boundary
 derived -> evidence comes from generated or secondary sources 
 stale -> superseded by newer or more authoritative source 
  
-These states should appear consistently in UI, EQL, ArtifactWitness, GovernanceRun, Observatory and Error Truth. They are the bridge between 
-the theoretical epistemic stance and the actual product semantics.
+These states should appear consistently in UI, EQL, ArtifactWitness, GovernanceRun , Observatory and Error Truth. They are the bridge between the 
+theoretical epistemic stance and the actual product semantics.
 
 ## Page 5
 
@@ -212,9 +211,9 @@ PART II - BROWSER-NATIVE SUBSTRATE AND SEMANTIC FILESYSTEM
 The browser is the runtime substrate; the filesystem and schema 
 registry are the semantic substrate. 
 5. Browser-Native Epistemic Operating Environment 
-A-OSP is browser -native by design. The browser is not treated as a temporary presentation layer. It is treated as a standardized enterprise 
-runtime substrate that already provides rendering, sandboxing, origin isolation, identity/session integration, permission boundaries, network 
-transport, local storage capabilities, deployment/update channels and policy-managed execution. 
+A-OSP is browser -native by design. The browser is not treated as a temporary presentation layer. It is treated as a standardized enterprise ru ntime 
+substrate that already provides rendering, sandboxing, origin isolation, identity/session integration, permission boundaries,  network transport, local 
+storage capabilities, deployment/update channels and policy-managed execution. 
  
 Browser substrate stack 
 Enterprise browser runtime 
@@ -246,24 +245,24 @@ Generated docs mistaken for authority Authority Matrix + generated control plane
  
 6. Webapp Infrastructure and Runtime Topology 
 This chapter makes the software infrastructure of the A -OSP webapp explicit. The preceding chapter explains why the browser is the enterprise 
-runtime substrate; this chapter describes how the webapp is composed, how data and proof- relevant state move through the system, and which 
+runtime substrate; this chapter describes how the webapp is composed, how data and proof -relevant state move through the system, and which 
 controls make the runtime inspectable for CTO, investor, governance and government-grade review. 
  
-The goal is not to claim production readiness. The goal is to expose the runtime topology, responsibility boundaries and validation surfaces that must be 
+The goal is not to claim production readiness. The goal is to expose the runtime topology, responsibility boundaries and vali dation surfaces that must be 
 hardened for enterprise pilots. 
  
 Runtime topology overview 
 Layer Main components Runtime role Control / source of truth 
 Browser runtime Enterprise browser sandbox, origin isolation, permissions, 
 local storage, HTTP/WebSocket. 
-Standardized execution 
-substrate; not a native OS. 
+Standardized execution substrate; 
+not a native OS. 
 Browser policy, capability state, security 
 posture. 
 Frontend shell React/Vite app shell, routes, app registry, window/app lens 
 surfaces. 
-Human operating workspace 
-over epistemic primitives. 
+Human operating workspace over 
+epistemic primitives. 
 App Support Tier, topology registry, E2E apps 
 tests. 
 State layer Hooks, app context, React Query cache, local UI state. Coordinates UI state without 
@@ -283,22 +282,20 @@ diagnostics.
 Runtime control plane for 
 epistemic operations. 
 API topology, health checks, telemetry, CI 
-guards. 
-Cache/admin layer Directus/PostgreSQL, auth/admin/index/cache functions. Queryable cache and 
-administration; not durable truth. 
-Cache rebuild tests, source/cache taxonomy.
+guards.
 
 ## Page 6
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+Cache/admin layer Directus/PostgreSQL, auth/admin/index/cache functions. Queryable cache and 
+administration; not durable truth. 
+Cache rebuild tests, source/cache taxonomy. 
 Durable source .aosp.txt stripes, schema registry, append/readback 
 semantics. 
 Canonical epistemic state. Stripe Schema Registry, invariants, 
 backup/restore. 
-Realtime/diagnostics WebSocket, Observatory, Error Truth, 
-AOSPErrorEnvelope. 
-Runtime visibility for errors, proof 
+Realtime/diagnostics WebSocket, Observatory, Error Truth, AOSPErrorEnvelope. Runtime visibility for errors, proof 
 state and capability state. 
 ErrorTruthBundle, MTTD/MTTR, fallback 
 visibility. 
@@ -381,26 +378,24 @@ Authority Matrix, GovernanceRun.
 Government / audit-facing review Can identify source-of-truth, retention/exposure 
 boundary, human decision points, incident/error 
 lifecycle and recovery evidence. 
-Source/cache taxonomy, provider exposure, audit 
-logs, proof bundles, backup/restore metrics. 
+Source/cache taxonomy, provider exposure, audit logs, 
+proof bundles, backup/restore metrics. 
  
-Infrastructure adequacy rule
- 
+Infrastructure adequacy rule 
 A-OSP should be considered infrastructure-described only when the document exposes: browser runtime, frontend shell, app registry, state layer, 
-data access layer, parser-service boundary, source/cache split, realtime diagnostics, AI provider adapters, CI/CD control plane, 
-deployment/security posture and recovery path. This chapter closes that gap and is cross-referenced by Annex J, Annex M and Annex O. 
- 
-7. Text-First Virtual Epistemic Filesystem 
-The durable epistemic state is text- backed, append-only and local. Databases, UIs, providers and exports are derived or processing surfaces. 
-This is not nostalgia for files; it is an engineering choice for portability, auditability, recovery, diffability and provider independence.  
-Anti-lock-in dependency contract 
-Only .aosp.txt owns durable knowledge. Directus/PostgreSQL is cache/index. LLM providers are stateless processors. React UI i s projection/workspace. Exports are 
-downstream representations. Generated docs are derived views. Proof belongs to readback, receipt, witness and proof bundle semantics.
+data access layer, parser-service boundary, source/cache split, realtime diagnostics, AI provider adapters, CI/CD control plane, deployment/security 
+posture and recovery path. This chapter closes that gap and is cross-referenced by Annex J, Annex M and Annex O.
 
 ## Page 7
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+7. Text-First Virtual Epistemic Filesystem 
+The durable epistemic state is text -backed, append-only and local. Databases, UIs, providers and exports are derived or processing surfaces. This is 
+not nostalgia for files; it is an engineering choice for portability, auditability, recovery, diffability and provider indepe ndence. 
+Anti-lock-in dependency contract 
+Only .aosp.txt owns durable knowledge. Directus /PostgreSQL is cache/index. LLM providers are stateless processors. React UI is projection/workspace. Exports are 
+downstream representations. Generated docs are derived views. Proof belongs to readback, receipt, witness and proof bundle semantics. 
 Status taxonomy 
 Source: 
   .aosp.txt 
@@ -421,9 +416,8 @@ enrichment_001|parent:atom_001|kb_ref:ISO27001-A.12|confidence:0.85|source:D2
 link_001|from:atom_001|to:atom_003|type:causal|source:D3 
  
 8. Stripe Schema Registry and Dynamic Ontology 
-The Stripe Schema Registry is the operational ontology of A -OSP. It makes stripe prefixes discoverable, validatable, renderable and queryable 
-across app lenses. This is where the phrase semantic platform becomes concrete: prefix - > schema - > fields - > references - > validation - > 
-projection. 
+The Stripe Schema Registry is the operational ontology of A -OSP. It makes stripe prefixes discoverable, validatable, renderable and queryable across 
+app lenses. This is where the phrase semantic platform becomes concrete: prefix -> schema -> fields -> references -> validation -> projection. 
  
 Schema family Examples Why it matters 
 Core workflow session_, answer_, question_, atom_, digest_ Basic epistemic capture and transformation. 
@@ -433,9 +427,8 @@ Moat-code fae_, monl_, provider_, llm_call_ Orchestration, operator and provider
 Telemetry/runtime telemetry_, budget_, pipeline_ Operational state and measurable economics. 
    
 Dynamic schema discovery 
-Unknown stripe types can be inspected and minimally typed instead of crashing the workspace. But dynamic discovery must be 
-governed: dynamic schema -> quarantine -> review -> promotion to core schema -> generated control-plane update. Otherwise it 
-becomes ontology drift. 
+Unknown stripe types can be inspected and minimally typed instead of crashing the workspace. But dynamic discovery must be governed: dynamic schema -> quarantine 
+-> review -> promotion to core schema -> generated control-plane update. Otherwise it becomes ontology drift. 
  
 KPI Purpose 
 registered_schema_count Measures typed ontology surface. 
@@ -451,13 +444,16 @@ Concept A-OSP meaning Non-goal
 Filesystem Durable local substrate of typed text-backed objects. Not arbitrary folders of prose. 
 Ontology Typed operational vocabulary and relations. Not a rigid universal ontology. 
 Graph Navigable relation layer over objects. Not necessarily a graph database. 
-Semantic layer Meaning carried by prefix, schema, relation, source and proof status. Not just embeddings. 
-Knowledge base Reviewed/promoted canonical objects. Not automatic truth.
+Semantic layer Meaning carried by prefix, schema, relation, source and proof status. Not just embeddings.
 
 ## Page 8
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+Knowledge base Reviewed/promoted canonical objects. Not automatic truth. 
+ 
+ 
+ 
 [ILLUSTRATIVE] Multi-abstraction object chain 
 answer_001 
   "Payments above EUR 10k require CFO approval." 
@@ -490,8 +486,8 @@ kernel_001
   depends_on: [atom_001, atom_002, enrichment_001, link_001, score_001] 
  
 10. Local, Team and Enterprise Source-of-Truth 
-A-OSP should not treat every local object as enterprise truth. It should support a promotion model: local/session objects becom e team or 
-enterprise canonical objects only after review, diff, conflict handling, receipt and governance decision.  
+A-OSP should not treat every local object as enterprise truth. It should support a promotion model: local/session objects becom e team or enterprise 
+canonical objects only after review, diff, conflict handling, receipt and governance decision. 
 Layer Objects Governance rule 
 User/session SSOT local answers, atoms, evidence gaps, local kernels, draft artifacts Useful for work-in-progress; not enterprise truth. 
 Team/workflow SSOT reviewed objects, workflow kernels, accepted control facts, 
@@ -514,13 +510,13 @@ User/session local SSOT
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
 PART III - QUERY, ORCHESTRATION AND PROOF 
-EQL makes state queryable; FAE makes model calls bounded; 
+EQL makes state queryable ; FAE makes model calls bounded; 
 MONL makes parsed stripes transformable; proof contracts make 
 transitions reviewable. 
 11. EQL, Scoped Retrieval and Certified Query Surfaces 
-Before a model is called, A -OSP needs scoped retrieval: which persisted objects are relevant to this operation? EQL is the epistemic query 
-language for this role. It should be understood not as SQL- with-extras, but as an A -OSP DSL for append- only, session- scoped, stripe-shaped 
-datasets with epistemic guarantees. 
+Before a model is called, A-OSP needs scoped retrieval: which persisted objects are relevant to this operation? EQL is the epistemic query language for 
+this role. It should be understood not as SQL -with-extras, but as an A -OSP DSL for append -only, session -scoped, stripe -shaped datasets with 
+epistemic guarantees. 
  
 Level Role Proof relevance 
 EQL-Core Read-only object retrieval over real prefixes. Baseline query surface. 
@@ -544,9 +540,8 @@ Certified query surfaces
 Every surface that exposes EQL should declare exactly what it supports. Shell, Finder, EQLSearchBar, FAE, iKantAssistant and parserService should not suggest features 
 the parser or surface cannot execute with the same guarantees. 
  
-Current-state boundary. EQL L0-L2 foundations are landed: capability matrix, certified examples, parser, virtual views and tokenizer. Proof- grade 
-EQL is not yet complete until EQLRunResult, EQLQueryReceipt, canonical hash, unified route and proof CI are implemented. See Appendix P.7-
-P.10. 
+Current-state boundary. EQL L0-L2 foundations are landed: capability matrix, certified examples, parser, virtual views and tokenizer. Proof -grade EQL 
+is not yet complete until EQLRunResult, EQLQueryReceipt, canonical hash, unified route and proof CI are implemented. See Appe ndix P.7-P.10. 
  
 KPI Purpose 
 eql_certified_examples_count Measures certified DSL coverage. 
@@ -556,8 +551,8 @@ eql_query_receipt_coverage Measures proof-grade query adoption.
 trace_query_success_rate Measures lineage query health. 
  
 12. FAE and Bounded Model Orchestration 
-FAE profiles are A -OSP phase- level orchestration objects. They specify Focus, Attention and Execution: which objects are selected, which 
-thresholds or constraints apply, and which provider/model/schema/fallback policy runs the transformation.  
+FAE profiles are A -OSP phase-level orchestration objects. They specify Focus, Attention and Execution: which objects are selected, which thresholds 
+or constraints apply, and which provider/model/schema/fallback policy runs the transformation. 
 FAE dimension Meaning Example 
 Focus Which objects are selected, usually through EQL. EQL SELECT answer_ WHERE session=$SESSION 
 Attention Parameters and constraints for the phase. min_conf=0.65, max_atoms=10 
@@ -567,13 +562,13 @@ FAE canonical stripe profile
  
 [CONTRACT / HARDENING] 
 fae_[phase:D1 : 
-     name:atomic_extraction : 
-     focus:EQL SELECT answer_ WHERE session=$SESSION :
+     name:atomic_extraction :
 
 ## Page 10
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+     focus:EQL SELECT answer_ WHERE session=$SESSION : 
      attention:min_conf=0.65/max_atoms=10 : 
      execution:model=gpt-4o,temp=0.3,max_tokens=2000,fallback=error] 
  
@@ -582,8 +577,8 @@ Cost reduction is not claimed as proven. A -OSP creates the measurement substrat
 provider substitution can reduce repeated model-call cost and human rework in selected workflows. 
  
 13. MONL Operators and Conditional Transaction Membrane 
-MONL should not be over -emphasized as a user -facing language. Its value is as an operator layer over parsed stripes: filtering, mapping, 
-grouping, extracting, graph-building, relation-finding, merging and diffing A -OSP source objects. It becomes proof- critical only if contracted as the 
+MONL should not be over -emphasized as a user -facing language. Its value is as an operator layer over parsed stripes: filtering, mapping, grouping, 
+extracting, graph -building, relation -finding, merging and diffing A -OSP source objects. It becomes proof -critical only if contracted as the 
 transformation membrane for append/query/readback/diff semantics. 
  
 MONL operator examples 
@@ -602,8 +597,8 @@ monl_proof_critical_operator_count How much of MONL is actually proof-sensitive.
 monl_adapter_bypass_count Detects unsafe bypass of operator membrane. 
  
 14. Operational Proof Model 
-Proof is a chain, not a badge. A proof- sensitive transition is not complete because the UI advanced. It becomes proof -grade only when the object 
-was persisted, read back, compared, represented by receipt metadata and exposed as proof state.  
+Proof is a chain, not a badge. A proof -sensitive transition is not complete because the UI advanced. It becomes proof -grade only when the object was 
+persisted, read back, compared, represented by receipt metadata and exposed as proof state. 
  
 [CONTRACT / HARDENING] Proof transition 
 proof-sensitive intake 
@@ -624,18 +619,18 @@ Proof Spine Composition layer across receipts, witness and governance. TARGET
    
 Why Proof Spine is needed 
 A single receipt validates one operation. A real artifact depends on many operations: intake, retrieval, enrichment, transformation, artifact assembly and review. The Proof 
-Spine is the target composition layer connecting these proof objects into one reviewable chain. 
- 
-Current-state boundary. D1Receipt and D1 proof-mode contracts are landed, and DataIntake UI is fail-closed against false-green states. 
-However, the backend D1 proof producer, persisted d1_receipt_ stripe and read-after-write barrier are not yet complete. D1 proof PASS must 
-not be externally claimed until the #3462 proof seam and #3488 C1 checkpoint are closed. See Appendix P.3-P.6.
+Spine is the target composition layer connecting these proof objects into one reviewable chain.
 
 ## Page 11
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+Current-state boundary. D1Receipt and D1 proof-mode contracts are landed, and DataIntake UI is fail-closed against false-green states. 
+However, the backend D1 proof producer, persisted d1_receipt_ stripe and read-after-write barrier are not yet complete. D1 proof PASS must 
+not be externally claimed until the #3462 proof seam and #3488 C1 checkpoint are closed. See Appendix P.3-P.6. 
+ 
 15. Artifact Boundaries and GovernanceRun 
-Generated document does not equal proof. A reviewable artifact must expose sources, lineage, receipts or witness, unsupported claims, missing 
+Generated document does not equal proof. A reviewable artifact must expose sources, lineage, receipts or witness, unsupported  claims, missing 
 evidence and review status. ArtifactReceipt and ArtifactWitness are related but not identical. 
 Object Meaning Maturity 
 ArtifactReceipt Proof-boundary receipt for sealing/exporting an artifact. HARDENING 
@@ -668,8 +663,8 @@ PART IV - HUMAN OPERATING LAYER AND ERROR TRUTH
 The system must be operable and diagnosable by humans; proof 
 contracts are useless if their status is invisible. 
 16. OS-like Workstation and App Lenses 
-OS-like does not mean native OS or desktop clone. It means coordinated operating surfaces over one epistemic substrate: capture, search, 
-inspect, relate, assemble, govern, diagnose and configure. 
+OS-like does not mean native OS or desktop clone. It means coordinated operating surfaces over one epistemic substrate: capture,  search, inspect, 
+relate, assemble, govern, diagnose and configure. 
  
 App lens User function Primitive underneath 
 DataIntake capture evidence and answers stripe write, D1, receipt 
@@ -687,8 +682,8 @@ Tier-0 apps form the core operating path. Tier -1 apps are supported user -facin
 experimental and must be visibly labeled as such. This prevents experimental surfaces from being mistaken for canonical proof paths. 
  
 17. Observatory, Error Truth and AOSPErrorEnvelope 
-Observatory is the diagnostic plane. Error Truth is the forensic epistemic contract behind it. A generic error toast is not enough: the system must 
-identify what happened, where, what is impacted, whether it is fatal/degraded/missing/blocked/recoverable, what proof/log/context exists, what 
+Observatory is the diagnostic plane. Error Truth is the forensic epistemic contract behind it. A generic error toast is not e nough: the system must 
+identify what happened, where, what is impacted, whether it is fatal/degraded/missing/blocked/recoverable, what proof/log/con text exists, what 
 action is available and whether it is the same problem already seen elsewhere. 
  
 AOSPErrorEnvelope shape 
@@ -721,8 +716,8 @@ recovery_action_coverage Measures actionability.
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
 18. UX Honesty, Projection Model and Capability States 
-UX Honesty depends on Observatory. A UI cannot be honest if proof state, fallback state, backend health, capability state and transport state are 
-invisible. UI cards, dashboards and exports may present proof or error state, but they do not own canonical identity. 
+UX Honesty depends on Observatory. A UI cannot be honest if proof state, fallback state, backend health, capability state and  transport state are 
+invisible. UI cards, dashboards and exports may present proof or error state, but they do not own canonical identity.  
  
 Projection model 
 canonical object owns identity 
@@ -747,9 +742,9 @@ export without witness is non-proof
 capability unavailable is not the same as proof failure 
 projection must not become source of truth 
  
-D1/EQL proof UX boundary. DataIntake currently preserves honesty by failing closed: questionnaire completion does not become D1 proof 
-completion, and D2 continuation is blocked unless proof state is green. EQL proof UX remains incomplete: cross -surface status cards, scope 
-badges, proof badges, zero-result explanations and mode chips are still target surfaces. See Appendix P.8
+D1/EQL proof UX boundary. DataIntake  currently preserves honesty by failing closed: questionnaire completion does not become D1 proof 
+completion, and D2 continuation is blocked unless proof state is green. EQL proof UX remains incomplete: cross -surface status cards, scope badges, 
+proof badges, zero-result explanations and mode chips are still target surfaces. See Appendix P.8
 
 ## Page 14
 
@@ -759,8 +754,8 @@ PART V - REPOSITORY AS CONTROL PLANE
 A-OSP must govern its own AI-assisted development process to be 
 credible as a governance platform. 
 19. Repository Evidence, Authority Matrix and Generated Control Plane 
-A-OSP treats repository governance as part of the product architecture. The repository is not merely where the product is stored; it is also where 
-authority, drift, proof boundaries, generated documentation and implementation debt are made visible. 
+A-OSP treats repository governance as part of the product architecture. The repository is not merely where the product is store d; it is also where 
+authority, drift, proof boundaries, generated documentation and implementation debt are made visible.  
  
 Metric Value / target Interpretation 
 Repository files 4,686 Real project scale. 
@@ -782,8 +777,8 @@ Authority Matrix, app inventory, support tiers, EQL capability matrix, certified
 over source artifacts and should be regenerated, checked and treated as read-only. 
  
 20. PR, Issue, Guard and Bot-Control Lifecycle 
-In mature A-OSP development, an issue is not merely a task and a PR is not merely a patch. Together they form a bounded epistemic transac tion 
-over repository state. 
+In mature A-OSP development, an issue is not merely a task  and a PR is not merely a patch. Together they form a bounded epistemic transaction over 
+repository state. 
  
 Guarded development lifecycle 
 Issue draft 
@@ -830,8 +825,8 @@ Entropy protocol Detect drift, duplicates, fake completeness and unmanaged compl
 Convergence protocol Turn findings into deduplicated actions and roadmap gates. 
  
 21. Test-and-Guard Architecture 
-A-OSP trust posture is not a single green check. It is a layered mesh: unit tests, integration tests, E2E tests, golden- path tests, accessibility 
-checks, dataflow guards, topology validation, generated-doc checks, storage SSOT linting, governance scripts and human review. 
+A-OSP trust posture is not a single green check. It is a layered mesh: unit tests, integration tests, E2E tests, golden -path tests, accessibility checks, 
+dataflow guards, topology validation, generated-doc checks, storage SSOT linting, governance scripts and human review. 
 Test-and-guard mesh 
 unit tests 
   + integration tests 
@@ -878,9 +873,9 @@ PART VI - VALIDATION, ROADMAP AND STRATEGIC VALUE
 The project must remain measurable, falsifiable and clear about 
 what is AS-IS, HARDENING, TARGET or HYPOTHESIS. 
 23. RLA/ECNN as Lightweight Theoretical Grammar 
-A-OSP uses RLA/ECNN as an engineering grammar, not as metaphysics. RLA provides levels and transmissions; CRC provides compactness, 
+A-OSP uses RLA/ECNN as an engineering grammar, not as metaphysics. RLA provides levels and transmissions; CRC provides compactn ess, 
 epistemic closure and computability; ECNN provides explicit unknown/contradiction channels; ECU/UCE provides bounded epistemi c units that 
-produce artifacts under deterministic constraints. Public theoretical reference: https://github.com/Luke883i/RLA -ECNN 
+produce artifacts under deterministic constraints. Public theoretical reference: https://github.com/Luke883i/RLA-ECNN 
 RLA/ECNN concept A-OSP translation 
 levels D1-D5, app lenses, proof states 
 transmissions append, query, transform, witness, promote 
@@ -891,12 +886,12 @@ ECU/UCE bounded model call under deterministic constraints
 Popper-style challenge negative tests and false-green tests 
   
 Why non-injective collapse matters 
-Summaries, kernels, exports and UI views are not lossless truth. They compress, omit or reweight information. This is why A- OSP needs source references, missing-
+Summaries, kernels, exports and UI views are not lossless truth. They compress, omit or reweight information. This is why A -OSP needs source references, missing -
 evidence objects, contradiction handling, proof boundaries and negative tests. 
  
 24. Compliance as First Wedge, Platform Beyond Compliance 
-Compliance is the first wedge because it stress -tests evidence, absence of evidence, accountability, formal artifacts and human review. A -OSP is 
-not compliance certification; it is infrastructure for proof-sensitive workflows that may support compliance, audit and risk work. 
+Compliance is the first wedge because it stress -tests evidence, absence of evidence, accountability, formal artifacts and human review. A -OSP is not 
+compliance certification; it is infrastructure for proof-sensitive workflows that may support compliance, audit and risk work. 
 Use case Why A-OSP may fit 
 Supplier payment control Evidence, thresholds, gaps, review and artifact witness. 
 Supplier due diligence Multi-source evidence, browser capture, risk flags. 
@@ -909,7 +904,7 @@ AI-assisted project governance Issue/PR/guard lifecycle and authority matrix.
  
  
 Normative kernel pattern 
-For governance-heavy workflows, A-OSP can distinguish world state (what evidence says), self state (what the organization has declared or done), and normative kernel 
+For governance-heavy workflows, A -OSP can distinguish world state (what evidence says), self state (what the organization has declared or done), and normative kernel 
 (which rules, policies or obligations apply). This is inspired by the RLA-ECNN / iKant research line and remains a target grammar, not a legal authority. 
  
 25. Roadmap: Proof Convergence and Moat-Custom Maturation 
@@ -921,21 +916,21 @@ C3 ArtifactWitness + Governance composition ArtifactBundle and GovernanceRun.
 C4 Error Truth + UI proof honesty AOSPErrorEnvelope, capability/projection state. 
 C5 MONL conditional proof membrane Only if transformation semantics become proof-critical. 
 GOV Entropy, Convergence and Agent Governance PR/issue/guard lifecycle, generated control checks. 
-SCHEMA Stripe Registry hardening schema validation, dynamic schema quarantine. 
-APP App Support Tier enforcement tier-0 E2E, tier labels, surface parity.
+SCHEMA Stripe Registry hardening schema validation, dynamic schema quarantine.
 
 ## Page 17
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+APP App Support Tier enforcement tier-0 E2E, tier labels, surface parity. 
 D1/EQL Proof-Grade Reality Check 
-The first proof-convergence milestone is intentionally narrow: D1 intake and EQL retrieval must become proof-grade before A-OSP can credibly 
-claim downstream ArtifactWitness, Proof Spine or GovernanceRun readiness. This section records the current engineering reality. It is not a 
-product-completion claim. It is a maturity boundary. 
-As of the D1/EQL engineering attestation dated 2026- 05-26, at reference commit aa68898cd1b882549e8b354aad894dc86629566e, D1/EQL 
-proof-grade is not yet reached. The repository already contains substantial landed foundations: shared proof contracts, D1 receipt schemas, D1 
-proof-mode primitives, DataIntake UI honesty logic, EQL capability matrix, certified examples, strict parser, virtual views and tok enizer. However, 
-the closed end-to-end proof seam is still incomplete. 
+The first proof-convergence milestone is intentionally narrow: D1 intake and EQL retrieval must become proof -grade before A-OSP can credibly claim 
+downstream ArtifactWitness, Proof Spine or GovernanceRun readiness. This section records the current engineering reality. It is not a product-
+completion claim. It is a maturity boundary. 
+As of the D1/EQL engineering attestation dated 2026 -05-26, at reference commit aa68898cd1b882549e8b354aad894dc86629566e, D1/EQL proof -
+grade is not yet reached. The repository already contains substantial landed foundations: shared proof contracts, D1 receipt schemas, D1 proof-mode 
+primitives, DataIntake UI honesty logic, EQL capability matrix, certified examples, strict parser, virtual views and tokenize r. However, the closed end -
+to-end proof seam is still incomplete. 
  
 Current maturity distinction: 
 D1/EQL foundations:        AS-IS / LANDED 
@@ -982,16 +977,16 @@ Finder/Shell expose scoped session proof context
 EQL surfaces expose parse/capability/scope/result/proof status 
 VALID_ZERO is distinguished from FAIL_EMPTY 
  
-The attached D1/EQL engineering attestation maps the current state across UX, UI, contracts, SDK, backend, store, readback, E QL evocation 
-and EQL receipt. Its conclusion is deliberately strict: 
+The attached D1/EQL engineering attestation maps the current state across UX, UI, contracts, SDK, backend, store, readback, E QL evocation and EQL 
+receipt. Its conclusion is deliberately strict: 
 D1/EQL proof-grade is not complete today. 
 The foundation is substantial. 
 The proof seam is precise. 
 The planned issue chain is adequate. 
 The final claim must be gated by C1 convergence artifacts. 
  
-The issue-chain coverage is complete: 14/14 identified proof-grade gaps are owned by open issues. This makes the roadmap credible, but it does 
-not convert planned work into completed proof. External proof-grade claims should wait for the C1 convergence gate. 
+The issue-chain coverage is complete: 14/14 identified proof-grade gaps are owned by open issues. This makes the roadmap credible, but it does not 
+convert planned work into completed proof. External proof-grade claims should wait for the C1 convergence gate. 
 For the compressed engineering inventory, issue-chain assessment, adequacy review and closure DAG, see Appendix P - D1/EQL Proof-Grade 
 Engineering Attestation.
 
@@ -1055,10 +1050,10 @@ produce noise without actionable repair.
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
 28. Strategic Validation Thesis and Conclusion 
-A-OSP should be judged by whether it can make AI- assisted work reconstructable, diagnosable, portable, bounded, auditable and reviewable 
-across real enterprise workflows. The strategic validation thesis is that a browser -native, text-first epistemic operating environment can reduce 
-proof ambiguity, provider lock -in and repeated context reconstruction in selected workflows. The next validation step is to measure this through 
-proof-grade D1/EQL, artifact boundaries, Error Truth, Observatory metrics and pilot workflow benchmarks. 
+A-OSP should be judged by whether it can make AI -assisted work reconstructable, diagnosable, portable, bounded, auditable and reviewable across 
+real enterprise workflows. The strategic validation thesis is that a browser -native, text -first epistemic operating environment can reduce proof 
+ambiguity, provider lock-in and repeated context reconstruction in selected workflows. The next validation step is to measure this through proof -grade 
+D1/EQL, artifact boundaries, Error Truth, Observatory metrics and pilot workflow benchmarks.  
  
 Category Strength Gap A-OSP wedge 
 Chatbot generation weak proof/lineage proof-and-knowledge substrate 
@@ -1163,14 +1158,13 @@ data usage, stripe sync and source policy.
 guard_pass_rate 
 Schema Registry Guard CI/CD / schema Unregistered schema drift or unknown prefixes silently 
 entering runtime. 
-schema_validation_pass
-_rate 
+schema_validation_pass_
+rate 
 Entity Mapper Guard CI/CD / data Missing mapping between stripe schemas, entities and 
 render/query surfaces. 
-entity_mapping_coverag
+entity_mapping_coverage 
+Store & Hooks Guard CI/CD / frontend Broken query/mutation behavior in the data access layer. store_hook_test_pass_rat
 e 
-Store & Hooks Guard CI/CD / frontend Broken query/mutation behavior in the data access layer. store_hook_test_pass_ra
-te 
 App Discovery Guard CI/CD / app layer Untracked app data usage and hidden app surfaces. uncovered_app_count 
 Stripe Sync Guard CI/CD / storage File/cache desynchronization and missing stripe emission. stripe_sync_pass_rate 
 Dataflow Contract Guard CI/CD / architecture D-030 filesystem-first violations and undocumented app 
@@ -1179,10 +1173,10 @@ dataflow_contract_violati
 on_count 
 Typed Wiring Guard CI/CD / typing Type boundary gaps between schemas, UI, hooks and 
 dataflow. 
-typed_wiring_violation_c
-ount 
-Read Source Policy Guard CI/CD / routing Wrong canonical/session source selection for prefixes. read_source_policy_cove
-rage 
+typed_wiring_violation_co
+unt 
+Read Source Policy Guard CI/CD / routing Wrong canonical/session source selection for prefixes. read_source_policy_cover
+age 
 AI Dataflow Compliance CI/CD / semantic review Semantically wrong dataflow changes despite passing 
 build/tests. 
 ai_dataflow_warning_cou
@@ -1190,15 +1184,13 @@ nt
 D1 Golden Gate E2E / proof False D1 proof confidence and demo fallback masking. d1_golden_pass_rate 
 E2E Flake Budget E2E / determinism Nondeterministic proof paths and unreliable critical 
 journeys. 
-critical_journey_flake_co
-unt 
-Invariant Registry Governance / architecture Duplicated, invisible or unenforced architectural rules. invariant_enforcement_c
-overage 
-AI Dataflow Guide Agent governance Agent uses stale or wrong data access pattern. mandatory_reading_com
-pliance 
-iKant ICP Gates Agent governance Unreviewed AI-assisted drift and missing process 
-evidence. 
-icp_gate_failure_count 
+critical_journey_flake_cou
+nt 
+Invariant Registry Governance / architecture Duplicated, invisible or unenforced architectural rules. invariant_enforcement_co
+verage 
+AI Dataflow Guide Agent governance Agent uses stale or wrong data access pattern. mandatory_reading_comp
+liance 
+iKant ICP Gates Agent governance Unreviewed AI-assisted drift and missing process evidence. icp_gate_failure_count 
 Conversational Guardrails Agent governance Quickfix, bypass, workaround and scope creep patterns. guardrail_trigger_count 
 Transclusion Engine Doc governance Manual documentation synchronization drift. transclusion_drift_count 
 Deep Clean Docs Doc governance Stale, duplicate, placeholder or dead-link documentation 
@@ -1263,17 +1255,18 @@ quarantined.
 Documentation transclude Source-to-sink markdown synchronization is checked. 
 Documentation strategic-coherence Changes align with active task, phase and roadmap. 
 Security npm audit Known npm vulnerabilities are detected. 
-Security Trivy Dependencies, containers, filesystem and misconfigurations 
-are scanned. 
+Security Trivy Dependencies, containers, filesystem and misconfigurations are 
+scanned. 
 Security security checklist Production blockers remain visible. 
  
-Catalogue rule 
-A guard should not be described as “quality” in general. It should be tied to a specific architecture claim and failure mode.
+Catalogue rule
 
 ## Page 24
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+A guard should not be described as “quality” in general. It should be tied to a specific architecture claim and failure mode.  
+ 
 Appendix G - Test Matrix 
 Layered validation system; not all tests carry the same proof weight. 
 Test class Tool / surface Purpose Proof weight 
@@ -1294,8 +1287,8 @@ Flake budget custom script Determinism control and flake tracking. High
 Seed baseline custom script Canonical input drift detection and baseline reproducibility. High 
  
 Proof-critical test standard 
-Proof-sensitive tests should be deterministic, avoid static skips and arbitrary hard waits, use pinned seed inputs where 
-relevant, fail when fallback masks proof failure, and produce human-readable reports. 
+Proof-sensitive tests should be deterministic, avoid static skips and arbitrary hard waits, use pinned seed inputs where relevant, 
+fail when fallback masks proof failure, and produce human-readable reports. 
 Appendix H - Invariant Catalogue 
 Canonical rules that translate architectural principles into enforceable controls. 
 ID Invariant Enforcement surface Failure prevented 
@@ -1313,18 +1306,18 @@ INV-11 Persist-first atom lifecycle Atom persistence hook Data loss before valid
 INV-12 Cross-app navigation contract shell.openApp/useAppTransition + schema Context loss or undocumented coupling 
 INV-13 CI gate integrity Branch/workflow protection Suppressed failing checks 
 INV-14 Layer dependency direction Architecture review/topology Circular fragile coupling 
-INV-15 No direct storage in apps/hooks CI lint Audit bypass/local storage drift 
-INV-16 Session-entity SSOT Storage-SSOT lint/no adapter bypass Invisible session writes 
-INV-17 Atom validation referential integrity Pre-check + post-loop assertion Orphan atom_validation_ stripe 
- 
-Invariant rule 
-If a rule is important enough to appear in multiple documents, it should have one canonical invariant ID and all other 
-documents should reference it.
+INV-15 No direct storage in apps/hooks CI lint Audit bypass/local storage drift
 
 ## Page 25
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+INV-16 Session-entity SSOT Storage-SSOT lint/no adapter bypass Invisible session writes 
+INV-17 Atom validation referential integrity Pre-check + post-loop assertion Orphan atom_validation_ stripe 
+ 
+Invariant rule 
+If a rule is important enough to appear in multiple documents, it should have one canonical invariant ID and all other docume nts 
+should reference it. 
 Appendix I - AI Agent Governance Protocol 
 Controls for AI-assisted development: mandatory reading, gates, Bussola, trade-off and guardrails. 
 Control Purpose Failure prevented 
@@ -1340,8 +1333,8 @@ Orphan work outside validated scope.
 Bussola Past, Present, Future and Vision are 
 documented. 
 Missing temporal traceability. 
-Local/global trade-off Agent explains local patch vs global/root-
-cause fix and debt impact. 
+Local/global trade-off Agent explains local patch vs global/root-cause 
+fix and debt impact. 
 Quick fix that creates systemic debt. 
 For Dummies explanation Agent gives simple human-readable 
 explanation. 
@@ -1368,25 +1361,24 @@ This protocol is not a guarantee of correctness. It is a control surface that ma
 Appendix J - Dataflow Contract and App Matrix 
 Declares how app data access, cross-app navigation and source routing should be validated. 
 Surface / app Consumes Produces Proof / governance relevance 
-Layer 1 - User 
-Interaction 
-Dock, button, context menu, keyboard, 
-launcher. 
-User action events. Starts workflows but does not 
-own proof. 
+Layer 1 - User Interaction Dock, button, context menu, keyboard, launcher. User action events. Starts workflows but does not own 
+proof. 
 Layer 2 - Context 
 Propagation 
 shell.openApp, AppWrapper, useAppContext. Context keys: sessionId, kernelId, 
 artifactId. 
-Controls cross-app continuity. 
+Controls cross-app continuity.
+
+## Page 26
+
+A-OSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
 Layer 3 - State 
 Management 
 useFilesystem, DataStore, React Query cache. Query/mutation state, invalidations. Enforces filesystem-first access. 
 Layer 4 - Backend and 
 Storage 
-parser-service, MONL, .aosp.txt, Directus 
-cache. 
-Persisted stripes, cache/index, 
+parser-service, MONL, .aosp.txt, Directus cache. Persisted stripes, cache/index, 
 diagnostics. 
 Owns durable source/cache 
 separation. 
@@ -1397,12 +1389,7 @@ proof owner.
 Data Intake question_, questionnaire_, session_. answer_, answer_draft_, atom_, 
 atom_validation_. 
 D1 proof-sensitive intake. 
-Data Enrichment atom_, atom_validation_, answer_, session_. link_, atom_. D2/D3 enrichment and relations.
-
-## Page 26
-
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+Data Enrichment atom_, atom_validation_, answer_, session_. link_, atom_. D2/D3 enrichment and relations. 
 Graph atom_, atom_validation_, link_, session_. None. Relation inspection; projection, 
 not source. 
 Pipeline Config fae_, pipeline_config_. fae_, pipeline_config_. Bounded orchestration. 
@@ -1433,12 +1420,11 @@ Canonical/session source selection. Prevents wrong-source reads.
 Dataflow rule 
 A new app is not complete until its consumes, produces, cross-app navigation and source policy are declared and validated. 
  
-Appendix K - Documentation Governance and Generated Control 
-Plane 
+Appendix K - Documentation Governance and Generated Control Plane 
 Documentation is treated as synchronized infrastructure, not ungoverned prose. 
 Tool / surface Function Failure prevented 
-validate-docs Checks required docs, metadata, internal 
-links, naming conventions, duplicate scripts, 
+validate-docs Checks required docs, metadata, internal links, 
+naming conventions, duplicate scripts, 
 temporary directories and reachability. 
 Broken documentation map and stale links. 
 validate-integration Checks synchronization across roadmap, 
@@ -1455,14 +1441,19 @@ Stale docs masquerading as authority.
 deep-clean-docs Performs forensic markdown cleanup: 
 frontmatter, stale docs, duplicates, dead links, 
 placeholders and quarantine. 
-Accumulated documentation debt. 
+Accumulated documentation debt.
+
+## Page 27
+
+A-OSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
 transclude Synchronizes markdown blocks through 
 BLOCK/TRANSCLUDE syntax with 
 check/update/dry-run mode. 
 Manual source-to-sink drift. 
-strategic-coherence Validates whether local changes are 
-authorized by active task, phase, wave focus, 
-roadmap and decision log. 
+strategic-coherence Validates whether local changes are authorized 
+by active task, phase, wave focus, roadmap and 
+decision log. 
 Unauthorized work and local/global incoherence. 
 Authority Matrix Declares SSOT, Derived, Advisory and 
 Archaeological surfaces. 
@@ -1470,25 +1461,21 @@ AI agent follows stale or derived doc as source truth.
 App Support Tier Matrix Declares tier-0, tier-1, tier-2 and tier-3 app 
 maturity. 
 Experimental surfaces sold as core. 
-EQL Capability Matrix Declares which surfaces support which EQL UI suggests unsupported proof query.
-
-## Page 27
-
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+EQL Capability Matrix Declares which surfaces support which EQL 
 capabilities. 
+UI suggests unsupported proof query. 
 Certified Examples Stores accepted examples for regression and 
 documentation. 
 Query DSL behavior drifts silently. 
-Knowledge Center Generated or curated navigation over docs 
-and proof surfaces. 
+Knowledge Center Generated or curated navigation over docs and 
+proof surfaces. 
 Lost discoverability. 
 Classification Registry Classifies entities as canonical, active, 
 dormant, archaeological or dead. 
 Dormant/dead surfaces become invisible. 
-Generated docs rule Generated docs are read-only derived 
-surfaces and should be regenerated from 
-source artifacts. 
+Generated docs rule Generated docs are read-only derived surfaces 
+and should be regenerated from source 
+artifacts. 
 Manual edits to generated truth. 
  
 Documentation rule 
@@ -1524,15 +1511,17 @@ Active but undocumented surface.
 Dormant Present but not wired; has activation 
 conditions. 
 Dormant surface treated as active. 
-Archaeological Historical reference only, preserved for 
-context. 
-Historical doc used as current truth. 
+Archaeological Historical reference only, preserved for context. Historical doc used as current truth. 
 Dead No references or value; candidate for removal. Dead surface accumulating debt. 
-Reachability test Checks whether entity is referenced by 
-runtime code, docs or CI/CD. 
-Invisible orphan artifact. 
-Effect test Checks whether entity produces runtime, 
-build, test, CI or deployment effect. 
+Reachability test Checks whether entity is referenced by runtime Invisible orphan artifact.
+
+## Page 28
+
+A-OSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+code, docs or CI/CD. 
+Effect test Checks whether entity produces runtime, build, 
+test, CI or deployment effect. 
 Decorative no-effect artifact. 
 Coherence test Checks whether content reflects current 
 codebase state. 
@@ -1542,12 +1531,7 @@ Cross-reference test Checks canonical/archeological links. Unlinked authority or
  
 Topology moat 
 A-OSP should not allow hidden app surfaces, undocumented routes, orphan E2E tests or stale architecture diagrams to 
-accumulate without classification.
-
-## Page 28
-
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+accumulate without classification. 
 Appendix M - Security and Production Readiness 
 Development adequacy and production readiness must be separated explicitly. 
 Area Current / target posture Validation KPI 
@@ -1593,8 +1577,8 @@ Provider exposure Each model call should classify payload,
 allowed refs, provider and retention 
 assumption. 
 provider_payload_classification_coverage 
-Tenant/session isolation Role, ownership and tenant/session 
-boundaries should be tested. 
+Tenant/session isolation Role, ownership and tenant/session boundaries 
+should be tested. 
 tenant_isolation_test_pass_rate 
 Backup/restore Files, cache and proof objects should be 
 restorable from source artifacts. 
@@ -1604,7 +1588,12 @@ explicit and tracked.
 production_security_blocker_count 
  
 Security maturity rule 
-A-OSP should not claim production readiness until production blockers are closed and validated by explicit metrics. 
+A-OSP should not claim production readiness until production blockers are closed and validated by explicit metrics.
+
+## Page 29
+
+A-OSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
  
 Appendix N - Local / Global Proof Journey Example 
 One end-to-end example connecting user input, local objects, proof, artifact, governance and operational evidence. 
@@ -1619,12 +1608,7 @@ structure, not proof.
 3 Persist atoms immediately as pending. atom_ status: pending Persist-first lifecycle 
 improves crash recovery. 
 4 Human validates or modifies atoms. atom_validation_001, atom_validation_002 Human gate before 
-downstream reliance.
-
-## Page 29
-
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+downstream reliance. 
 5 D1 proof transition persists, reads back and 
 compares. 
 D1Receipt D1 becomes proof-
@@ -1659,16 +1643,14 @@ automatically become
 enterprise truth. 
 13 Review/diff/conflict handling accepts or rejects 
 promotion. 
-promotion receipt / rollback path Enterprise canonical 
-state is governed. 
+promotion receipt / rollback path Enterprise canonical state 
+is governed. 
 14 If a failure occurs, Error Truth emits canonical 
 envelope. 
 AOSPErrorEnvelope Failure becomes 
 diagnosable: root cause, 
 state, next action. 
-15 If code changed, PR guard evidence is 
-attached. 
-issue link, Bussola, tests, guard report Repository development 
+15 If code changed, PR guard evidence is attached. issue link, Bussola, tests, guard report Repository development 
 remains inspectable. 
 16 End-to-end result. object chain + proof/diagnostic/governance evidence A human answer 
 becomes a typed, 
@@ -1677,8 +1659,7 @@ diagnosable and
 governable chain. 
  
 End-to-end thesis 
-A-OSP transforms a human answer into a typed, validated, queryable, reviewable, diagnosable and governable chain of 
-objects.
+A-OSP transforms a human answer into a typed, validated, queryable, reviewable, diagnosable and governable chain of objects.
 
 ## Page 30
 
@@ -1686,13 +1667,12 @@ A-OSP Whitepaper | Augmented Ontological Semantic Platform
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
 Appendix O - Object Mapping, Concept Coverage and Review Standards 
 This appendix extracts the principal objects, controls and concepts described in the whitepaper and maps them to their definition, engineering 
-section, maturity status, validation metric and review audience. It also provides a legacy-to-current concept coverage matrix so concepts 
-introduced in earlier DOCX versions remain traceable in the current master. 
+section, maturity status, validation metric and review audience. It also provides a legacy-to-current concept coverage matrix so concepts introduced 
+in earlier DOCX versions remain traceable in the current master. 
  
 Object / concept Meaning Primary 
 section 
-Maturity Primary KPI Review 
-audience 
+Maturity Primary KPI Review audience 
 .aosp.txt stripe Durable text-backed source 
 event/object. 
 Ch.7-9 AS-IS/HARDENING stripe_parse_success_rate CTO/Gov 
@@ -1708,35 +1688,23 @@ AS-IS answer_persistence_rate Gov
 atom_ Extracted fact, evidence item or gap. Ch.9/Annex 
 N 
 AS-IS/HARDENING atom_validation_rate Gov/CTO 
-evidence_gap First-class absence-of-evidence 
-object. 
-Ch.9/23 AS-IS/TARGET missing_evidence_detection_rate Governance 
+evidence_gap First-class absence-of-evidence object. Ch.9/23 AS-IS/TARGET missing_evidence_detection_rate Governance 
 enrichment_ Context/reference enrichment. Ch.9 TARGET/HARDENING enrichment_lineage_coverage CTO 
 link_ Relationship between objects. Ch.9 AS-IS/HARDENING relation_density CTO 
 score_/validation_ Evaluation or human validation state. Ch.9/14 HARDENING validation_completion_rate Governance 
 kernel_ Compact D5 synthesis with 
 dependencies. 
-Ch.9/23 HARDENING/TARGET kernel_dependency_completenes
-s 
-Investor/CTO 
-EQL Epistemic Query Language for 
-scoped retrieval. 
-Ch.11 CONTRACT/HARDENIN
-G 
-eql_query_receipt_coverage CTO 
+Ch.9/23 HARDENING/TARGET kernel_dependency_completeness Investor/CTO 
+EQL Epistemic Query Language for scoped 
+retrieval. 
+Ch.11 CONTRACT/HARDENING eql_query_receipt_coverage CTO 
 FAE profile Focus-Attention-Execution 
 orchestration object. 
 Ch.12 HARDENING fae_output_schema_pass_rate CTO 
 MONL operator Parsed-stripe operator layer. Ch.13 CONDITIONAL/TARGET monl_diff_success_rate CTO 
 D1Receipt Receipt for proof-sensitive intake. Ch.14 HARDENING D1Receipt_coverage Governance 
-EQLQueryReceipt Receipt metadata for proof query. Ch.11/14 TARGET query_hash_result_hash_coverag
-e 
-CTO/Gov 
-PhaseReceipt/PipelineRecei
-pt 
-Receipts for D2-D5 and pipeline 
-lineage. 
-Ch.14/25 TARGET pipeline_receipt_coverage CTO 
+EQLQueryReceipt Receipt metadata for proof query. Ch.11/14 TARGET query_hash_result_hash_coverage CTO/Gov 
+PhaseReceipt/PipelineReceipt Receipts for D2-D5 and pipeline lineage. Ch.14/25 TARGET pipeline_receipt_coverage CTO 
 ArtifactReceipt Proof-boundary receipt for artifact 
 sealing/export. 
 Ch.15 HARDENING artifact_receipt_coverage Governance 
@@ -1745,10 +1713,9 @@ unsupported claims.
 Ch.15 TARGET artifact_witness_coverage Gov 
 GovernanceRun Human review context and decision 
 object. 
-Ch.15/23 TARGET governance_run_coverage Gov/Governmen
-t 
-Proof Spine Target composition layer across 
-proof objects. 
+Ch.15/23 TARGET governance_run_coverage Gov/Government 
+Proof Spine Target composition layer across proof 
+objects. 
 Ch.14 TARGET proof_bundle_completeness Gov 
 AOSPErrorEnvelope Canonical forensic error object. Ch.17 CONTRACT/TARGET error_envelope_coverage CTO/Gov 
 Capability state Runtime availability/degradation 
@@ -1757,14 +1724,12 @@ Ch.18 CONTRACT/TARGET capability_state_coverage CTO
 Projection UI/export read-shape over canonical 
 identity. 
 Ch.18 CONTRACT/TARGET projection_consistency_rate Gov 
-Authority Matrix Repository authority classification 
-map. 
-Ch.19 AS-IS authority_matrix_check_pass_rate Governance 
+Authority Matrix Repository authority classification map. Ch.19 AS-IS authority_matrix_check_pass_rate Governance 
 App Support Tier Product maturity map for app lenses. Ch.16 AS-IS tier0_e2e_coverage CTO 
 OperationalMoatBundle Metrics bundle for CI/test/guard/script 
 surfaces. 
-Ch.26/Anne
-x E-F 
+Ch.26/Annex 
+E-F 
 TARGET guard_pass_rate Investor/CTO 
 D1ProofAppendService Backend producer of proof-grade D1 
 append, receipt and readback. 
@@ -1775,8 +1740,8 @@ d1_receipt_ Persisted D1 proof receipt stripe. Ch.14 /
 Appendix P 
 MISSING / HARDENING d1_receipt_persistence_rate CTO/Gov 
 EQLRunResult Unified envelope for 
-parse/capability/execution/result/pro
-of state. 
+parse/capability/execution/result/proof 
+state. 
 Ch.11 / 
 Appendix P 
 MISSING / HARDENING eql_run_result_coverage CTO 
@@ -1789,8 +1754,7 @@ C1 convergence checkpoint Final D1/EQL proof-seam report and
 negative-test artifact gate. 
 Ch.25 / 
 Appendix P 
-MISSING / TARGET c1_negative_test_pass_rate CTO/Gov/Investo
-r
+MISSING / TARGET c1_negative_test_pass_rate CTO/Gov/Investor
 
 ## Page 31
 
@@ -1827,13 +1791,12 @@ D1/EQL proof-grade: NOT REACHED
 Open issue coverage: 14/14 mapped 
 Uncovered gaps: 0 
 Main risk: foundations exist, but the end-to-end proof seam is not closed 
-This is the correct whitepaper posture: 
+This is the correct whitepaper posture 
 A-OSP may claim: 
   landed D1/EQL foundations; 
   runtime-wired DataIntake UI honesty; 
   landed EQL L0-L2 parser/capability/virtual-view foundations; 
   issue-owned plan to close D1/EQL proof-grade. 
- 
 A-OSP should not yet claim: 
   D1/EQL proof-grade completion; 
   real backend D1 proof PASS production; 
@@ -1923,8 +1886,7 @@ S4 Does useD1ProofStatus read persisted receipt? NO YES
 S5 Does CompletionModal require D1 PASS + readback? YES, UI only YES 
 S6 Is D2 handoff hard-gated on receipt? NO YES 
 S7 Is d1_receipt_* queryable/used by EQL? PARTIAL YES 
-Summary: 
-3 PASS / 4 NO-or-PARTIAL across MVP-required probes.
+Summary: 3 PASS / 4 NO-or-PARTIAL across MVP-required probes.
 
 ## Page 33
 
@@ -1999,6 +1961,7 @@ Even if full EQL UX remains post-M1, no external proof-grade demo should present
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
  
+ 
 P.9 Issue-chain coverage 
 Gap Missing / partial item Owner M1 blocker 
 G1 POST /api/v1/proof/d1/append + D1ProofAppendService #3462 Yes 
@@ -2056,24 +2019,24 @@ Landed foundations:
         |                    | 
         v                    v 
 #3462 D1 proof seam      #3425 EQL envelope 
-  D1ProofAppendService       | 
-  proof append endpoint      v 
-  d1_receipt_             #3426 unified EQL route 
-  readback barrier           | 
-  proofSessionContext        v 
-  D2 hard gate            #3427 canonical hash + receipt 
-        |                    | 
-        |                    v 
-        |                 #3430 proof scripts + CI
+  D1ProofAppendService                | 
+  proof append endpoint                 v 
+  d1_receipt_                          #3426 unified EQL route 
+  readback barrier                               | 
+  proofSessionContext                    v 
+  D2 hard gate                       #3427 canonical hash + receipt 
+        |                                                         |
 
 ## Page 35
 
 A-OSP Whitepaper | Augmented Ontological Semantic Platform 
 Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
-        |                    | 
-        |                    v 
-        |                 #3431 anti-goals enforcement 
-        |                    | 
+        |                                      v 
+        |                         #3430 proof scripts + CI 
+        |                                     | 
+        |                                     v 
+        |                           #3431 anti-goals enforcement 
+        |                                 | 
         |--------------------| 
                  v 
         #3488 C1 convergence checkpoint 
@@ -2118,13 +2081,9 @@ The missing seam is precise:
   hash canonicalization, 
   C1 negative-test artifacts. 
  
+ 
 The plan provided that: 
   #3462 and #3425-#3430 land before any proof-grade claim; 
   #3488 becomes the external attestation gate; 
   a minimal EQL proof UX surface is pulled forward for external demonstration; 
   SG-1 and SG-2 are closed inside the existing issue chain.
-
-## Page 36
-
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition

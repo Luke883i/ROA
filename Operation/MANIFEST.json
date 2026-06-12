@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "repository": "https://github.com/Luke883i/RLA-ECNN",
+  "repository": "https://github.com/Luke883i/ROA",
   "default_branch": "main",
   "agent_access_policy": {
     "canonical_download_method": "raw_url",
@@ -29,193 +29,205 @@
       "id": "roa-main-entrypoint",
       "title": "ROA - Reticular Observer Architectures for Governable AI-Assisted Work",
       "role": "main_entrypoint",
-      "path": "(2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work (main Entrypoint).pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%282%29%20ROA%20-%20Reticular%20Observer%20Architectures%20for%20Governable%20AI-Assisted%20Work%20%28main%20Entrypoint%29.pdf",
+      "path": "(2) Reticular Observer Architectures (ROA) for Governable AI-Assisted Work.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%282%29%20Reticular%20Observer%20Architectures%20%28ROA%29%20for%20Governable%20AI-Assisted%20Work.pdf",
       "canonical": true,
-      "size_bytes": 1053199,
-      "sha256": "2390ec08be1fc72582968b74be218d29d59b3936eddcfa6e502b683867878840",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/roa-main-entrypoint.md",
-      "text_sha256": "41ba8fb7f0bfc4865e472e2084e9ff445fc13321d170dd9598da14262c0e75b6"
+      "size_bytes": 5240177,
+      "sha256": "bc278d5602ca14bf656f0a60108a857b3a35dbbe07f63621406e49d2a26d24d0",
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/roa-main-entrypoint.md",
+      "text_sha256": "d78cd9536aa39574e28aa01b22f2f3354e6353e7606139b89112a433df3925b7"
     },
     {
       "id": "humanistic-philosopher-entrypoint",
       "title": "Every Map Leaves Something Out",
       "role": "humanistic_philosopher_entrypoint",
       "path": "(1) Every Map Leaves Something Out (Humanistic & Philosopher Entrypoint).pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%281%29%20Every%20Map%20Leaves%20Something%20Out%20%28Humanistic%20%26%20Philosopher%20Entrypoint%29.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%281%29%20Every%20Map%20Leaves%20Something%20Out%20%28Humanistic%20%26%20Philosopher%20Entrypoint%29.pdf",
       "canonical": true,
       "size_bytes": 1121093,
       "sha256": "fbf4d6b05907539a25556ef49e056479582741004cb49d1ea7b551049fb629fd",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/humanistic-philosopher-entrypoint.md",
-      "text_sha256": "175e22f9b9589b14b0b4955aad8f839be1e30fb0c5e41ceb767a1324799e7cee"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/humanistic-philosopher-entrypoint.md",
+      "text_sha256": "423819553c989ef501f2735fad9327a8148bbe8f4fe97941a06d842cf1c057bf"
     },
     {
       "id": "observer-compiler-wolfram",
       "title": "AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN)",
       "role": "theory_bridge",
       "path": "(3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%283%29%20AI%20as%20Observer%20Compiler%20%28from%20Wolfram%27s%20Ruliad%20to%20RLA-ECNN%29.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%283%29%20AI%20as%20Observer%20Compiler%20%28from%20Wolfram%27s%20Ruliad%20to%20RLA-ECNN%29.pdf",
       "canonical": true,
       "size_bytes": 480866,
       "sha256": "43c8c9171540729e80db7096fbb6962d42d2ec0478e8805724fd4ec0eb61de68",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/observer-compiler-wolfram.md",
-      "text_sha256": "8a476818eb711fc30c549ee64f8e5061a7d5f3b9eaef40b0031e3a5d1162516a"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/observer-compiler-wolfram.md",
+      "text_sha256": "74f16a1e93171a1908504283732780938bc01b2220b7b82b0c31e4d5643a58bb"
     },
     {
       "id": "aosp-whitepaper",
       "title": "Augmented Ontological Semantic Platform (A-OSP) Whitepaper",
       "role": "implementation_architecture",
-      "path": "(4) A-OSP Webapp (Augmented Ontological Semantic Platform) Whitepaper.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%284%29%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20Whitepaper.pdf",
+      "path": "(4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%284%29%20%5BWP%5D%20A-OSP%20Webapp%20%28Augmented%20Ontological%20Semantic%20Platform%29%20WHITEPAPER.pdf",
       "canonical": true,
-      "size_bytes": 577952,
-      "sha256": "b3f77c14fc4a1c668507b4a64dfb96ca05499e39bcfbbe17471aacbe0ef3783e",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/aosp-whitepaper.md",
-      "text_sha256": "f6d10c82eebccc4169d0fa3f2136b590d31e08fcd54a95374e3fce0359b98b9c"
+      "size_bytes": 570324,
+      "sha256": "f27584cfc0156ac0000d74c676efa8a81f601aef3fc08eb9be45c07cec8a9e9b",
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/aosp-whitepaper.md",
+      "text_sha256": "88bfe9d53a24d1d2ad28637fe273810f9689b6894e9a952f3d5a99930592f34c"
     },
     {
       "id": "main-paper-rla-ecnn-crc-pce",
       "title": "Main Paper - RLA-ECNN-CRC-PCE",
       "role": "core_paper",
       "path": "RLA-CRC-ECNN/_Main_Paper_RLA-ECNN-CRC-PCE.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/_Main_Paper_RLA-ECNN-CRC-PCE.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/_Main_Paper_RLA-ECNN-CRC-PCE.pdf",
       "canonical": true,
       "size_bytes": 347249,
       "sha256": "46614044c0ca3d6441d9052f20e6f16c1c117f4337baf692bdcc9bdf0c0d89e9",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/main-paper-rla-ecnn-crc-pce.md",
-      "text_sha256": "cc46b4c1146174b71ccd53e44e6b58b96488334c6713764b38f5b344c2ffa3bb"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/main-paper-rla-ecnn-crc-pce.md",
+      "text_sha256": "eaab39c5030dc753c316831ec78610b4866437bc4cdb0b7b83b387acc6dcdc47"
     },
     {
       "id": "slidedeck-rla-ecnn-pce-bridge",
       "title": "Slidedeck - RLA-ECNN PCE Bridge",
       "role": "slidedeck",
       "path": "RLA-CRC-ECNN/_Slidedeck_RLA-ECNN_bridge_PCE.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/_Slidedeck_RLA-ECNN_bridge_PCE.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/_Slidedeck_RLA-ECNN_bridge_PCE.pdf",
       "canonical": true,
       "size_bytes": 1724772,
       "sha256": "089aac6a291dd3fd809e825eb9d3d31e4ff19a3778488813e8aef77380160eb8",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/slidedeck-rla-ecnn-pce-bridge.md",
-      "text_sha256": "d41f8eb84f833dcd06744052bcad6b3e221cfa9da2593fdc7ee193eac4e17624"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/slidedeck-rla-ecnn-pce-bridge.md",
+      "text_sha256": "a8e6c7516f46285a96a412b6deb0e4f53dcf03797c0d0058038d16b6683f162e"
     },
     {
       "id": "annex-a-rla-crc-foundations",
       "title": "Annex A - RLA-CRC Foundations",
       "role": "technical_annex",
       "path": "RLA-CRC-ECNN/Annex A - RLA-CRC Foundations.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20A%20-%20RLA-CRC%20Foundations.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20A%20-%20RLA-CRC%20Foundations.pdf",
       "canonical": true,
       "size_bytes": 306627,
       "sha256": "bed516b6858f10722d102aae24103c9589bbd818f891248db47c9ebc6df3797e",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-a-rla-crc-foundations.md",
-      "text_sha256": "b310a10f2e1775066c3598673a9ad6732c832cd06e3f02f3f725a81dbca83f35"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-a-rla-crc-foundations.md",
+      "text_sha256": "5377ac3e1ac7fb6c214925db7891210583f55dad298cb7e34acebdcdb03400e8"
     },
     {
       "id": "annex-b-rla-biological-case-bryophyte",
       "title": "Annex B - RLA biological Case Bryophyte",
       "role": "technical_annex",
       "path": "RLA-CRC-ECNN/Annex B - RLA biological Case Bryophyte.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20B%20-%20RLA%20biological%20Case%20Bryophyte.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20B%20-%20RLA%20biological%20Case%20Bryophyte.pdf",
       "canonical": true,
       "size_bytes": 327365,
       "sha256": "f9944099cc2bb2463ea5730d9b0da4b2a945e0f665622533664a1f81752f9527",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-b-rla-biological-case-bryophyte.md",
-      "text_sha256": "6370e4d8dbf0df912d3980e553afb29da5d1de0e2934887ec5ccf29826144460"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-b-rla-biological-case-bryophyte.md",
+      "text_sha256": "443bf8ac9f634a96057bb603d85fe7fad1b3907737886a34ef57b364ca63e06c"
     },
     {
       "id": "annex-c-ecnn-formalisation",
       "title": "Annex C - ECNN Formalisation",
       "role": "technical_annex",
       "path": "RLA-CRC-ECNN/Annex C - ECNN Formalisation.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20C%20-%20ECNN%20Formalisation.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20C%20-%20ECNN%20Formalisation.pdf",
       "canonical": true,
       "size_bytes": 332985,
       "sha256": "48338baf4413b5d3bafcad7d00a2f317d3d8ca4ffcd60d4b6c035fc9bcc6ea06",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-c-ecnn-formalisation.md",
-      "text_sha256": "b1b10ffbf7c5e300a5ff0037f741f39c1ba4ece6568ce4643b0c8a8cd5e4d766"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-c-ecnn-formalisation.md",
+      "text_sha256": "3de3fc884e938642e1f9ba3b056ba56bf6e5b087dc0a43ab7b41c691f6cc5e22"
     },
     {
       "id": "annex-d-ecu-uce-specification",
       "title": "Annex D - Epistemic LLM neuron ECU-UC Specification",
       "role": "technical_annex",
       "path": "RLA-CRC-ECNN/Annex D - Epistemic LLM neuron ECU-UC Specification.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20D%20-%20Epistemic%20LLM%20neuron%20ECU-UC%20Specification.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20D%20-%20Epistemic%20LLM%20neuron%20ECU-UC%20Specification.pdf",
       "canonical": true,
       "size_bytes": 334735,
       "sha256": "bd424693c01ddff79365a9211deebaa649e5f9ad2c14949b62eae158e9fee186",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-d-ecu-uce-specification.md",
-      "text_sha256": "7bed52a17b4d89981816c4b5955efb6529d50f83349c65e2cfde4f90bebb4400"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-d-ecu-uce-specification.md",
+      "text_sha256": "4d9351ff5e33ed41765a8e15c2accbdd03a27b390d26d8391eb0748b4ffb51f5"
     },
     {
       "id": "annex-e-rla-ecnn-pce-bridge",
       "title": "Annex E - RLA-ECNN bridge PCE",
       "role": "technical_annex",
       "path": "RLA-CRC-ECNN/Annex E - RLA-ECNN bridge PCE.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20E%20-%20RLA-ECNN%20bridge%20PCE.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20E%20-%20RLA-ECNN%20bridge%20PCE.pdf",
       "canonical": true,
       "size_bytes": 367341,
       "sha256": "9b60fcd0ff6a269404208d991478dd794cc5f48b7a7e0d9686a6adfc5ec6be35",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-e-rla-ecnn-pce-bridge.md",
-      "text_sha256": "f371ae237742210cc47cea27cbd56b74f5c7c3e7e81a653cc28ff5d4c3e906cb"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-e-rla-ecnn-pce-bridge.md",
+      "text_sha256": "9726321936a7b91c6d33fa055f5d03eb84ff0d2b87ff9f5b9fd8f2a558f50442"
     },
     {
       "id": "annex-f-proto-epistemic-architectures",
       "title": "Annex F - Proto-epistemic Architectures",
       "role": "technical_annex",
       "path": "RLA-CRC-ECNN/Annex F - Proto-epistemic Architectures.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20F%20-%20Proto-epistemic%20Architectures.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20F%20-%20Proto-epistemic%20Architectures.pdf",
       "canonical": true,
       "size_bytes": 344952,
       "sha256": "9a4a230a8da9480b0742ee9e47eec3a686fa27a42bd0b177e8a805a405dd7cb1",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-f-proto-epistemic-architectures.md",
-      "text_sha256": "15893927f9c20cc661f3def9b7503fd17aa6808f5e6db29b43fe81144b8ee888"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-f-proto-epistemic-architectures.md",
+      "text_sha256": "644981e72d0045e74c791a08cb4e5cc8f51c7699d1d8debbf0793c74e1d9b2a1"
     },
     {
       "id": "annex-g-methodology-experiments",
       "title": "Annex G - Methodology Experiments",
       "role": "methodology_annex",
       "path": "RLA-CRC-ECNN/Annex G - Methodology Experiments.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/RLA-CRC-ECNN/Annex%20G%20-%20Methodology%20Experiments.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/RLA-CRC-ECNN/Annex%20G%20-%20Methodology%20Experiments.pdf",
       "canonical": true,
       "size_bytes": 394682,
       "sha256": "230164c306f410fe0110fcc0a1875d3d577a43b9f47cae10df13059cfba97946",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/annex-g-methodology-experiments.md",
-      "text_sha256": "66583033dcce02fde4873ef7dee1bc5dcb235557b95db41bc7d2eb9d5645751d"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/annex-g-methodology-experiments.md",
+      "text_sha256": "a051c7cd4976bae852c94fb1d23c90ffd011c655f9a094ccbe02b41471420e53"
     },
     {
       "id": "wolfram-reply-annex",
       "title": "AI as Observer Compiler - ANNEX - reply Wolfram Metaphysics Position through RLA-ECNN",
       "role": "theory_bridge",
       "path": "Reply to Wolfram/AI as Observer Compiler - ANNEX - reply Wolfram Metaphisics Position through RLA-ECNN.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Reply%20to%20Wolfram/AI%20as%20Observer%20Compiler%20-%20ANNEX%20-%20reply%20Wolfram%20Metaphisics%20Position%20through%20RLA-ECNN.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Reply%20to%20Wolfram/AI%20as%20Observer%20Compiler%20-%20ANNEX%20-%20reply%20Wolfram%20Metaphisics%20Position%20through%20RLA-ECNN.pdf",
       "canonical": true,
       "size_bytes": 394706,
       "sha256": "c85fadc60c7f3e5edd6aec01abe29cea6c240913168fa3ad7c25076e0398e23b",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/wolfram-reply-annex.md",
-      "text_sha256": "811203414e0c74c8bb749feb9b3bfa2c959408df3731189902a7861356b7c5eb"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/wolfram-reply-annex.md",
+      "text_sha256": "df8cfec94806d3708c0e656740b430eeb1bfd97c3c2e5d94437334d91b2bc3be"
     },
     {
       "id": "5-a-osp-webapp-technical-due-diligence-v1-infrastructure-runtime-topology",
       "title": "(5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)",
       "role": "UNREVIEWED_AUTOSEEDED",
       "path": "(5) A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology).pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/%285%29%20A-OSP%20Webapp%20Technical%20Due%20Diligence%20v1%20%28Infrastructure%2C%20Runtime%2C%20Topology%29.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%285%29%20A-OSP%20Webapp%20Technical%20Due%20Diligence%20v1%20%28Infrastructure%2C%20Runtime%2C%20Topology%29.pdf",
       "canonical": true,
       "size_bytes": 356103,
       "sha256": "087ffc5597dd61b04d8aab181c920928fee8e998915da472f09575a0fd4a1f37",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/5-a-osp-webapp-technical-due-diligence-v1-infrastructure-runtime-topology.md",
-      "text_sha256": "10b235cd0dce9122a099013c8f2cd5e50e38630f9b38fceaa6f3f6071aff97dd"
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/5-a-osp-webapp-technical-due-diligence-v1-infrastructure-runtime-topology.md",
+      "text_sha256": "36e26ce3ad3aa3afc4848a9b152786987f8d28fd1cff84ecbece98a3c82afcbd"
     },
     {
       "id": "full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa",
       "title": "Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA",
       "role": "UNREVIEWED_AUTOSEEDED",
-      "path": "_Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA.pdf",
-      "raw_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_Full%20APA%20Bibliografy%20Corpus%20RLA-CRC%28Briophita%29-ECNN-ROA.pdf",
+      "path": "Full Bibliografy Corpus ROA Corpus.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Full%20Bibliografy%20Corpus%20ROA%20Corpus.pdf",
       "canonical": true,
-      "size_bytes": 61398,
-      "sha256": "650d3a03652316d7655010b30b7e334f7f2bcdd03affa35f5b0db64c8d08b6a4",
-      "text_url": "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/corpus/text/full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa.md",
-      "text_sha256": "00d8d216579a22462982a884d67981f3534380603c32dd963ccf350af025d453"
+      "size_bytes": 92218,
+      "sha256": "e9fec8c8e250ff40549b049401b3f8bb8a227b9ca1874e9e270516f340f0dc04",
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa.md",
+      "text_sha256": "6585f95f0afc0b0445decb8c1ce47e83f41d5cae429ec56a3e5df2b4c0848314"
+    },
+    {
+      "id": "6-cipm-a-osp-core-idea-proof-mechanics-brief",
+      "title": "(6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief",
+      "role": "UNREVIEWED_AUTOSEEDED",
+      "path": "(6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief.pdf",
+      "raw_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/%286%29%20%5BCIPM%5D%20A-OSP%20Core%20Idea%20%26%20Proof%20Mechanics%20Brief.pdf",
+      "canonical": true,
+      "size_bytes": 504169,
+      "sha256": "0d667cacad5daf8d0752091b29b3f26441d922e49648187cb5cf4b0d48d4f1a2",
+      "text_url": "https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/6-cipm-a-osp-core-idea-proof-mechanics-brief.md",
+      "text_sha256": "6ccd1df4ce1314e2fe9a324a3b2825d930ec4de86dd2acd334366c133980f349"
     }
   ]
 }

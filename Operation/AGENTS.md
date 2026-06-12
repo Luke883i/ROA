@@ -205,7 +205,7 @@ binary-acquisition map.
 Canonical raw URL:
 
 ```text
-https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/Operation/MANIFEST.json
+https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/MANIFEST.json
 ```
 
 Agents MUST prefer each entry's `text_url` when present, then fall back to

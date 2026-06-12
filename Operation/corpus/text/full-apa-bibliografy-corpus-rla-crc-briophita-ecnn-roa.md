@@ -2,38 +2,31 @@
 id: "full-apa-bibliografy-corpus-rla-crc-briophita-ecnn-roa"
 title: "Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA"
 role: "UNREVIEWED_AUTOSEEDED"
-source_path: "_Full APA Bibliografy Corpus RLA-CRC(Briophita)-ECNN-ROA.pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/RLA-ECNN/main/_Full%20APA%20Bibliografy%20Corpus%20RLA-CRC%28Briophita%29-ECNN-ROA.pdf"
-source_sha256: "650d3a03652316d7655010b30b7e334f7f2bcdd03affa35f5b0db64c8d08b6a4"
+source_path: "Full Bibliografy Corpus ROA Corpus.pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Full%20Bibliografy%20Corpus%20ROA%20Corpus.pdf"
+source_sha256: "e9fec8c8e250ff40549b049401b3f8bb8a227b9ca1874e9e270516f340f0dc04"
 extraction_status: "success"
 ---
 
 ## Page 1
 
-Bibliografia corpus RLA–ECNN–ROA · 1 
+Bibliografia corpus RLA–ECNN–ROA · 1
 Riferimenti bibliografici del  
 corpus RLA–ECNN–CRC–ROA 
- 
-Censimento completo · deduplicato · APA · ordine alfabetico canonico 
+Cens
+imento completo · deduplicato · APA · ordine alfabetico canonico 
 Gianluca Conte (2025–2026) · 4 giugno 2026 
- 
-Codice Documento Tipo riferimenti N. voci 
-M Main Paper RLA–ECNN–CRC–PCE (PDF) lett. esterna 22 
-A Annex A — RLA/CRC foundations (PDF) lett. esterna 16 
-B Annex B — bryophyte case (PDF) lett. esterna 73 
-C Annex C — ECNN formalisation (PDF) lett. esterna 15 
-D Annex D — PCE bridge (PDF) lett. esterna 14 
-E Annex E — ECU/UCE specification (PDF) lett. esterna 13 
-— Annex F — prototypes (PDF) nessuna 0 
-— Annex G — iKant methodology (PDF) nessuna 0 
-RW ANNEX 1 — Reply to Wolfram (PDF) esterna + corpus 2 
-EM Every Map — entrypoint umanistico (PDF) inline / per nome ~12 
-ROA ROA v6 — entrypoint / governance (DOCX) rinvii interni corpus 
-OC (i) AI as Observer Compiler (DOCX) rinvii interni corpus 
-AOSP (ii) A-OSP Whitepaper (DOCX) rinvii interni corpus 
-Totale: 114 riferimenti esterni unici + 15 riferimenti interni al corpus + 12 fonti in appendice = 141 voci. 
- 
-Letteratura esterna (APA, ordine alfabetico) 
+Documento Tipo riferimenti N. voci 
+Main Paper RLA–ECNN–CRC–PCE (PDF) lett. esterna 22 
+Annex A — RLA/CRC foundations (PDF) lett. esterna 16 
+Annex B — bryophyte case (PDF) lett. esterna 73 
+Annex C — ECNN formalisation (PDF) lett. esterna 15 
+Annex D — PCE bridge (PDF) lett. esterna 14 
+Annex E — ECU/UCE specification (PDF) lett. esterna 13 
+Annex F — prototypes (PDF) nessuna 0 
+Annex G — iKant methodology (PDF) nessuna 0 
+Let
+teratura esterna (APA, ordine alfabetico) 
 Anderson, P. W. (1972). More is different. Science, 177(4047), 393–396.  [A, B, C, D, M] 
 Asada, K. (2006). Production and scavenging of reactive oxygen species in chloroplasts. Plant Physiology, 
 141(2), 391–396.  [B] 
@@ -58,8 +51,9 @@ Physiology, 159(6), 567–584.  [B]
 
 ## Page 2
 
-Bibliografia corpus RLA–ECNN–ROA · 2 
-Brodersen, C. R., & Vogelmann, T. C. (2008). Do shaded leaves prevent photoinhibition? Plant, Cell & 
+Bibliografia corpus RLA–ECNN–ROA · 2
+B
+rodersen, C. R., & Vogelmann, T. C. (2008). Do shaded leaves prevent photoinhibition? Plant, Cell & 
 Environment, 31(2), 193–200.  [B] 
 Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., … Amodei, D. (2020). Language 
 models are few-shot learners. Advances in Neural Information Processing Systems, 33, 1877–1901.  
@@ -99,8 +93,9 @@ During, H. J., & van Tooren, B. F. (2015). Bryophyte biomechanics and hydrology.
 Eklund, D. M., Ståldal, V., Valsecchi, I., et al. (2015). Auxin feedback on dormancy and germination in 
 moss spores. Plant Physiology, 169(2), 913–924.  [B] 
 Evans, J. R. (1989). Photosynthesis and nitrogen relationships in leaves of C3 plants. Oecologia, 78(1), 9–
-19.  [B] 
-Foyer, C. H., & Noctor, G. (2009). Redox regulation and antioxidant signalling in plants. Plant, Cell & 
+19. [B]
+F
+oyer, C. H., & Noctor, G. (2009). Redox regulation and antioxidant signalling in plants. Plant, Cell & 
 Environment, 32(6), 646–659.  [B] 
 Frankham, R. (2005). Genetics and extinction. Biological Conservation, 126(2), 131–140.  [B] 
 Furness, S. B., & Grime, J. P. (1982). Growth-rate and temperature responses in bryophytes. Journal of 
@@ -111,8 +106,9 @@ in deep learning. Proceedings of the 33rd International Conference on Machine Le
 
 ## Page 3
 
-Bibliografia corpus RLA–ECNN–ROA · 3 
-Garcia, A., Rivera, S., & Ochoa, J. (2018). Hormonal control of protonemal growth in mosses. Plant 
+Bibliografia corpus RLA–ECNN–ROA · 3
+G
+arcia, A., Rivera, S., & Ochoa, J. (2018). Hormonal control of protonemal growth in mosses. Plant 
 Physiology and Biochemistry, 130, 1–12.  [B] 
 Garratt, J. R. (1994). The atmospheric boundary layer. Cambridge University Press.  [B] 
 Geifman, Y., & El-Yaniv, R. (2017). Selective classification for deep neural networks. Advances in Neural 
@@ -162,8 +158,9 @@ Lipton, Z. C. (2018). The mythos of model interpretability. Queue, 16(3), 31–5
 
 ## Page 4
 
-Bibliografia corpus RLA–ECNN–ROA · 4 
-Liu, X., & Rousk, K. (2021). Cyanobacterial colonisation of mosses. Annals of Botany, 129, 147–160.  [B] 
+Bibliografia corpus RLA–ECNN–ROA · 4
+Li
+u, X., & Rousk, K. (2021). Cyanobacterial colonisation of mosses. Annals of Botany, 129, 147–160.  [B] 
 Long, S. P., Ainsworth, E. A., Rogers, A., & Ort, D. R. (2006). Rising CO2 and plant photosynthesis. Annual 
 Review of Plant Biology, 57, 591–628.  [B] 
 Marschner, P. (2012). Marschner’s mineral nutrition of higher plants (3rd ed.). Academic Press.  [B] 
