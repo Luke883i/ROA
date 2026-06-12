@@ -129,6 +129,7 @@ The corpus is programmatic and criticisable. It does **not** claim completed mat
 ├── 🗎 (4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf
 ├── 🗎 (5) [TechDD] A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology).pdf
 ├── 🗎 (6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief.pdf
+├── 🗎 (7) A-OSP Value Propositions Brief View.pdf
 |
 |   MAIN THEORETICAL CORPUS
 ├──📁 RLA-CRC-ECNN
