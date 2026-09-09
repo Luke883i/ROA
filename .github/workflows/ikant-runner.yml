@@ -1,25 +1,29 @@
 name: iKant runner tests
 
-# DEC-0009: deterministic fetch + verify + trace reference runner.
-# Runs the dependency-free Node.js integration tests for Operation/runner/, which
-# exercise the manifest-driven fetch + verify + trace flow and the
-# DUE-CORPUS-FETCH fixture. No npm install: the runner uses only the Node.js
-# standard library.
-
 on:
   push:
     branches: ["**"]
     paths:
+      - "IKANT_ROA_ACCESS_CONTRACT.md"
       - "Operation/runner/**"
       - "Operation/MANIFEST.json"
+      - "Operation/SEMANTIC_RETICULUM.json"
       - "Operation/iKANT_PROMPT.md"
+      - "Operation/governance/CHAT_RUNTIME_V2.md"
+      - "Operation/governance/chat_runtime_100k_receipt.json"
+      - "Operation/governance/simulate_chat_runtime.js"
       - ".github/workflows/ikant-runner.yml"
   pull_request:
     branches: ["**"]
     paths:
+      - "IKANT_ROA_ACCESS_CONTRACT.md"
       - "Operation/runner/**"
       - "Operation/MANIFEST.json"
+      - "Operation/SEMANTIC_RETICULUM.json"
       - "Operation/iKANT_PROMPT.md"
+      - "Operation/governance/CHAT_RUNTIME_V2.md"
+      - "Operation/governance/chat_runtime_100k_receipt.json"
+      - "Operation/governance/simulate_chat_runtime.js"
       - ".github/workflows/ikant-runner.yml"
   workflow_dispatch:
 
@@ -32,13 +36,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      - name: Run iKant runner tests
-        # Let the shell expand the glob so the gate is portable across Node
-        # versions (Node < 21 does not expand glob patterns inside --test).
+      - name: Run iKant runner and chat-runtime tests
         run: node --test Operation/runner/test/*.test.js
+      - name: Verify persisted 100k chat-runtime receipt
+        run: node Operation/governance/simulate_chat_runtime.js --check

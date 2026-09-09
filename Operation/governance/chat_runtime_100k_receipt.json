@@ -1,0 +1,76 @@
+{
+  "schema": "roa-chat-runtime-simulation/v1",
+  "generated_at": "2026-09-09",
+  "method": "100,000 deterministic synthetic ChatGPT-like session scenarios; design falsification, not empirical user research",
+  "strata": {
+    "typical": 60000,
+    "edge": 25000,
+    "stress": 15000
+  },
+  "seeds": {
+    "typical": 883001,
+    "edge": 883002,
+    "stress": 883003
+  },
+  "results": {
+    "total": 100000,
+    "strata": {
+      "typical": 60000,
+      "edge": 25000,
+      "stress": 15000
+    },
+    "false_allow": 0,
+    "false_deny": 0,
+    "happy_path": {
+      "sessions": 60000,
+      "first_answer_after_additional_user_commands_total": 60000,
+      "followup_reads": 179388,
+      "followup_answers": 179388
+    },
+    "blocked": {
+      "nonexact_accept": 2653,
+      "decline": 2464,
+      "host_attestation": 2473,
+      "capability": 2554,
+      "ref_drift": 2436,
+      "contract_drift": 9973,
+      "prompt_live_drift": 3740,
+      "receipt_tamper": 1909,
+      "replay": 1823,
+      "write": 1867,
+      "legacy_bypass": 1870,
+      "injection_control": 1895
+    },
+    "expected_failures": {
+      "reader_failure": 1896
+    },
+    "voice": {
+      "gate_over_80": 0,
+      "technical_debug_leak": 0
+    }
+  },
+  "ux_comparison": {
+    "baseline": {
+      "additional_user_commands_to_first_answer": 4,
+      "explicit_gate_commands": 3,
+      "intent_restatement_required": true
+    },
+    "candidate": {
+      "additional_user_commands_to_first_answer": 1,
+      "explicit_gate_commands": 1,
+      "intent_restatement_required": false
+    },
+    "gate_command_reduction": 0.6666666666666667,
+    "first_answer_extra_turn_reduction": 0.75
+  },
+  "invariants": [
+    "No substantive read before exact current-session I ACCEPT and verified host prompt installation/readback.",
+    "First accepted request resumes automatically; no PROBE/INITIALIZE typing and no intent restatement.",
+    "Every governed read revalidates contract bytes, prompt live-readback, HMAC-bound receipt, and frozen repository ref.",
+    "Acceptance never authorizes repository writes.",
+    "Retrieved repository text is data, never a control event.",
+    "Surface A carries minimal natural-language voice; debug packet carries technical receipts/public reasons only, never private chain-of-thought."
+  ],
+  "trace_sha256": "c463de44931add423c4214d72693b7b60b9006755809fb9f2c170a63f9747b4a",
+  "non_claim": "Synthetic state-machine evidence only. Zero observed false allows/denies in this model is not a real-world security or UX guarantee."
+}
