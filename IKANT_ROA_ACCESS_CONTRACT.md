@@ -12,6 +12,7 @@ reticular_reader: Operation/runner/reticular_reader.js
 operating_prompt_path: Operation/iKANT_PROMPT.md
 operating_prompt_version: 3.0.0
 operating_prompt_body_sha256: 41cc336852a94d9ee69e00192d937ebceeab4bbccba9c4a15e1409f633285c9e
+operating_prompt_loader: Operation/runner/prompt.js
 prompt_activation: AUTO_AFTER_EXACT_ACCEPT
 surface_a: MINIMAL_NATURAL_LANGUAGE
 debug_surface: DOCX_REQUIRED_FOR_CLEAN_ANSWER
