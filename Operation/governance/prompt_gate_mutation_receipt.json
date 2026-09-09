@@ -1,0 +1,59 @@
+{
+  "schema": "roa-prompt-gate-mutation-receipt/v1",
+  "base_sha": "ea2bef21859eab78cdedc4296720c18c5c977db7",
+  "prompt_body_sha256": "41cc336852a94d9ee69e00192d937ebceeab4bbccba9c4a15e1409f633285c9e",
+  "method": "1000 deterministic reticular mutations around main survivor; hard invariant kill + minimal-burden convergence",
+  "seeds": [883, 20260909, 314159, 271828, 161803],
+  "strata": {
+    "ordinary": {"n": 500, "killed": 366, "survived": 134},
+    "edge": {"n": 300, "killed": 300, "survived": 0},
+    "adversarial": {"n": 200, "killed": 200, "survived": 0}
+  },
+  "mutations": 1000,
+  "killed": 866,
+  "survived": 134,
+  "kill_rate": 0.866,
+  "kill_reasons": {
+    "missing-readback": 206,
+    "prompt-drift-not-fail-closed": 191,
+    "hidden-authority-escalation": 190,
+    "unsafe-github-write": 190,
+    "lifecycle-bypass": 189,
+    "prompt-not-bound-at-initialize": 188,
+    "active-receipt-does-not-bind-prompt": 187,
+    "provider-lock-in": 185,
+    "debug-leak": 181,
+    "host-precedence-violation": 179,
+    "consent-not-local-readback-or-committed-global": 175,
+    "source-sha-mix": 172,
+    "prompt-not-cryptographically-bound": 123,
+    "prompt-not-persistent": 66
+  },
+  "best": {
+    "mutation_id": 8,
+    "stratum": "ordinary",
+    "seed": 883,
+    "fingerprint": "ce856ef085325bc4",
+    "burden": 0,
+    "candidate": {
+      "lifecycle": "exact_terms_accept_probe_initialize",
+      "prompt_path": "reuse_operation_ikant_prompt",
+      "prompt_digest": "body_sha256",
+      "activation": "initialize_once",
+      "receipt_binding": "prompt_sha256",
+      "drift": "reset_required",
+      "consent_storage": "session_local_uncommitted",
+      "prompt_authority": "zero",
+      "host_precedence": "preserved",
+      "source_ref": "pin_or_explicit_refresh",
+      "readback": "required",
+      "surface": "natural_debug_split",
+      "write_policy": "branch_same_sha",
+      "provider": "replaceable"
+    }
+  },
+  "compression_probe": {"alternatives_tested": 28, "strictly_better_survivors": []},
+  "trace_sha256": "b890a1eb621e2d3e89f26de0ffce141dbbe984f8f77505f87d828a05dfdead62",
+  "converged": true,
+  "non_claim": "Synthetic design falsification only; not empirical/scientific validation and not saturation under the v3 million-scale rule."
+}
