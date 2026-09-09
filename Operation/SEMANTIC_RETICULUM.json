@@ -1,17 +1,21 @@
 {
-  "schema": "roa-semantic-reticulum/v1.1",
+  "schema": "roa-semantic-reticulum/v1.2",
   "status": "RUNTIME_CANDIDATE",
   "non_claim": "Edge weights are routing/design weights, not probabilities of truth, empirical confidence, or scientific validation.",
   "control": {
     "admission_authority": "IKANT_ROA_ACCESS_CONTRACT.md",
-    "access_sequence": ["I ACCEPT", "PROBE IKANT", "INITIALIZE IKANT"],
-    "continuity": "ACTIVE SessionReceipt",
+    "chat_runtime": "Operation/runner/chat_runtime.js",
+    "access_sequence": ["I ACCEPT", "AUTO_BOOTSTRAP"],
+    "continuity": "ACTIVE signed SessionReceipt plus live prompt/ref/contract readback",
     "operating_prompt_path": "Operation/iKANT_PROMPT.md",
     "operating_prompt_version": "3.0.0",
-    "operating_prompt_loader": "Operation/runner/prompt.js",
-    "operating_prompt_binding": "prompt_body_sha256_in_session_receipt",
-    "prompt_activation": "INITIALIZE_ONCE",
-    "source_drift": "pin frozen ref or refresh source vector; never silently mix refs",
+    "operating_prompt_binding": "prompt_body_sha256_plus_live_host_readback",
+    "prompt_activation": "AUTO_AFTER_EXACT_ACCEPT",
+    "reticular_reader": "Operation/runner/reticular_reader.js",
+    "surface_a": "minimal_natural_language",
+    "debug_surface": "required_docx_artifact_sink",
+    "source_drift": "reset_required before substantive read; never silently mix refs",
+    "legacy_access_gate": "non_authorizing_compatibility_surface",
     "epistemic_authority": 0.0
   },
   "nodes": [
