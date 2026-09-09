@@ -2,10 +2,14 @@
 """Minimal ROA semantic chat runtime.
 
 Pure control/navigation code. It creates no epistemic authority and performs no
-repository mutation. The root IKANT_ROA_ACCESS_CONTRACT.md remains admission owner.
+repository mutation. The root IKANT_ROA_ACCESS_CONTRACT.md remains admission
+owner. Clean ACTIVE additionally requires the canonical Universal Meta-Prompt to
+be hash-bound in the SessionReceipt.
 """
 from __future__ import annotations
+import hashlib
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -15,6 +19,10 @@ OP = ROOT / "Operation"
 MANIFEST = OP / "MANIFEST.json"
 RETICULUM = OP / "SEMANTIC_RETICULUM.json"
 CURATION = OP / "SEMANTIC_CURATION.json"
+PROMPT = OP / "iKANT_PROMPT.md"
+PROMPT_VERSION = "3.0.0"
+PROMPT_BEGIN = "<!-- PROMPT:BEGIN -->"
+PROMPT_END = "<!-- PROMPT:END -->"
 ACTIVE_STATES = {"ACTIVE_FILE", "ACTIVE_EPHEMERAL", "DEGRADED_READ_ONLY"}
 TERMINALS = {"Answer", "Unknown", "Contradiction", "OutOfHorizon", "Review", "Timeout", "Failure"}
 
@@ -24,21 +32,83 @@ class AccessVerdict:
     state: str
     reason: str
 
+@dataclass(frozen=True)
+class PromptBinding:
+    ok: bool
+    version: str
+    sha256: str
+    body: str
+    reason: str
+
 def _load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
-def validate_session_receipt(receipt: dict, *, terms_sha256: str, contract_version: str) -> AccessVerdict:
-    required = {"session_id", "contract_version", "terms_sha256", "repository_ref", "runtime_mode", "status", "initialized_at"}
+def _sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+def operating_prompt_body(path: Path = PROMPT) -> str:
+    text = path.read_text(encoding="utf-8")
+    if text.count(PROMPT_BEGIN) != 1 or text.count(PROMPT_END) != 1:
+        raise ValueError("prompt-marker-cardinality")
+    segment = text.split(PROMPT_BEGIN, 1)[1].split(PROMPT_END, 1)[0]
+    match = re.fullmatch(r"\n```text\n(.*)```\n", segment, flags=re.S)
+    if not match:
+        raise ValueError("prompt-body-envelope-invalid")
+    body = match.group(1)
+    if not body.endswith("\n"):
+        raise ValueError("prompt-body-final-newline-missing")
+    return body
+
+def operating_prompt_version(path: Path = PROMPT) -> str:
+    text = path.read_text(encoding="utf-8")
+    m = re.search(r"`IKANT_PROMPT_VERSION:\s*([^`]+)`", text)
+    if not m:
+        raise ValueError("prompt-version-missing")
+    return m.group(1).strip()
+
+def operating_prompt_declared_sha256(path: Path = PROMPT) -> str:
+    text = path.read_text(encoding="utf-8")
+    m = re.search(r"`IKANT_PROMPT_BODY_SHA256:\s*([0-9a-f]{64})`", text)
+    if not m:
+        raise ValueError("prompt-declared-sha256-missing")
+    return m.group(1)
+
+def bind_operating_prompt(*, expected_sha256: str, expected_version: str = PROMPT_VERSION, path: Path = PROMPT) -> PromptBinding:
+    try:
+        body = operating_prompt_body(path)
+        version = operating_prompt_version(path)
+        got = _sha256_text(body)
+        declared = operating_prompt_declared_sha256(path)
+    except (OSError, ValueError) as exc:
+        return PromptBinding(False, "UNVERIFIED", "", "", str(exc))
+    if version != expected_version:
+        return PromptBinding(False, version, got, body, "prompt-version-drift")
+    if declared != got:
+        return PromptBinding(False, version, got, body, "prompt-self-digest-mismatch")
+    if got != expected_sha256:
+        return PromptBinding(False, version, got, body, "prompt-contract-digest-mismatch")
+    return PromptBinding(True, version, got, body, "prompt-bound")
+
+def validate_session_receipt(receipt: dict, *, terms_sha256: str, contract_version: str, prompt_sha256: str, prompt_version: str = PROMPT_VERSION) -> AccessVerdict:
+    required = {"session_id", "contract_version", "terms_sha256", "repository_ref", "runtime_mode", "status", "initialized_at", "accepted_command", "prompt_path", "prompt_version", "prompt_sha256", "prompt_loaded_at"}
     missing = sorted(required - set(receipt))
     if missing:
         return AccessVerdict(False, "RECEIPT_INVALID", "missing:" + ",".join(missing))
+    if receipt["accepted_command"] != "I ACCEPT":
+        return AccessVerdict(False, "RECEIPT_INVALID", "acceptance-not-exact")
     if receipt["contract_version"] != contract_version:
         return AccessVerdict(False, "RESET_REQUIRED", "contract-version-drift")
     if receipt["terms_sha256"] != terms_sha256:
         return AccessVerdict(False, "RESET_REQUIRED", "terms-digest-drift")
+    if receipt["prompt_path"] != "Operation/iKANT_PROMPT.md":
+        return AccessVerdict(False, "RESET_REQUIRED", "prompt-path-drift")
+    if receipt["prompt_version"] != prompt_version:
+        return AccessVerdict(False, "RESET_REQUIRED", "prompt-version-drift")
+    if receipt["prompt_sha256"] != prompt_sha256:
+        return AccessVerdict(False, "RESET_REQUIRED", "prompt-digest-drift")
     if receipt["status"] not in ACTIVE_STATES:
         return AccessVerdict(False, "NOT_ACTIVE", "initialization-not-active")
-    return AccessVerdict(True, "ACTIVE", "session-receipt-valid")
+    return AccessVerdict(True, "ACTIVE", "session-receipt-and-prompt-valid")
 
 def source_ref_state(receipt: dict, current_ref: str) -> str:
     frozen = receipt.get("repository_ref")
@@ -91,6 +161,15 @@ def validate_reticulum(graph: dict | None = None) -> list[str]:
             errors.append(f"candidate-authority:{cid}")
     if set(g.get("typed_terminals", [])) != TERMINALS:
         errors.append("typed-terminal-set")
+    control = g.get("control", {})
+    if control.get("operating_prompt_path") != "Operation/iKANT_PROMPT.md":
+        errors.append("operating-prompt-path")
+    if control.get("operating_prompt_loader") != "Operation/runner/prompt.js":
+        errors.append("operating-prompt-loader")
+    if control.get("operating_prompt_binding") != "prompt_body_sha256_in_session_receipt":
+        errors.append("operating-prompt-binding")
+    if control.get("epistemic_authority") != 0.0:
+        errors.append("control-authority-nonzero")
     return errors
 
 def route(seed_nodes: Iterable[str], *, graph: dict | None = None, max_nodes: int = 8) -> list[str]:
@@ -139,7 +218,7 @@ def self_check() -> dict:
             errors.append(f"curation-id-not-in-manifest:{cid}")
         elif cidx[cid].get("authority") != 0.0:
             errors.append(f"candidate-curation-nonzero-authority:{cid}")
-    return {"ok": not errors, "errors": errors, "manifest_entries": len(midx), "curation_entries": len(cidx)}
+    return {"ok": not errors, "errors": errors, "manifest_entries": len(midx), "curation_entries": len(cidx), "prompt_sha256": _sha256_text(operating_prompt_body())}
 
 if __name__ == "__main__":
     result = self_check()
