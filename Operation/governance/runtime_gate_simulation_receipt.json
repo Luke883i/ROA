@@ -1,0 +1,82 @@
+{
+  "schema": "roa-semantic-runtime-simulation/v2",
+  "base_main_sha": "5d029554aa3edd3f32db5a1f83f3d52caf8771ed",
+  "method": "10,000,000 deterministic multi-seed lifecycle/access scenarios + exact invariant enumeration + Markov forbidden-edge audit",
+  "strata": {
+    "ordinary": {
+      "n": 5000000,
+      "active": 3864161,
+      "degraded": 761079,
+      "gate": 299893,
+      "reset": 74867,
+      "false_allow": 0,
+      "false_allow_rate": 0
+    },
+    "edge": {
+      "n": 3000000,
+      "active": 909642,
+      "degraded": 1431157,
+      "gate": 300164,
+      "reset": 359037,
+      "false_allow": 0,
+      "false_allow_rate": 0
+    },
+    "stress": {
+      "n": 2000000,
+      "active": 86241,
+      "degraded": 989238,
+      "gate": 359993,
+      "reset": 564528,
+      "false_allow": 0,
+      "false_allow_rate": 0
+    }
+  },
+  "counts": {
+    "total": 10000000,
+    "active": 4860044,
+    "degraded": 3181474,
+    "gate": 960050,
+    "reset": 998432,
+    "false_allow": 0,
+    "false_deny": 0,
+    "legacy_bypass_blocked": 747047,
+    "injection_bypass_blocked": 889800,
+    "replay_blocked": 564648
+  },
+  "exact_enumeration": {
+    "cases": 256,
+    "clean_active": 1,
+    "false_allow": 0
+  },
+  "markov": {
+    "states": 11,
+    "forbidden_direct_active_edges": 16,
+    "examples": [
+      "UNINITIALIZED->ACTIVE_FILE",
+      "UNINITIALIZED->ACTIVE_EPHEMERAL",
+      "TERMS_PRESENTED->ACTIVE_FILE",
+      "TERMS_PRESENTED->ACTIVE_EPHEMERAL",
+      "ACCEPTED->ACTIVE_FILE",
+      "ACCEPTED->ACTIVE_EPHEMERAL",
+      "PROBING->ACTIVE_FILE",
+      "PROBING->ACTIVE_EPHEMERAL",
+      "INITIALIZING->ACTIVE_FILE",
+      "INITIALIZING->ACTIVE_EPHEMERAL",
+      "DEGRADED_READ_ONLY->ACTIVE_FILE",
+      "DEGRADED_READ_ONLY->ACTIVE_EPHEMERAL"
+    ]
+  },
+  "ux": {
+    "first_repo_request": "PRESENT_GATE",
+    "human_commands_to_clean_active": 1,
+    "required_human_command": "I ACCEPT",
+    "manual_probe_commands": 0,
+    "manual_initialize_commands": 0,
+    "original_request_auto_resumed": true,
+    "repeated_active_reads_ceremony": 0,
+    "decline_requires_no_substantive_read": true
+  },
+  "trace_sha256": "d08542d9001498e23db55f654ba99273a87349122e585b9f5f56cacf0cd8865e",
+  "verdict": "PASS",
+  "non_claim": "Synthetic design falsification and state-machine evidence only; not empirical attack probability, scientific validation, or formal saturation."
+}

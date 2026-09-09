@@ -1,17 +1,23 @@
 {
-  "schema": "roa-semantic-reticulum/v1.1",
+  "schema": "roa-semantic-reticulum/v1.2",
   "status": "RUNTIME_CANDIDATE",
   "non_claim": "Edge weights are routing/design weights, not probabilities of truth, empirical confidence, or scientific validation.",
   "control": {
     "admission_authority": "IKANT_ROA_ACCESS_CONTRACT.md",
-    "access_sequence": ["I ACCEPT", "PROBE IKANT", "INITIALIZE IKANT"],
+    "single_gate_owner": "Operation/runner/runtime.js",
+    "orchestrator": "Operation/runner/orchestrator.js",
+    "reticular_reader": "Operation/runner/reticular.js",
+    "user_access_sequence": ["FIRST_REPO_READ", "I ACCEPT"],
+    "automatic_transitions": ["AUTO_PROBE", "AUTO_INITIALIZE", "PROMPT_BOUND", "AUTO_RESUME"],
     "continuity": "ACTIVE SessionReceipt",
+    "session_receipt": ".ikant/session.json",
     "operating_prompt_path": "Operation/iKANT_PROMPT.md",
     "operating_prompt_version": "3.0.0",
     "operating_prompt_loader": "Operation/runner/prompt.js",
-    "operating_prompt_binding": "prompt_body_sha256_in_session_receipt",
-    "prompt_activation": "INITIALIZE_ONCE",
-    "source_drift": "pin frozen ref or refresh source vector; never silently mix refs",
+    "operating_prompt_binding": "host_install_plus_readback_sha256_in_session_receipt",
+    "prompt_activation": "AUTO_AFTER_EXACT_ACCEPT_ON_FIRST_REPO_READ",
+    "legacy_access_gate": "NON_AUTHORIZING_COMPATIBILITY",
+    "source_drift": "pin frozen ref or reset/explicit refresh; never silently mix refs",
     "epistemic_authority": 0.0
   },
   "nodes": [

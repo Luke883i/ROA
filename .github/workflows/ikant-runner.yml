@@ -1,25 +1,31 @@
-name: iKant runner tests
-
-# DEC-0009: deterministic fetch + verify + trace reference runner.
-# Runs the dependency-free Node.js integration tests for Operation/runner/, which
-# exercise the manifest-driven fetch + verify + trace flow and the
-# DUE-CORPUS-FETCH fixture. No npm install: the runner uses only the Node.js
-# standard library.
+name: iKant semantic runtime gate
 
 on:
   push:
     branches: ["**"]
     paths:
-      - "Operation/runner/**"
-      - "Operation/MANIFEST.json"
+      - "IKANT_ROA_ACCESS_CONTRACT.md"
       - "Operation/iKANT_PROMPT.md"
+      - "Operation/SEMANTIC_RETICULUM.json"
+      - "Operation/MANIFEST.json"
+      - "Operation/runner/**"
+      - "Operation/governance/incarnation_test.py"
+      - "Operation/governance/semantic_runtime.py"
+      - "Operation/governance/simulate_runtime_gate.js"
+      - "Operation/governance/runtime_gate_simulation_receipt.json"
       - ".github/workflows/ikant-runner.yml"
   pull_request:
     branches: ["**"]
     paths:
-      - "Operation/runner/**"
-      - "Operation/MANIFEST.json"
+      - "IKANT_ROA_ACCESS_CONTRACT.md"
       - "Operation/iKANT_PROMPT.md"
+      - "Operation/SEMANTIC_RETICULUM.json"
+      - "Operation/MANIFEST.json"
+      - "Operation/runner/**"
+      - "Operation/governance/incarnation_test.py"
+      - "Operation/governance/semantic_runtime.py"
+      - "Operation/governance/simulate_runtime_gate.js"
+      - "Operation/governance/runtime_gate_simulation_receipt.json"
       - ".github/workflows/ikant-runner.yml"
   workflow_dispatch:
 
@@ -27,18 +33,33 @@ permissions:
   contents: read
 
 jobs:
-  runner-test:
+  runtime-gate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      - name: Run iKant runner tests
-        # Let the shell expand the glob so the gate is portable across Node
-        # versions (Node < 21 does not expand glob patterns inside --test).
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run unified runtime and corpus tests
         run: node --test Operation/runner/test/*.test.js
+      - name: Verify legacy gate is non-authorizing
+        run: python Operation/governance/incarnation_test.py
+      - name: Verify semantic plane remains non-authorizing
+        run: python Operation/governance/test_semantic_runtime.py
+      - name: Re-run 10M deterministic access simulation
+        run: |
+          node Operation/governance/simulate_runtime_gate.js > /tmp/runtime_gate_receipt.json
+          python - <<'PY'
+          import json
+          expected=json.load(open('Operation/governance/runtime_gate_simulation_receipt.json'))
+          got=json.load(open('/tmp/runtime_gate_receipt.json'))
+          for key in ('counts','exact_enumeration','markov','ux','trace_sha256','verdict'):
+              assert got[key] == expected[key], (key, got[key], expected[key])
+          assert got['verdict'] == 'PASS'
+          PY

@@ -1,20 +1,17 @@
 {
   "name": "ikant-runner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Deterministic, dependency-free iKant runner: fetch + verify + trace ROA corpus documents from Operation/MANIFEST.json (mirrors Operation/iKANT_PROMPT.md and AGENTS.md §4.1).",
+  "description": "Dependency-free ROA semantic runtime: one-step admission, prompt readback, reticular verified reading and corpus trace.",
   "license": "SEE LICENSE IN ../../README.md",
   "type": "commonjs",
-  "main": "app.js",
-  "bin": {
-    "ikant-runner": "app.js"
-  },
-  "engines": {
-    "node": ">=18"
-  },
+  "main": "orchestrator.js",
+  "bin": {"ikant-runner": "app.js"},
+  "engines": {"node": ">=20"},
   "scripts": {
     "start": "node app.js",
-    "test": "node --test \"test/*.test.js\""
+    "test": "node --test \"test/*.test.js\"",
+    "simulate:gate": "node ../governance/simulate_runtime_gate.js"
   },
   "dependencies": {},
   "devDependencies": {}
