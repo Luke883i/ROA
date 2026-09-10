@@ -1,37 +1,33 @@
-# ROA semantic chat runtime — candidate v1.3
+# ROA semantic chat runtime — candidate v1.4
 
-This runtime is a zero-authority navigation/control layer. `IKANT_ROA_ACCESS_CONTRACT.md` remains the admission owner; `Operation/runner/chat_runtime.js` is the sole issuer of chat session receipts. The v1.3 change separates **permission to perform bounded same-session chat study** from **technical conformance of the host/runtime**.
+This slice changes presentation, not epistemic authority or admission semantics. The admission contract still owns access; the existing chat runtime still owns session receipts; the reticular reader still owns bounded corpus selection. A new product-facing adapter now owns what may leave the runtime toward a chat UI.
 
-## Hot path
+## Product hot path
 
-After the complete Terms are inspectable, exact current-session `I ACCEPT` triggers the automatic common bootstrap:
+After the existing one-accept admission flow, the product path is:
 
-`contract/Terms/prompt-digest checks -> capability probe -> repository-ref freeze -> signed STUDY_AUTHORIZED receipt -> resume pending request`
+`user intent -> chat runtime -> reticular reader -> internal result -> semantic chat adapter -> Surface A + Surface B`
 
-A host that also exposes real prompt installation and prompt readback may then upgrade the same epoch:
+The adapter is intentionally non-authorizing. It cannot mint receipts, upgrade conformance, change source selection, create write authority or alter the scientific status of any claim.
 
-`STUDY_AUTHORIZED -> install exact prompt -> readback exact digest -> ACTIVE_CONFORMING`
+## Surface A
 
-No prompt adapter or a failed readback means **remain `STUDY_AUTHORIZED`**, not false-green `ACTIVE_CONFORMING` and not a false denial of already-authorized read-only study. `DEGRADED_READ_ONLY` is retired; study authorization is a different property, not a weaker conformance claim.
+Surface A is only ordinary natural-language prose. It is bounded to 500 words and rejects structured control output, implementation paths, hashes, URLs, legacy layout markers, runtime state labels and control-plane vocabulary. The boundary does not silently rewrite a substantive answer that violates the rule: it fails closed with a short natural-language message.
 
-## Continuity
+Control/status messages are projected from fixed human-readable phrases instead of exposing the runtime's internal wording. The exact acceptance command may still appear because it is a user action, not diagnostic state.
 
-Both readable states require a valid signed receipt, stable contract bytes, stable Terms/prompt digest bindings, a pinned repository ref and an available artifact sink. `ACTIVE_CONFORMING` adds a live prompt-readback equality check on every governed read. Contract/ref/readback drift yields `RESET_REQUIRED`; source refs are never silently mixed.
+## Surface B
 
-## Plane separation
+All machine-facing detail stays on the artifact side. Before acceptance, the complete Terms remain inspectable there. For governed answers, the existing DOCX artifact carries trace, receipts, routes, source identifiers, hashes, open obligations, failures and backlog. Private chain-of-thought is never requested or persisted.
 
-- **Admission plane:** exact acceptance creates human authorization for the bounded chat-study channel only.
-- **Conformance plane:** host adapter evidence may upgrade that channel to `ACTIVE_CONFORMING`; hashes and model assertions cannot do so.
-- **Acquisition plane:** `Operation/MANIFEST.json` owns paths, URLs and integrity metadata.
-- **Curation plane:** `Operation/SEMANTIC_CURATION.json` proposes semantic roles without rewriting acquisition metadata. Candidate curation has authority `0.0` until human review.
-- **Navigation plane:** `Operation/SEMANTIC_RETICULUM.json` is the AI-navigable graph. Edge weights are routing/design weights, never truth probabilities.
-- **Inference plane:** claim state, evidence, componentwise Epistemic Debt, typed terminal and receipt remain separate from named-use permission.
-- **Action plane:** neither `STUDY_AUTHORIZED` nor `ACTIVE_CONFORMING` authorizes repository writes, merges, releases or settings changes.
+The product adapter exposes exactly two top-level fields: `voice` and `artifact`. Internal runtime fields remain available to tests and control code but are not part of the product envelope.
 
-## Evidence and falsification
+## Legacy compatibility
 
-The split is checked by deterministic unit tests plus `semantic_split_stress.js`: exact enumeration of the compact control-state space, 10,000,000 deterministic semantic mutations and a 1,000,000-case no-novelty tail. The receipt is design/state-machine evidence only. It is not empirical security validation, legal adjudication, model-behavior proof or production-host attestation.
+Older SPEAK/DEBUG/SEED and incarnation mechanisms remain historical or compatibility witnesses. They do not authorize current chat study and they must not be projected into Surface A. The presentation boundary therefore absorbs useful legacy control functions without reproducing their visible syntax.
 
-## Defeat conditions
+## Falsification
 
-Reject this design if a state can read without exact acceptance/common integrity, if host conformance can appear without study authorization plus prompt readback, if `STUDY_AUTHORIZED` can claim conformance, if write authority leaks from acceptance, if source drift continues silently, or if a simpler state representation preserves all negative behavior and reconstructability at lower burden.
+`simulate_chat_surface.js` generates 1,000 labelled presentation mutations and an additional 1,000-case no-novelty tail. The persisted receipt requires zero false allows and zero false denies in that synthetic set. Unit tests also verify that package consumers resolve to the semantic chat adapter while the existing corpus CLI remains available.
+
+This evidence is about deterministic boundary behavior only. It is not empirical UX validation, a security proof, proof of arbitrary host rendering behavior, or scientific validation of ROA.

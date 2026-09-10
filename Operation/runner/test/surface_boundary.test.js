@@ -1,0 +1,11 @@
+'use strict';
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const { inspectSurfaceA, projectPublicResult } = require('../surface_boundary');
+const CLEAN = 'La conclusione è prudente: il materiale sostiene questa lettura, ma non basta per trasformarla in una certezza generale.';
+test('clean prose passes',()=>assert.equal(inspectSurfaceA(CLEAN).ok,true));
+test('runtime vocabulary and legacy layout fail',()=>{for(const text of ['Lo stato è STUDY_AUTHORIZED.','Ora faccio il bootstrap.',':: DEBUG\ntrace interna','Vedi Operation/runner/chat_runtime.js.','Il valore sha256 è noto.','Resta epistemic debt.']) assert.equal(inspectSurfaceA(text).ok,false,text);});
+test('structured non-prose fails',()=>{for(const text of ['- primo punto','# Titolo','| a | b |','`codice`']) assert.equal(inspectSurfaceA(text).ok,false,text);});
+test('public projection exposes exactly voice and artifact',()=>{const got=projectPublicResult({kind:'ANSWER',voice:CLEAN,runtime_state:'ACTIVE_CONFORMING',debt:['x'],source_ids:['y'],debug_artifact:{path:'artifacts/backlog.docx',sha256:'abc'}});assert.deepEqual(Object.keys(got),['voice','artifact']);assert.equal(got.voice,CLEAN);assert.deepEqual(got.artifact,{kind:'DOCX',path:'artifacts/backlog.docx',sha256:'abc'});});
+test('terms are carried only on artifact surface',()=>{const got=projectPublicResult({kind:'ROA_ACCESS_GATE',voice:'Per continuare mi serve una sola conferma. Le condizioni complete sono disponibili nel documento associato.',terms_body:'FULL TERMS',terms_sha256:'terms',contract_version:'1.3.0'});assert.equal(got.voice.includes('sha'),false);assert.deepEqual(got.artifact,{kind:'TERMS',body:'FULL TERMS',sha256:'terms',contract_version:'1.3.0'});});
+test('1,000 mutations plus 1,000-case tail reproduce the persisted zero-error receipt',()=>{const {buildReceipt}=require('../../governance/simulate_chat_surface');const receipt=require('../../governance/chat_surface_1k_receipt.json');const got=buildReceipt();assert.deepEqual(got,receipt);assert.equal(got.primary.false_allow,0);assert.equal(got.primary.false_deny,0);assert.equal(got.tail.false_allow,0);assert.equal(got.tail.false_deny,0);assert.equal(got.no_novelty,true);});

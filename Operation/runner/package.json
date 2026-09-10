@@ -1,21 +1,14 @@
 {
   "name": "ikant-runner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Deterministic, dependency-free iKant runner: fetch + verify + trace ROA corpus documents from Operation/MANIFEST.json (mirrors Operation/iKANT_PROMPT.md and AGENTS.md §4.1).",
+  "description": "Dependency-free ROA runner with a two-surface semantic chat adapter and deterministic corpus access.",
   "license": "SEE LICENSE IN ../../README.md",
   "type": "commonjs",
-  "main": "app.js",
-  "bin": {
-    "ikant-runner": "app.js"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "test": "node --test \"test/*.test.js\""
-  },
+  "main": "semantic_chat.js",
+  "bin": {"ikant-runner": "app.js"},
+  "engines": {"node": ">=18"},
+  "scripts": {"start": "node app.js", "test": "node --test \"test/*.test.js\""},
   "dependencies": {},
   "devDependencies": {}
 }
