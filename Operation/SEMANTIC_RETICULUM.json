@@ -1,10 +1,328 @@
 {
-  "schema":"roa-semantic-reticulum/v1.4",
-  "status":"RUNTIME_CANDIDATE",
-  "non_claim":"Edge weights are routing/design weights, not probabilities of truth, empirical confidence, or scientific validation.",
-  "control":{"admission_authority":"IKANT_ROA_ACCESS_CONTRACT.md","chat_product_adapter":"Operation/runner/semantic_chat.js","chat_runtime":"Operation/runner/chat_runtime.js","surface_a_guard":"Operation/runner/surface_boundary.js","public_output_shape":["voice","artifact"],"access_sequence":["I ACCEPT","AUTO_BOOTSTRAP","STUDY_AUTHORIZED","OPTIONAL_CONFORMANCE_UPGRADE"],"continuity":"signed SessionReceipt plus contract/terms/prompt/ref integrity for study; live prompt readback additionally required for ACTIVE_CONFORMING","operating_prompt_path":"Operation/iKANT_PROMPT.md","operating_prompt_version":"3.0.0","operating_prompt_loader":"Operation/runner/prompt.js","operating_prompt_binding":"prompt_digest_for_study_live_readback_for_conformance","prompt_activation":"OPTIONAL_CONFORMANCE_UPGRADE_AFTER_EXACT_ACCEPT","chat_study_state":"STUDY_AUTHORIZED","conforming_state":"ACTIVE_CONFORMING","reticular_reader":"Operation/runner/reticular_reader.js","surface_a":"plain_natural_language_prose_only","surface_b":"terms_or_docx_artifact_only","debug_surface":"required_docx_artifact_sink","source_drift":"reset_required before substantive read; never silently mix refs","legacy_access_gate":"non_authorizing_compatibility_surface","epistemic_authority":0.0},
-  "nodes":[{"id":"RLA","layer":"representation","state":"CURATED","authority_class":"scientific_corpus"},{"id":"CRC","layer":"bounded_evaluation","state":"CURATED","authority_class":"scientific_corpus"},{"id":"ECU_ECNN","layer":"epistemic_transduction","state":"CURATED","authority_class":"scientific_corpus"},{"id":"ROA","layer":"observer_governance","state":"CURATED","authority_class":"scientific_corpus"},{"id":"CLAIM_ADMISSIBILITY","layer":"computational_semantics","state":"CANDIDATE_REVIEW_REQUIRED","authority_class":"candidate_zero_authority","manifest_id":"iv-computational-semantics-of-claim-admissibility"},{"id":"EPISTEMIC_DEBT","layer":"warrant_accounting","state":"CANDIDATE_REVIEW_REQUIRED","authority_class":"candidate_zero_authority","manifest_id":"v-epistemi-debt-the-accounting-layer-of-computational-semantics"},{"id":"USE_GATE","layer":"governed_use","state":"DERIVED_CONTRACT","authority_class":"external_policy_human"},{"id":"PCE","layer":"optional_simulation_bridge","state":"CURATED","authority_class":"bounded_bridge_only"},{"id":"BRYOPHYTE","layer":"falsification_surface","state":"CURATED","authority_class":"witness_only"},{"id":"AOSP","layer":"implementation_witness","state":"CURATED","authority_class":"witness_only"},{"id":"HUMAN_AUTHORITY","layer":"authorization","state":"CURATED","authority_class":"human_external"}],
-  "edges":[{"from":"RLA","to":"CRC","relation":"compile","weight":{"routing":1.0,"preservation":0.95,"authority":1.0,"falsifiability":0.9,"debt_cost":0.2},"debt":["encoding","termination"],"optionality":"core","falsifier":"matched evaluator reconstructs the same export without the typed reticulum"},{"from":"CRC","to":"ECU_ECNN","relation":"bound_execution","weight":{"routing":0.95,"preservation":0.95,"authority":1.0,"falsifiability":0.9,"debt_cost":0.2},"debt":["composition","receipt"],"optionality":"core","falsifier":"simpler transducer composition reconstructs full typed export at lower burden"},{"from":"ECU_ECNN","to":"ROA","relation":"compose_observer","weight":{"routing":1.0,"preservation":0.95,"authority":1.0,"falsifiability":0.9,"debt_cost":0.25},"debt":["dependency","governance"],"optionality":"core","falsifier":"matched baseline reconstructs observer export with lower burden"},{"from":"ROA","to":"CLAIM_ADMISSIBILITY","relation":"contextualize_claim_state","weight":{"routing":1.0,"preservation":0.9,"authority":0.0,"falsifiability":0.85,"debt_cost":0.55},"debt":["semantic-role-human-review"],"optionality":"core_candidate","falsifier":"claim-state export is reconstructable without this contract at lower burden"},{"from":"CLAIM_ADMISSIBILITY","to":"EPISTEMIC_DEBT","relation":"account_residual_warrant","weight":{"routing":1.0,"preservation":0.95,"authority":0.0,"falsifiability":0.9,"debt_cost":0.6},"debt":["semantic-role-human-review","instrument-reliability"],"optionality":"core_candidate","falsifier":"simpler rubric preserves all blocking and discharge information"},{"from":"CLAIM_ADMISSIBILITY","to":"USE_GATE","relation":"separate_state_from_permission","weight":{"routing":0.95,"preservation":1.0,"authority":0.8,"falsifiability":0.9,"debt_cost":0.35},"debt":["gate-calibration","institutional-legitimacy"],"optionality":"core_for_use","falsifier":"evidence status alone safely determines all representative named uses"},{"from":"EPISTEMIC_DEBT","to":"USE_GATE","relation":"propagate_open_warrant","weight":{"routing":1.0,"preservation":1.0,"authority":0.8,"falsifiability":0.9,"debt_cost":0.35},"debt":["coding-reliability","dependency-completeness"],"optionality":"core_for_use","falsifier":"debt coding adds no diagnostic value against matched baseline"},{"from":"USE_GATE","to":"HUMAN_AUTHORITY","relation":"authorization_boundary","weight":{"routing":1.0,"preservation":1.0,"authority":1.0,"falsifiability":0.95,"debt_cost":0.25},"debt":["normative-legitimacy"],"optionality":"core_for_normative_use","falsifier":"system self-authorizes under separated-authority policy"},{"from":"RLA","to":"PCE","relation":"optional_simulation","weight":{"routing":0.2,"preservation":0.45,"authority":0.3,"falsifiability":0.85,"debt_cost":0.75},"debt":["encoding","distortion","overhead","reverse-equivalence"],"optionality":"optional_lateral","falsifier":"declared observable/distortion/overhead bound fails"},{"from":"RLA","to":"BRYOPHYTE","relation":"instantiate_scientific_case","weight":{"routing":0.45,"preservation":0.55,"authority":0.4,"falsifiability":0.95,"debt_cost":0.7},"debt":["transfer","calibration","validation"],"optionality":"witness","falsifier":"compiled model fails constructibility or matched empirical challenge"},{"from":"ROA","to":"AOSP","relation":"implementation_witness","weight":{"routing":0.35,"preservation":0.55,"authority":0.4,"falsifiability":0.9,"debt_cost":0.6},"debt":["empirical-payoff","production-readiness"],"optionality":"witness","falsifier":"implementation fails its receipt/readback/anti-false-green contract"}],
-  "core_route":["RLA","CRC","ECU_ECNN","ROA","CLAIM_ADMISSIBILITY","EPISTEMIC_DEBT","USE_GATE","HUMAN_AUTHORITY"],
-  "typed_terminals":["Answer","Unknown","Contradiction","OutOfHorizon","Review","Timeout","Failure"]
+  "schema": "roa-semantic-reticulum/v1.5",
+  "status": "RUNTIME_CANDIDATE",
+  "non_claim": "Edge weights are routing/design weights, not probabilities of truth, empirical confidence, or scientific validation.",
+  "control": {
+    "admission_authority": "IKANT_ROA_ACCESS_CONTRACT.md",
+    "decision_chain": [
+      "Operation/governance/DecisionLog.md",
+      "Operation/governance/DecisionLog.runtime.md"
+    ],
+    "chat_product_adapter": "Operation/runner/semantic_chat.js",
+    "chat_runtime": "Operation/runner/chat_runtime.js",
+    "hosted_chat_port": "Operation/runner/hosted_chat_port.js",
+    "external_chat_port": "Operation/runner/mcp_server.js",
+    "artifact_sink": "Operation/runner/docx_artifact.js",
+    "reticular_reader": "Operation/runner/reticular_reader.js",
+    "surface_a_guard": "Operation/runner/surface_boundary.js",
+    "public_output_shape": [
+      "voice",
+      "artifact"
+    ],
+    "surface_a": "plain_natural_language_prose_only",
+    "surface_b": "terms_or_verified_docx_artifact_only",
+    "access_sequence": [
+      "I ACCEPT",
+      "AUTO_VERIFY",
+      "STUDY_AUTHORIZED",
+      "OPTIONAL_CONFORMANCE_UPGRADE"
+    ],
+    "hosted_sequence": [
+      "PREPARE_VERIFIED_CONTEXT",
+      "HOST_DRAFT_AUTHORITY_0",
+      "FINALIZE_REVALIDATE",
+      "DOCX_WRITE",
+      "DOCX_READBACK",
+      "RELEASE"
+    ],
+    "continuity": "opaque_application_handle_zero_authority",
+    "artifact_release": "write_plus_exact_readback_required",
+    "operating_prompt_path": "Operation/iKANT_PROMPT.md",
+    "operating_prompt_version": "3.1.0",
+    "chat_study_state": "STUDY_AUTHORIZED",
+    "conforming_state": "ACTIVE_CONFORMING",
+    "legacy_access_gate": "historical_non_authorizing_compatibility",
+    "epistemic_authority": 0,
+    "continuity_authority": 0,
+    "debug_surface": "docx_write_and_exact_readback_required"
+  },
+  "nodes": [
+    {
+      "id": "RLA",
+      "layer": "representation",
+      "state": "CURATED",
+      "authority_class": "scientific_corpus"
+    },
+    {
+      "id": "CRC",
+      "layer": "bounded_evaluation",
+      "state": "CURATED",
+      "authority_class": "scientific_corpus"
+    },
+    {
+      "id": "ECU_ECNN",
+      "layer": "epistemic_transduction",
+      "state": "CURATED",
+      "authority_class": "scientific_corpus"
+    },
+    {
+      "id": "ROA",
+      "layer": "observer_governance",
+      "state": "CURATED",
+      "authority_class": "scientific_corpus"
+    },
+    {
+      "id": "CLAIM_ADMISSIBILITY",
+      "layer": "computational_semantics",
+      "state": "CANDIDATE_REVIEW_REQUIRED",
+      "authority_class": "candidate_zero_authority",
+      "manifest_id": "iv-computational-semantics-of-claim-admissibility"
+    },
+    {
+      "id": "EPISTEMIC_DEBT",
+      "layer": "warrant_accounting",
+      "state": "CANDIDATE_REVIEW_REQUIRED",
+      "authority_class": "candidate_zero_authority",
+      "manifest_id": "v-epistemi-debt-the-accounting-layer-of-computational-semantics"
+    },
+    {
+      "id": "USE_GATE",
+      "layer": "governed_use",
+      "state": "DERIVED_CONTRACT",
+      "authority_class": "external_policy_human"
+    },
+    {
+      "id": "PCE",
+      "layer": "optional_simulation_bridge",
+      "state": "CURATED",
+      "authority_class": "bounded_bridge_only"
+    },
+    {
+      "id": "BRYOPHYTE",
+      "layer": "falsification_surface",
+      "state": "CURATED",
+      "authority_class": "witness_only"
+    },
+    {
+      "id": "AOSP",
+      "layer": "implementation_witness",
+      "state": "CURATED",
+      "authority_class": "witness_only"
+    },
+    {
+      "id": "HUMAN_AUTHORITY",
+      "layer": "authorization",
+      "state": "CURATED",
+      "authority_class": "human_external"
+    }
+  ],
+  "edges": [
+    {
+      "from": "RLA",
+      "to": "CRC",
+      "relation": "compile",
+      "weight": {
+        "routing": 1,
+        "preservation": 0.95,
+        "authority": 1,
+        "falsifiability": 0.9,
+        "debt_cost": 0.2
+      },
+      "debt": [
+        "encoding",
+        "termination"
+      ],
+      "optionality": "core"
+    },
+    {
+      "from": "CRC",
+      "to": "ECU_ECNN",
+      "relation": "bound_execution",
+      "weight": {
+        "routing": 0.95,
+        "preservation": 0.95,
+        "authority": 1,
+        "falsifiability": 0.9,
+        "debt_cost": 0.2
+      },
+      "debt": [
+        "composition",
+        "receipt"
+      ],
+      "optionality": "core"
+    },
+    {
+      "from": "ECU_ECNN",
+      "to": "ROA",
+      "relation": "compose_observer",
+      "weight": {
+        "routing": 1,
+        "preservation": 0.95,
+        "authority": 1,
+        "falsifiability": 0.9,
+        "debt_cost": 0.25
+      },
+      "debt": [
+        "dependency",
+        "governance"
+      ],
+      "optionality": "core"
+    },
+    {
+      "from": "ROA",
+      "to": "CLAIM_ADMISSIBILITY",
+      "relation": "contextualize_claim_state",
+      "weight": {
+        "routing": 1,
+        "preservation": 0.9,
+        "authority": 0,
+        "falsifiability": 0.85,
+        "debt_cost": 0.55
+      },
+      "debt": [
+        "semantic-role-human-review"
+      ],
+      "optionality": "core_candidate"
+    },
+    {
+      "from": "CLAIM_ADMISSIBILITY",
+      "to": "EPISTEMIC_DEBT",
+      "relation": "account_residual_warrant",
+      "weight": {
+        "routing": 1,
+        "preservation": 0.95,
+        "authority": 0,
+        "falsifiability": 0.9,
+        "debt_cost": 0.6
+      },
+      "debt": [
+        "semantic-role-human-review",
+        "instrument-reliability"
+      ],
+      "optionality": "core_candidate"
+    },
+    {
+      "from": "CLAIM_ADMISSIBILITY",
+      "to": "USE_GATE",
+      "relation": "separate_state_from_permission",
+      "weight": {
+        "routing": 0.95,
+        "preservation": 1,
+        "authority": 0.8,
+        "falsifiability": 0.9,
+        "debt_cost": 0.35
+      },
+      "debt": [
+        "gate-calibration",
+        "institutional-legitimacy"
+      ],
+      "optionality": "core_for_use"
+    },
+    {
+      "from": "EPISTEMIC_DEBT",
+      "to": "USE_GATE",
+      "relation": "propagate_open_warrant",
+      "weight": {
+        "routing": 1,
+        "preservation": 1,
+        "authority": 0.8,
+        "falsifiability": 0.9,
+        "debt_cost": 0.35
+      },
+      "debt": [
+        "coding-reliability",
+        "dependency-completeness"
+      ],
+      "optionality": "core_for_use"
+    },
+    {
+      "from": "USE_GATE",
+      "to": "HUMAN_AUTHORITY",
+      "relation": "authorization_boundary",
+      "weight": {
+        "routing": 1,
+        "preservation": 1,
+        "authority": 1,
+        "falsifiability": 0.95,
+        "debt_cost": 0.25
+      },
+      "debt": [
+        "normative-legitimacy"
+      ],
+      "optionality": "core_for_normative_use"
+    },
+    {
+      "from": "RLA",
+      "to": "PCE",
+      "relation": "optional_simulation",
+      "weight": {
+        "routing": 0.2,
+        "preservation": 0.45,
+        "authority": 0.3,
+        "falsifiability": 0.85,
+        "debt_cost": 0.75
+      },
+      "debt": [
+        "encoding",
+        "distortion",
+        "overhead",
+        "reverse-equivalence"
+      ],
+      "optionality": "optional_lateral"
+    },
+    {
+      "from": "RLA",
+      "to": "BRYOPHYTE",
+      "relation": "instantiate_scientific_case",
+      "weight": {
+        "routing": 0.45,
+        "preservation": 0.55,
+        "authority": 0.4,
+        "falsifiability": 0.95,
+        "debt_cost": 0.7
+      },
+      "debt": [
+        "transfer",
+        "calibration",
+        "validation"
+      ],
+      "optionality": "witness"
+    },
+    {
+      "from": "ROA",
+      "to": "AOSP",
+      "relation": "implementation_witness",
+      "weight": {
+        "routing": 0.35,
+        "preservation": 0.55,
+        "authority": 0.4,
+        "falsifiability": 0.9,
+        "debt_cost": 0.6
+      },
+      "debt": [
+        "empirical-payoff",
+        "production-readiness"
+      ],
+      "optionality": "witness"
+    }
+  ],
+  "core_route": [
+    "RLA",
+    "CRC",
+    "ECU_ECNN",
+    "ROA",
+    "CLAIM_ADMISSIBILITY",
+    "EPISTEMIC_DEBT",
+    "USE_GATE",
+    "HUMAN_AUTHORITY"
+  ],
+  "typed_terminals": [
+    "Answer",
+    "Unknown",
+    "Contradiction",
+    "OutOfHorizon",
+    "Review",
+    "Timeout",
+    "Failure"
+  ]
 }

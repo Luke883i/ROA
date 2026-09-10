@@ -1,14 +1,14 @@
 {
   "name": "ikant-runner",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
-  "description": "Dependency-free ROA runner with a two-surface semantic chat adapter and deterministic corpus access.",
+  "description": "Dependency-free ROA runner with semantic chat, verified DOCX release, and stateless hosted MCP boundary.",
   "license": "SEE LICENSE IN ../../README.md",
   "type": "commonjs",
   "main": "semantic_chat.js",
-  "bin": {"ikant-runner": "app.js"},
-  "engines": {"node": ">=18"},
-  "scripts": {"start": "node app.js", "test": "node --test \"test/*.test.js\""},
+  "bin": {"ikant-runner": "app.js", "ikant-mcp": "mcp_server.js"},
+  "engines": {"node": ">=20"},
+  "scripts": {"start": "node app.js", "mcp": "node mcp_server.js", "test": "node --test \"test/*.test.js\""},
   "dependencies": {},
   "devDependencies": {}
 }

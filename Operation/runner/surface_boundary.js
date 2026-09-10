@@ -6,6 +6,9 @@ const INTERNAL_PATTERNS = Object.freeze([
   ['runtime-jargon', /\b(?:bootstrap|chat[- ]host|host adapter|artifact[_ -]?sink|sessionreceipt|receipt_hmac|prompt(?:[_ -]?(?:readback|sha|digest|loader))?|repository[_ -]?ref|runtime[_ -]?state|conformance_status|source_ids?|route ids?|telemetry|trace|debug packet|epistemic debt|debt)\b/i],
   ['implementation-ref', /\b(?:PR|pull request)\s*#?\d+\b|Operation\/|\.github\/|(?:[A-Za-z0-9_-]+\/)+[A-Za-z0-9_.-]+\.(?:js|py|json|md|yml|yaml)\b/i],
   ['digest-or-hash', /\bsha-?256\b|\b[0-9a-f]{40,64}\b/i],
+  ['continuation-handle', /\b(?:c|d)_[A-Za-z0-9_-]{20,}\b/],
+  ['protocol-jargon', /\b(?:MCP|Mcp-Session-Id|MCP-Protocol-Version|Mcp-Method|Mcp-Name|JSON-RPC)\b/i],
+  ['internal-resource-uri', /\broa-(?:artifact|terms):\/\//i],
   ['url', /https?:\/\/|www\./i],
   ['code', /```|`[^`\n]+`/],
   ['list-or-heading', /^(?:\s*[-*+]\s+|\s*\d+\.\s+|\s*#{1,6}\s+)/m],
@@ -48,6 +51,7 @@ function artifactFromInternalResult(result) {
       kind: 'DOCX',
       path: result.debug_artifact.path || null,
       sha256: result.debug_artifact.sha256 || null,
+      readback_verified: result.debug_artifact.readback_verified === true,
     });
   }
   return null;
