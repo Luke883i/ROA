@@ -3,8 +3,38 @@
   "generated_at": "2026-09-10",
   "base_sha": "d432b5002d55370ee6c1ce0f6b06ad3c27202783",
   "method": "1,000 deterministic labelled chat-surface mutations plus 1,000-case no-novelty tail; design falsification only",
-  "primary": {"cases":1000,"false_allow":0,"false_deny":0,"observed_rejection_classes":["code","control-token","digest-or-hash","implementation-ref","legacy-layout","runtime-jargon","table","url"],"trace_sha256":"9513689ba420cac3ac16bb155d213048461106c958f159ffac6b463c2da02b7d"},
-  "tail": {"cases":1000,"false_allow":0,"false_deny":0,"observed_rejection_classes":["code","control-token","digest-or-hash","implementation-ref","legacy-layout","runtime-jargon","table","url"],"trace_sha256":"afb1c0a91ecc7e09b675422dd4c5c74cfabd74925bf07c9f9c008aa43b74be41"},
+  "primary": {
+    "cases": 1000,
+    "false_allow": 0,
+    "false_deny": 0,
+    "observed_rejection_classes": [
+      "code",
+      "control-token",
+      "digest-or-hash",
+      "implementation-ref",
+      "legacy-layout",
+      "runtime-jargon",
+      "table",
+      "url"
+    ],
+    "trace_sha256": "9513689ba420cac3ac16bb155d213048461106c958f159ffac6b463c2da02b7d"
+  },
+  "tail": {
+    "cases": 1000,
+    "false_allow": 0,
+    "false_deny": 0,
+    "observed_rejection_classes": [
+      "code",
+      "control-token",
+      "digest-or-hash",
+      "implementation-ref",
+      "legacy-layout",
+      "runtime-jargon",
+      "table",
+      "url"
+    ],
+    "trace_sha256": "afb1c0a91ecc7e09b675422dd4c5c74cfabd74925bf07c9f9c008aa43b74be41"
+  },
   "no_novelty": true,
   "invariant": "Surface A is plain natural-language prose; runtime/control references and structured diagnostics remain outside it.",
   "non_claim": "Synthetic boundary evidence only; not empirical UX research, security proof, or proof of arbitrary host rendering behavior."
