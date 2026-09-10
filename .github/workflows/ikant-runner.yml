@@ -2,10 +2,10 @@ name: iKant runner tests
 on:
   push:
     branches: ["**"]
-    paths: ["IKANT_ROA_ACCESS_CONTRACT.md","Operation/runner/**","Operation/MANIFEST.json","Operation/SEMANTIC_CURATION.json","Operation/SEMANTIC_RETICULUM.json","Operation/SEMANTIC_RUNTIME.md","Operation/iKANT_PROMPT.md","Operation/governance/CHAT_RUNTIME_V2.md","Operation/governance/CHAT_SURFACE_BOUNDARY.md","Operation/governance/semantic_runtime.py","Operation/governance/test_semantic_runtime.py","Operation/governance/semantic_split_stress.js","Operation/governance/semantic_split_11m_receipt.json","Operation/governance/simulate_chat_surface.js","Operation/governance/chat_surface_1k_receipt.json",".github/workflows/ikant-runner.yml"]
+    paths: ["README.md","IKANT_ROA_ACCESS_CONTRACT.md","Operation/AGENTS.md","Operation/runner/**","Operation/MANIFEST.json","Operation/SEMANTIC_CURATION.json","Operation/SEMANTIC_RETICULUM.json","Operation/SEMANTIC_RUNTIME.md","Operation/iKANT_PROMPT.md","Operation/governance/DecisionLog.runtime.md","Operation/governance/HOSTED_CHAT_RUNTIME.md","Operation/governance/CHAT_RUNTIME_V2.md","Operation/governance/CHAT_SURFACE_BOUNDARY.md","Operation/governance/semantic_runtime.py","Operation/governance/test_semantic_runtime.py","Operation/governance/semantic_split_stress.js","Operation/governance/semantic_split_11m_receipt.json","Operation/governance/simulate_chat_surface.js","Operation/governance/chat_surface_1k_receipt.json","Operation/governance/semantic_host_bridge_stress.js","Operation/governance/semantic_host_bridge_11m_receipt.json",".github/workflows/ikant-runner.yml"]
   pull_request:
     branches: ["**"]
-    paths: ["IKANT_ROA_ACCESS_CONTRACT.md","Operation/runner/**","Operation/MANIFEST.json","Operation/SEMANTIC_CURATION.json","Operation/SEMANTIC_RETICULUM.json","Operation/SEMANTIC_RUNTIME.md","Operation/iKANT_PROMPT.md","Operation/governance/CHAT_RUNTIME_V2.md","Operation/governance/CHAT_SURFACE_BOUNDARY.md","Operation/governance/semantic_runtime.py","Operation/governance/test_semantic_runtime.py","Operation/governance/semantic_split_stress.js","Operation/governance/semantic_split_11m_receipt.json","Operation/governance/simulate_chat_surface.js","Operation/governance/chat_surface_1k_receipt.json",".github/workflows/ikant-runner.yml"]
+    paths: ["README.md","IKANT_ROA_ACCESS_CONTRACT.md","Operation/AGENTS.md","Operation/runner/**","Operation/MANIFEST.json","Operation/SEMANTIC_CURATION.json","Operation/SEMANTIC_RETICULUM.json","Operation/SEMANTIC_RUNTIME.md","Operation/iKANT_PROMPT.md","Operation/governance/DecisionLog.runtime.md","Operation/governance/HOSTED_CHAT_RUNTIME.md","Operation/governance/CHAT_RUNTIME_V2.md","Operation/governance/CHAT_SURFACE_BOUNDARY.md","Operation/governance/semantic_runtime.py","Operation/governance/test_semantic_runtime.py","Operation/governance/semantic_split_stress.js","Operation/governance/semantic_split_11m_receipt.json","Operation/governance/simulate_chat_surface.js","Operation/governance/chat_surface_1k_receipt.json","Operation/governance/semantic_host_bridge_stress.js","Operation/governance/semantic_host_bridge_11m_receipt.json",".github/workflows/ikant-runner.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,3 +26,5 @@ jobs:
         run: node Operation/governance/semantic_split_stress.js --check
       - name: Verify chat surface falsification receipt
         run: node Operation/governance/simulate_chat_surface.js --check
+      - name: Verify hosted runtime 11m falsification receipt
+        run: node Operation/governance/semantic_host_bridge_stress.js --check

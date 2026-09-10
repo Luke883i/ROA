@@ -1,0 +1,112 @@
+{
+  "schema": "roa-semantic-host-bridge-falsification/v2",
+  "generated_at": "2026-09-10",
+  "base_sha": "f1096feb1f2fea7a17fa659cba23a1dced19c01e",
+  "model_digest": "78942253555df111a094b6749a15dc301c653002b5270adec1e3c9b3254f4ed8",
+  "implementation_binding": "Executable runtime behavior is checked by the Node/Python CI suites; this receipt binds only the deterministic falsification model and does not infer implementation correctness from file hashes.",
+  "method": "10,000,000 deterministic multi-seed architecture/governance mutations plus 1,000,000-case no-novelty tail; synthetic design evidence only",
+  "seeds": [
+    "0x13579bdf",
+    "0x2468ace1",
+    "0x9e3779b9",
+    "0x7f4a7c15"
+  ],
+  "tail_seeds": [
+    "0xa5a5a5a5",
+    "0x5a5a5a5a"
+  ],
+  "primary": {
+    "cases": 10000000,
+    "false_allow": 0,
+    "false_deny": 0,
+    "rejection_classes": [
+      "admission",
+      "allow",
+      "artifact",
+      "handle_authority",
+      "live_binding",
+      "receipt",
+      "source_ref",
+      "surface",
+      "synthesis_token",
+      "transport",
+      "write_authority"
+    ],
+    "strata": {
+      "admission": 1000000,
+      "continuity": 1000000,
+      "artifact": 1000000,
+      "source_ref": 1000000,
+      "contract_prompt": 1000000,
+      "surface": 1000000,
+      "synthesis_token": 1000000,
+      "write_authority": 1000000,
+      "transport": 1000000,
+      "combined": 1000000
+    },
+    "killed": {
+      "acceptance": 1862,
+      "signed_receipt": 1848,
+      "live_ref": 1871,
+      "artifact_readback": 594,
+      "surface_guard": 92,
+      "prepared_token": 24,
+      "action_gate": 635,
+      "handle_zero_authority": 1934
+    }
+  },
+  "tail": {
+    "cases": 1000000,
+    "false_allow": 0,
+    "false_deny": 0,
+    "rejection_classes": [
+      "admission",
+      "allow",
+      "artifact",
+      "handle_authority",
+      "live_binding",
+      "receipt",
+      "source_ref",
+      "surface",
+      "synthesis_token",
+      "transport",
+      "write_authority"
+    ],
+    "strata": {
+      "admission": 100000,
+      "continuity": 100000,
+      "artifact": 100000,
+      "source_ref": 100000,
+      "contract_prompt": 100000,
+      "surface": 100000,
+      "synthesis_token": 100000,
+      "write_authority": 100000,
+      "transport": 100000,
+      "combined": 100000
+    },
+    "killed": {
+      "acceptance": 0,
+      "signed_receipt": 0,
+      "live_ref": 0,
+      "artifact_readback": 0,
+      "surface_guard": 0,
+      "prepared_token": 0,
+      "action_gate": 0,
+      "handle_zero_authority": 0
+    }
+  },
+  "no_novelty": true,
+  "novel_tail_classes": [],
+  "all_ablations_killed": true,
+  "invariants": [
+    "exact acceptance cannot be bypassed",
+    "opaque continuation has zero authority",
+    "signed receipt and live bindings/ref required",
+    "host draft cannot release without matching prepared token",
+    "clean public voice required",
+    "DOCX write+exact readback required before release",
+    "write authority remains separately human-authorized",
+    "transport validation cannot create chat authority"
+  ],
+  "non_claim": "Synthetic deterministic runtime-boundary evidence; not empirical UX research, security certification, production-host attestation, implementation proof, or scientific validation of ROA."
+}

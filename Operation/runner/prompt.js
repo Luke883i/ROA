@@ -1,11 +1,5 @@
 'use strict';
 
-// Universal Meta-Prompt loader for the ROA admission lifecycle.
-// Pure stdlib, filesystem-first, zero authority. It verifies and returns the
-// exact canonical prompt bytes. A conforming host must install `body` into its
-// active repository-policy instruction layer and only then record a load ACK in
-// the SessionReceipt. This module cannot prove behavior inside a third-party UI.
-
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
@@ -65,33 +59,13 @@ function loadOperatingPrompt(repoRoot) {
   if (declared !== got) throw new Error('prompt-self-digest-mismatch');
   if (got !== expectedSha) throw new Error('prompt-contract-digest-mismatch');
 
-  return Object.freeze({
-    ok: true,
-    prompt_path: promptRel,
-    prompt_version: version,
-    prompt_sha256: got,
-    body,
-    authority: 0,
-  });
+  return Object.freeze({ ok:true, prompt_path:promptRel, prompt_version:version, prompt_sha256:got, body, authority:0 });
 }
 
 function makePromptLoadReceipt(binding, loadedAt) {
   if (!binding || binding.ok !== true || !binding.body) throw new Error('prompt-binding-required');
   if (!loadedAt) throw new Error('host-load-ack-required');
-  return Object.freeze({
-    prompt_path: binding.prompt_path,
-    prompt_version: binding.prompt_version,
-    prompt_sha256: binding.prompt_sha256,
-    prompt_loaded_at: loadedAt,
-  });
+  return Object.freeze({ prompt_path:binding.prompt_path, prompt_version:binding.prompt_version, prompt_sha256:binding.prompt_sha256, prompt_loaded_at:loadedAt });
 }
 
-module.exports = {
-  sha256,
-  field,
-  extractPromptBody,
-  promptVersion,
-  declaredPromptSha,
-  loadOperatingPrompt,
-  makePromptLoadReceipt,
-};
+module.exports = { sha256, field, extractPromptBody, promptVersion, declaredPromptSha, loadOperatingPrompt, makePromptLoadReceipt };

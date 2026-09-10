@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
-"""Audit repository corpus geometry — deterministic inventory of all corpus-relevant files.
+"""Audit repository corpus geometry — deterministic inventory of corpus files.
 
-Compares the actual filesystem, Operation/MANIFEST.json, and Operation/corpus/text/*
-sidecars to produce a structured report classifying every PDF and manifest entry.
+Compares the actual filesystem, Operation/MANIFEST.json, and text sidecars.
+Semantic review state is deliberately not a geometry failure: the manifest and
+semantic curation layer may lawfully contain UNREVIEWED_AUTOSEEDED entries.
 
 Exit codes:
-  0  all entries OK (or --report mode)
-  1  at least one non-OK classification detected (--check mode)
-
-Usage:
-  python Operation/scripts/audit_corpus_geometry.py           # print report
-  python Operation/scripts/audit_corpus_geometry.py --check   # fail if drift exists
+  0  all geometry/integrity entries OK (or --report mode)
+  1  at least one blocking geometry/integrity classification detected (--check)
 """
 
 from __future__ import annotations
 
 import argparse
-import json
 import sys
-from pathlib import Path
 
 from manifest_common import (
     MANIFEST_PATH,
     REPO_ROOT,
-    TEXT_ROOT,
     expected_raw_url,
     load_manifest,
     sha256_file,
@@ -32,7 +26,6 @@ from manifest_common import (
 
 OPERATION_DIR_NAME = "Operation"
 
-# Classification labels
 OK = "OK"
 STALE_MANIFEST_PATH = "STALE_MANIFEST_PATH"
 STALE_RAW_URL = "STALE_RAW_URL"
@@ -41,7 +34,7 @@ MISSING_SIDECAR = "MISSING_SIDECAR"
 STALE_SIDECAR_METADATA = "STALE_SIDECAR_METADATA"
 UNMANIFESTED_PDF = "UNMANIFESTED_PDF"
 MANIFEST_ENTRY_MISSING_FILE = "MANIFEST_ENTRY_MISSING_FILE"
-ROLE_UNREVIEWED_AUTOSEEDED = "ROLE_UNREVIEWED_AUTOSEEDED"
+ROLE_UNREVIEWED_AUTOSEEDED = "ROLE_UNREVIEWED_AUTOSEEDED"  # informational semantic state, not geometry failure
 
 
 def discover_pdfs() -> list[str]:
@@ -58,14 +51,13 @@ def discover_pdfs() -> list[str]:
 
 
 def audit(manifest: dict) -> list[dict]:
-    """Return a list of audit entries, one per PDF or manifest entry."""
+    """Return one geometry/integrity audit entry per PDF or manifest entry."""
     repository = manifest["repository"]
     branch = manifest["default_branch"]
     pdfs_on_disk = set(discover_pdfs())
     manifest_entries = {entry["path"]: entry for entry in manifest["pdfs"]}
     results: list[dict] = []
 
-    # Check every manifest entry
     for entry in manifest["pdfs"]:
         eid = entry["id"]
         path = entry["path"]
@@ -76,31 +68,29 @@ def audit(manifest: dict) -> list[dict]:
             results.append({
                 "id": eid,
                 "path": path,
+                "role": entry.get("role", ""),
                 "status": [MANIFEST_ENTRY_MISSING_FILE],
             })
             continue
 
-        # Check raw_url
         expected = expected_raw_url(repository, branch, path)
         if entry.get("raw_url") != expected:
             issues.append(STALE_RAW_URL)
 
-        # Check text_url
         sidecar_rel = sidecar_relpath(eid)
         expected_text = expected_raw_url(repository, branch, sidecar_rel)
         if entry.get("text_url") != expected_text:
             issues.append(STALE_TEXT_URL)
 
-        # Check sidecar exists
         sidecar_path = REPO_ROOT / sidecar_rel
         if not sidecar_path.exists():
             issues.append(MISSING_SIDECAR)
 
-        # Check role
-        if entry.get("role") == "UNREVIEWED_AUTOSEEDED":
-            issues.append(ROLE_UNREVIEWED_AUTOSEEDED)
+        # Role/curation is semantic metadata, not repository geometry. In
+        # particular UNREVIEWED_AUTOSEEDED is an allowed manifest role and is
+        # handled by the curation overlay and semantic gates. Do not false-red
+        # an otherwise aligned corpus merely because human curation is pending.
 
-        # Check sha256
         if entry.get("sha256"):
             actual_sha = sha256_file(abs_path)
             if entry["sha256"] != actual_sha:
@@ -114,7 +104,6 @@ def audit(manifest: dict) -> list[dict]:
             "status": status,
         })
 
-    # Check for unmanifested PDFs
     manifested_paths = set(manifest_entries.keys())
     for pdf_path in sorted(pdfs_on_disk - manifested_paths):
         results.append({
@@ -160,7 +149,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--check",
         action="store_true",
-        help="fail (exit 1) if any non-OK classification exists",
+        help="fail (exit 1) if any blocking geometry/integrity issue exists",
     )
     args = parser.parse_args(argv)
 

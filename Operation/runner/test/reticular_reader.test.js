@@ -1,22 +1,8 @@
 'use strict';
-const test=require('node:test'); const assert=require('node:assert/strict'); const fs=require('node:fs'); const path=require('node:path'); const os=require('node:os'); const crypto=require('node:crypto');
-const {ReticularReader,selectRoute}=require('../reticular_reader');
-function h(s){return crypto.createHash('sha256').update(s).digest('hex');}
-function fixture(){const root=fs.mkdtempSync(path.join(os.tmpdir(),'roa-reader-')); fs.mkdirSync(path.join(root,'Operation','corpus','text'),{recursive:true});
- const docs={
-  'roa-main-entrypoint':'ROA text',
-  'v-epistemi-debt-the-accounting-layer-of-computational-semantics':'Debt text',
-  'iv-computational-semantics-of-claim-admissibility':'Claim text',
-  'main-paper-rla-ecnn-crc-pce':'Main paper',
-  'annex-c-ecnn-formalisation':'ECNN',
-  'annex-d-ecu-uce-specification':'ECU',
-  'annex-a-rla-crc-foundations':'RLA CRC',
-  'aosp-whitepaper':'AOSP',
-  'observer-compiler-wolfram':'Wolfram',
- };
- const pdfs=[]; for(const [id,text] of Object.entries(docs)){const rel=`Operation/corpus/text/${id}.md`;fs.writeFileSync(path.join(root,rel),text);pdfs.push({id,title:id,role:'x',text_url:`https://raw.githubusercontent.com/Luke883i/ROA/main/${rel}`,text_sha256:h(text)});} fs.writeFileSync(path.join(root,'Operation','MANIFEST.json'),JSON.stringify({pdfs})); return root;}
-
-test('intent routes to minimum epistemic-debt neighborhood',()=>{assert.deepEqual(selectRoute('spiegami epistemic debt').nodes,['ROA','EPISTEMIC_DEBT']);});
-test('generic intent reads only main ROA entrypoint',()=>{assert.deepEqual(selectRoute('che cosa sostiene il progetto?').ids,['roa-main-entrypoint']);});
-test('verified sidecars are passed as untrusted data to synthesizer',async()=>{const root=fixture();let seen;const r=new ReticularReader({repoRoot:root,synthesizer:async(c)=>{seen=c;return {voice:'Voce minima.'};}});const out=await r.read('epistemic debt',{repository_ref:'abc'});assert.equal(out.ok,true);assert.equal(out.source_ids.length,2);assert.match(seen.control_note,/untrusted data/);});
-test('sidecar hash mismatch fails closed',async()=>{const root=fixture();fs.appendFileSync(path.join(root,'Operation','corpus','text','roa-main-entrypoint.md'),'tamper');const r=new ReticularReader({repoRoot:root,synthesizer:async()=>({voice:'x'})});const out=await r.read('generic',{repository_ref:'abc'});assert.equal(out.ok,false);assert.match(out.reason,/text-sha-mismatch/);});
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const os=require('node:os');const path=require('node:path');const crypto=require('node:crypto');const {ReticularReader,selectRoute}=require('../reticular_reader');
+function sha(b){return crypto.createHash('sha256').update(b).digest('hex');}
+function fixture(){const root=fs.mkdtempSync(path.join(os.tmpdir(),'roa-reader-'));fs.mkdirSync(path.join(root,'Operation','corpus','text'),{recursive:true});const bytes=Buffer.from('verified source\n');fs.writeFileSync(path.join(root,'Operation','corpus','text','roa-main-entrypoint.md'),bytes);fs.writeFileSync(path.join(root,'Operation','MANIFEST.json'),JSON.stringify({pdfs:[{id:'roa-main-entrypoint',title:'ROA',role:'main_entrypoint',text_url:'https://raw.githubusercontent.com/Luke883i/ROA/main/Operation/corpus/text/roa-main-entrypoint.md',text_sha256:sha(bytes)}]}));return root;}
+test('default route is minimum ROA entrypoint',()=>assert.deepEqual(selectRoute('spiegami il progetto').nodes,['ROA']));
+test('prepare returns verified source hashes and bounded model context',async()=>{const root=fixture();const r=new ReticularReader({repoRoot:root});const out=await r.prepare('spiegami',{repository_ref:'abc'});assert.equal(out.ok,true);assert.equal(out.source_ids[0],'roa-main-entrypoint');assert.equal(out.source_hashes['roa-main-entrypoint'],out.context.sources[0].sha256);assert.equal(out.context.control_note.includes('authority=0'),true);});
+test('digest mismatch fails closed',async()=>{const root=fixture();const m=JSON.parse(fs.readFileSync(path.join(root,'Operation','MANIFEST.json')));m.pdfs[0].text_sha256='0'.repeat(64);fs.writeFileSync(path.join(root,'Operation','MANIFEST.json'),JSON.stringify(m));const out=await new ReticularReader({repoRoot:root}).prepare('x',{repository_ref:'abc'});assert.equal(out.ok,false);assert.match(out.reason,/text-sha-mismatch/);});
+test('inline compatibility still delegates only after verification',async()=>{const root=fixture();let seen=null;const r=new ReticularReader({repoRoot:root,synthesizer:async ctx=>{seen=ctx;return{voice:'Risposta semplice.',terminal:'Answer',debt:[]};}});const out=await r.read('x',{repository_ref:'abc'});assert.equal(out.ok,true);assert.equal(seen.sources.length,1);});

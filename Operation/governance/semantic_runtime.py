@@ -3,8 +3,9 @@
 
 Pure control/navigation code. It creates no epistemic authority and performs no
 repository mutation. The root IKANT_ROA_ACCESS_CONTRACT.md remains admission
-owner. Since contract v1.3, chat-study authorization and technical iKant
-conformance are deliberately separate properties.
+owner. Since contract v1.4, exact current-session acceptance is the only human
+chat admission command; hosted and inline execution remain subordinate to the
+same receipt/state machine.
 """
 from __future__ import annotations
 import hashlib
@@ -20,7 +21,7 @@ MANIFEST = OP / "MANIFEST.json"
 RETICULUM = OP / "SEMANTIC_RETICULUM.json"
 CURATION = OP / "SEMANTIC_CURATION.json"
 PROMPT = OP / "iKANT_PROMPT.md"
-PROMPT_VERSION = "3.0.0"
+PROMPT_VERSION = "3.1.0"
 PROMPT_BEGIN = "<!-- PROMPT:BEGIN -->"
 PROMPT_END = "<!-- PROMPT:END -->"
 READ_STATES = {"STUDY_AUTHORIZED", "ACTIVE_CONFORMING"}
@@ -182,6 +183,8 @@ def validate_reticulum(graph: dict | None = None) -> list[str]:
     control = g.get("control", {})
     if control.get("operating_prompt_path") != "Operation/iKANT_PROMPT.md":
         errors.append("operating-prompt-path")
+    if control.get("operating_prompt_version") != PROMPT_VERSION:
+        errors.append("operating-prompt-version")
     if control.get("operating_prompt_loader") != "Operation/runner/prompt.js":
         errors.append("operating-prompt-loader")
     if control.get("operating_prompt_binding") != "prompt_digest_for_study_live_readback_for_conformance":
@@ -190,6 +193,12 @@ def validate_reticulum(graph: dict | None = None) -> list[str]:
         errors.append("chat-study-state")
     if control.get("conforming_state") != "ACTIVE_CONFORMING":
         errors.append("conforming-state")
+    if control.get("continuity") != "opaque_application_handle_zero_authority":
+        errors.append("continuity-model")
+    if control.get("continuity_authority") != 0:
+        errors.append("continuity-authority-nonzero")
+    if control.get("artifact_release") != "write_plus_exact_readback_required":
+        errors.append("artifact-release-contract")
     if control.get("epistemic_authority") != 0.0:
         errors.append("control-authority-nonzero")
     return errors
