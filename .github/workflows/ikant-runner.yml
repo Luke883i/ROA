@@ -7,11 +7,15 @@ on:
       - "IKANT_ROA_ACCESS_CONTRACT.md"
       - "Operation/runner/**"
       - "Operation/MANIFEST.json"
+      - "Operation/SEMANTIC_CURATION.json"
       - "Operation/SEMANTIC_RETICULUM.json"
+      - "Operation/SEMANTIC_RUNTIME.md"
       - "Operation/iKANT_PROMPT.md"
       - "Operation/governance/CHAT_RUNTIME_V2.md"
-      - "Operation/governance/chat_runtime_100k_receipt.json"
-      - "Operation/governance/simulate_chat_runtime.js"
+      - "Operation/governance/semantic_runtime.py"
+      - "Operation/governance/test_semantic_runtime.py"
+      - "Operation/governance/semantic_split_stress.js"
+      - "Operation/governance/semantic_split_11m_receipt.json"
       - ".github/workflows/ikant-runner.yml"
   pull_request:
     branches: ["**"]
@@ -19,11 +23,15 @@ on:
       - "IKANT_ROA_ACCESS_CONTRACT.md"
       - "Operation/runner/**"
       - "Operation/MANIFEST.json"
+      - "Operation/SEMANTIC_CURATION.json"
       - "Operation/SEMANTIC_RETICULUM.json"
+      - "Operation/SEMANTIC_RUNTIME.md"
       - "Operation/iKANT_PROMPT.md"
       - "Operation/governance/CHAT_RUNTIME_V2.md"
-      - "Operation/governance/chat_runtime_100k_receipt.json"
-      - "Operation/governance/simulate_chat_runtime.js"
+      - "Operation/governance/semantic_runtime.py"
+      - "Operation/governance/test_semantic_runtime.py"
+      - "Operation/governance/semantic_split_stress.js"
+      - "Operation/governance/semantic_split_11m_receipt.json"
       - ".github/workflows/ikant-runner.yml"
   workflow_dispatch:
 
@@ -40,7 +48,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: Run iKant runner and chat-runtime tests
         run: node --test Operation/runner/test/*.test.js
-      - name: Verify persisted 100k chat-runtime receipt
-        run: node Operation/governance/simulate_chat_runtime.js --check
+      - name: Run semantic runtime tests
+        run: python Operation/governance/test_semantic_runtime.py
+      - name: Verify semantic split 11m falsification receipt
+        run: node Operation/governance/semantic_split_stress.js --check

@@ -3,8 +3,8 @@
 
 Pure control/navigation code. It creates no epistemic authority and performs no
 repository mutation. The root IKANT_ROA_ACCESS_CONTRACT.md remains admission
-owner. Clean ACTIVE additionally requires the canonical Universal Meta-Prompt to
-be hash-bound in the SessionReceipt.
+owner. Since contract v1.3, chat-study authorization and technical iKant
+conformance are deliberately separate properties.
 """
 from __future__ import annotations
 import hashlib
@@ -23,7 +23,8 @@ PROMPT = OP / "iKANT_PROMPT.md"
 PROMPT_VERSION = "3.0.0"
 PROMPT_BEGIN = "<!-- PROMPT:BEGIN -->"
 PROMPT_END = "<!-- PROMPT:END -->"
-ACTIVE_STATES = {"ACTIVE_FILE", "ACTIVE_EPHEMERAL", "DEGRADED_READ_ONLY"}
+READ_STATES = {"STUDY_AUTHORIZED", "ACTIVE_CONFORMING"}
+CONFORMING_STATES = {"ACTIVE_CONFORMING"}
 TERMINALS = {"Answer", "Unknown", "Contradiction", "OutOfHorizon", "Review", "Timeout", "Failure"}
 
 @dataclass(frozen=True)
@@ -87,28 +88,45 @@ def bind_operating_prompt(*, expected_sha256: str, expected_version: str = PROMP
         return PromptBinding(False, version, got, body, "prompt-self-digest-mismatch")
     if got != expected_sha256:
         return PromptBinding(False, version, got, body, "prompt-contract-digest-mismatch")
-    return PromptBinding(True, version, got, body, "prompt-bound")
+    return PromptBinding(True, version, got, body, "prompt-digest-verified")
 
 def validate_session_receipt(receipt: dict, *, terms_sha256: str, contract_version: str, prompt_sha256: str, prompt_version: str = PROMPT_VERSION) -> AccessVerdict:
-    required = {"session_id", "contract_version", "terms_sha256", "repository_ref", "runtime_mode", "status", "initialized_at", "accepted_command", "prompt_path", "prompt_version", "prompt_sha256", "prompt_loaded_at"}
+    required = {
+        "schema", "session_id", "epoch", "contract_version", "terms_sha256",
+        "repository_ref", "runtime_mode", "status", "initialized_at",
+        "accepted_command", "prompt_sha256", "prompt_readback_sha256",
+        "conformance_status",
+    }
     missing = sorted(required - set(receipt))
     if missing:
         return AccessVerdict(False, "RECEIPT_INVALID", "missing:" + ",".join(missing))
+    if receipt["schema"] != "roa-chat-session/v3":
+        return AccessVerdict(False, "RECEIPT_INVALID", "schema-mismatch")
     if receipt["accepted_command"] != "I ACCEPT":
         return AccessVerdict(False, "RECEIPT_INVALID", "acceptance-not-exact")
     if receipt["contract_version"] != contract_version:
         return AccessVerdict(False, "RESET_REQUIRED", "contract-version-drift")
     if receipt["terms_sha256"] != terms_sha256:
         return AccessVerdict(False, "RESET_REQUIRED", "terms-digest-drift")
-    if receipt["prompt_path"] != "Operation/iKANT_PROMPT.md":
-        return AccessVerdict(False, "RESET_REQUIRED", "prompt-path-drift")
-    if receipt["prompt_version"] != prompt_version:
-        return AccessVerdict(False, "RESET_REQUIRED", "prompt-version-drift")
     if receipt["prompt_sha256"] != prompt_sha256:
         return AccessVerdict(False, "RESET_REQUIRED", "prompt-digest-drift")
-    if receipt["status"] not in ACTIVE_STATES:
-        return AccessVerdict(False, "NOT_ACTIVE", "initialization-not-active")
-    return AccessVerdict(True, "ACTIVE", "session-receipt-and-prompt-valid")
+    if receipt["runtime_mode"] != receipt["status"]:
+        return AccessVerdict(False, "RECEIPT_INVALID", "runtime-status-mismatch")
+    if receipt["status"] not in READ_STATES:
+        return AccessVerdict(False, "NOT_AUTHORIZED", "chat-study-not-authorized")
+
+    if receipt["status"] == "ACTIVE_CONFORMING":
+        if receipt["conformance_status"] != "CONFORMING":
+            return AccessVerdict(False, "RECEIPT_INVALID", "conformance-status-mismatch")
+        if receipt["prompt_readback_sha256"] != prompt_sha256:
+            return AccessVerdict(False, "RESET_REQUIRED", "prompt-readback-drift")
+        return AccessVerdict(True, "ACTIVE_CONFORMING", "chat-study-authorized-and-host-conforming")
+
+    if receipt["conformance_status"] == "CONFORMING":
+        return AccessVerdict(False, "RECEIPT_INVALID", "study-state-cannot-claim-conformance")
+    if receipt["prompt_readback_sha256"] is not None:
+        return AccessVerdict(False, "RECEIPT_INVALID", "study-state-readback-must-be-null")
+    return AccessVerdict(True, "STUDY_AUTHORIZED", "chat-study-authorized-without-host-conformance")
 
 def source_ref_state(receipt: dict, current_ref: str) -> str:
     frozen = receipt.get("repository_ref")
@@ -166,8 +184,12 @@ def validate_reticulum(graph: dict | None = None) -> list[str]:
         errors.append("operating-prompt-path")
     if control.get("operating_prompt_loader") != "Operation/runner/prompt.js":
         errors.append("operating-prompt-loader")
-    if control.get("operating_prompt_binding") != "prompt_body_sha256_in_session_receipt":
+    if control.get("operating_prompt_binding") != "prompt_digest_for_study_live_readback_for_conformance":
         errors.append("operating-prompt-binding")
+    if control.get("chat_study_state") != "STUDY_AUTHORIZED":
+        errors.append("chat-study-state")
+    if control.get("conforming_state") != "ACTIVE_CONFORMING":
+        errors.append("conforming-state")
     if control.get("epistemic_authority") != 0.0:
         errors.append("control-authority-nonzero")
     return errors

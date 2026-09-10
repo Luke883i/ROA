@@ -1,27 +1,37 @@
-# ROA semantic chat runtime — candidate v1
+# ROA semantic chat runtime — candidate v1.3
 
-This runtime is a **post-initialization navigation and inference layer**. It does not replace `IKANT_ROA_ACCESS_CONTRACT.md`, does not grant access, and has zero independent epistemic authority.
+This runtime is a zero-authority navigation/control layer. `IKANT_ROA_ACCESS_CONTRACT.md` remains the admission owner; `Operation/runner/chat_runtime.js` is the sole issuer of chat session receipts. The v1.3 change separates **permission to perform bounded same-session chat study** from **technical conformance of the host/runtime**.
 
 ## Hot path
 
-After a valid `I ACCEPT -> PROBE IKANT -> INITIALIZE IKANT` lifecycle has produced an ACTIVE SessionReceipt:
+After the complete Terms are inspectable, exact current-session `I ACCEPT` triggers the automatic common bootstrap:
 
-`drift check -> minimal semantic route -> hash-verified source reads -> evidence/debt classification -> typed terminal -> named-use gate only when material -> compressed answer + audit`
+`contract/Terms/prompt-digest checks -> capability probe -> repository-ref freeze -> signed STUDY_AUTHORIZED receipt -> resume pending request`
 
-The SessionReceipt is the runtime continuity token. Legacy SPEAK/DEBUG/SEED formatting remains a renderer/regression surface; it is not a second access credential. A changed contract/Terms digest resets admission. A changed corpus ref creates `SOURCE_DRIFT`: pin the frozen source vector or refresh it, never silently mix refs. Any repository-write authorization is invalidated by a changed head.
+A host that also exposes real prompt installation and prompt readback may then upgrade the same epoch:
+
+`STUDY_AUTHORIZED -> install exact prompt -> readback exact digest -> ACTIVE_CONFORMING`
+
+No prompt adapter or a failed readback means **remain `STUDY_AUTHORIZED`**, not false-green `ACTIVE_CONFORMING` and not a false denial of already-authorized read-only study. `DEGRADED_READ_ONLY` is retired; study authorization is a different property, not a weaker conformance claim.
+
+## Continuity
+
+Both readable states require a valid signed receipt, stable contract bytes, stable Terms/prompt digest bindings, a pinned repository ref and an available artifact sink. `ACTIVE_CONFORMING` adds a live prompt-readback equality check on every governed read. Contract/ref/readback drift yields `RESET_REQUIRED`; source refs are never silently mixed.
 
 ## Plane separation
 
+- **Admission plane:** exact acceptance creates human authorization for the bounded chat-study channel only.
+- **Conformance plane:** host adapter evidence may upgrade that channel to `ACTIVE_CONFORMING`; hashes and model assertions cannot do so.
 - **Acquisition plane:** `Operation/MANIFEST.json` owns paths, URLs and integrity metadata.
 - **Curation plane:** `Operation/SEMANTIC_CURATION.json` proposes semantic roles without rewriting acquisition metadata. Candidate curation has authority `0.0` until human review.
 - **Navigation plane:** `Operation/SEMANTIC_RETICULUM.json` is the AI-navigable graph. Edge weights are routing/design weights, never truth probabilities.
 - **Inference plane:** claim state, evidence, componentwise Epistemic Debt, typed terminal and receipt remain separate from named-use permission.
-- **Authorization plane:** model output, routing, runtime state, hashes and successful execution do not create human or institutional authority.
+- **Action plane:** neither `STUDY_AUTHORIZED` nor `ACTIVE_CONFORMING` authorizes repository writes, merges, releases or settings changes.
 
-## UX rule
+## Evidence and falsification
 
-Default human output stays short. Full route, source hashes, debt, falsifiers, mutation receipts and diagnostics belong in Debug/audit artifacts. Ordinary read-only turns do not repeat Terms/PROBE/INITIALIZE and do not require ActionCertificates.
+The split is checked by deterministic unit tests plus `semantic_split_stress.js`: exact enumeration of the compact control-state space, 10,000,000 deterministic semantic mutations and a 1,000,000-case no-novelty tail. The receipt is design/state-machine evidence only. It is not empirical security validation, legal adjudication, model-behavior proof or production-host attestation.
 
 ## Defeat conditions
 
-Remove this runtime layer if a simpler composition reconstructs the same routes, non-answer terminals, debt propagation, witness boundaries and source-drift behavior with lower burden. Fail the design if PCE becomes equivalence by implication, A-OSP/Bryophyte become theory-validation elevators, candidate curation gains authority through generation alone, or hash validity becomes epistemic validity.
+Reject this design if a state can read without exact acceptance/common integrity, if host conformance can appear without study authorization plus prompt readback, if `STUDY_AUTHORIZED` can claim conformance, if write authority leaks from acceptance, if source drift continues silently, or if a simpler state representation preserves all negative behavior and reconstructability at lower burden.

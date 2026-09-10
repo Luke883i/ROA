@@ -12,10 +12,19 @@ import semantic_runtime as rt
 
 TERMS = "1d1eb4b669d90f637b73b36c56ff29f4707ea3878734aff633b97d54d96dd1ea"
 PROMPT_SHA = "41cc336852a94d9ee69e00192d937ebceeab4bbccba9c4a15e1409f633285c9e"
-REF = "ea2bef21859eab78cdedc4296720c18c5c977db7"
+REF = "74010bec98e92ccc73b0cfa8b40a5de0ede5016d"
+VERSION = "1.3.0"
 
-def receipt(**kw):
-    base = {"session_id":"TEST-SESSION","epoch":1,"contract_version":"1.1.0","terms_sha256":TERMS,"accepted_command":"I ACCEPT","repository_ref":REF,"prompt_path":"Operation/iKANT_PROMPT.md","prompt_version":"3.0.0","prompt_sha256":PROMPT_SHA,"prompt_loaded_at":"2026-09-09T18:00:00+02:00","runtime_mode":"FILE","status":"ACTIVE_FILE","initialized_at":"2026-09-09T18:00:01+02:00"}
+def receipt(status="STUDY_AUTHORIZED", **kw):
+    base = {
+        "schema":"roa-chat-session/v3", "session_id":"TEST-SESSION", "epoch":1,
+        "contract_version":VERSION, "terms_sha256":TERMS, "accepted_command":"I ACCEPT",
+        "repository_ref":REF, "prompt_sha256":PROMPT_SHA, "prompt_readback_sha256":None,
+        "runtime_mode":status, "status":status, "conformance_status":"NOT_ATTESTED",
+        "initialized_at":"2026-09-10T09:00:01+02:00",
+    }
+    if status == "ACTIVE_CONFORMING":
+        base.update(prompt_readback_sha256=PROMPT_SHA, conformance_status="CONFORMING")
     base.update(kw)
     return base
 
@@ -34,16 +43,16 @@ class PromptBindingTests(unittest.TestCase):
             self.assertFalse(rt.bind_operating_prompt(expected_sha256=PROMPT_SHA, expected_version="3.0.0", path=p).ok)
 
 class AccessContinuityTests(unittest.TestCase):
-    def validate(self, r): return rt.validate_session_receipt(r, terms_sha256=TERMS, contract_version="1.1.0", prompt_sha256=PROMPT_SHA, prompt_version="3.0.0")
-    def test_active_receipt_binds_acceptance_and_prompt(self): self.assertTrue(self.validate(receipt()).allowed)
+    def validate(self, r): return rt.validate_session_receipt(r, terms_sha256=TERMS, contract_version=VERSION, prompt_sha256=PROMPT_SHA, prompt_version="3.0.0")
+    def test_study_receipt_binds_acceptance_without_claiming_host_conformance(self): self.assertEqual(self.validate(receipt()).state, "STUDY_AUTHORIZED")
+    def test_active_conforming_receipt_requires_prompt_readback(self): self.assertEqual(self.validate(receipt("ACTIVE_CONFORMING")).state, "ACTIVE_CONFORMING")
     def test_non_exact_acceptance_is_invalid(self): self.assertEqual(self.validate(receipt(accepted_command="I accept")).state, "RECEIPT_INVALID")
     def test_terms_drift_resets(self): self.assertEqual(self.validate(receipt(terms_sha256="x")).state, "RESET_REQUIRED")
     def test_contract_drift_resets(self): self.assertEqual(self.validate(receipt(contract_version="0")).state, "RESET_REQUIRED")
     def test_prompt_digest_drift_resets(self): self.assertEqual(self.validate(receipt(prompt_sha256="x")).state, "RESET_REQUIRED")
-    def test_prompt_version_drift_resets(self): self.assertEqual(self.validate(receipt(prompt_version="2.0.0")).state, "RESET_REQUIRED")
-    def test_prompt_path_drift_resets(self): self.assertEqual(self.validate(receipt(prompt_path="tmp/prompt.md")).state, "RESET_REQUIRED")
-    def test_missing_prompt_binding_invalidates_receipt(self):
-        r=receipt(); r.pop("prompt_loaded_at"); self.assertEqual(self.validate(r).state, "RECEIPT_INVALID")
+    def test_prompt_readback_drift_resets_only_conforming_state(self): self.assertEqual(self.validate(receipt("ACTIVE_CONFORMING", prompt_readback_sha256="x")).state, "RESET_REQUIRED")
+    def test_study_state_cannot_claim_conformance(self): self.assertEqual(self.validate(receipt(conformance_status="CONFORMING")).state, "RECEIPT_INVALID")
+    def test_degraded_read_only_is_retired(self): self.assertEqual(self.validate(receipt("DEGRADED_READ_ONLY")).state, "NOT_AUTHORIZED")
     def test_source_drift_never_silent(self):
         self.assertEqual(rt.source_ref_state(receipt(), "different"), "SOURCE_DRIFT"); self.assertEqual(rt.source_ref_state(receipt(), REF), "PINNED")
 
@@ -52,14 +61,20 @@ class SemanticPlaneTests(unittest.TestCase):
     def setUpClass(cls):
         cls.manifest=json.loads(rt.MANIFEST.read_text(encoding="utf-8")); cls.curation=json.loads(rt.CURATION.read_text(encoding="utf-8")); cls.midx=rt.manifest_index(cls.manifest); cls.cidx=rt.curation_index(cls.curation)
     def test_reticulum_is_well_formed(self): self.assertEqual(rt.validate_reticulum(), [])
-    def test_control_plane_binds_prompt_without_authority(self):
+    def test_control_plane_encodes_chat_conformance_split_without_authority(self):
         control=json.loads(rt.RETICULUM.read_text(encoding="utf-8"))["control"]
-        self.assertEqual(control["operating_prompt_path"], "Operation/iKANT_PROMPT.md"); self.assertEqual(control["operating_prompt_loader"], "Operation/runner/prompt.js"); self.assertEqual(control["operating_prompt_binding"], "prompt_body_sha256_in_session_receipt"); self.assertEqual(control["epistemic_authority"], 0.0)
+        self.assertEqual(control["operating_prompt_path"], "Operation/iKANT_PROMPT.md")
+        self.assertEqual(control["operating_prompt_loader"], "Operation/runner/prompt.js")
+        self.assertEqual(control["operating_prompt_binding"], "prompt_digest_for_study_live_readback_for_conformance")
+        self.assertEqual(control["chat_study_state"], "STUDY_AUTHORIZED")
+        self.assertEqual(control["conforming_state"], "ACTIVE_CONFORMING")
+        self.assertEqual(control["epistemic_authority"], 0.0)
     def test_curation_overlay_does_not_rewrite_acquisition_role(self):
         for mid,cur in self.cidx.items():
             self.assertEqual(self.midx[mid]["role"], "UNREVIEWED_AUTOSEEDED"); status=rt.semantic_status(self.midx[mid],cur); self.assertEqual(status["authority"],0.0); self.assertTrue(status["readable"])
     def test_iv_v_have_explicit_candidate_roles(self):
-        self.assertEqual(self.cidx["iv-computational-semantics-of-claim-admissibility"]["semantic_role"], "claim_admissibility"); self.assertEqual(self.cidx["v-epistemi-debt-the-accounting-layer-of-computational-semantics"]["semantic_role"], "epistemic_debt_accounting")
+        self.assertEqual(self.cidx["iv-computational-semantics-of-claim-admissibility"]["semantic_role"], "claim_admissibility")
+        self.assertEqual(self.cidx["v-epistemi-debt-the-accounting-layer-of-computational-semantics"]["semantic_role"], "epistemic_debt_accounting")
     def test_pce_is_not_on_core_route(self): self.assertNotIn("PCE", json.loads(rt.RETICULUM.read_text(encoding="utf-8"))["core_route"])
     def test_witnesses_never_upgrade_authority(self):
         nodes={n["id"]:n for n in json.loads(rt.RETICULUM.read_text(encoding="utf-8"))["nodes"]}; self.assertEqual(nodes["AOSP"]["authority_class"],"witness_only"); self.assertEqual(nodes["BRYOPHYTE"]["authority_class"],"witness_only")

@@ -1,0 +1,70 @@
+{
+  "schema": "roa-semantic-chat-conformance-split-stress/v1",
+  "generated_at": "2026-09-10",
+  "base_sha": "74010bec98e92ccc73b0cfa8b40a5de0ede5016d",
+  "method": "exact state enumeration plus 10,000,000 deterministic semantic mutations and 1,000,000 no-novelty tail; architecture/design falsification only",
+  "seeds": [
+    883001,
+    883002,
+    883003,
+    20260910,
+    314159
+  ],
+  "exact": {
+    "states": 2048,
+    "counts": {
+      "study": 2,
+      "conforming": 1,
+      "blocked": 2046
+    },
+    "valid_study_without_host": 1,
+    "v12_active_only_false_denies": 1
+  },
+  "main": {
+    "cases": 10000000,
+    "survivors": 9326833,
+    "mutant_kill_counts": {
+      "accept_optional": 657,
+      "artifact_optional": 626,
+      "clock_optional": 626,
+      "conformance_without_study": 332452,
+      "contract_optional": 624,
+      "degraded_state": 314,
+      "host_required_for_study": 342,
+      "prompt_optional": 623,
+      "receipt_optional": 665,
+      "ref_optional": 678,
+      "repository_optional": 629,
+      "session_optional": 636,
+      "study_claims_conforming": 356,
+      "terms_optional": 658,
+      "write_from_accept": 333281
+    },
+    "failure_classes": [
+      "conformance-label-mismatch",
+      "conformance-without-study",
+      "false-conformance-allow",
+      "false-study-allow",
+      "false-study-deny",
+      "retired-degraded-state",
+      "write-authority-leak"
+    ],
+    "all_mutant_classes_killed": true
+  },
+  "tail": {
+    "cases": 1000000,
+    "survivors": 932589,
+    "novel_failure_classes": [],
+    "novelty_count": 0
+  },
+  "invariants": [
+    "chat study requires exact acceptance plus contract/terms/prompt/repository/session/clock/artifact/ref/receipt integrity",
+    "technical host conformance is sufficient only as an additional conjunct after chat-study authorization",
+    "absence or failure of host prompt attestation cannot become ACTIVE_CONFORMING",
+    "STUDY_AUTHORIZED never claims technical conformance",
+    "DEGRADED_READ_ONLY is retired",
+    "I ACCEPT never grants write authority"
+  ],
+  "trace_sha256": "3675f8187115b35a7c4244ae5087982788eee02c90a7895d3a2e448076bd27be",
+  "non_claim": "Synthetic semantic/state-machine evidence only; not empirical security validation, legal adjudication, model-behavior proof, or production-host attestation."
+}
