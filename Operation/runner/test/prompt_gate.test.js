@@ -1,5 +1,4 @@
 'use strict';
-
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -10,9 +9,7 @@ const promptLoader = require('../prompt.js');
 const REPO_ROOT = process.env.ROA_REPO_ROOT ? path.resolve(process.env.ROA_REPO_ROOT) : path.resolve(__dirname, '..', '..', '..');
 const PROMPT_PATH = path.join(REPO_ROOT, 'Operation', 'iKANT_PROMPT.md');
 const CONTRACT_PATH = path.join(REPO_ROOT, 'IKANT_ROA_ACCESS_CONTRACT.md');
-const RECEIPT_PATH = path.join(REPO_ROOT, 'Operation', 'governance', 'prompt_gate_mutation_receipt.json');
 const EXPECTED_PROMPT_SHA = '41cc336852a94d9ee69e00192d937ebceeab4bbccba9c4a15e1409f633285c9e';
-const BASE_SHA = 'ea2bef21859eab78cdedc4296720c18c5c977db7';
 
 function sha256(text) { return crypto.createHash('sha256').update(Buffer.from(text, 'utf8')).digest('hex'); }
 function promptBody(text) {
@@ -22,25 +19,28 @@ function promptBody(text) {
   assert.ok(match); assert.ok(match[1].endsWith('\n')); return match[1];
 }
 function contractField(text,key){const m=text.match(new RegExp(`^${key}:\\s*(.+)$`,'m')); return m?m[1].trim():null;}
-const BASE=Object.freeze({lifecycle:'exact_terms_accept_probe_initialize',prompt_path:'reuse_operation_ikant_prompt',prompt_digest:'body_sha256',activation:'initialize_once',receipt_binding:'prompt_sha256',drift:'reset_required',consent_storage:'session_local_uncommitted',prompt_authority:'zero',host_precedence:'preserved',source_ref:'pin_or_explicit_refresh',readback:'required',surface:'natural_debug_split',write_policy:'branch_same_sha',provider:'replaceable'});
-const OPTIONS=Object.freeze({lifecycle:['exact_terms_accept_probe_initialize','skip_probe','skip_initialize','implicit_accept'],prompt_path:['reuse_operation_ikant_prompt','parallel_prompt_file','ephemeral_only','embedded_in_contract'],prompt_digest:['body_sha256','file_sha256','none','mtime'],activation:['initialize_once','after_accept','per_turn','lazy_first_query'],receipt_binding:['prompt_sha256','path_only','none'],drift:['reset_required','warn_only','silent_continue'],consent_storage:['session_local_uncommitted','memory_only','repo_committed'],prompt_authority:['zero','epistemic','human'],host_precedence:['preserved','prompt_overrides_host'],source_ref:['pin_or_explicit_refresh','silent_mix'],readback:['required','best_effort','none'],surface:['natural_debug_split','debug_leaks_surface_a'],write_policy:['branch_same_sha','direct_main','stale_sha_ok'],provider:['replaceable','locked']});
-const CRITICAL=Object.freeze({lifecycle:new Set(['exact_terms_accept_probe_initialize']),prompt_path:new Set(['reuse_operation_ikant_prompt','parallel_prompt_file','embedded_in_contract']),prompt_digest:new Set(['body_sha256','file_sha256']),activation:new Set(['initialize_once']),receipt_binding:new Set(['prompt_sha256']),drift:new Set(['reset_required']),consent_storage:new Set(['session_local_uncommitted']),prompt_authority:new Set(['zero']),host_precedence:new Set(['preserved']),source_ref:new Set(['pin_or_explicit_refresh']),readback:new Set(['required']),surface:new Set(['natural_debug_split']),write_policy:new Set(['branch_same_sha']),provider:new Set(['replaceable'])});
-const KILL_REASON=Object.freeze({lifecycle:'lifecycle-bypass',prompt_path:'prompt-not-persistent',prompt_digest:'prompt-not-cryptographically-bound',activation:'prompt-not-bound-at-initialize',receipt_binding:'active-receipt-does-not-bind-prompt',drift:'prompt-drift-not-fail-closed',consent_storage:'consent-not-local-readback-or-committed-global',prompt_authority:'hidden-authority-escalation',host_precedence:'host-precedence-violation',source_ref:'source-sha-mix',readback:'missing-readback',surface:'debug-leak',write_policy:'unsafe-github-write',provider:'provider-lock-in'});
-function lcg(seed){let state=seed>>>0;return()=>{state=(Math.imul(1664525,state)+1013904223)>>>0;return state/0x100000000;};}
-function pick(rng,arr){return arr[Math.floor(rng()*arr.length)];}
-function sampleKeys(rng,keys,n){const pool=[...keys],out=[];for(let i=0;i<n;i++){const j=Math.floor(rng()*pool.length);out.push(pool.splice(j,1)[0]);}return out;}
-function killReasons(candidate){const out=[];for(const [key,allowed] of Object.entries(CRITICAL))if(!allowed.has(candidate[key]))out.push(KILL_REASON[key]);return out;}
-function burden(c){let s=0;if(c.prompt_path==='parallel_prompt_file')s+=2;if(c.prompt_path==='embedded_in_contract')s+=1.5;if(c.prompt_digest==='file_sha256')s+=0.8;return s;}
-function fingerprint(c){return sha256(Object.keys(c).sort().map(k=>`${k}=${c[k]}`).join('|')).slice(0,16);}
-function runMutationLab(){
- const seeds=[883,20260909,314159,271828,161803],strata=[{name:'ordinary',count:500,min:1,max:1},{name:'edge',count:300,min:2,max:4},{name:'adversarial',count:200,min:5,max:8}],keys=Object.keys(OPTIONS),mutations=[];let id=0;
- for(let sidx=0;sidx<strata.length;sidx++){const st=strata[sidx],per=Array(seeds.length).fill(Math.floor(st.count/seeds.length));for(let i=0;i<st.count%seeds.length;i++)per[i]++;for(let si=0;si<seeds.length;si++){const seed=seeds[si],rng=lcg((seed^((sidx+1)*0x9e3779b9))>>>0);for(let n=0;n<per[si];n++){id++;const candidate={...BASE};let mutatedKeys=[],perturbation='semantic';if(st.name==='ordinary'&&rng()<0.20){perturbation='wording_only';}else{const width=st.min+Math.floor(rng()*(st.max-st.min+1));mutatedKeys=sampleKeys(rng,keys,width);for(const key of mutatedKeys){const alternatives=OPTIONS[key].filter(v=>v!==BASE[key]);candidate[key]=pick(rng,alternatives);}}mutations.push({id,stratum:st.name,seed,perturbation,mutatedKeys,candidate});}}}
- assert.equal(mutations.length,1000);const killCounts=new Map(),stratumStats=Object.fromEntries(strata.map(s=>[s.name,{n:0,killed:0,survived:0}])),survivors=[],trace=crypto.createHash('sha256');
- for(const m of mutations){const reasons=killReasons(m.candidate),fp=fingerprint(m.candidate);trace.update(`${m.id}|${m.stratum}|${m.seed}|${m.perturbation}|${fp}|${[...reasons].sort().join(',')}\n`);stratumStats[m.stratum].n++;if(reasons.length){stratumStats[m.stratum].killed++;for(const r of reasons)killCounts.set(r,(killCounts.get(r)||0)+1);}else{stratumStats[m.stratum].survived++;survivors.push({...m,fingerprint:fp,burden:burden(m.candidate)});}}
- survivors.sort((a,b)=>a.burden-b.burden||a.fingerprint.localeCompare(b.fingerprint)||a.id-b.id);const best=survivors[0],alternatives=[];for(const key of keys)for(const value of OPTIONS[key]){if(value===best.candidate[key])continue;const candidate={...best.candidate,[key]:value},reasons=killReasons(candidate);alternatives.push({dimension:key,value,survives:reasons.length===0,kill_reasons:reasons,burden:reasons.length?null:burden(candidate)});}const strictlyBetter=alternatives.filter(x=>x.survives&&x.burden<best.burden),sortedKills=Object.fromEntries([...killCounts.entries()].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])));
- return {schema:'roa-prompt-gate-mutation-receipt/v1',base_sha:BASE_SHA,prompt_body_sha256:EXPECTED_PROMPT_SHA,method:'1000 deterministic reticular mutations around main survivor; hard invariant kill + minimal-burden convergence',seeds,strata:stratumStats,mutations:mutations.length,killed:mutations.length-survivors.length,survived:survivors.length,kill_rate:Number(((mutations.length-survivors.length)/mutations.length).toFixed(6)),kill_reasons:sortedKills,best:{mutation_id:best.id,stratum:best.stratum,seed:best.seed,fingerprint:best.fingerprint,burden:best.burden,candidate:best.candidate},compression_probe:{alternatives_tested:alternatives.length,strictly_better_survivors:strictlyBetter},trace_sha256:trace.digest('hex'),converged:JSON.stringify(best.candidate)===JSON.stringify(BASE)&&strictlyBetter.length===0,non_claim:'Synthetic design falsification only; not empirical/scientific validation and not saturation under the v3 million-scale rule.'};
-}
 
-test('Universal prompt body is persistent, executable by loader, and contract-bound',()=>{const prompt=fs.readFileSync(PROMPT_PATH,'utf8'),body=promptBody(prompt),got=sha256(body);assert.equal(got,EXPECTED_PROMPT_SHA);const contract=fs.readFileSync(CONTRACT_PATH,'utf8');assert.equal(contractField(contract,'operating_prompt_path'),'Operation/iKANT_PROMPT.md');assert.equal(contractField(contract,'operating_prompt_loader'),'Operation/runner/prompt.js');const binding=promptLoader.loadOperatingPrompt(REPO_ROOT);assert.equal(binding.ok,true);assert.equal(binding.prompt_sha256,EXPECTED_PROMPT_SHA);assert.equal(binding.body,body);assert.equal(binding.authority,0);});
-test('1000 prompt-gate mutations kill unsafe variants and converge on minimal reticulum',()=>{const computed=runMutationLab();assert.equal(computed.mutations,1000);assert.equal(computed.converged,true);assert.deepEqual(computed.best.candidate,BASE);const persisted=JSON.parse(fs.readFileSync(RECEIPT_PATH,'utf8'));assert.equal(persisted.mutations,computed.mutations);assert.equal(persisted.killed,computed.killed);assert.equal(persisted.survived,computed.survived);assert.equal(persisted.trace_sha256,computed.trace_sha256);});
-module.exports={promptBody,runMutationLab,BASE};
+test('Universal prompt body remains persistent, hash-bound and zero-authority',()=>{
+  const prompt=fs.readFileSync(PROMPT_PATH,'utf8'),body=promptBody(prompt),got=sha256(body);
+  assert.equal(got,EXPECTED_PROMPT_SHA);
+  const binding=promptLoader.loadOperatingPrompt(REPO_ROOT);
+  assert.equal(binding.ok,true); assert.equal(binding.prompt_sha256,EXPECTED_PROMPT_SHA); assert.equal(binding.body,body); assert.equal(binding.authority,0);
+});
+
+test('contract v1.3 separates chat-study authorization from technical conformance',()=>{
+  const contract=fs.readFileSync(CONTRACT_PATH,'utf8');
+  assert.equal(contractField(contract,'contract_version'),'1.3.0');
+  assert.equal(contractField(contract,'operating_prompt_path'),'Operation/iKANT_PROMPT.md');
+  assert.equal(contractField(contract,'operating_prompt_loader'),'Operation/runner/prompt.js');
+  assert.equal(contractField(contract,'chat_study_state'),'STUDY_AUTHORIZED');
+  assert.equal(contractField(contract,'conforming_state'),'ACTIVE_CONFORMING');
+  assert.equal(contractField(contract,'prompt_activation'),'OPTIONAL_CONFORMANCE_AFTER_EXACT_ACCEPT');
+});
+
+test('prompt loader proves repository bytes, not host behavior',()=>{
+  const binding=promptLoader.loadOperatingPrompt(REPO_ROOT);
+  const receipt=promptLoader.makePromptLoadReceipt(binding,'2026-09-10T09:00:00+02:00');
+  assert.equal(receipt.prompt_sha256,EXPECTED_PROMPT_SHA);
+  assert.equal(Object.prototype.hasOwnProperty.call(receipt,'installed_sha256'),false);
+  assert.equal(Object.prototype.hasOwnProperty.call(receipt,'prompt_readback_sha256'),false);
+});

@@ -6,7 +6,8 @@ const STATES = Object.freeze({
   COLD: 'COLD',
   AWAIT_ACCEPT: 'AWAIT_ACCEPT',
   BOOTING: 'BOOTING',
-  ACTIVE: 'ACTIVE',
+  STUDY_AUTHORIZED: 'STUDY_AUTHORIZED',
+  ACTIVE_CONFORMING: 'ACTIVE_CONFORMING',
   RESET_REQUIRED: 'RESET_REQUIRED',
   DECLINED: 'DECLINED',
   FAILURE: 'FAILURE',
@@ -37,6 +38,10 @@ function wordCount(text) {
   return String(text || '').trim().split(/\s+/).filter(Boolean).length;
 }
 
+function isReadableState(state) {
+  return state === STATES.STUDY_AUTHORIZED || state === STATES.ACTIVE_CONFORMING;
+}
+
 class ChatRuntime {
   constructor(config) {
     if (!config || !config.contract || !config.host || !config.reader) throw new Error('contract-host-reader-required');
@@ -59,7 +64,7 @@ class ChatRuntime {
   }
 
   gateVoice() {
-    const text = 'ROA richiede una sola accettazione per questa sessione. Le T&C canoniche sono disponibili con il digest mostrato. Digita esattamente `I ACCEPT`: verifica risorse, attivazione del prompt e ripresa della richiesta avverranno automaticamente.';
+    const text = 'ROA richiede una sola accettazione per questa sessione. Le T&C canoniche sono disponibili con il digest mostrato. Digita esattamente `I ACCEPT`: verifica risorse e ripresa della richiesta avverranno automaticamente; la conformità tecnica iKant resta attestata separatamente.';
     if (wordCount(text) > 80) throw new Error('gate-voice-too-long');
     return text;
   }
@@ -78,7 +83,7 @@ class ChatRuntime {
 
   async handleRepoRequest(intent) {
     if (typeof intent !== 'string' || !intent.trim()) throw new Error('intent-required');
-    if (this.state === STATES.ACTIVE) return this.executeGovernedRead(intent);
+    if (isReadableState(this.state)) return this.executeGovernedRead(intent);
     if (this.state === STATES.RESET_REQUIRED || this.state === STATES.DECLINED || this.state === STATES.FAILURE) this.reset();
     this.pendingIntent = intent;
     this.state = STATES.AWAIT_ACCEPT;
@@ -107,6 +112,54 @@ class ChatRuntime {
     return { kind: 'PASS_THROUGH', voice: null };
   }
 
+  makeReceipt({ acceptedAt, initializedAt, currentContractSha, repositoryRef, prompt, status, readbackSha = null, conformanceStatus }) {
+    const receipt = {
+      schema: 'roa-chat-session/v3',
+      session_id: this.sessionId,
+      epoch: this.epoch,
+      contract_version: this.contract.contract_version,
+      contract_sha256: currentContractSha,
+      terms_sha256: this.contract.terms_sha256,
+      accepted_command: 'I ACCEPT',
+      accepted_at: acceptedAt,
+      repository_ref: repositoryRef,
+      prompt_sha256: prompt.sha256,
+      prompt_readback_sha256: readbackSha,
+      runtime_mode: status,
+      status,
+      conformance_status: conformanceStatus,
+      initialized_at: initializedAt,
+      pending_intent_sha256: this.pendingIntent ? sha256(this.pendingIntent) : null,
+    };
+    receipt.receipt_hmac = signReceipt(receipt, this.sessionKey);
+    return Object.freeze(receipt);
+  }
+
+  async tryConformanceUpgrade(base) {
+    if (typeof this.host.installPrompt !== 'function' || typeof this.host.readbackPromptSha256 !== 'function') {
+      this.log('CONFORMANCE_UNAVAILABLE', { reason: 'host-prompt-attestation-interface-unavailable' });
+      return false;
+    }
+    try {
+      const install = await this.host.installPrompt(base.prompt.body, base.prompt.sha256);
+      if (!install || install.installed_sha256 !== base.prompt.sha256) throw new Error('prompt-install-unverified');
+      const readbackSha = await this.host.readbackPromptSha256();
+      if (readbackSha !== base.prompt.sha256) throw new Error('prompt-readback-mismatch');
+      this.receipt = this.makeReceipt({
+        ...base,
+        status: STATES.ACTIVE_CONFORMING,
+        readbackSha,
+        conformanceStatus: 'CONFORMING',
+      });
+      this.state = STATES.ACTIVE_CONFORMING;
+      this.log('ACTIVE_CONFORMING', { repository_ref: base.repositoryRef, prompt_sha256: base.prompt.sha256 });
+      return true;
+    } catch (err) {
+      this.log('CONFORMANCE_FAILED', { reason: err.message });
+      return false;
+    }
+  }
+
   async autoBootstrapAndResume() {
     if (this.state !== STATES.AWAIT_ACCEPT) throw new Error('acceptance-state-invalid');
     this.state = STATES.BOOTING;
@@ -121,11 +174,7 @@ class ChatRuntime {
       if (currentContract.prompt_sha256 !== this.contract.prompt_sha256) throw new Error('prompt-contract-drift');
 
       const prompt = await this.host.loadCanonicalPrompt();
-      if (prompt.sha256 !== this.contract.prompt_sha256) throw new Error('prompt-digest-drift');
-      const install = await this.host.installPrompt(prompt.body, prompt.sha256);
-      if (!install || install.installed_sha256 !== prompt.sha256) throw new Error('prompt-install-unverified');
-      const readbackSha = await this.host.readbackPromptSha256();
-      if (readbackSha !== prompt.sha256) throw new Error('prompt-readback-mismatch');
+      if (!prompt || prompt.sha256 !== this.contract.prompt_sha256) throw new Error('prompt-digest-drift');
 
       const capabilities = await this.host.probeCapabilities();
       for (const name of ['repository_read', 'session_context', 'clock', 'artifact_sink']) {
@@ -135,50 +184,48 @@ class ChatRuntime {
       if (!repositoryRef) throw new Error('repository-ref-unverified');
 
       const initializedAt = this.clock();
-      const receipt = {
-        schema: 'roa-chat-session/v2',
-        session_id: this.sessionId,
-        epoch: this.epoch,
-        contract_version: this.contract.contract_version,
-        contract_sha256: currentContractSha,
-        terms_sha256: this.contract.terms_sha256,
-        accepted_command: 'I ACCEPT',
-        accepted_at: acceptedAt,
-        repository_ref: repositoryRef,
-        prompt_sha256: prompt.sha256,
-        prompt_readback_sha256: readbackSha,
-        runtime_mode: 'ACTIVE_EPHEMERAL',
-        status: 'ACTIVE',
-        initialized_at: initializedAt,
-        pending_intent_sha256: this.pendingIntent ? sha256(this.pendingIntent) : null,
-      };
-      receipt.receipt_hmac = signReceipt(receipt, this.sessionKey);
-      this.receipt = Object.freeze(receipt);
-      this.state = STATES.ACTIVE;
-      this.log('ACTIVE', { repository_ref: repositoryRef, prompt_sha256: prompt.sha256 });
+      const base = { acceptedAt, initializedAt, currentContractSha, repositoryRef, prompt };
+      this.receipt = this.makeReceipt({
+        ...base,
+        status: STATES.STUDY_AUTHORIZED,
+        conformanceStatus: 'NOT_ATTESTED',
+      });
+      this.state = STATES.STUDY_AUTHORIZED;
+      this.log('STUDY_AUTHORIZED', { repository_ref: repositoryRef, prompt_sha256: prompt.sha256 });
+
+      await this.tryConformanceUpgrade(base);
 
       const pending = this.pendingIntent;
       this.pendingIntent = null;
-      if (!pending) return { kind: 'ACTIVE', voice: 'ROA attivo.' };
+      if (!pending) return { kind: this.state, voice: this.state === STATES.ACTIVE_CONFORMING ? 'ROA attivo e conforme.' : 'ROA autorizzato per studio in chat.' };
       return this.executeGovernedRead(pending);
     } catch (err) {
       this.state = STATES.FAILURE;
       this.log('BOOT_FAILED', { reason: err.message });
-      return { kind: 'FAILURE', voice: 'Non posso attivare una sessione ROA verificata. Il dettaglio tecnico è nel log di debug.', reason: err.message };
+      return { kind: 'FAILURE', voice: 'Non posso autorizzare una sessione ROA verificata. Il dettaglio tecnico è nel log di debug.', reason: err.message };
     }
   }
 
   async validateLiveSession() {
-    if (this.state !== STATES.ACTIVE || !verifyReceipt(this.receipt, this.sessionKey)) return { ok: false, reason: 'receipt-invalid' };
+    if (!isReadableState(this.state) || !verifyReceipt(this.receipt, this.sessionKey)) return { ok: false, reason: 'receipt-invalid' };
+    if (this.receipt.schema !== 'roa-chat-session/v3' || this.receipt.status !== this.state) return { ok: false, reason: 'receipt-state-mismatch' };
+
     const currentContract = await this.host.readContract();
     if (sha256(currentContract.bytes) !== this.receipt.contract_sha256) return { ok: false, reason: 'contract-byte-drift' };
     if (currentContract.version !== this.receipt.contract_version) return { ok: false, reason: 'contract-version-drift' };
     if (currentContract.terms_sha256 !== this.receipt.terms_sha256) return { ok: false, reason: 'terms-drift' };
     if (currentContract.prompt_sha256 !== this.receipt.prompt_sha256) return { ok: false, reason: 'prompt-contract-drift' };
-    const promptReadback = await this.host.readbackPromptSha256();
-    if (promptReadback !== this.receipt.prompt_sha256) return { ok: false, reason: 'live-prompt-readback-drift' };
+
     const currentRef = await this.host.currentRepositoryRef();
     if (currentRef !== this.receipt.repository_ref) return { ok: false, reason: 'source-ref-drift' };
+
+    if (this.state === STATES.ACTIVE_CONFORMING) {
+      if (typeof this.host.readbackPromptSha256 !== 'function') return { ok: false, reason: 'live-prompt-readback-unavailable' };
+      const promptReadback = await this.host.readbackPromptSha256();
+      if (promptReadback !== this.receipt.prompt_sha256 || this.receipt.prompt_readback_sha256 !== this.receipt.prompt_sha256) {
+        return { ok: false, reason: 'live-prompt-readback-drift' };
+      }
+    }
     return { ok: true };
   }
 
@@ -207,6 +254,8 @@ class ChatRuntime {
       source_mode: 'REPOSITORY',
       terminal: result.terminal || 'Answer',
       debt: Array.isArray(result.debt) ? result.debt : [],
+      runtime_state: this.state,
+      conformance: this.state === STATES.ACTIVE_CONFORMING ? 'CONFORMING' : 'NOT_CONFORMING',
       debug_artifact: { sha256: artifact.sha256, path: artifact.path || null },
     };
   }
@@ -236,4 +285,4 @@ class ChatRuntime {
   }
 }
 
-module.exports = { ChatRuntime, STATES, sha256, wordCount, signReceipt, verifyReceipt };
+module.exports = { ChatRuntime, STATES, sha256, wordCount, signReceipt, verifyReceipt, isReadableState };
