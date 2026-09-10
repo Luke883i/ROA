@@ -1,8 +1,9 @@
 {
-  "schema": "roa-semantic-host-bridge-falsification/v1",
+  "schema": "roa-semantic-host-bridge-falsification/v2",
   "generated_at": "2026-09-10",
   "base_sha": "f1096feb1f2fea7a17fa659cba23a1dced19c01e",
-  "candidate_digest": "0e7f5ac32aefb4829c2b633c10103ba5681212a06802f3e25d89c40e8d97b83f",
+  "model_digest": "78942253555df111a094b6749a15dc301c653002b5270adec1e3c9b3254f4ed8",
+  "implementation_binding": "Executable runtime behavior is checked by the Node/Python CI suites; this receipt binds only the deterministic falsification model and does not infer implementation correctness from file hashes.",
   "method": "10,000,000 deterministic multi-seed architecture/governance mutations plus 1,000,000-case no-novelty tail; synthetic design evidence only",
   "seeds": [
     "0x13579bdf",
@@ -107,5 +108,5 @@
     "write authority remains separately human-authorized",
     "transport validation cannot create chat authority"
   ],
-  "non_claim": "Synthetic deterministic runtime-boundary evidence; not empirical UX research, security certification, production-host attestation, or scientific validation of ROA."
+  "non_claim": "Synthetic deterministic runtime-boundary evidence; not empirical UX research, security certification, production-host attestation, implementation proof, or scientific validation of ROA."
 }
