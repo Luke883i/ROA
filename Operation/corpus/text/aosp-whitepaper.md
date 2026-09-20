@@ -1,21 +1,21 @@
 <!-- GENERATED FILE. DO NOT EDIT BY HAND. Run Operation/scripts/build_manifest.py -->
 ---
 id: "aosp-whitepaper"
-title: "Augmented Ontological Semantic Platform (A-OSP) Whitepaper"
+title: "Augmented Ontological Semantic Platform (AOSP) Whitepaper"
 role: "implementation_architecture"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(3) A-OSP Webapp Whitepaper [WP].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%283%29%20A-OSP%20Webapp%20Whitepaper%20%5BWP%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(3) AOSP Webapp Whitepaper [WP].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%283%29%20AOSP%20Webapp%20Whitepaper%20%5BWP%5D.pdf"
 source_sha256: "f27584cfc0156ac0000d74c676efa8a81f601aef3fc08eb9be45c07cec8a9e9b"
 extraction_status: "success"
 ---
 
 ## Page 1
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
 Augmented Ontological 
-Semantic Platform (A-OSP) 
+Semantic Platform (AOSP) 
 A browser-native epistemic operating environment for reconstructable, 
 diagnosable, portable and governable AI-assisted work 
  
@@ -31,7 +31,7 @@ evidence, hardening targets and measurable validation paths. It does not claim l
 production readiness or completed proof-grade implementation across all surfaces. 
  
 CORE THESIS 
-A-OSP uses the enterprise browser runtime as a standardized substrate and builds on top of it a text-first 
+AOSP uses the enterprise browser runtime as a standardized substrate and builds on top of it a text-first 
 epistemic operating layer: typed stripes, schema registry, scoped query language, bounded model calls, 
 proof contracts, error-truth envelopes, authority matrices, generated control surfaces, app lenses and 
 guard/test architecture. 
@@ -50,13 +50,13 @@ All maturity claims are tagged as AS-IS, HARDENING, TARGET, HYPOTHESIS or NON-GO
 
 ## Page 2
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Table of Contents 
 PART I  Problem, thesis and moat discipline 
 1  Executive Summary 
 2  The Enterprise AI Proof Gap 
-3  What A-OSP Is and Is Not 
+3  What AOSP Is and Is Not 
 4  Claims, Evidence, Maturity and Epistemic States 
  
 PART II  Browser-native substrate and semantic filesystem 
@@ -97,19 +97,19 @@ Appendix A – P
 
 ## Page 3
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 PART I - PROBLEM, THESIS AND MOAT DISCIPLINE 
-Why A-OSP exists, what it is, and how to read its claims. 
+Why AOSP exists, what it is, and how to read its claims. 
 1. Executive Summary 
 AI output is abundant. Governable AI -assisted work is still scarce. Most organizations can now generate text, summaries, code, analyses and reports, 
 but they still struggle to reconstruct how those outputs were produced, which evidence supports them, what was inferred, what  is missing, which 
-transformations occurred, and which human review steps remain required.  A-OSP addresses that gap by building a local, browser -native, text -first 
+transformations occurred, and which human review steps remain required.  AOSP addresses that gap by building a local, browser -native, text -first 
 proof-and-knowledge substrate for AI-assisted work. Its durable source of truth is not the model, the user interface, the database or the export file. It is 
 a structured local substrate of typed append-only stripes, readback checks, receipts, proof contracts, governance states and diagnostic events.  
  
 Core moat-code thesis 
-A-OSP's defensibility is not a single model or algorithm. It is the integration of typed stripes, schema registries, epistemic query/orchestration languages, proof contracts, 
+AOSP's defensibility is not a single model or algorithm. It is the integration of typed stripes, schema registries, epistemic query/orchestration languages, proof contracts, 
 error-truth envelopes, authority matrices, generated control surfaces and app lenses that make AI -assisted work queryable, inspectable, portable, diagnosable and 
 governable. 
  
@@ -151,7 +151,7 @@ Forbidden equivalences
 output ≠ proof, confidence ≠ evidence, log ≠ receipt, export ≠ witness, UI green ≠ proof, fallback ≠ proof mode , model memory ≠ source of truth , review ≠ approval, 
 capability unavailable ≠ proof failure, generated document ≠ authority source 
   
-Prompt-first AI A-OSP pattern 
+Prompt-first AI AOSP pattern 
 fluent output typed epistemic event 
 chat memory text-first source of truth 
 prompt context scoped reticular context 
@@ -161,11 +161,11 @@ manual trust readback + receipt + review
 
 ## Page 4
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 vendor memory provider-replaceable processing 
-3. What A-OSP Is and Is Not 
-A-OSP is A-OSP is not 
+3. What AOSP Is and Is Not 
+AOSP is AOSP is not 
 browser-native epistemic operating environment a native operating system 
 text-first virtual epistemic filesystem arbitrary folder storage 
 proof-and-knowledge substrate a chatbot or document generator 
@@ -174,7 +174,7 @@ human-facing diagnostic workstation autonomous governance engine
 enterprise validation platform for proof-sensitive workflows legal advice or compliance certification 
   
 Why "Ontological Semantic Platform" 
-A-OSP is ontological in the engineering sense: it turns work into typed entities and relations - answers, atoms, evidence gaps, enrichments, links, scores, kernels, 
+AOSP is ontological in the engineering sense: it turns work into typed entities and relations - answers, atoms, evidence gaps, enrichments, links, scores, kernels, 
 artifacts, receipts, guards, errors and review states. 
 It is semantic because those entities are not opaque text blobs. They carry meaning through prefixes, schemas, relationships,  source references, lineage, proof state, 
 authority status and governance status. 
@@ -206,13 +206,13 @@ theoretical epistemic stance and the actual product semantics.
 
 ## Page 5
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 PART II - BROWSER-NATIVE SUBSTRATE AND SEMANTIC FILESYSTEM 
 The browser is the runtime substrate; the filesystem and schema 
 registry are the semantic substrate. 
 5. Browser-Native Epistemic Operating Environment 
-A-OSP is browser -native by design. The browser is not treated as a temporary presentation layer. It is treated as a standardized enterprise ru ntime 
+AOSP is browser -native by design. The browser is not treated as a temporary presentation layer. It is treated as a standardized enterprise ru ntime 
 substrate that already provides rendering, sandboxing, origin isolation, identity/session integration, permission boundaries,  network transport, local 
 storage capabilities, deployment/update channels and policy-managed execution. 
  
@@ -226,7 +226,7 @@ Enterprise browser runtime
     local storage and selected local file capabilities 
     PWA / deployment / update channel 
  
-A-OSP epistemic operating layer 
+AOSP epistemic operating layer 
   builds: 
     virtual text-first filesystem 
     typed epistemic object model 
@@ -287,8 +287,8 @@ guards.
 
 ## Page 6
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Cache/admin layer Directus/PostgreSQL, auth/admin/index/cache functions. Queryable cache and 
 administration; not durable truth. 
 Cache rebuild tests, source/cache taxonomy. 
@@ -383,14 +383,14 @@ Source/cache taxonomy, provider exposure, audit logs,
 proof bundles, backup/restore metrics. 
  
 Infrastructure adequacy rule 
-A-OSP should be considered infrastructure-described only when the document exposes: browser runtime, frontend shell, app registry, state layer, 
+AOSP should be considered infrastructure-described only when the document exposes: browser runtime, frontend shell, app registry, state layer, 
 data access layer, parser-service boundary, source/cache split, realtime diagnostics, AI provider adapters, CI/CD control plane, deployment/security 
 posture and recovery path. This chapter closes that gap and is cross-referenced by Annex J, Annex M and Annex O.
 
 ## Page 7
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 7. Text-First Virtual Epistemic Filesystem 
 The durable epistemic state is text -backed, append-only and local. Databases, UIs, providers and exports are derived or processing surfaces. This is 
 not nostalgia for files; it is an engineering choice for portability, auditability, recovery, diffability and provider indepe ndence. 
@@ -441,7 +441,7 @@ directus_mapped_schema_count Separates source schemas from cache/index mapping.
 9. Multi-Abstraction Filesystem 
 The filesystem is not only storage. It can express evidence, absence of evidence, enrichments, relations, evaluations, compac t kernels, artifacts, 
 receipts, errors and governance states in one inspectable substrate. 
-Concept A-OSP meaning Non-goal 
+Concept AOSP meaning Non-goal 
 Filesystem Durable local substrate of typed text-backed objects. Not arbitrary folders of prose. 
 Ontology Typed operational vocabulary and relations. Not a rigid universal ontology. 
 Graph Navigable relation layer over objects. Not necessarily a graph database. 
@@ -449,8 +449,8 @@ Semantic layer Meaning carried by prefix, schema, relation, source and proof sta
 
 ## Page 8
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Knowledge base Reviewed/promoted canonical objects. Not automatic truth. 
  
  
@@ -487,7 +487,7 @@ kernel_001
   depends_on: [atom_001, atom_002, enrichment_001, link_001, score_001] 
  
 10. Local, Team and Enterprise Source-of-Truth 
-A-OSP should not treat every local object as enterprise truth. It should support a promotion model: local/session objects becom e team or enterprise 
+AOSP should not treat every local object as enterprise truth. It should support a promotion model: local/session objects becom e team or enterprise 
 canonical objects only after review, diff, conflict handling, receipt and governance decision. 
 Layer Objects Governance rule 
 User/session SSOT local answers, atoms, evidence gaps, local kernels, draft artifacts Useful for work-in-progress; not enterprise truth. 
@@ -508,14 +508,14 @@ User/session local SSOT
 
 ## Page 9
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 PART III - QUERY, ORCHESTRATION AND PROOF 
 EQL makes state queryable ; FAE makes model calls bounded; 
 MONL makes parsed stripes transformable; proof contracts make 
 transitions reviewable. 
 11. EQL, Scoped Retrieval and Certified Query Surfaces 
-Before a model is called, A-OSP needs scoped retrieval: which persisted objects are relevant to this operation? EQL is the epistemic query language for 
+Before a model is called, AOSP needs scoped retrieval: which persisted objects are relevant to this operation? EQL is the epistemic query language for 
 this role. It should be understood not as SQL -with-extras, but as an A -OSP DSL for append -only, session -scoped, stripe -shaped datasets with 
 epistemic guarantees. 
  
@@ -567,8 +567,8 @@ fae_[phase:D1 :
 
 ## Page 10
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
      focus:EQL SELECT answer_ WHERE session=$SESSION : 
      attention:min_conf=0.65/max_atoms=10 : 
      execution:model=gpt-4o,temp=0.3,max_tokens=2000,fallback=error] 
@@ -624,8 +624,8 @@ Spine is the target composition layer connecting these proof objects into one re
 
 ## Page 11
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Current-state boundary. D1Receipt and D1 proof-mode contracts are landed, and DataIntake UI is fail-closed against false-green states. 
 However, the backend D1 proof producer, persisted d1_receipt_ stripe and read-after-write barrier are not yet complete. D1 proof PASS must 
 not be externally claimed until the #3462 proof seam and #3488 C1 checkpoint are closed. See Appendix P.3-P.6. 
@@ -658,8 +658,8 @@ GovernanceRun example
 
 ## Page 12
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 PART IV - HUMAN OPERATING LAYER AND ERROR TRUTH 
 The system must be operable and diagnosable by humans; proof 
 contracts are useless if their status is invisible. 
@@ -714,8 +714,8 @@ recovery_action_coverage Measures actionability.
 
 ## Page 13
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 18. UX Honesty, Projection Model and Capability States 
 UX Honesty depends on Observatory. A UI cannot be honest if proof state, fallback state, backend health, capability state and  transport state are 
 invisible. UI cards, dashboards and exports may present proof or error state, but they do not own canonical identity.  
@@ -749,13 +749,13 @@ proof badges, zero-result explanations and mode chips are still target surfaces.
 
 ## Page 14
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 PART V - REPOSITORY AS CONTROL PLANE 
-A-OSP must govern its own AI-assisted development process to be 
+AOSP must govern its own AI-assisted development process to be 
 credible as a governance platform. 
 19. Repository Evidence, Authority Matrix and Generated Control Plane 
-A-OSP treats repository governance as part of the product architecture. The repository is not merely where the product is store d; it is also where 
+AOSP treats repository governance as part of the product architecture. The repository is not merely where the product is store d; it is also where 
 authority, drift, proof boundaries, generated documentation and implementation debt are made visible.  
  
 Metric Value / target Interpretation 
@@ -778,7 +778,7 @@ Authority Matrix, app inventory, support tiers, EQL capability matrix, certified
 over source artifacts and should be regenerated, checked and treated as read-only. 
  
 20. PR, Issue, Guard and Bot-Control Lifecycle 
-In mature A-OSP development, an issue is not merely a task  and a PR is not merely a patch. Together they form a bounded epistemic transaction over 
+In mature AOSP development, an issue is not merely a task  and a PR is not merely a patch. Together they form a bounded epistemic transaction over 
 repository state. 
  
 Guarded development lifecycle 
@@ -814,8 +814,8 @@ Human review
 
 ## Page 15
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
 Control Purpose 
 Bussola Past / present / future / vision narrative control. 
@@ -826,7 +826,7 @@ Entropy protocol Detect drift, duplicates, fake completeness and unmanaged compl
 Convergence protocol Turn findings into deduplicated actions and roadmap gates. 
  
 21. Test-and-Guard Architecture 
-A-OSP trust posture is not a single green check. It is a layered mesh: unit tests, integration tests, E2E tests, golden -path tests, accessibility checks, 
+AOSP trust posture is not a single green check. It is a layered mesh: unit tests, integration tests, E2E tests, golden -path tests, accessibility checks, 
 dataflow guards, topology validation, generated-doc checks, storage SSOT linting, governance scripts and human review. 
 Test-and-guard mesh 
 unit tests 
@@ -853,7 +853,7 @@ generated_doc_sync_pass_rate Control-plane integrity.
 Enterprise readiness depends on identity/session boundaries, role tests, backup/restore, health monitoring, runbooks, tenant boundaries, provider 
 exposure controls and browser capability scope. 
 Provider exposure boundary 
-For each model call, A-OSP should record allowed_refs, prompt/context payload class, data sensitivity class, provider, retention assumption, output validation status and 
+For each model call, AOSP should record allowed_refs, prompt/context payload class, data sensitivity class, provider, retention assumption, output validation status and 
 human review requirement. 
  
 Security and operations controls should be validated as explicit metrics rather than assumed from deployment posture. 
@@ -868,16 +868,16 @@ Audit logs audit_log_completeness
 
 ## Page 16
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 PART VI - VALIDATION, ROADMAP AND STRATEGIC VALUE 
 The project must remain measurable, falsifiable and clear about 
 what is AS-IS, HARDENING, TARGET or HYPOTHESIS. 
 23. RLA/ECNN as Lightweight Theoretical Grammar 
-A-OSP uses RLA/ECNN as an engineering grammar, not as metaphysics. RLA provides levels and transmissions; CRC provides compactn ess, 
+AOSP uses RLA/ECNN as an engineering grammar, not as metaphysics. RLA provides levels and transmissions; CRC provides compactn ess, 
 epistemic closure and computability; ECNN provides explicit unknown/contradiction channels; ECU/UCE provides bounded epistemi c units that 
 produce artifacts under deterministic constraints. Public theoretical reference: https://github.com/Luke883i/RLA-ECNN 
-RLA/ECNN concept A-OSP translation 
+RLA/ECNN concept AOSP translation 
 levels D1-D5, app lenses, proof states 
 transmissions append, query, transform, witness, promote 
 non-injective collapse summaries, kernels, exports, UI views 
@@ -893,7 +893,7 @@ evidence objects, contradiction handling, proof boundaries and negative tests.
 24. Compliance as First Wedge, Platform Beyond Compliance 
 Compliance is the first wedge because it stress -tests evidence, absence of evidence, accountability, formal artifacts and human review. A -OSP is not 
 compliance certification; it is infrastructure for proof-sensitive workflows that may support compliance, audit and risk work. 
-Use case Why A-OSP may fit 
+Use case Why AOSP may fit 
 Supplier payment control Evidence, thresholds, gaps, review and artifact witness. 
 Supplier due diligence Multi-source evidence, browser capture, risk flags. 
 Incident review Logs, timeline, root-cause hypotheses, corrective action. 
@@ -921,11 +921,11 @@ SCHEMA Stripe Registry hardening schema validation, dynamic schema quarantine.
 
 ## Page 17
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 APP App Support Tier enforcement tier-0 E2E, tier labels, surface parity. 
 D1/EQL Proof-Grade Reality Check 
-The first proof-convergence milestone is intentionally narrow: D1 intake and EQL retrieval must become proof -grade before A-OSP can credibly claim 
+The first proof-convergence milestone is intentionally narrow: D1 intake and EQL retrieval must become proof -grade before AOSP can credibly claim 
 downstream ArtifactWitness, Proof Spine or GovernanceRun readiness. This section records the current engineering reality. It is not a product-
 completion claim. It is a maturity boundary. 
 As of the D1/EQL engineering attestation dated 2026 -05-26, at reference commit aa68898cd1b882549e8b354aad894dc86629566e, D1/EQL proof -
@@ -993,8 +993,8 @@ Engineering Attestation.
 
 ## Page 18
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 26. Metrics, Bundles and Benchmark Plan 
 Bundle What it measures 
 RepositoryBundle repo scale, audit findings, authority state, CI/guard state 
@@ -1042,21 +1042,21 @@ D1/EQL proof-grade overclaim Appendix P claim boundary, #3462 D1 proof seam, #34
 EQL proof invisible to users Minimal EQL proof UX surface before external demo; full EQLStatusCard / ScopeBadge / ProofBadge in #3428. 
   
 What would falsify the thesis? 
-A-OSP would fail its own thesis if users cannot diagnose failed proof states; the filesystem cannot be reliably parsed/rebuilt;  artifacts cannot trace claims to source 
+AOSP would fail its own thesis if users cannot diagnose failed proof states; the filesystem cannot be reliably parsed/rebuilt;  artifacts cannot trace claims to source 
 objects; bounded calls do not reduce rework or review effort in measured workflows; local -to-enterprise promotion creates unmanageable conflicts; or guard systems 
 produce noise without actionable repair.
 
 ## Page 19
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 28. Strategic Validation Thesis and Conclusion 
-A-OSP should be judged by whether it can make AI -assisted work reconstructable, diagnosable, portable, bounded, auditable and reviewable across 
+AOSP should be judged by whether it can make AI -assisted work reconstructable, diagnosable, portable, bounded, auditable and reviewable across 
 real enterprise workflows. The strategic validation thesis is that a browser -native, text -first epistemic operating environment can reduce proof 
 ambiguity, provider lock-in and repeated context reconstruction in selected workflows. The next validation step is to measure this through proof -grade 
 D1/EQL, artifact boundaries, Error Truth, Observatory metrics and pilot workflow benchmarks.  
  
-Category Strength Gap A-OSP wedge 
+Category Strength Gap AOSP wedge 
 Chatbot generation weak proof/lineage proof-and-knowledge substrate 
 Agent framework automation weak durable local SSOT text-first filesystem + guards 
 GRC tool workflow governance not AI-native proof evidence gaps + receipts 
@@ -1066,8 +1066,8 @@ Data room evidence storage weak bounded model orchestration scoped calls + proof
 
 ## Page 20
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 APPENDIX A – O 
 Operational catalogues, engineering attestations and review standards for 
 engineering, CTO and governance review. 
@@ -1118,8 +1118,8 @@ TARGET Dashboard claims global truth. horizon_violation_count
 
 ## Page 21
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Appendix B - Concept Injection Matrix 
 Concept First definition Engineering section Snippet/KPI section Cross-reference 
 Ontological Semantic Platform Ch.3 Ch.8-8 Schema/KPI tables EQL, proof, registry 
@@ -1149,8 +1149,8 @@ Auditor Inspects proof bundles and review history.
 
 ## Page 22
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Appedinx E - Operational Moat Map 
 Scripts, workflows, guards, policies and generated reports that keep the architecture from drifting. 
 Moat asset Layer Failure prevented Primary KPI 
@@ -1216,8 +1216,8 @@ artifact, KPI and roadmap or decision reference.
 
 ## Page 23
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Appendix F - CI/CD Guard Catalogue 
 CI/CD is treated as a control plane: each guard protects a specific architecture claim. 
 Guard family Guard / job Protected claim 
@@ -1264,8 +1264,8 @@ Catalogue rule
 
 ## Page 24
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 A guard should not be described as “quality” in general. It should be tied to a specific architecture claim and failure mode.  
  
 Appendix G - Test Matrix 
@@ -1311,8 +1311,8 @@ INV-15 No direct storage in apps/hooks CI lint Audit bypass/local storage drift
 
 ## Page 25
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 INV-16 Session-entity SSOT Storage-SSOT lint/no adapter bypass Invisible session writes 
 INV-17 Atom validation referential integrity Pre-check + post-loop assertion Orphan atom_validation_ stripe 
  
@@ -1372,8 +1372,8 @@ Controls cross-app continuity.
 
 ## Page 26
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Layer 3 - State 
 Management 
 useFilesystem, DataStore, React Query cache. Query/mutation state, invalidations. Enforces filesystem-first access. 
@@ -1446,8 +1446,8 @@ Accumulated documentation debt.
 
 ## Page 27
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 transclude Synchronizes markdown blocks through 
 BLOCK/TRANSCLUDE syntax with 
 check/update/dry-run mode. 
@@ -1518,8 +1518,8 @@ Reachability test Checks whether entity is referenced by runtime Invisible orpha
 
 ## Page 28
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 code, docs or CI/CD. 
 Effect test Checks whether entity produces runtime, build, 
 test, CI or deployment effect. 
@@ -1531,7 +1531,7 @@ Informational value test Checks unique decisions, rationale or history. Low-valu
 Cross-reference test Checks canonical/archeological links. Unlinked authority or archive. 
  
 Topology moat 
-A-OSP should not allow hidden app surfaces, undocumented routes, orphan E2E tests or stale architecture diagrams to 
+AOSP should not allow hidden app surfaces, undocumented routes, orphan E2E tests or stale architecture diagrams to 
 accumulate without classification. 
 Appendix M - Security and Production Readiness 
 Development adequacy and production readiness must be separated explicitly. 
@@ -1589,16 +1589,16 @@ explicit and tracked.
 production_security_blocker_count 
  
 Security maturity rule 
-A-OSP should not claim production readiness until production blockers are closed and validated by explicit metrics.
+AOSP should not claim production readiness until production blockers are closed and validated by explicit metrics.
 
 ## Page 29
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
 Appendix N - Local / Global Proof Journey Example 
 One end-to-end example connecting user input, local objects, proof, artifact, governance and operational evidence. 
-Step A-OSP operation Objects / evidence produced Proof or governance 
+Step AOSP operation Objects / evidence produced Proof or governance 
 meaning 
 1 Capture supplier payment-control answer. answer_001 Human input becomes 
 local source object. 
@@ -1660,12 +1660,12 @@ diagnosable and
 governable chain. 
  
 End-to-end thesis 
-A-OSP transforms a human answer into a typed, validated, queryable, reviewable, diagnosable and governable chain of objects.
+AOSP transforms a human answer into a typed, validated, queryable, reviewable, diagnosable and governable chain of objects.
 
 ## Page 30
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
 Appendix O - Object Mapping, Concept Coverage and Review Standards 
 This appendix extracts the principal objects, controls and concepts described in the whitepaper and maps them to their definition, engineering 
 section, maturity status, validation metric and review audience. It also provides a legacy-to-current concept coverage matrix so concepts introduced 
@@ -1759,8 +1759,8 @@ MISSING / TARGET c1_negative_test_pass_rate CTO/Gov/Investor
 
 ## Page 31
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
 Appendix P - D1/EQL Proof-Grade Engineering Attestation 
 P.1 Purpose and claim boundary 
@@ -1793,12 +1793,12 @@ Open issue coverage: 14/14 mapped
 Uncovered gaps: 0 
 Main risk: foundations exist, but the end-to-end proof seam is not closed 
 This is the correct whitepaper posture 
-A-OSP may claim: 
+AOSP may claim: 
   landed D1/EQL foundations; 
   runtime-wired DataIntake UI honesty; 
   landed EQL L0-L2 parser/capability/virtual-view foundations; 
   issue-owned plan to close D1/EQL proof-grade. 
-A-OSP should not yet claim: 
+AOSP should not yet claim: 
   D1/EQL proof-grade completion; 
   real backend D1 proof PASS production; 
   EQL proof receipts; 
@@ -1827,8 +1827,8 @@ C1 convergence artifacts MISSING Yes #3488
 
 ## Page 32
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
 P.4 What is already strong 
 The repository already contains a substantial D1/EQL proof foundation. 
@@ -1891,8 +1891,8 @@ Summary: 3 PASS / 4 NO-or-PARTIAL across MVP-required probes.
 
 ## Page 33
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
 P.7 EQL current state 
 EQL has strong foundations but is not yet proof-grade. 
@@ -1959,8 +1959,8 @@ Even if full EQL UX remains post-M1, no external proof-grade demo should present
 
 ## Page 34
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
  
  
 P.9 Issue-chain coverage 
@@ -2030,8 +2030,8 @@ Landed foundations:
 
 ## Page 35
 
-A-OSP Whitepaper | Augmented Ontological Semantic Platform 
-Confidential draft for technical / enterprise review | A-OSP Webapp Infrastructure Edition 
+AOSP Whitepaper | Augmented Ontological Semantic Platform 
+Confidential draft for technical / enterprise review | AOSP Webapp Infrastructure Edition 
         |                                      v 
         |                         #3430 proof scripts + CI 
         |                                     | 

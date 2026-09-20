@@ -82,4 +82,4 @@ result (README §8). I will not present it as proven.
 - The correction uses **rollback** with `RB`/`ART` supersession and `xref`.
 - The fallback answer is bounded and respects the claim discipline.
 - `export: rollback_record` separates the corrected answer from any proof claim
-  (A-OSP: answer ≠ proof).
+  (AOSP: answer ≠ proof).

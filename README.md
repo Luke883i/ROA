@@ -29,7 +29,7 @@ artificial consciousness.
 | Humanistic / philosophical | `(I) Every Map Leaves Something Out.pdf` | Why every representation preserves some distinctions and loses others. |
 | ROA main entry point | `(II) Reticular Observer Architectures (ROA) for Governable AI-Assisted Work.pdf` | Integrated ROA thesis, governance compression and claim boundaries. |
 | Theory bridge | `(III) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf` | Bounded artificial observers, RLA/ECNN and the Ruliad discussion. |
-| A-OSP implementation witness | `Augmented Ontological Semantic Platform A-OSP/` | One proof-aware implementation path; not independent theory validation. |
+| AOSP implementation witness | `Augmented Ontological Semantic Platform AOSP/` | One proof-aware implementation path; not independent theory validation. |
 | Scientific backbone | `Reticular Local Abstraction RLA-CRC-ECNN/` | Main paper, slidedeck and Annexes A-G. |
 
 ## Core logic
@@ -39,7 +39,7 @@ RLA -> grammar of bounded observation
 CRC -> computability under declared epistemic horizons
 ECNN/ECU -> bounded epistemic transduction
 ROA -> controlled reification + epistemic-debt governance
-A-OSP -> implementation witness
+AOSP -> implementation witness
 ```
 
 The central discipline is to preserve distinctions that ordinary AI workflows

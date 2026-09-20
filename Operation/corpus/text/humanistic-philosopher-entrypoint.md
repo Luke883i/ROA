@@ -529,7 +529,7 @@ a policy -and-audit layer: typed state
 transitions, a debt ledger that blocks 
 unverified use 
 the governance; the ROA paper 
-A-OSP a strict, append-only environment 
+AOSP a strict, append-only environment 
 keeping provenance, validation 
 and proof distinct 
 an event -sourced store with signed 

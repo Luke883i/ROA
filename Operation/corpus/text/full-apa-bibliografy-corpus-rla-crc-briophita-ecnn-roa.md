@@ -265,7 +265,7 @@ Reply to Wolfram). La provenienza indica quali documenti li richiamano.
 entrypoint]. RLA–ECNN corpus. https://github.com/Luke883i/RLA-ECNN  [OC, AOSP, EM] 
 (2026). AI as Observer Compiler: From Wolfram’s Ruliad to RLA–ECNN [Integrative methodology paper]. 
 RLA–ECNN corpus.  [ROA, AOSP, RW] 
-(2026). Augmented Ontological Semantic Platform (A-OSP) Whitepaper: Webapp, infrastructure, runtime, 
+(2026). Augmented Ontological Semantic Platform (AOSP) Whitepaper: Webapp, infrastructure, runtime, 
 topology (Version 2026-05-25) [Engineering whitepaper]. RLA–ECNN corpus.  [ROA, OC, M, EM] 
 (2026). RLA–ECNN–CRC–PCE: Reticular Local Abstraction, epistemic convolution, compact reticular 
 computability, and the PCE bridge [Core theory position paper]. RLA–ECNN corpus.  [ROA, OC, EM, A, B, 
@@ -318,4 +318,4 @@ Sider, T. (2011). Writing the book of the world. Oxford University Press. [Cited
 van Fraassen, B. C. (1980). The scientific image. Oxford University Press. [Cited by name (constructive 
 empiricism).]  [EM] 
 Legenda provenienza: M = Main Paper · A–G = Annex A–G · RW = Reply to Wolfram · EM = Every Map · ROA = ROA v6 · 
-OC = Observer Compiler · AOSP = A-OSP Whitepaper.
+OC = Observer Compiler · AOSP = AOSP Whitepaper.

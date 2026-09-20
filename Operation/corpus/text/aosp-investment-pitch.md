@@ -1,28 +1,28 @@
 <!-- GENERATED FILE. DO NOT EDIT BY HAND. Run Operation/scripts/build_manifest.py -->
 ---
 id: "aosp-investment-pitch"
-title: "A-OSP Investment Pitch"
+title: "AOSP Investment Pitch"
 role: "investment_pitch"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(7) A-OSP Investment Pitch [INP].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%287%29%20A-OSP%20Investment%20Pitch%20%5BINP%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(7) AOSP Investment Pitch [INP].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%287%29%20AOSP%20Investment%20Pitch%20%5BINP%5D.pdf"
 source_sha256: "ebdd802c28051be77b7e6168b4a5f83e1ba9d9cecd4035954b039779f8a6d409"
 extraction_status: "success"
 ---
 
 ## Page 1
 
-A-OSP
+AOSP
 Augmented Ontological Semantic Platform 
 Computational Semantics for Proof Sovereignty
 answer_ → atom_ → receipt_
 A local Proof Operating Environment that computes when AI-assisted work may answer, abstain, escalate or 
 expose epistemic debt.
 AI creates output. 
-A-OSP computes proof status.
+AOSP computes proof status.
 It does not open the black box. 
 It moves the trust boundary outside the model.
 Proof sovereignty · computational semantics · repo-governed engineering witness
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 1
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 1
 Investment Pitch
 (INP)
 
@@ -37,28 +37,28 @@ Act III What is built dev method · engineering witness · .aosp.txt · D1/EQL (
 Act IV Sovereign & investible sovereignty · market · model · moat · roadmap & ask · scale → category · gates
 Data room A1–A15 · financials · benchmarks · governance · risks · value capture · founder · repo · theory · semantics · sovereign stack · tests · debt · capital · ledger of meaning
 Each section declares: AS-IS vs TARGET, theory vs witness vs category.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 3
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 3
 
 ## Page 3
 
-A-OSP
+AOSP
 A C T  I  — W H Y  I T  E X I S T S
-Why A-OSP exists.
+Why AOSP exists.
 Problem, category, competitive boundary, why-now, founder & method.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 4
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 4
 
 ## Page 4
 
 T H E S I S A C T  I  — W H Y  I T  E X I S T S
-AI creates output. A-OSP computes proof status.
-When models become replaceable, proof identity becomes the asset. A-OSP converts AI-assisted work into reusable proof capital.
+AI creates output. AOSP computes proof status.
+When models become replaceable, proof identity becomes the asset. AOSP converts AI-assisted work into reusable proof capital.
 AI output
 fast · fluent · unverifiable →
 Proof obligation
 source? scope? gap? review? 
 receipt?
 →
-A-OSP substrate
+AOSP substrate
 typed stripes · receipt · readback · 
 hash · scope
 →
@@ -67,8 +67,8 @@ risk matrix · audit memo · witness ·
 portable proof graph
 Each engagement leaves reusable proof objects, not dead documents — one evidence object, many institutional lenses 
 (compliance, audit, legal, ESG, scientific provenance).
-AI output is abundant. Proof is scarce. A-OSP captures the scarce layer.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 5
+AI output is abundant. Proof is scarce. AOSP captures the scarce layer.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 5
 
 ## Page 5
 
@@ -97,46 +97,46 @@ WHAT A -OSP TARGETS
 The reconstruction layer: source → claim → gap → 
 receipt → artifact → witness → governance.
 The failure is not only hallucination. It is unreconstructable institutional work.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 6
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 6
 → → → →
 
 ## Page 6
 
 C A T E G O R Y A C T  I  — W H Y  I T  E X I S T S
-A-OSP is a local Proof Operating Environment.
+AOSP is a local Proof Operating Environment.
 Not a chatbot, not a generic GRC dashboard, not a RAG wrapper. It is the proof layer around AI-assisted regulated work.
-A-OSP is
+AOSP is
 • local proof substrate
 • text-first virtual epistemic filesystem
 • bounded model-call orchestration
 • proof-and-governance workstation
 • semantic status engine
-A-OSP is not
+AOSP is not
 • chatbot
 • generic document repository
 • model memory
 • autonomous compliance engine
 • legal certification
-RAG retrieves. GRC tracks controls. A-OSP computes proof status.
+RAG retrieves. GRC tracks controls. AOSP computes proof status.
 Compliance is the wedge. Computational proof infrastructure is the category.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A14 · first schema, not last 7
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A14 · first schema, not last 7
 
 ## Page 7
 
 C O M P E T I T I V E  B E N C H M A R K A C T  I  — W H Y  I T  E X I S T S
 Proof status, not trust automation.
-GRC tools automate control posture; provenance standards certify media history. A-OSP computes whether AI-assisted institutional work is admissible under 
+GRC tools automate control posture; provenance standards certify media history. AOSP computes whether AI-assisted institutional work is admissible under 
 declared proof conditions.
 SEGMENT WHAT THEY PROVE STRUCTURAL GAP
 GRC / trust automation controls, evidence, audit readiness vendor-captive control posture
 AI governance model / system risk, policies governs AI systems, not the work-product proof chain
 C2PA-like provenance source / history of media content provenance ≠ institutional admissibility
 Cloud / LLM providers logs, traces, model-side receipts provider capture — not a neutral proof authority
-A-OSP computes proof status of work products — local SOT (source of truth) + provider-independence + computable 
+AOSP computes proof status of work products — local SOT (source of truth) + provider-independence + computable 
 abstention/debt + portability. The empty intersection the four segments leave open — a candidate neutral proof 
 layer outside vendor-captive control.
 The category boundary is proof portability: proof objects must travel across tools, auditors and institutions.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A2 · LOA 8
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A2 · LOA 8
 
 ## Page 8
 
@@ -144,7 +144,7 @@ H O W  T H E  W E D G E  B E C O M E S  I N F R A S T R U C T U R E A C T  I  �
 The first sale is not the final product. 
 It is how the proof substrate enters institutions.
 Compliance is the wedge; reusable proof objects are the compounding asset.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A2 · LOA 9
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A2 · LOA 9
 1. WEDGE
 Compliance / audit pain
 recurring reconstruction spend
@@ -169,13 +169,13 @@ same substrate, many registers: compliance · audit · legal custody · ESG · s
 CATEGORY PROOF MOMENT
 Third parties read, write and validate proof 
 objects without trusting the vendor.
-The wedge buys entry. The substrate creates memory. Portability tests whether A-OSP becomes infrastructure.
+The wedge buys entry. The substrate creates memory. Portability tests whether AOSP becomes infrastructure.
 
 ## Page 9
 
 W H Y  N O W  ·  W H O  P A Y S A C T  I  — W H Y  I T  E X I S T S
 The spend already exists. AI just made it acute.
-A-OSP does not create a new budget line. It redirects money institutions already spend on reconstruction.
+AOSP does not create a new budget line. It redirects money institutions already spend on reconstruction.
 WHO PAYS TODAY
 Compliance, audit, cyber and governance 
 already pay consultants, auditors and data 
@@ -189,8 +189,8 @@ It turns that recurring reconstruction spend
 into reusable proof capital instead of dead 
 documents.
 Already-budgeted spend · multi-regime duplication · audit-evidence pain · board / OdV / customer pressure
-Compliance, audit, cyber and governance already pay for reconstruction — A-OSP makes it reusable.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 10
+Compliance, audit, cyber and governance already pay for reconstruction — AOSP makes it reusable.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 10
 
 ## Page 10
 
@@ -205,14 +205,14 @@ Privacy / AI governance Moves AI governance from principles to operational evide
 Applied philosophy of AI Turns ignorance, uncertainty and responsibility into system objects.
 Investment interpretation
 Founder profile explains category coherence; the round exists to make the institution independent from the founder.
-A-OSP is not AI looking for governance. It is governance, audit and proof discipline rebuilt around AI.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 11
+AOSP is not AI looking for governance. It is governance, audit and proof discipline rebuilt around AI.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 11
 
 ## Page 11
 
 F O U N D E R  &  M E T H O D A C T  I  — W H Y  I T  E X I S T S
 The discipline was built before it was sold.
-A-OSP began as the founder’s own theoretical reflection on the limits of representation and local computability, developed and published openly — then 
+AOSP began as the founder’s own theoretical reflection on the limits of representation and local computability, developed and published openly — then 
 forced into an engineering practice.
 TWO FAILED BUILDS → A 
 GOVERNED LAB
@@ -230,7 +230,7 @@ Technical leadership without being an
 engineer.
 ANTI-FALSE -GREEN, SELF -
 APPLIED
-The rule A-OSP sells — file / UI / 
+The rule AOSP sells — file / UI / 
 completion ≠ proof — was first forced onto 
 its own development. The method is the 
 product, applied to itself.
@@ -239,15 +239,15 @@ Multiplier 1 — Founder leverage already demonstrated
 compression, category coherence and disciplined AI orchestration — not market validation, production readiness or security certification. The 
 round funds the next multiplier: converting founder-operated proof discipline into a team-operable institution.
 Founder-market fit demonstrated, not claimed: he built the control system for the chaos he lived.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A6 12
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A6 12
 
 ## Page 12
 
-A-OSP
+AOSP
 A C T  I I  — W H Y  T H I S  A R C H I T E C T U R E  E X I S T S
 Why this architecture exists.
 Theory lineage, local computability, computational semantics and epistemic debt.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 13
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 13
 
 ## Page 13
 
@@ -271,25 +271,25 @@ iKant
 answer · abstain · 
 escalate
 →
-A-OSP
+AOSP
 local-first proof OS-like
 Claim discipline
-A-OSP is ECNN-inspired and local-first. It is not claimed as a formally complete ECNN. The webapp is the witness: VFS, typed 
+AOSP is ECNN-inspired and local-first. It is not claimed as a formally complete ECNN. The webapp is the witness: VFS, typed 
 stripes, EQL/MONL, receipts, witness and governance.
 Theory is the design grammar that explains why the product is built this way.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 14
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 14
 
 ## Page 14
 
 L O C A L  C O M P U T A B I L I T Y  U N D E R  H O R I Z O N A C T  I I  — W H Y  T H I S  A R C H I T E C T U R E  E X I S T S
-Why A-OSP does not promise universal truth.
+Why AOSP does not promise universal truth.
 It computes local proof status under declared constraints — and states precisely what it does not claim.
 RICE
 Non-trivial semantic properties are 
 undecidable in general.
 GÖDEL
 No formal system closes all truth internally.
-A-OSP RESPONSE
+AOSP RESPONSE
 Compute admissible proof status under 
 declared horizons — not total truth.
 ALLOWED FORBIDDEN
@@ -297,13 +297,13 @@ local proof status under horizon universal truth machine
 admissible transmission between scopes global semantic completeness
 computed unknown / contradiction / debt guaranteed correctness
 Local proof status under declared constraints — not universal truth.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A9 (formal statement) 15
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A9 (formal statement) 15
 
 ## Page 15
 
 C O M P U T A T I O N A L  S E M A N T I C S A C T  I I  — W H Y  T H I S  A R C H I T E C T U R E  E X I S T S
 Not the truth of a claim — its admissibility under a horizon.
-A-OSP does not compute whether a claim is true (Rice/Gödel forbid that in general). It computes a decidable, restricted question: in what epistemic state is the claim, relative to a 
+AOSP does not compute whether a claim is true (Rice/Gödel forbid that in general). It computes a decidable, restricted question: in what epistemic state is the claim, relative to a 
 declared horizon.
 THE HORIZON
 H = ⟨ S, Σ, T, R, M, V ⟩
@@ -322,7 +322,7 @@ M, V holds
 • review-required — V not yet satisfied
 • blocking-debt — a transform in T lacks receipt in R
 Changing the horizon can change the state — that tracked relativity is what makes it computable.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A9 16
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A9 16
 
 ## Page 16
 
@@ -337,14 +337,14 @@ domain transfer scale debt
 claim promoted too early reification debt
 validation absent validation debt
 Undecidability is the formal limit. Epistemic debt is the governance residue.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 17
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 17
 
 ## Page 17
 
 E P I S T E M I C  H E A D A C T  I I  — W H Y  T H I S  A R C H I T E C T U R E  E X I S T S
 “I don’t know” is not a phrase. It is a computed state.
 The difference between a chatbot and a proof environment is where the unknown lives.
-CHATBOT A-OSP EPISTEMIC HEAD
+CHATBOT AOSP EPISTEMIC HEAD
 “I don’t know” as style unknown as computed state
 confidence score admissibility under proof graph
 provider answer local proof-state evaluation
@@ -358,7 +358,7 @@ escalate
 when governance is needed
 expose debt
 when meaning is unresolved
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 18
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 18
 
 ## Page 18
 
@@ -378,22 +378,22 @@ export = witness export needs witness-backed proof state
 UI green = proof green is earned only by proof predicates
 model memory = SOT SOT is local typed stripes
 A proof chain is a sequence of permissions, not a formatting pipeline.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 19
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 19
 → → → → →
 
 ## Page 19
 
-A-OSP
+AOSP
 A C T  I I I  — W H A T  H A S  B E E N  B U I L T
 What has been built.
 A founder-built, AI-orchestrated engineering witness with repo governance and proof seams.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 20
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 20
 
 ## Page 20
 
 AI - O R C H E S T R A T E D  D E V E L O P M E N T A C T  I I I  — W H A T  H A S  B E E N  B U I L T
 The build was AI-orchestrated chaos — then governed.
-The same discipline A-OSP sells — file / UI / completion ≠ proof — was first forced onto its own development. The method is the product, applied to itself.
+The same discipline AOSP sells — file / UI / completion ≠ proof — was first forced onto its own development. The method is the product, applied to itself.
 THE ENTROPY (shown, not hidden)
 • hallucinated code
 • duplicated implementations
@@ -409,7 +409,7 @@ audit scripts false-green checks E2E journeys
 E2E critical journeys = HARDENING: a journey is PASS only when scheduled, executed and observing the required 
 artifacts — not because a file or a screen exists.
 Founder-market fit, demonstrated: he built the control system for the chaos he lived.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 21
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 21
 
 ## Page 21
 
@@ -432,7 +432,7 @@ AUTHORITY HIERARCHY
 code > tests/CI > config > docs > issues > AI 
 plans
 This does not prove enterprise readiness. It proves a method of layered governance for 1FTE + AI development.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 22
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 22
 
 ## Page 22
 
@@ -462,13 +462,13 @@ Interpretation
 aosp1 is not a finished enterprise product. It is a concrete witness that the stack, abstractions, proof seams and repo-
 governance method can exist together.
 A witness, not a certificate.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 23
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 23
 
 ## Page 23
 
 A R C H I T E C T U R E A C T  I I I  — W H A T  H A S  B E E N  B U I L T
 Enterprise webapp + epistemic OS-like abstractions.
-A-OSP uses dominant web technologies, then adds proof-native OS-like abstractions over the stack.
+AOSP uses dominant web technologies, then adds proof-native OS-like abstractions over the stack.
 Enterprise web 
 runtime
 App / 
@@ -484,23 +484,23 @@ WEB STACK GIVES
 scalability, accessibility, security patterns, 
 deployment familiarity and enterprise 
 integration.
-A-OSP ADDS
+AOSP ADDS
 VFS, typed stripes, query/readback 
 semantics, receipts, witness and 
 governance.
 DESIGN GOAL
 a simple user experience over a 
 deliberately disciplined proof substrate.
-Web stack = enterprise substrate.  A-OSP = epistemic / proof abstraction layer.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 24
+Web stack = enterprise substrate.  AOSP = epistemic / proof abstraction layer.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 24
 → → → → →
 
 ## Page 24
 
 W H Y  . A O S P . T X T  M A T T E R S A C T  I I I  — W H A T  H A S  B E E N  B U I L T
 Plain text is not a downgrade. It is the resilience layer.
-A-OSP does not use TXT instead of enterprise infrastructure. It uses TXT as the canonical proof substrate.
-TECHNICAL BIAS A-OSP RESPONSE
+AOSP does not use TXT instead of enterprise infrastructure. It uses TXT as the canonical proof substrate.
+TECHNICAL BIAS AOSP RESPONSE
 “TXT does not scale” Text is SOT / event-log; parser, cache and DB handle query and performance.
 “You need a database” The database exists — it is cache / index / RBAC, not institutional truth.
 “TXT is fragile” Plain text is portable, diffable, inspectable, versionable and legacy-resilient.
@@ -508,7 +508,7 @@ TECHNICAL BIAS A-OSP RESPONSE
 “Enterprise?” Enterprise means recovery, auditability, access control, observability, reproducibility.
 DB-resilient, not DB-less.    LLM-resilient, not LLM-free.    If the database, model or vendor changes, institutional proof remains 
 readable.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 25
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 25
 
 ## Page 25
 
@@ -523,7 +523,7 @@ scope
 False-green rule
 A completion modal, raw query success, a filled questionnaire or a local fallback atom do not equal proof.
 Minimum proof substrate before D2–D5, not full proof spine.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 26
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 26
 
 ## Page 26
 
@@ -542,13 +542,13 @@ CAVEAT
 full UI proof run remains opt-in / hardening 
 in parts
 No green without proof predicates.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 27
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 27
 
 ## Page 27
 
 C I / C D  &  E V I D E N C E  T O P O L O G Y A C T  I I I  — W H A T  H A S  B E E N  B U I L T
 Not every check means the same thing.
-A-OSP classifies controls before claiming control: blocking, evidence, advisory, nightly, manual and deprecated checks differ in meaning.
+AOSP classifies controls before claiming control: blocking, evidence, advisory, nightly, manual and deprecated checks differ in meaning.
 CLASS MEANING
 blocking must pass before merge
 evidence produces artifacts, no verdict
@@ -566,16 +566,16 @@ Investment task: classify, budget and consolidate — this is what the
 round funds, not more workflow noise.
 Honest status
 Rich but still hardening. The goal is not more workflow noise; it is classified, budgeted, progressively consolidated control.
-A-OSP classifies controls before claiming control.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A10 / A12 28
+AOSP classifies controls before claiming control.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A10 / A12 28
 
 ## Page 28
 
-A-OSP
+AOSP
 A C T  I V  — S O V E R E I G N  &  I N V E S T I B L E
 Why it is sovereign and investible.
 Provider resilience, EU-first posture, market wedge, moat stack, gates and ask.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 29
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 29
 
 ## Page 29
 
@@ -595,19 +595,19 @@ not proof by itself
 local institutional proof 
 substrate — human + machine 
 readable
-A-OSP is not anti-provider. It is anti-provider-capture.  Providers may process; they must not own proof, memory or 
+AOSP is not anti-provider. It is anti-provider-capture.  Providers may process; they must not own proof, memory or 
 institutional truth.
 local truth →
  bounded processing →
  receipt & readback →
  witness & governance
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 30
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 30
 
 ## Page 30
 
 D B  /  L L M  /  P R O V I D E R  R E S I L I E N C E A C T  I V  — S O V E R E I G N  &  I N V E S T I B L E
 Resilient by role separation, not by denial.
-A-OSP does not eliminate providers. It limits what providers are allowed to mean.
+AOSP does not eliminate providers. It limits what providers are allowed to mean.
 COMPONENT USED FOR NOT ALLOWED TO OWN
 LLM bounded transformation under FAE (focus·attention·execution) memory, truth, proof state
 Database index, cache, RBAC, acceleration canonical knowledge
@@ -618,13 +618,13 @@ AS-IS caveat · economics
 Adapters exist today; target: provider registry + EU-first routing + self-hosted. Cost note: value is governability, not doing the 
 work cheaper — but the substrate is cheap to run, since bounded calls on typed stripes don’t need frontier models. Cost 
 scales with proof depth, not model price.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 31
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 31
 
 ## Page 31
 
 S O V E R E I G N T Y  P O S T U R E A C T  I V  — S O V E R E I G N  &  I N V E S T I B L E
 Sovereignty is architectural first, EU-first second.
-A-OSP is sovereignty-aligned because proof identity is provider-independent. EU-first is a deployment and dependency policy, notthe core proof claim.
+AOSP is sovereignty-aligned because proof identity is provider-independent. EU-first is a deployment and dependency policy, notthe core proof claim.
 1 · Proof remains local
 Institutional truth lives in .aosp.txt, never owned by a provider.
 AS -IS
@@ -638,7 +638,7 @@ TARGET
 Every dependency tracked with payload class, sensitivity and validation.
 TARGET
 Proof remains local. Trust becomes portable — provider-independence is the claim, EU-first the policy.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A10 (register) 32
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A10 (register) 32
 
 ## Page 32
 
@@ -651,8 +651,8 @@ dead reports reusable proof capital
 evidence rebuilt multiple times one evidence object, many lenses
 AI output hard to defend receipt / gap / review state
 fragile green dashboards computed proof status
-A-OSP makes compliance spend accumulate instead of evaporate.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 33
+AOSP makes compliance spend accumulate instead of evaporate.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 33
 
 ## Page 33
 
@@ -673,7 +673,7 @@ Prior work matters
 The compliance wedge is not opportunistic. It follows prior integrated-compliance work on multi-regime cost, evidence reuse 
 and overlapping obligations.
 Compliance is the wedge. Computational proof infrastructure is the category.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 34
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 34
 
 ## Page 34
 
@@ -690,13 +690,13 @@ Channel / advisor program €15–75k/y distributed proof production
 RegTech adapter / enterprise €90k+ · ent. €120–320k ecosystem embedding
 Conformance validator post-M36 standard adoption surface
 Revenue lines today; infrastructure roles tomorrow — the substrate enters, then compounds.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A1 · A2 35
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A1 · A2 35
 
 ## Page 35
 
 G T M  /  T R U S T  N E T W O R K A C T  I V  — S O V E R E I G N  &  I N V E S T I B L E
 Proof is adopted through trust networks.
-A-OSP sells proof, not automation. It enters through intermediaries who already speak evidence, governance and risk.
+AOSP sells proof, not automation. It enters through intermediaries who already speak evidence, governance and risk.
 ODV / 231
 organizational liability
 INTERNAL AUDIT
@@ -712,7 +712,7 @@ REGTECH
 distribution + trust
 Trust networks reduce cold-start risk but do not replace paid validation.
 Enter through people who already speak evidence, governance and risk.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 36
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 36
 
 ## Page 36
 
@@ -735,7 +735,7 @@ Revenue logic
 recognized revenue = diagnostics + proof packs + maintenance + association + advisor/OdV + mid-market + RegTech pilots / 
 adapters.   Category unit (ecosystem / conformance / platform ARR) is post-M36 only.
 Unit counts are bounded by delivery capacity, not by ambition.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A1 37
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A1 37
 
 ## Page 37
 
@@ -760,11 +760,11 @@ posture
 COMMERCIAL
 compliance wedge + trust networks + 
 foundation-backed proof commons
-As generation commoditizes, value migrates to the proof layer.  A-OSP is strategically unnatural for incumbents built around 
+As generation commoditizes, value migrates to the proof layer.  AOSP is strategically unnatural for incumbents built around 
 data gravity and proprietary memory; sovereign, scientific and public-interest demand is optionality earned by the substrate 
 — not near-term revenue.
 Seven layers, one cause — copyable feature by feature, not as the structure that generates them together. 
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 38
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 38
 
 ## Page 38
 
@@ -781,7 +781,7 @@ E2E determinism critical journeys hardened; long tail staged
 EU-first stack target posture, not AS-IS default
 enterprise readiness gated target (P1/P2)
 A proof company must prove its own limits first.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A12 39
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A12 39
 
 ## Page 39
 
@@ -802,7 +802,7 @@ Foundation stewards trust value
 Conditional foundation economics: mission-locked economic rights + arm’s-length conformance / validator flows + 
 endowment trigger at adoption or liquidity gates + independent governance after portability signals. Proof-commons 
 stewardship is the stewardship layer of Multiplier 3 — gated optionality, not in this ask.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 40Deep dive → A4 / A15
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 40Deep dive → A4 / A15
 
 ## Page 40
 
@@ -828,7 +828,7 @@ controls · channel evidence
 in this ask
 Total ask = €6.5M (T0, drawn in tranches).  Multiplier 2 and Multiplier 3 are separate, gated, and not part of this round — they
 show the trajectory, not the request.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A1 / A3 41
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → A1 / A3 41
 Not in this ask:
 
 ## Page 41
@@ -854,15 +854,15 @@ proof format read, written and validated across tools, auditors and
 institutions; proof-infrastructure economics.
 Formation proves the company. Portability tests the category. Adoption earns the standard — gated by portability, not 
 declaration.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → category economics · A2 / A5 42
-The category exists when third parties can read, write and validate A-OSP-compatible proof objects without 
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → category economics · A2 / A5 42
+The category exists when third parties can read, write and validate AOSP-compatible proof objects without 
 trusting the vendor.
 
 ## Page 42
 
 C A T E G O R Y  E C O N O M I C S A C T  I V  — S O V E R E I G N  &  I N V E S T I B L E
 Why €100M+ is a threshold, not a wall.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 43
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 43
 Illustrative · gated on portability. €100M+ ARR is reached by combining engines — not by multiplying delivery services.
 ENGINE ILLUSTRATIVE SCALE ARR
 Enterprise proof workspaces 300 × €120k €36M
@@ -913,21 +913,21 @@ Additional no-go
 No scale if the CI blocking/advisory map is unmaintained, the full proof-flow 
 demo is not repeatable, or the hardening-deferred index grows without owner.
 No activation without gates. No green without proof. No truth without horizon.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 44
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 44
 
 ## Page 44
 
-A-OSP
+AOSP
 Fund computational proof sovereignty, not another AI 
 wrapper.
-A-OSP is a founder-built, AI-orchestrated engineering witness for local computational semantics: theory-
+AOSP is a founder-built, AI-orchestrated engineering witness for local computational semantics: theory-
 informed, repo-governed, provider-resilient, EU-sovereignty aligned, honest about hardening, and designed 
 to turn AI-assisted work into reconstructable institutional evidence.
 Models generate.
-A-OSP computes whether the result may be institutionally used.
+AOSP computes whether the result may be institutionally used.
 Institutions decide.
 But only after proof status, scope, debt and governance are visible.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 45
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 45
 
 ## Page 45
 
@@ -963,7 +963,7 @@ A13
 Capital & Category
 A14
 Ledger of meaning
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 46
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 46
 
 ## Page 46
 
@@ -978,7 +978,7 @@ RegTech · 3×€250k €0.75M 82%
 Assessment / packs / maint. €1.50M 58%
 Blended €5.80M 72%
 Blended 72% GM = recurring lines (74–82%) offset by the lower-margin assessment / packs line (58%).
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 47
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 47
 Runway (€6.5M round)
 Y1 Y2 Y3
 Recognized rev. 0.6 1.85 5.8
@@ -997,7 +997,7 @@ here — it is unlocked only after M36 activation.
 
 A P P E N D I X  A 2 D A T A  R O O M
 Benchmark pack: prove the economics — and the category.
-Economics are a benchmark program; portability and conformance test whether A-OSP is a standard, not just an app.
+Economics are a benchmark program; portability and conformance test whether AOSP is a standard, not just an app.
 LLM COST / PROOF PACK
 € / pack
 PROVIDER SUBSTITUTION 
@@ -1032,7 +1032,7 @@ PA / defense
 HUMAN REVIEW TIME
 hours
 Benchmark cost by workflow; measure portability to test the standard.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 48
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 48
 
 ## Page 48
 
@@ -1064,7 +1064,7 @@ Total €6.50M
 * Founder/CEO pay is OpCo-board approved; no undisclosed fees or double compensation. Any 
 standards-vehicle role is separately disclosed and conflict-approved; founder upside remains 
 primarily equity-based.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 49
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 49
 
 ## Page 49
 
@@ -1082,9 +1082,9 @@ Standards vehicle protects trust
 • conformance mark, not legal certification
 • reference validator / open core
 • training, standards, grants and public trust
-The standards vehicle is not governance theater. It is the competitive structure that lets A-OSP monetize the runtime while 
+The standards vehicle is not governance theater. It is the competitive structure that lets AOSP monetize the runtime while 
 making proof format, validator and conformance trust credible beyond the vendor.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 50
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 50
 
 ## Page 50
 
@@ -1102,7 +1102,7 @@ LLM provider lock-in / cost overclaim Provider registry + EU-first adapters; ben
 Enterprise maturity gap P1/P2, tenant isolation, failover, auditability before public/defense.
 Founder-only knowledge CTO / team runbooks + onboarding.
 Governance theater / CI noise Promote advisory to blocking only when stable; classify, budget, prune.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 51
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 51
 
 ## Page 51
 
@@ -1123,7 +1123,7 @@ IP leakage commons
 Investor skepticism on “standard” No standard claim before third-party read / write / validate; “portable proof-standard option”; category moment 
 gated.
 Founder dual-role (OpCo CEO + foundation) Roles separately disclosed and conflict-approved; founder upside primarily OpCo equity.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 52
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 52
 
 ## Page 52
 
@@ -1138,7 +1138,7 @@ Privacy / AI governance Operationalizes AI governance as evidence infrastructure
 Applied philosophy of AI Turns uncertainty and ignorance into system design.
 Math / economics / game theory Incentive-aware design for vendors, auditors, regulators.
 Founder as originator of coherence, not permanent delivery engine.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 53
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 53
 
 ## Page 53
 
@@ -1156,7 +1156,7 @@ E2E determinism docs/E2E_DETERMINISM.md
 LLM providers AS-IS backend/parser-service/src/llm/types.ts
 Docker self-host path backend/docker-compose*.yml
 Governance / LOA Legal Operating Architecture full memo
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 54
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 54
 
 ## Page 54
 
@@ -1169,10 +1169,10 @@ ROA observer governance, controlled reification, epistemic debt
 RLA / CRC local computable closure under horizon
 ECNN / ECU bounded epistemic units; epistemic head
 iKant normative meta-control: answer, abstain, escalate, expose debt
-A-OSP local-first proof OS: VFS, typed stripes, EQL/MONL, receipts, witness
+AOSP local-first proof OS: VFS, typed stripes, EQL/MONL, receipts, witness
 Claim limit
-A-OSP is ECNN-inspired. It is not claimed as a formally complete ECNN or as a research proof of ROA.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 55
+AOSP is ECNN-inspired. It is not claimed as a formally complete ECNN or as a research proof of ROA.
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 55
 
 ## Page 55
 
@@ -1197,7 +1197,7 @@ Horizon relativity
 ⟦c⟧ₕ ≠ ⟦c⟧ₕ′ is expected: narrowing Σ, enriching S, or adding receipts in R can move a claim from review-required to supported. 
 Universal truth is not horizon-relative; admissibility is — by definition. The two-node statement (Lᵢ, Lⱼ, Tᵢⱼ) is the special case of 
 this structure.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 56
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 56
 
 ## Page 56
 
@@ -1212,13 +1212,13 @@ Runtime Docker / Traefik EU cloud / on-prem / sovereign hosting
 DevOps GitHub / npm EU mirror + SBOM + signing
 OS / devices web-first Linux / Android-first where feasible
 Productivity generic privacy-aligned suite
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 57
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 57
 
 ## Page 57
 
 A P P E N D I X  A 1 1 D A T A  R O O M
 Testing / anti-regression map.
-A-OSP treats tests as proof surfaces, not decoration.
+AOSP treats tests as proof surfaces, not decoration.
 REQUIRED CHECKS
 D1 SSOT, golden D1, ontology, dataflow, a11y, 
 proof
@@ -1237,13 +1237,13 @@ structural protection of canonical sources
 Caveat
 Full UI proof runs remain opt-in / hardening in parts. Testing moat = explicit anti-regression semantics, not a claim that all 
 proof flows are finished.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 58
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 58
 
 ## Page 58
 
 A P P E N D I X  A 1 2 D A T A  R O O M
 Hardening debt index.
-A-OSP does not hide hardening debt. It classifies it: visibility does not equal closure.
+AOSP does not hide hardening debt. It classifies it: visibility does not equal closure.
 FINDING MEANING
 30 merged PRs scanned deferred / out-of-scope / follow-up items extracted
 47 distinct deferred items grouped into 8 clusters
@@ -1254,13 +1254,13 @@ Status caveat visibility does not equal closure
 Trust interpretation
 Maturity honesty is a trust asset: the moat is disciplined visibility and layered risk reduction by a 1FTE non-engineer founder 
 amplified by frontier AI — not certainty.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 59
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 59
 
 ## Page 59
 
 A P P E N D I X  A 1 3 D A T A  R O O M
 Capital & category: the right money for the right ceiling.
-A-OSP forms as proof infrastructure, not a GRC SaaS — capital and investors must match the category, or it gets mispriced.
+AOSP forms as proof infrastructure, not a GRC SaaS — capital and investors must match the category, or it gets mispriced.
 INVESTOR FIT
 • deep-tech / infrastructure funds
 • EU digital-sovereignty capital
@@ -1276,10 +1276,10 @@ BLENDED CAPITAL
 keeps the streams clean and non-contaminating
 • blended formation is the higher-altitude version of the same 
 raise
-Regulation creates the obligation. Standards create the language. A-OSP can become the local proof substrate that makes AI-
+Regulation creates the obligation. Standards create the language. AOSP can become the local proof substrate that makes AI-
 assisted institutional work reconstructable.
 Match the capital to the category — or be mispriced as a compliance tool.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → LOA 60
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → LOA 60
 
 ## Page 60
 
@@ -1302,4 +1302,4 @@ Scientific provenance OPTION
 These are structural implications of a schema-agnostic substrate, not a product roadmap. The accounting parallel is a lens that 
 illuminates the structure — not a claim.
 Compliance is the first schema, not the last. The substrate is schema-agnostic by construction.
-A-OSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → LOA 61
+AOSP · Investment Pitch · posture: main@e492290b · June 2026 Deep dive → LOA 61

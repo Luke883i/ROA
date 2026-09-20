@@ -20,9 +20,9 @@ These artifacts are the *minimum* fixed set. Removing any one is a regression
 | ID | Artifact | Path | ROA function |
 |---|---|---|---|
 | MDAS-1 | iKant binding / bootstrap | `AGENTS.md` | iKant: decision, format, anti-injection |
-| MDAS-2 | This set + architectures + DoD + metrics | `governance/MDAS.md` | A-OSP: artifact/export discipline |
+| MDAS-2 | This set + architectures + DoD + metrics | `governance/MDAS.md` | AOSP: artifact/export discipline |
 | MDAS-3 | Append-only decision / truth source | `governance/DecisionLog.md` | CRC: horizon/bounds, feasibility |
-| MDAS-4 | Agentified API-call example | `governance/examples/agentified_api_call.md` | A-OSP: witness/readback |
+| MDAS-4 | Agentified API-call example | `governance/examples/agentified_api_call.md` | AOSP: witness/readback |
 | MDAS-5 | Rollback / fallback scenario | `governance/examples/rollback_scenario.md` | ROA: rollback, debt propagation |
 | MDAS-5b | Simulation & antifragility audit | `governance/simulations.md` | ECNN/iKant: regression coverage |
 | MDAS-6 | Deterministic incarnation test | `governance/incarnation_test.py` | ECNN: state classification (pass/DEBT) |
@@ -99,7 +99,7 @@ ENV CONTRACT
   with the prior version recoverable from git history.
 - **Legacy absorption.** Old prompts/rules are absorbed by **function, not
   wording**: `PATTERN -> FUNCTION -> RISK -> CLASS(KEEP|COMPRESS|UPGRADE|DISCARD)
-  -> FRAMEWORK MAP(RLA|CRC|ECNN|ROA|A-OSP|iKant) -> ABSORPTION RULE -> TEST`. Each
+  -> FRAMEWORK MAP(RLA|CRC|ECNN|ROA|AOSP|iKant) -> ABSORPTION RULE -> TEST`. Each
   absorbed pattern gets a `LEG-xxxx` pointing to a target `ART`. Missing legacy
   text ⇒ `DUE-SRC`; missing mapping ⇒ `DUE-LEGACY`; missing test ⇒ `DUE-ABSORB`.
 

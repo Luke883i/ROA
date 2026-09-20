@@ -150,7 +150,7 @@ How does the framework relate to the
 Ruliad? 
 Bounded conversion of formal possibility into local observer 
 structure; bridge axioms. 
-IX. Cases What does the method look like? Bryophyte, compliance, A-OSP, VFS/SSOT, semantic CI/CD, 
+IX. Cases What does the method look like? Bryophyte, compliance, AOSP, VFS/SSOT, semantic CI/CD, 
 iKant, creative reticula. 
 X. Limits/roadmap What is not claimed, and what comes next? Non-claims, framework comparison, research program. 
 Claim Ladder 
@@ -168,7 +168,7 @@ contradiction, and horizon-exceeded states.
 i) Label induction and reification are necessary but dangerous operations; they must remain provisional, traced, and 
 validated. 
 j) Semantic transformation creates epistemic, label, scale, and reification debt. 
-k) A-OSP and iKant illustrate one auditable implementation path, not a necessary architecture. 
+k) AOSP and iKant illustrate one auditable implementation path, not a necessary architecture. 
 l) The human role becomes governance of artificial observers, not passive consumption of model outputs. 
 Contribution Status Table 
 Claim or construct Status in this document What would strengthen it 
@@ -220,7 +220,7 @@ Claim or construct Status in this document What would strengthen it
 Popper-chi Falsification discipline for epistemic 
 behaviour. 
 Public challenge suites and reported results. 
-A-OSP/iKant Implementation witnesses. Independent audit, security review, and 
+AOSP/iKant Implementation witnesses. Independent audit, security review, and 
 reproducibility package. 
 Acronyms and Notation 
 Acronym / symbol Meaning 
@@ -238,7 +238,7 @@ validation constraints.
 BOT, BOT_C, BOT_U Unknown/abstention; contradiction; horizon-exceeded or structurally not answerable. 
 Reification Treating an abstraction, relation, or pattern as a thing -like epistemic object; legitimate only when 
 controlled and traced. 
-A-OSP Implementation proof-of-work for artefact-mediated epistemic/software engineering. 
+AOSP Implementation proof-of-work for artefact-mediated epistemic/software engineering. 
 VFS Virtual/v-filesystem: typed, addressable, versioned artefact substrate. 
 SSOT Single source of truth; a local diffable epistemic state such as aosp.txt. 
 iKant Implementation name for normative meta-control; not a moral subject.
@@ -304,7 +304,7 @@ Part VIII - Rulial Transduction and Scale-Transversal Operators
 Part IX - Cases and Implementation Witnesses 
 47. Bryophyte as CRC Scientific Case 
 48. Compliance-Risk ECNN 
-49. A-OSP as Semantic ECNN 
+49. AOSP as Semantic ECNN 
 50. VFS, SSOT, Provider Routing and Semantic CI/CD 
 51. iKant as Meta-ECNN Layer 
 52. Creative and Brain-like Reticula 
@@ -1022,7 +1022,7 @@ stabilization of that structure into repeatable practices, artefacts, gates, tra
 Rulial transduction: Omega_Ruliad -> R_local_cand 
 Rulial domestication: R_local_cand --validation+trace+governance--> 
 R_local_operational 
-A-OSP is best read as a domestication witness. The transductive step produces candidate blueprints, labels, graph fragments 
+AOSP is best read as a domestication witness. The transductive step produces candidate blueprints, labels, graph fragments 
 and artefacts. The domestication step makes them addressable, versioned, diffable, tested, reviewed and governed through 
 VFS, SSOT, semantic CI/CD and iKant-like meta-control. 
 43. Bridge Axioms 
@@ -1109,13 +1109,13 @@ Policies and procedures Extract and classify unitary concepts. Concept inventory
 Controls and evidence Link evidence to controls, risks, duties and gaps. Control gap table and evidence matrix. 
 Regulations and standards Compare company graph with imported libraries. Risk map, issue list, uncertainty register. 
 Expert review Validate facts, legal interpretation and priority. Validated or revised compliance reticulum. 
-49. A-OSP as Semantic ECNN 
-A-OSP is an implementation witness for observer compilation. It can be read as a semantic ECNN over software and 
+49. AOSP as Semantic ECNN 
+AOSP is an implementation witness for observer compilation. It can be read as a semantic ECNN over software and 
 epistemic artefacts. The field is the repository state, SSOT, issues, blueprints, code, logs and graph. The filters are promp ts, 
 agents, checklists, matrix constraints and CI/CD rules. The neurons are LLM -based ECUs or typed agents. Pooling appears as 
 SSOT summaries, graph clusters, issue epics and architectural postures. The epistemic head appears as semantic CI/CD, 
 audit artefacts and iKant critical reports. 
-ECNN component A-OSP analogue 
+ECNN component AOSP analogue 
 Semantic field VFS, repository, SSOT, issues, logs, code, graph. 
 Receptive field Relevant artefact neighbourhood for a task. 
 Epistemic neuron LLM/agent operating under prompt, schema and policy. 
@@ -1187,7 +1187,7 @@ PART X - LIMITS, COMPARISON AND ROADMAP
 - It does not claim that reified artefacts are ontological objects. 
 - It does not claim that RLA proves the Ruliad or any global metaphysics. 
 - It does not claim artificial consciousness. 
-- It does not claim that A-OSP or iKant are necessary for the theory. 
+- It does not claim that AOSP or iKant are necessary for the theory. 
 - It does not replace scientific, legal, technical or ethical experts. 
 54. Framework Comparison 
 Framework Overlap RLA/ECNN distinction 
@@ -1240,7 +1240,7 @@ integration rings.
 - RLA-CA exploration | Optional PCE bridge | Tests explicit encodings and diagnostics against CA dynamics. 
 - Popper-chi harness | Falsification infrastructure | Runs contradiction, unknown, horizon, modal drift, label and 
 reification tests with metrics. 
-- A-OSP semantic CI/CD | Implementation witness | Checks SSOT, VFS traces, issue coherence, provider drift and 
+- AOSP semantic CI/CD | Implementation witness | Checks SSOT, VFS traces, issue coherence, provider drift and 
 semantic debt. 
 Each track should produce replayable logs, versioned artefacts, configuration snapshots, failure cases and a small public 
 report. The goal is not production maturity at first. The goal is reproducible falsification.
@@ -1562,7 +1562,7 @@ Anderson, P. W. (1972). More is Different. Science, 177(4047), 393-396.
 Berger, P. L., & Luckmann, T. (1966). The Social Construction of Reality. Anchor Books. 
 Brown, T. B., et al. (2020). Language Models are Few-Shot Learners. NeurIPS. 
 Church, A. (1936). An Unsolvable Problem of Elementary Number Theory. American Journal of Mathematics. 
-Conte, G. (2025-2026). RLA-CRC-ECNN corpus: main paper, annexes A-G, observer compiler drafts, A-OSP/iKant notes. 
+Conte, G. (2025-2026). RLA-CRC-ECNN corpus: main paper, annexes A-G, observer compiler drafts, AOSP/iKant notes. 
 Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press. 
 Gödel, K. (1931). On Formally Undecidable Propositions of Principia Mathematica and Related Systems. 
 LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. Proceedings 
