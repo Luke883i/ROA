@@ -44,7 +44,7 @@ first-class. A worked case — a fully computable reticulum for a generalist bry
 from the published literature — demonstrates the central method, science as node. The framework 
 reuses established results — Rice’s theorem, provenance models, selective prediction, 
 information-flow discipline — openly; its contribution is their composition into a single governable 
-observer. A reference architecture (A-OSP) is an implementation witness gated by a narrow success 
+observer. A reference architecture (AOSP) is an implementation witness gated by a narrow success 
 proxy, not empirical validation. A result on the propagation of undecidability does real work, 
 defeating the intuition of compositional decidability, and the paper stat es its own falsification 
 conditions. The paper does not claim a completed mathematical theory, empirical validation, 
@@ -226,7 +226,7 @@ There is a piece of evidence that is neither pure theory nor an external study: 
 framework to itself. To build A -OSP, he instantiated the observer -compiler pattern as a pipeline of 
 specialised AI agents — epistemic computational units in the sense of §7 — each producing a typed, 
 validated intermediate artefact for the next. The pipeline has six stages: (1) capture the user intent, 
-what is wanted inside A-OSP; (2) decompose that intent into engineerable blueprints; (3) check each 
+what is wanted inside AOSP; (2) decompose that intent into engineerable blueprints; (3) check each 
 blueprint against A -OSP’s principles and prior decisions — the forbidden equivalences, the single 
 source of truth, the proof chain; (4) decompose into homogeneous, mutually coherent sub -
 blueprints; (5) generate the roadmap as an agent-guided issue chain with explicit dependencies; (6) 
@@ -242,12 +242,12 @@ Reticular Observer Architectures for Governable AI-Assisted Work
 Gianluca Conte — May 2026 — Page 7 of 23 
  
  
-Figure 6. The six-stage agent pipeline by which the framework was applied to itself to construct A-OSP. 
+Figure 6. The six-stage agent pipeline by which the framework was applied to itself to construct AOSP. 
  
 What this does and does not prove (efficiency caveat) 
 It does not claim A -OSP was built in the most efficient way, nor that A -OSP will be effective in itself. The 
 hypothesis is asymmetric and stated openly: robustness and enterprise-MVP effectiveness are candidate 
-— A-OSP may attain them; efficiency is, by design, not the goal. 
+— AOSP may attain them; efficiency is, by design, not the goal. 
 Corollary, stated plainly: more efficient software suites may exist that do the same thing as A -OSP. The 
 value claimed is governability, reconstructability and proof — not speed or economy. The self-application 
 is therefore a witness of method feasibility — the framework is operable enough to have driven the 
@@ -447,8 +447,8 @@ structured non -knowledge. ( Meta-controller: Annex G. A second, explicitly spec
 topological proto -consciousness, prominent enough to name the main paper's subtitle — is 
 developed in the main paper §7.5–§8 and Annex D; ROA deliberately excludes it from its claims while 
 acknowledging its place in the programme.) 
-11. A-OSP: Reference Architecture and the Forbidden Equivalences 
-A-OSP is a reference architecture: an implementation witness for how the framework can be 
+11. AOSP: Reference Architecture and the Forbidden Equivalences 
+AOSP is a reference architecture: an implementation witness for how the framework can be 
 expressed as a runtime substrate, and the early scaffolding of the oracle of §6. It is not empirical 
 validation — framework and architecture co-evolved, so it is an existence proof that the abstraction 
 is implementable, not evidence that it is beneficial. It is browser-native and text-first, with a durable 
@@ -466,7 +466,7 @@ Forbidden equivalences (enforceable, testable)
 output ≠ proof   ·   confidence ≠ evidence   ·   log ≠ receipt   ·   export ≠ witness   ·   interface state ≠ proof   ·   
 model memory ≠ source of truth   ·   review ≠ approval   ·   generated document ≠ authority source 
  
-A-OSP is built to learn, not to certify, and its progress is gated by one deliberately narrow proxy: proof-
+AOSP is built to learn, not to certify, and its progress is gated by one deliberately narrow proxy: proof-
 grade D1 (intake) and EQL (scoped retrieval) — receipt-backed, read-back-confirmed, resistant to 
 false-green interface states. Its roadmap is credibl e in a limited sense: all fourteen identified proof -
 grade gaps are owned by open issues, which makes the plan honest without converting planned 
@@ -509,7 +509,7 @@ debt, blocked from authoritative use until discharged
 Governed oracle Vision + early 
 witness 
 answers by navigating a typed semantic reticulum; persistent, traceable, 
-debt-aware; substrate prototyped in A-OSP, proxy not yet closed 
+debt-aware; substrate prototyped in AOSP, proxy not yet closed 
 Self-application 
 pipeline 
 Method-
@@ -549,7 +549,7 @@ Sober reading
 kept 
 epistemic self-boundedness: computing when a query exceeds the 
 supportable horizon; the speculative topological version is excluded here 
-A-OSP Reference 
+AOSP Reference 
 architecture 
 implementation witness, co-evolved; success proxy = proof-grade D1/EQL; 
 not independent validation 
@@ -563,7 +563,7 @@ complementarity with  neural-symbolic systems is argued, not demonstrated: a rep
 comparison of a reticular observer instantiation, an unstructured baseline and a neural -symbolic 
 system on a bounded compliance task — reporting accuracy, abstention, contradiction detect ion, 
 indecidability recall, provenance preservation, reification -debt rate and review effort, under a 
-Popper-style challenge harness — is owed. A-OSP is a witness, not validated evidence; closing the 
+Popper-style challenge harness — is owed. AOSP is a witness, not validated evidence; closing the 
 D1/EQL proxy is the first empirical test and the smallest step toward the oracle.
 
 ## Page 14
@@ -604,7 +604,7 @@ structural revision, consistency checks and — as described in §6b — the sta
 reference architecture’s blueprints and issues; all references were manually checked. This paper is 
 the upper, self -contained layer of a longer development by the same author: beneath it sit an 
 integrative methodologica l paper (“AI as Observer Compiler”), an engineering whitepaper for the 
-reference architecture (A-OSP), a chapter-aligned reply to Wolfram’s metaphysics — in which laws 
+reference architecture (AOSP), a chapter-aligned reply to Wolfram’s metaphysics — in which laws 
 and objectivity are read as stability classes induced by admissible compressions, rulial transduction 
 is domesticated into governed practice, and global necessity claims are admitted only when an 
 identification procedure remains available — and a technical corpus: foundations of RLA and CRC 
@@ -628,9 +628,9 @@ Reticular Observer Architectures for Governable AI-Assisted Work
 ├🗎 (1) Every Map Leaves Something Out.pdf  
 ├🗎 (2) ROA - Reticular Observer Architectures for Governable AI-Assisted Work.pdf     
 ├🗎 (3) AI as Observer Compiler (from Wolfram's Ruliad to RLA-ECNN).pdf 
-├🗎 (4) [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf 
-├🗎 (5) [TechDD] A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology).pdf 
-├🗎 (6) [CIPM] A-OSP Core Idea & Proof Mechanics Brief.pdf 
+├🗎 (4) [WP] AOSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER.pdf 
+├🗎 (5) [TechDD] AOSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology).pdf 
+├🗎 (6) [CIPM] AOSP Core Idea & Proof Mechanics Brief.pdf 
 ├   RLA-CRC-ECNN 
      ├🗎 _Main_Paper_RLA-ECNN-CRC-PCE.pdf 
      ├🗎 _Slidedeck_RLA-ECNN_bridge_PCE.pdf 
@@ -693,9 +693,9 @@ prompt-as-operator; knowledge
 mining; rulial 
 transduction→domestication 
 §1, §3, §6b, Note 
-A-OSP 
+AOSP 
 Whitepaper / 
-A-OSP 
+AOSP 
 Technical 
 Due 
 Diligence  
@@ -815,7 +815,7 @@ across calls — the basis of the self-application pipeline in ROA v6 §6b. Intr
 original epistemic artefact synthesis, prompt -as-operator, semantic debt, and the rulial 
 transduction→domestication framing connecting Wolfram's Ruliad to bounded reticular 
 computation. 
-A-OSP Whitepaper
+AOSP Whitepaper
 
 ## Page 18
 
@@ -947,11 +947,11 @@ components
 ROA; Observer Compiler §8 
 Forbidden equivalences; 
 six object classes 
-A-OSP §11, §12 
+AOSP §11, §12 
 Proof chain; proof-grade; 
 D1 / EQL; false-green 
-A-OSP §11 
-Semantic CI/CD A-OSP; Observer Compiler §6b, §11 
+AOSP §11 
+Semantic CI/CD AOSP; Observer Compiler §6b, §11 
 Intermediate artefact 
 chains; prompt-as-
 operator 
@@ -1073,12 +1073,12 @@ Scientific-modelling case Annex B Annex A, Main paper, ROA v6
 §4 
 Experiments / prototypes Annex F Annex C, Annex E, ROA v6 
 §6,§13 
-Governance / compliance ROA v6 Annex G, A-OSP whitepaper 
+Governance / compliance ROA v6 Annex G, AOSP whitepaper 
 Wolfram / Ruliad / PCE AI as Observer Compiler Reply to Wolfram, Annex D, 
 slide deck 
 Implementation 
 architecture 
-A-OSP whitepaper ROA v6 §6b,§11, Annex F, 
+AOSP whitepaper ROA v6 §6b,§11, Annex F, 
 Annex G 
  
 The corpus does not claim completed mathematical proof, empirical validation, production 

@@ -1,10 +1,10 @@
 <!-- GENERATED FILE. DO NOT EDIT BY HAND. Run Operation/scripts/build_manifest.py -->
 ---
 id: "aosp-value-propositions"
-title: "A-OSP Value Propositions Brief View"
+title: "AOSP Value Propositions Brief View"
 role: "implementation_value_proposition"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(1) A-OSP Value Propositions Brief View [VPB].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%281%29%20A-OSP%20Value%20Propositions%20Brief%20View%20%5BVPB%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(1) AOSP Value Propositions Brief View [VPB].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%281%29%20AOSP%20Value%20Propositions%20Brief%20View%20%5BVPB%5D.pdf"
 source_sha256: "38214ef78e2b698dfe132b613424cc876b425b49f3b2e7462078a78e1fa41d36"
 extraction_status: "success"
 ---
@@ -12,14 +12,14 @@ extraction_status: "success"
 ## Page 1
 
 answer_ atom_ receipt_
-A-OSP
+AOSP
 AI Proof Operating Environment
 Value propositions — and how each one is sustained.
 Not a better answer generator — a proof machine around AI work.
 It doesn't open the black box. It moves the trust boundary outside the model.
 Companion deck: theory lives in [RLA/CRC/ECNN/ROA], architecture in the [Whitepaper -WP], repo evidence in the [TechDD].
 This deck points into them instead of repeating them.
-Posture anchored to main@e492290b · June 2026 · every claim carries a maturity tag (AS-IS / HARDENING / TARGET / HYPOTHESIS / NON-GOAL) A-OSP  ·  1 / 14
+Posture anchored to main@e492290b · June 2026 · every claim carries a maturity tag (AS-IS / HARDENING / TARGET / HYPOTHESIS / NON-GOAL) AOSP  ·  1 / 14
 Value Proposition 
 (VPB)
 
@@ -42,9 +42,9 @@ but
 reconstruction · provenance · 
 proof · governance
 Prompt → answer hides the observer behind the 
-answer. A-OSP makes that observer explicit, 
+answer. AOSP makes that observer explicit, 
 computable and governable.
-Corpus → ROA (abstract, §6, §14) · WP §1–2 “The Enterprise AI Proof Gap” A-OSP  ·  2 / 14
+Corpus → ROA (abstract, §6, §14) · WP §1–2 “The Enterprise AI Proof Gap” AOSP  ·  2 / 14
 
 ## Page 3
 
@@ -68,7 +68,7 @@ trust boundary IN the local substrate
 Truth lives in a local knowledge lattice. The model processes it —
 it never owns it.
 The source of truth is not the model, not the UI, not the database, not the export.
-Corpus → WP §1, §7 (anti-lock-in contract) · CIPM (cover) · TechDD §3 (SSOT) A-OSP  ·  3 / 14
+Corpus → WP §1, §7 (anti-lock-in contract) · CIPM (cover) · TechDD §3 (SSOT) AOSP  ·  3 / 14
 
 ## Page 4
 
@@ -86,7 +86,7 @@ computable iKant + terminal states  →  sl. 10 semantics AS-IS
 Proof capital & model optionality the proof graph compounds; providers swappable text SSOT + receipts  →  sl. 7, 9 AS-IS · econ. HYPOTHESIS
 Not repeated here (already deepened in the corpus): theory — horizon, epistemic debt → EM · ROA;  OS grammar & runtime topology → WP §5–7, §16–19;  D1–D5 detail → WP 
 §9;  full competitive matrix → WP §28.
-Corpus → WP §1 (primitives), §28 · CIPM · TechDD (status tags) · ROA §6, §14 A-OSP  ·  4 / 14
+Corpus → WP §1 (primitives), §28 · CIPM · TechDD (status tags) · ROA §6, §14 AOSP  ·  4 / 14
 
 ## Page 5
 
@@ -114,7 +114,7 @@ Every layer is queryable via EQL — bounded, replayable,
 navigable by the oracle.
 Nine object classes, one substrate: answer · atom · enrichment · link · 
 score · kernel · artifact · receipt · governance
-Corpus → WP §7–9 (VFS, schema registry, multi-abstraction chain) — full object model lives there A-OSP  ·  5 / 14
+Corpus → WP §7–9 (VFS, schema registry, multi-abstraction chain) — full object model lives there AOSP  ·  5 / 14
 
 ## Page 6
 
@@ -136,7 +136,7 @@ downstream use: blocked until debt
 discharged
 Why it proves the VP: the hallucination surfaces as declared, blocking debt — and not-knowing is a computed outcome, not a failure. The 
 model stops being the knowledge and becomes its navigator.
-Corpus → ROA §6 (worked example, fig. 5) — the full oracle argument lives there · WP §12 A-OSP  ·  6 / 14
+Corpus → ROA §6 (worked example, fig. 5) — the full oracle argument lives there · WP §12 AOSP  ·  6 / 14
 
 ## Page 7
 
@@ -174,7 +174,7 @@ objects only; output is a candidate
 knowledge proof governance Every step emits a receipt; every failure becomes Error Truth — never a silent 
 green.
 Build once, query many: the lattice compounds instead of evaporating into chat history — proof capital.  [quantified benefit: HYPOTHESIS, pilot-gated]
-Corpus → WP §1 (plain-language architecture), §9–10, §15 — phase-by-phase detail lives there A-OSP  ·  7 / 14
+Corpus → WP §1 (plain-language architecture), §9–10, §15 — phase-by-phase detail lives there AOSP  ·  7 / 14
 
 ## Page 8
 
@@ -201,7 +201,7 @@ persisted, read back
 Error Truth  typed 
 failure, never a false green
 Side effect for CISOs: provider exposure shrinks by construction — the LLM never holds the organisation's memory.
-Corpus → WP §11–13 (DSL chapters) · CIPM · TechDD §6.4 — language specs live there A-OSP  ·  8 / 14
+Corpus → WP §11–13 (DSL chapters) · CIPM · TechDD §6.4 — language specs live there AOSP  ·  8 / 14
 
 ## Page 9
 
@@ -226,7 +226,7 @@ export ≠ witness fallback/demo ≠ proof model memory ≠ SSOT query success �
 The demonstration is runtime evidence, not a slogan — negative tests landed on main: generic append without receipt ⇒ FAIL · receipt 
 without readback ⇒ FAIL · tampered atom ⇒ no convergence · D2 handoff without D1Receipt PASS ⇒ blocked.  D1: RUNTIME-WIRED · EQL 
 proof: TARGET (the declared open seam).
-Corpus → TechDD §3, §6.2–6.3 (D1ProofAppendService, proof-d1 tests, evidence register) — file/line evidence lives there A-OSP  ·  9 / 14
+Corpus → TechDD §3, §6.2–6.3 (D1ProofAppendService, proof-d1 tests, evidence register) — file/line evidence lives there AOSP  ·  9 / 14
 
 ## Page 10
 
@@ -251,7 +251,7 @@ Computable terminal states — abstaining is a successful computation:
 unknown contradiction out-of-scope
 review-required debt-open blocked
 Why it proves the VP: a fluent but unsupported answer is defective; a responsible abstention is a result. Hard cases escalateto a human by design.
-Corpus → ROA §6, §10–11 · Annex G (iKant formalisation) · Annex F.3 — formal model lives there A-OSP  ·  10 / 14
+Corpus → ROA §6, §10–11 · Annex G (iKant formalisation) · Annex F.3 — formal model lives there AOSP  ·  10 / 14
 
 ## Page 11
 
@@ -282,14 +282,14 @@ Local LLM call (FAE-bounded)
 validation → stripe + receipt
 Same mechanics for: policies · procedures · gap analyses · risk matrices · audit reports · due diligence.  The export is not the witness: 
 ArtifactWitness exposes sources, gaps, unsupported claims and proof state.
-Corpus → WP §15 (Artifact boundaries, GovernanceRun) · CIPM · TechDD #3472 (witness MVP) A-OSP  ·  11 / 14
+Corpus → WP §15 (Artifact boundaries, GovernanceRun) · CIPM · TechDD #3472 (witness MVP) AOSP  ·  11 / 14
 
 ## Page 12
 
 1 1  ·  T H E  M A R K E T
 Competing to be the runtime of trust
 Category snapshot — the full competitive matrix is in WP §28; here, only the wedge.
-They are strong at… Their structural gap A-OSP wedge
+They are strong at… Their structural gap AOSP wedge
 generation (chatbots) · retrieval (RAG) weak proof, lineage and governance semantics proof-and-knowledge substrate, typed objects 
 + scoped EQL
 automation (agents) · workflow (GRC) no durable local SSOT; not AI-native text filesystem + guards; native evidence gaps 
@@ -298,10 +298,10 @@ output (doc generators) · storage (data rooms) no witness / review boundary; no
 orchestration ArtifactWitness; scoped calls + proof bundles
 First wedge: compliance — it stress-tests evidence, absence of evidence, accountability and human review. Entry use cases: supplier 
 payment controls, due diligence, incident review, policy impact, technical audit.
-Why now: commoditised generation + regulatory pressure (AI Act, DORA, NIS2) + the rising cost of non-reconstructability. A-OSP gains 
+Why now: commoditised generation + regulatory pressure (AI Act, DORA, NIS2) + the rising cost of non-reconstructability. AOSP gains 
 value from the same forces that make prompt-first AI fragile. The category is large and fast-growing — GRC plus a multi-billion AI-
 governance market by 2030 (external estimates) — and incumbents are repositioning toward proof; sizing lives in Pitch Deck v7.
-Corpus → WP §24 (compliance as first wedge), §28 (full matrix) · CIPM “why it compounds” A-OSP  ·  12 / 14
+Corpus → WP §24 (compliance as first wedge), §28 (full matrix) · CIPM “why it compounds” AOSP  ·  12 / 14
 
 ## Page 13
 
@@ -325,11 +325,11 @@ maturity tags · pilot evidence required · falsification
 conditions declared
 This discipline is itself a demonstration: the claim system (tags, gates, falsification conditions) applies to the pitch the same rules it applies to the 
 product.
-Corpus → TechDD (posture, §10–11, §14) · WP §4, Appendix P · ROA §6b, §13 (falsification) A-OSP  ·  13 / 14
+Corpus → TechDD (posture, §10–11, §14) · WP §4, Appendix P · ROA §6b, §13 (falsification) AOSP  ·  13 / 14
 
 ## Page 14
 
-A-OSP turns AI-assisted work
+AOSP turns AI-assisted work
 into governed epistemic capital.
 Local, typed, queryable, receipt-backed and governable objects — plus portable proof of how they were produced.
 C O R P U S  M A P  — W H E R E  E A C H  L A Y E R  I S  D E E P E N E D
@@ -345,6 +345,6 @@ CIPM Brief
 the compressed synthesis of idea and proof mechanics
 RLA-ECNN main paper + Annexes A–G
 formal foundations · iKant (G) · oracle prototype (F)
-A-OSP does not aim to make the model omniscient. It aims to make the organisation able to govern 
+AOSP does not aim to make the model omniscient. It aims to make the organisation able to govern 
 what it produces with models.
-Full corpus: github.com/Luke883i/ROA · posture: main@e492290b · June 2026 A-OSP  ·  14 / 14
+Full corpus: github.com/Luke883i/ROA · posture: main@e492290b · June 2026 AOSP  ·  14 / 14

@@ -193,7 +193,7 @@ What Would Count as Empirical Improvement? ................ 246
 Differential Contribution Against Selected Research Traditions
 .................................................................................................. 258 
 Open Scientific Debt and Conditions of Defeat .................. 270 
-A-OSP as an Engineering Witness, Not Scientific Validation280 
+AOSP as an Engineering Witness, Not Scientific Validation280 
 Engineering Vocabulary and Evidential Limits of the Augmented Ontological 
 Semantic Platform ...................................................................................................... 280 
 Human Authority and the Final Authorization of Use ....... 286 
@@ -3763,7 +3763,7 @@ artefacts?
 There is an implementation witness that is nei-
 ther pure theory nor an external validation: the 
 framework was used to organise the construction 
-of A-OSP through a staged AI -assisted workflow. 
+of AOSP through a staged AI -assisted workflow. 
 The stages capture intent, produce engineerable 
 blueprints, check them against declared con-
 straints, decompose them into coherent subblue-
@@ -3786,7 +3786,7 @@ caveat) It does not claim A -OSP was built in the
 most efficient way, nor that A -OSP will be effec-
 tive in itself. The hypothesis is asymmetric and 
 stated openly: robustness and enterprise -MVP ef-
-fectiveness are candidate — A-OSP may attain 
+fectiveness are candidate — AOSP may attain 
 them; efficiency is, by design, not the goal. Corol-
 lary, stated plainly: more efficient software suites 
 may exist that do the same thing as A -OSP. The 
@@ -6223,7 +6223,7 @@ dependent reliability testing of the
 approximation/transfer ledger, tests of dependen-
 cy and relevance-set soundness, empirical compar-
 isons of workflow outcomes, independent review 
-of A-OSP’s proof seams, and scientific trials of the 
+of AOSP’s proof seams, and scientific trials of the 
 bryophyte literature -compiled model. Naming 
 these debts is not a weakness of the monograph; it 
 is the monograph obeying itself. 
@@ -6298,14 +6298,14 @@ The Accounting Laye r of Computationa l Semantics
 The Accounting Laye r of Computationa l Semantics  
 280 
 CHAPTER 39  
-A-OSP as an Engineering 
+AOSP as an Engineering 
 Witness, Not Scientific 
 Validation 
 Engineering Vocabulary and Evidential Lim-
 its of the Augmented Ontological Semantic 
 Platform 
 The Augmented Ontological Semantic Platform 
-(A-OSP) calls its append -only text events stripes, 
+(AOSP) calls its append -only text events stripes, 
 its scoped retrieval surface the Epistemic Query 
 Language (EQL), and its five -stage intake -to-
 kernel pipeline D1 –D5. An Artifact Witness is a 

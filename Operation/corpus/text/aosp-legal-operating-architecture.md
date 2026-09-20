@@ -3,8 +3,8 @@
 id: "aosp-legal-operating-architecture"
 title: "Legal Operating Architecture Target"
 role: "legal_operating_architecture_target"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(6) A-OSP Legal Operating Architecture Target [LOA].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%286%29%20A-OSP%20Legal%20Operating%20Architecture%20Target%20%5BLOA%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(6) AOSP Legal Operating Architecture Target [LOA].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%286%29%20AOSP%20Legal%20Operating%20Architecture%20Target%20%5BLOA%5D.pdf"
 source_sha256: "41b280f01f6d97501aa75e40b5a73d56139466cef2cd62d62daf3ac4a1d96c65"
 extraction_status: "success"
 ---
@@ -12,7 +12,7 @@ extraction_status: "success"
 ## Page 1
 
 spec_ → company_ → control_
-A-OSP
+AOSP
 Legal & Operating Architecture
 How the OpCo + standards-vehicle structure is built, owned and governed — with commercial economics 
 governed by Pitch
@@ -44,7 +44,7 @@ cannot retroactively own a neutral,
 already-adopted open format
 This memorandum shows the wiring behind that claim: entities, IP, conflict governance, contracts, capital routing, legal 
 gates and jurisdictional expansion. Commercial economics live in Investment Pitch.
-A-OSP · LOA · companion to Investment Pitch 2
+AOSP · LOA · companion to Investment Pitch 2
 
 ## Page 3
 
@@ -66,7 +66,7 @@ holding, foreign entity — is triggered by a gate (revenue, round, market), nev
 The structure grows only when evidence justifies it.
 Cross-reference: the commercial case lives in Investment Pitch; the proof mechanics in the Whitepaper [WP] / Technical Due Diligence 
 [TechDD]. This memorandum is the legal and operating layer beneath both.
-A-OSP · LOA · companion to Investment Pitch 3
+AOSP · LOA · companion to Investment Pitch 3
 
 ## Page 4
 
@@ -100,7 +100,7 @@ commercial licences
 the standards vehicle / future Foundation after activation
 OpCo is Italian at inception. The standards vehicle starts lightweight and grows only when adoption, funding and governance justify the 
 overhead. Jurisdictional expansion comes by trigger, not ambition.
-A-OSP · LOA · companion to Investment Pitch 4
+AOSP · LOA · companion to Investment Pitch 4
 
 ## Page 5
 
@@ -110,7 +110,7 @@ future Foundation stewards
 The Mozilla / Eclipse pattern — a neutral standards body, a commercial entity that builds on it.
 Foundation owns
 • The open specification of the evidence format
-• The trademark + the «A-OSP-compliant» conformance 
+• The trademark + the «AOSP-compliant» conformance 
 mark
 • The open-core reference implementation (network-
 copyleft)
@@ -127,7 +127,7 @@ with an independent board) — which is exactly what makes the standard credible
 the toll: granted by the standards vehicle / future Foundation after activation, operationalized through OpCo tooling and services. 
 Founder IP is assigned to the OpCo at day-zero; the spec is contributed to the standards vehicle / future Foundation under the 
 applicable CLA under a contributor licence agreement.
-A-OSP · LOA · companion to Investment Pitch 5
+AOSP · LOA · companion to Investment Pitch 5
 
 ## Page 6
 
@@ -151,7 +151,7 @@ Audit trail All inter-entity transactions logged; conflict register maintained; 
 — the founder's own audit discipline applied internally
 The founder's 15 years in internal audit and as a 231 supervisory-body secretary are the asset here: conflict governance is the discipline he 
 already practices professionally.
-A-OSP · LOA · companion to Investment Pitch 6
+AOSP · LOA · companion to Investment Pitch 6
 
 ## Page 7
 
@@ -168,7 +168,7 @@ Contributor Licence Agreement
 how the OpCo and third parties contribute to the open core held by the 
 standards vehicle / future Foundation
 Trademark & conformance policy
-who may use «A-OSP-compliant», on what terms, revocation rights
+who may use «AOSP-compliant», on what terms, revocation rights
 Channel / white-label agreement
 associations and advisors: revenue share, data ownership, member terms
 DPA + model-provider addendum
@@ -179,13 +179,13 @@ composition
 Conflict-of-interest policy
 related-party rules across both entities; the register and approval flow
 Draft templates for the ● items live in the data room; the rest are the legal workstream of the first 90 days (slide 13).
-A-OSP · LOA · companion to Investment Pitch 7
+AOSP · LOA · companion to Investment Pitch 7
 
 ## Page 8
 
 F U N D I N G  M A P
 Which capital type fits which entity — and why they don't mix
-A-OSP · LOA · companion to Investment Pitch 11
+AOSP · LOA · companion to Investment Pitch 11
 Capital type Entity Allowed use Forbidden
 Equity OpCo product, team, GTM, 
 runtime
@@ -212,7 +212,7 @@ governance investor return
 
 F U N D I N G  M A P
 Which capital type fits which entity — and why they don't mix
-A-OSP · LOA · companion to Investment Pitch 11
+AOSP · LOA · companion to Investment Pitch 11
 Stage Legal/operating requirement
 Formation OpCo incorporated, founder IP assigned, basic counsel/CFO support
 Institutional formation board, SHA, ESOP, DPA, licence, conflict register
@@ -242,9 +242,9 @@ metric
 Stop mechanism
 failed gates freeze tranches and round 2 — what remains is an 
 inspectable asset, not a write-off
-Control is not overhead here — it is the product applied to the company: A-OSP governs AI work the way the founder governs the 
+Control is not overhead here — it is the product applied to the company: AOSP governs AI work the way the founder governs the 
 institution.
-A-OSP · LOA · companion to Investment Pitch 14
+AOSP · LOA · companion to Investment Pitch 14
 
 ## Page 11
 
@@ -262,4 +262,4 @@ Why this order is safe: the standard travels through adoption and standards-vehi
 Italian structure is never thrown away — it is wrapped, then extended. International cost is incurred only after the standard has proven it can
 spread. The endgame is explicit: the Foundation becomes the international home of the proof standard — the Mozilla / Eclipse path, where
 adoption, not legal footprint, is what scales the category.
-A-OSP · LOA · companion to Investment Pitch 16
+AOSP · LOA · companion to Investment Pitch 16

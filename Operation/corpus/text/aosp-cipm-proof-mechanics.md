@@ -1,26 +1,26 @@
 <!-- GENERATED FILE. DO NOT EDIT BY HAND. Run Operation/scripts/build_manifest.py -->
 ---
 id: "aosp-cipm-proof-mechanics"
-title: "A-OSP Core Idea & Proof Mechanics Brief"
+title: "AOSP Core Idea & Proof Mechanics Brief"
 role: "implementation_proof_mechanics"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(2) A-OSP Core Idea Proof Mechanics Brief [CIPM].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%282%29%20A-OSP%20Core%20Idea%20Proof%20Mechanics%20Brief%20%5BCIPM%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(2) AOSP Core Idea Proof Mechanics Brief [CIPM].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%282%29%20AOSP%20Core%20Idea%20Proof%20Mechanics%20Brief%20%5BCIPM%5D.pdf"
 source_sha256: "e772d595eb7a0abbfec15ba782ed9d7435db400b019035681f2d50b9bddedbb0"
 extraction_status: "success"
 ---
 
 ## Page 1
 
-A-OSP
+AOSP
 Core Idea & Proof Mechanics Brief
-How A-OSP turns AI-assisted work into typed, local, receipt-backed and governable evidence.
-A-OSP is not a better answer generator. It is a proof machine around AI work.
+How AOSP turns AI-assisted work into typed, local, receipt-backed and governable evidence.
+AOSP is not a better answer generator. It is a proof machine around AI work.
 It does not open the black box. It moves the trust boundary outside the model.
 answer_ → atom_ → receipt_
 Companion brief — claims anchored to live repo main@e492290b · June 2026. 
 Deep layers live in the Whitepaper, the Technical Due Diligence and the ROA corpus; this brief points into them instead of repeating them.
 Gianluca Conte · contegianluca@hotmail.com  ·  2026 · confidential discussion draft · not legal or financial advice
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 1
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 1
 Core Idea (CIPM)
 
 ## Page 2
@@ -42,11 +42,11 @@ CLAIM RULE — every technical statement in this brief carries exactly one statu
 AS -IS HARDENI NG CANDI DATE TARGET HYPOTHESI S NON -GOAL
 WHERE THE DEPTH LIVES
 Whitepaper (WP)
-A-OSP architecture, primitives,
+AOSP architecture, primitives,
 proof contracts
 Technical Due Diligence 
 (TechDD)
-A-OSP live repo evidence,
+AOSP live repo evidence,
 gaps, gates, metrics
 ROA corpus + annexes
 theory: RLA · CRC ·
@@ -55,7 +55,7 @@ Every Map Leaves
 Something Out
 humanistic entry point,
 why horizons exist
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 2Deep dive → slide A4 source map
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 2Deep dive → slide A4 source map
 Whole corpus: https://github.com/Luke883i/ROA
 
 ## Page 3
@@ -79,18 +79,18 @@ across phases
 Artifact Witness dependency map: sources, gaps, 
 unsupported claims Governance Run human review context and decision 
 object
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 19Deep dive → WP terminology · TDD §3
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 19Deep dive → WP terminology · TDD §3
 
 ## Page 4
 
 W H Y  I T  M A T T E R S
-A-OSP makes model output usable where evidence matters
-Without A-OSP
+AOSP makes model output usable where evidence matters
+Without AOSP
 AI work is fluent but hard to reconstruct. 
 Evidence, gaps, source state and review 
 boundaries must be recovered after the 
 fact — often during audit.
-With A-OSP
+With AOSP
 AI work becomes local, typed, queryable, 
 receipt-backed and governable. Non-
 knowledge becomes a first-class state, 
@@ -100,7 +100,7 @@ Proof infrastructure for AI-assisted work:
 the technical bridge behind partner 
 collaboration, anchor formation and CTO 
 diligence.
-WHY IT COMPOUNDS — A-OSP gains value from the forces that make prompt -first AI fragile
+WHY IT COMPOUNDS — AOSP gains value from the forces that make prompt -first AI fragile
 Trust
 every receipt and remediation adds proof capital
 Knowledge
@@ -114,12 +114,12 @@ hallucination → debt → negative test → guard
 Good switching cost
 the customer owns the proof graph; lock-in is asset-
 based
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 3Deep dive → WP Part I §1–2 · emergent VPs
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 3Deep dive → WP Part I §1–2 · emergent VPs
 
 ## Page 5
 
 D E F I N I T I O N
-What A-OSP is — and is not
+What AOSP is — and is not
 A- O S P  I S
 • a browser-native epistemic operating environment
 • a text-first virtual epistemic filesystem
@@ -134,7 +134,7 @@ A- O S P  I S  N O T
 • an autonomous governance engine
 Engineering interpretation: “ontological” means work becomes typed entities and relations; “epistemic” means those entities carry schema, 
 lineage, proof state and governance status.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 4Deep dive → WP Part I · primitives table
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 4Deep dive → WP Part I · primitives table
 
 ## Page 6
 
@@ -149,7 +149,7 @@ What a receipt-backed state proves — and does not: it proves persistence, scop
 legal sufficiency. For any artifact, the system must answer which sources were used, what was inferred, what is missing, what failed and who reviewed 
 — from persisted objects, not from memory.
 False-green prevention is not a UI detail; it is the bridge between engineering truth and governance truth.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 5Deep dive → WP §2 · forbidden equivalences
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 5Deep dive → WP §2 · forbidden equivalences
 
 ## Page 7
 
@@ -175,7 +175,7 @@ proof surface — explicit state, lineage,
 hashes
 Anti-lock-in contract: only the text-first substrate owns durable knowledge; everything else is cache, projection, processor, export or proof 
 surface.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 6Deep dive → WP · source/cache taxonomy
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 6Deep dive → WP · source/cache taxonomy
 
 ## Page 8
 
@@ -190,7 +190,7 @@ Diagnostics & AI WebSocket · Observatory · Error Truth · provider adapters
 Operations CI/CD · guards · generated docs · authority checks
 Infrastructure adequacy rule: a technical review must see runtime, shell, state layer, parser-service, source/cache split, diagnostics, AI 
 adapters, CI guards and recovery path.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 7Deep dive → TDD §2 alignment · WP topology
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 7Deep dive → TDD §2 alignment · WP topology
 
 ## Page 9
 
@@ -212,12 +212,12 @@ Proof thesis
 A proof-sensitive transition must persist, read back, 
 compare, emit a receipt and expose downstream eligibility.
 The answer is not the product. The path, proof state and review boundary are the product.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 8Deep dive → WP · executive summary
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 8Deep dive → WP · executive summary
 
 ## Page 10
 
 O B J E C T  G R A M M A R
-A-OSP turns work into typed epistemic objects
+AOSP turns work into typed epistemic objects
 answer_
 source capture
 atom_
@@ -243,7 +243,7 @@ dependency map
 governance_run_
 human decision
 The object grammar is the moat: once AI work is typed, it can be queried, inspected, tested, promoted, rolled back and governed.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 9Deep dive → WP · schema registry · A1 glossary
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 9Deep dive → WP · schema registry · A1 glossary
 
 ## Page 11
 
@@ -264,7 +264,7 @@ gated by EQL/C1 closure.
 Anchors: routes/proof-d1.ts · services/d1-proof-append-service.ts · test/proof-d1.test.js · server.ts  (full paths → slide 
 A2)
 Generic append may create canonical data; only this seam can produce proof PASS.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 10Deep dive → TDD §6 · evidence E02–E05
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 10Deep dive → TDD §6 · evidence E02–E05
 
 ## Page 12
 
@@ -302,7 +302,7 @@ Analytic (aggregation, lineage).
 Authority Matrix: classifies doc / generated / code authority — anti-drift 
 governance when sources conflict.
 No raw LLM authority: EQL-selected objects → FAE-bounded call → MONL-controlled transform → stripe, or Error Truth.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 11Deep dive → TDD §6.4 · WP DSL chapters
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 11Deep dive → TDD §6.4 · WP DSL chapters
 
 ## Page 13
 
@@ -324,7 +324,7 @@ eligibility · trace id
 D1 already fail-closed: RFC 7807 ProblemDetail with explicit FAIL 
 receipt.
 Without Error Truth, every proof failure becomes a UX negotiation. With Error Truth, every failure becomes an object.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 12Deep dive → TDD · Error Truth posture
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 12Deep dive → TDD · Error Truth posture
 
 ## Page 14
 
@@ -347,7 +347,7 @@ session_ | id:SES-001 | horizon:D1-intake | status:open  →  atom_001 | type:ri
 A session is a horizon boundary: it makes later retrieval scoped instead of ambient. 
 Validation writes audit state and blocks downstream authoritative use while debt remains. A generated object without readback is not D1 proof.
 The product value is not the generated text. It is the reconstructable path from user input to durable proof state.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 13Deep dive → WP · end-to-end workflow table
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 13Deep dive → WP · end-to-end workflow table
 
 ## Page 15
 
@@ -405,7 +405,7 @@ persist → readback → compare → receipt → proof state → eligibility gap
 review_required / proof_ineligible — never cosmetic green
 Legend: ◉ = bounded LLM call inside a FAE envelope · teal rail = what a call may see (EQL) · gold rail = what a transform may become (MONL) · ledger = only durable memory
 Claim boundary: D1 as-is · EQL proof = financed seam · D2–D5 + ArtifactWitness = target · legal certification = non-goal
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 14Deep dive → annotated conveyor: CIPM v1 §D · WP
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 14Deep dive → annotated conveyor: CIPM v1 §D · WP
 
 ## Page 16
 
@@ -426,7 +426,7 @@ generation. Sections carry explicit status: supported · derived · gap
 Downstream: ArtifactWitness · Proof Spine · GovernanceRun
 W I TN E S S  /  S P I N E  =  TAR G E T
 Artifact output is trustworthy only when it preserves proof status, gaps and review state.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 15Deep dive → WP · workstation & witness targets
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 15Deep dive → WP · workstation & witness targets
 
 ## Page 17
 
@@ -443,7 +443,7 @@ ArtifactWitness · Proof Spine · GovernanceRun downstream composition TAR G E T
 Enterprise deployment · legal certification — N O N-G O AL U N TI L P I LO TS
 Diligence upgrade before external CTO circulation: attach commit snapshot (main@e492290b · 2026-06), test command + pass/fail output, line-level excerpts. 
 Repo-referenced now; diligence-grade once attached.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 16Deep dive → TDD §§9–12 · evidence register E01–E07
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 16Deep dive → TDD §§9–12 · evidence register E01–E07
 
 ## Page 18
 
@@ -457,8 +457,8 @@ artifact_reuse_coverage artifact sections with source objects / all sections P I
 unsupported_claim_detection_rate detected unsupported claims / seeded unsupported claims B E N C H M AR K
 C1 gate zeros: d1_pass_without_readback = 0 · eql_success_without_receipt = 0 · d2_handoff_without_receipt = 0 · 
 query_hash_reproducibility = 100%
-A-OSP succeeds only if proof, query, honesty and operations metrics make reconstructability observable.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 17Deep dive → TDD §11 · metrics & DoD
+AOSP succeeds only if proof, query, honesty and operations metrics make reconstructability observable.
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 17Deep dive → TDD §11 · metrics & DoD
 
 ## Page 19
 
@@ -481,7 +481,7 @@ Memorandum.
 P AR TN E R  G ATE
 The answer is not the product. The path, proof state and review boundary are the product.
 Read next: TDD v1 for live evidence · Whitepaper for architecture · AFM for the partnership frame.
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 18
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 18
 
 ## Page 20
 
@@ -517,7 +517,7 @@ hash mismatch    => never PASS
 no UI completion may
 masquerade as proof
 Full anchors: backend/parser-service/src/routes/proof-d1.ts · src/services/d1-proof-append-service.ts · src/server.ts · test/proof-d1.test.js
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 20Deep dive → TDD §6 + evidence register
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 20Deep dive → TDD §6 + evidence register
 
 ## Page 21
 
@@ -546,7 +546,7 @@ D o D  O F  T H I S  B R I E F
 one claim
 • every deep question has a PDF pointer (→ A4)
 Bundle families: Repository · Schema · D1Proof · EQLQuery · Pipeline · Artifact · Governance · ErrorTruth · ProviderExposure
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 21Deep dive → WP proof bundles · TDD §11 DoD
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 21Deep dive → WP proof bundles · TDD §11 DoD
 
 ## Page 22
 
@@ -555,9 +555,9 @@ Source map — which document answers which question
 Why does every map need a declared horizon? Every Map Leaves Something Out — humanistic / philosopher entry point
 What is the full theory behind the architecture? ROA paper · RLA-CRC-ECNN main paper + Annexes A–G
 How does this relate to Wolfram's Ruliad? AI as Observer Compiler (parts 1–2)
-How is the platform architected end to end? [WP] A-OSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER
-What does the live repo actually prove today? [TechDD] A-OSP Technical Due Diligence v1 — Infrastructure, Runtime, Topology 
+How is the platform architected end to end? [WP] AOSP Webapp (Augmented Ontological Semantic Platform) WHITEPAPER
+What does the live repo actually prove today? [TechDD] AOSP Technical Due Diligence v1 — Infrastructure, Runtime, Topology 
 What is the partnership / formation frame? AFM — Anchor Formation Memorandum (companion to this brief)
 Whole corpus:
-A-OSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 22
+AOSP · Core Idea & Proof Mechanics Brief · CIPM v3 · posture: main@e492290b · June 2026 22
 https://github.com/Luke883i/ROA

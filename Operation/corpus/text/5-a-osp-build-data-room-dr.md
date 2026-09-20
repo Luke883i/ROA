@@ -1,19 +1,19 @@
 <!-- GENERATED FILE. DO NOT EDIT BY HAND. Run Operation/scripts/build_manifest.py -->
 ---
 id: "5-a-osp-build-data-room-dr"
-title: "(5) A-OSP Build Data Room [DR]"
+title: "(5) AOSP Build Data Room [DR]"
 role: "implementation_data_room"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(5) A-OSP Build Data Room [DR].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%285%29%20A-OSP%20Build%20Data%20Room%20%5BDR%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(5) AOSP Build Data Room [DR].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%285%29%20AOSP%20Build%20Data%20Room%20%5BDR%5D.pdf"
 source_sha256: "3224d5db711cfa97c4eea551bfd479662192093f20669f091385842568493688"
 extraction_status: "success"
 ---
 
 ## Page 1
 
-A-OSP Build Data Room
+AOSP Build Data Room
 Snapshot 2026-06-23 - HEAD 191ff93 - 255 days
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 1
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 1
 How an AI-orchestrated build measured its 
 own proof debt - and what funding closes.
 FACT_ -> INFER_ -> GAP_
@@ -32,9 +32,9 @@ Data Room
 ACT 0 - READING FRAME
 How this plugs into INP
 INP tells the investment story. This data room turns it into repo facts.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 2
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 2
 Investment Pitch (INP) claim Data Room (DR) evidence Investment reading
-AI creates output; A-OSP computes proof 
+AI creates output; AOSP computes proof 
 status repo computes its own build status the thesis is dogfooded
 proof sovereignty local debt/proof objects, not model memory trust boundary lives outside the agent
 proof capital issues, gates, receipts, findings become reusable 
@@ -45,18 +45,18 @@ governance.
 
 ## Page 3
 
-A-OSP
+AOSP
 ACT I - BUILD SIGNATURE
 The repo is the first witness.
 Signature, volume and febrile state - read as self-application evidence, not as certification.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 3
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 3
 
 ## Page 4
 
 ACT I - VERDICT
 Instrumented fever, not hidden entropy.
 The repo is not healthy. The important fact is different: its unhealthy surfaces are measured, classified, owned and tied to convergence work.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 4
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 4
 One-glance state
 self-declared health: 61.57/100, critical [FACT]
 stable cold surfaces: 0 [FACT]
@@ -80,7 +80,7 @@ Backlog convergence % = INFER, not measured FACT.
 ACT I - SIGNATURE
 Directed by one human, written by an agent.
 The contributor signature explains both the strengths and the pathologies.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 5
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 5
 Contributions
 Copilot SWE agent - 6,820 (70.6%)
 Luke883i - 1,912 (19.8%)
@@ -105,18 +105,18 @@ The repository did not merely grow. It was forced to develop an immune system un
 
 ## Page 6
 
-A-OSP
+AOSP
 ACT II - THE INSTRUMENT
 Debt is computable.
 Before the numbers: the repo has tools to name, weight and assign proof debt.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 7
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 7
 
 ## Page 7
 
 ACT II - INSTRUMENTS
 The repo measures its own debt.
-A-OSP does not only accrue development debt. It has deterministic tools to name, weight and assign it.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 8
+AOSP does not only accrue development debt. It has deterministic tools to name, weight and assign it.
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 8
 Measuring lanes
 entropy lane - temperature in 5 classes
 declared weighted formula for drift
@@ -136,7 +136,7 @@ Instrument and thesis coincide: the product discipline is applied to the build p
 ACT II - ENTROPY
 A self-declared temperature, not an external rating.
 The temperature is regenerated in CI. Its value is reproducibility, not third-party authority.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 9
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 9
 Five classes
 cold 0-20 - stable
 warm 21-40 - monitor
@@ -154,8 +154,8 @@ Do not overread the number as certification. Read it as a thermometer the repo c
 
 ACT II - WEIGHTS
 The weight formula is a confession of priorities.
-The system fears false proof more than slow delivery. That is the A-OSP culture in one formula.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 10
+The system fears false proof more than slow delivery. That is the AOSP culture in one formula.
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 10
 Weighted formula
 proof_drift *20 - the maximum
 runtime_drift *15 - authority drift *15
@@ -175,7 +175,7 @@ The highest weight is proof drift: a slow product is bad; a falsely green proof 
 ACT II - FINDINGS
 Every finding has an owner.
 The hottest surfaces are not anonymous debt. They are assigned, sorted and bound to closure lanes.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 11
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 11
 Surface Temp Owner Proof implication
 MONL consumer/routes 98 redline #3484 proof-path facade risk
 DataIntake app 78 critical #3462 D1 hardening
@@ -186,18 +186,18 @@ The dominant debt is on the proof layer - exactly where the product addresses it
 
 ## Page 11
 
-A-OSP
+AOSP
 ACT III - THE HONEST GAP
 Spec runs. Runtime lags.
 The design ceiling is ahead of the witnessed floor. That is the investible gap.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 12
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 12
 
 ## Page 12
 
 ACT III - SPEC VS RUNTIME
 The designed ceiling is ahead of the witnessed floor.
 The question is not whether the architecture exists. It is how fast the floor converges with the ceiling.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 13
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 13
 Witnessed in runtime
 entropy diagnostics generated and owner-linked
 D1 proof route mounted
@@ -225,7 +225,7 @@ The floor has moved: D1/C1 are no longer only designed; EQL and downstream proof
 ACT III - ANTI-PATTERNS
 The pathology is canonical; the ownership is unusual.
 The dangerous version would be the same pathology without taxonomy, owner or gate.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 14
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 14
 Six anti-pattern families
 A1 duplication / over-generation
 A2 infinite-closure code - structural
@@ -245,8 +245,8 @@ This is not brand damage. It is a controlled vocabulary for the build disease.
 
 ACT III - TAXONOMY
 False-green is named before it is sold.
-The repo names the failure A-OSP exists to prevent in customer work.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 15
+The repo names the failure AOSP exists to prevent in customer work.
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 15
 Redline and critical kinds
 export-as-proof-copy - redline
 progress-as-proof - redline
@@ -258,7 +258,7 @@ Why it matters
 UI green cannot be proof.
 Export cannot be witness.
 Progress cannot stand in for closure.
-A-OSP must forbid the false equivalences it found in its 
+AOSP must forbid the false equivalences it found in its 
 own build.
 The repo discovered the product risk internally: progress, export or UI state masquerading as proof.
 
@@ -267,7 +267,7 @@ The repo discovered the product risk internally: progress, export or UI state ma
 ACT III - CHURN
 Review compresses generated mass.
 A targeted sample shows the human compression effect of review over agent-generated code.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 16
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 16
 Sample PRs
 #3522: 47k lines born; -89.5% in review
 #3234: older rename; about 1.15 del/add
@@ -283,18 +283,18 @@ convergence.
 
 ## Page 16
 
-A-OSP
+AOSP
 ACT IV - IMMUNE SYSTEM
 From advisory thermometer to proof gate.
 The immune system exists. The maturity gap is enforcement.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 17
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 17
 
 ## Page 17
 
 ACT IV - IMMUNE SYSTEM
 Out-of-scale immune system, staged enforcement.
-A-OSP already has a build immune system. The roadmap is soft gates to hard gates to third-party readability.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 18
+AOSP already has a build immune system. The roadmap is soft gates to hard gates to third-party readability.
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 18
 Observe
 entropy
 -> Name
@@ -332,8 +332,8 @@ The immune system exists; capital accelerates enforcement.
 
 ACT IV - ANTIFRAGILE QA
 Hallucination becomes debt; debt becomes guard.
-A-OSP QA is not a promise to avoid every error. It is a discipline for converting errors into owned proof memory.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 19
+AOSP QA is not a promise to avoid every error. It is a discipline for converting errors into owned proof memory.
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 19
 Drift
 AI mass
 -> Finding
@@ -350,22 +350,22 @@ taxonomy -> negative test -> guard -> proof capital
 Value proposition
 Every closed false-green, every receipt seam and every 
 negative test converts epistemic debt into proof capital.
-A-OSP gains value from the forces that make prompt-first AI fragile.
+AOSP gains value from the forces that make prompt-first AI fragile.
 
 ## Page 19
 
-A-OSP
+AOSP
 ACT V - INVESTMENT READING
 Capital closes convergence.
 Measured build debt into funding logic, governance architecture and stakeholder routing.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 20
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 20
 
 ## Page 20
 
 ACT V - MARKET PATHOLOGY
 Canonical AI-authored pathology.
 The repo is not weird because it is AI-authored. It is early: it shows what institutions will face as AI-assisted work scales.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 21
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 21
 Benchmark vs aosp1
 code churn high and rising
 clone / churn detection incomplete
@@ -374,7 +374,7 @@ tech-debt elevated
 right comparison: governed vs unguided agent 
 throughput
 The distinguishing move
-A-OSP measures its own pathology.
+AOSP measures its own pathology.
 The market typically discovers it after deployment.
 The question is whether the immune system keeps pace.
 Today it measures. Tomorrow it must block.
@@ -384,7 +384,7 @@ Today it measures. Tomorrow it must block.
 ACT V - BINDING CONSTRAINT
 The limit is convergence throughput.
 Every metric points to the same constraint: one human merge authority cannot converge AI-generated mass fast enough.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 22
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 22
 Constraint Current signal Funding response
 one human merge authority single reviewer / merger convergence lead + reviewer cell
 spec ahead of runtime designed ceiling > witnessed floor closure sprint
@@ -401,7 +401,7 @@ The fundable bottleneck is not awareness. It is convergence capacity.
 ACT V - WHAT FUNDING CLOSES
 Capital closes convergence, not invention.
 A 90-120 day closure sprint should convert measured debt into runtime proof capital.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 23
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 23
 Current evidence Funded workstream Target
 entropy 61.57 critical entropy closure sprint warm/cold mean
 redline 2 MONL / proof-path convergence redline 0
@@ -419,7 +419,7 @@ CI/CD topology debt governance topology cleanup zero unknown-owner surfaces
 ACT V - LOA BRIDGE
 Build governance today; standards governance tomorrow.
 The build process is the micro-model of the future proof commons.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 24
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 24
 DR proves now LOA scales later
 findings are inspectable specification is foundation-held
 proof debt has an owner certification mark and governance can assign authority
@@ -433,7 +433,7 @@ No proof without inspectability; no standard without non-capture; no product mar
 ACT V - STAKEHOLDER ROUTING
 Read the DR by stakeholder.
 Each reader should extract a different decision from the same evidence.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 25
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 25
 Reader What to read in DR Next document
 Investor convergence gap is fundable INP
 CTO / engineering proof seams are real but bounded TechDD
@@ -447,7 +447,7 @@ The DR should not be the first document. It should be the evidence appendix afte
 ACT V - FINAL VERDICT
 Not healthy. Not failed. Governable.
 The correct reading is governed acceleration.
-A-OSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 26
+AOSP - Build Data Room - self-application evidence - snapshot 191ff93 - June 2026 26
 A
 -
 OSP's first proof object is not a polished product demo.

@@ -1,20 +1,20 @@
 <!-- GENERATED FILE. DO NOT EDIT BY HAND. Run Operation/scripts/build_manifest.py -->
 ---
 id: "aosp-techdd"
-title: "A-OSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)"
+title: "AOSP Webapp Technical Due Diligence v1 (Infrastructure, Runtime, Topology)"
 role: "implementation_due_diligence"
-source_path: "Augmented Ontological Semantic Platform A-OSP/(4) A-OSP Webapp Technical Due Diligence [TechDD].pdf"
-source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20A-OSP/%284%29%20A-OSP%20Webapp%20Technical%20Due%20Diligence%20%5BTechDD%5D.pdf"
+source_path: "Augmented Ontological Semantic Platform AOSP/(4) AOSP Webapp Technical Due Diligence [TechDD].pdf"
+source_raw_url: "https://raw.githubusercontent.com/Luke883i/ROA/main/Augmented%20Ontological%20Semantic%20Platform%20AOSP/%284%29%20AOSP%20Webapp%20Technical%20Due%20Diligence%20%5BTechDD%5D.pdf"
 source_sha256: "087ffc5597dd61b04d8aab181c920928fee8e998915da472f09575a0fd4a1f37"
 extraction_status: "success"
 ---
 
 ## Page 1
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
-A-OSP Technical Due Diligence 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP Technical Due Diligence 
 Posture As-Is and Posture Candidate — D1/EQL Proof-Seam Closure (MVP) 
-CTO / engineering dossier aligned with the A-OSP architecture/topology whitepaper 
+CTO / engineering dossier aligned with the AOSP architecture/topology whitepaper 
 Field Value 
 Document class Technical due-diligence dossier with embedded architecture specification, runtime evidence, closure gates and engineering 
 readiness plan. 
@@ -26,9 +26,9 @@ Infrastructure, Runtime, Topology.pdf
 Non-goals No legal certification, production certification, complete proof-grade claim, full Oracle enforcement, or benchmarked 
 economics. 
 Executive posture 
-Posture as-is: A-OSP1 is no longer merely a contract-only D1 proof concept. Current main contains a dedicated D1 proof route, a 
+Posture as-is: AOSP1 is no longer merely a contract-only D1 proof concept. Current main contains a dedicated D1 proof route, a 
 D1ProofAppendService, persisted d1_receipt_ semantics, read-after-write evidence, proofSessionContext return and negative tests. 
-Posture candidate: A-OSP1 is a credible enterprise MVP candidate for proof-sensitive AI-assisted work if the claim remains bounded to 
+Posture candidate: AOSP1 is a credible enterprise MVP candidate for proof-sensitive AI-assisted work if the claim remains bounded to 
 D1/EQL proof-seam closure and if C1 artefacts, EQL proof receipts, unified EQL proof routing, downstream gates and pilot evidence 
 pass. 
 As-is / candidate boundary: D1 has materially advanced on main. EQL proof remains the primary open seam. Full enterprise pilot 
@@ -60,11 +60,11 @@ proceed to a scoped D1/EQL closure sprint and pilot readiness assessment.
 
 ## Page 2
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
-2. Alignment with “Augmented Ontological Semantic Platform (A-OSP) Whitepaper - 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+2. Alignment with “Augmented Ontological Semantic Platform (AOSP) Whitepaper - 
 Webapp, Infrastructure, Runtime, Topology.pdf” 
-The file (ii) Augmented Ontological Semantic Platform (A-OSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf is the 
-architecture/topology whitepaper. This dossier is the live implementation due-diligence layer over aosp1. It narrows the full A-OSP 
+The file (ii) Augmented Ontological Semantic Platform (AOSP) Whitepaper - Webapp, Infrastructure, Runtime, Topology.pdf is the 
+architecture/topology whitepaper. This dossier is the live implementation due-diligence layer over aosp1. It narrows the full AOSP 
 topology to the D1/EQL MVP proof seam while remaining standalone: all key terms, status tags, workflow paths, APIs and gates are 
 restated locally. 
 Concept in (ii) Live dossier coordinate Current posture on main 
@@ -83,13 +83,13 @@ D1 advanced; EQLQueryReceipt and Proof Spine remain open/downstream.
 3. Terms, status and forbidden equivalences 
 Term Meaning 
 Stripe / .aosp.txt Append-only text record; durable domain knowledge lives here. 
-SSOT Single source of truth; in A-OSP this is the stripe layer. 
+SSOT Single source of truth; in AOSP this is the stripe layer. 
 Cache Directus/PostgreSQL mirror, index or admin layer; rebuildable, not truth. 
 D1-D5 D1 intake, D2 enrichment, D3 links, D4 scores, D5 kernels. 
 Receipt Typed evidence object emitted by proof-sensitive action. 
 Readback Read-after-write verification with canonical hash comparison. 
 Proof seam D1 + EQL boundary requiring receipts, readback/scope and negative tests. 
-EQL A-OSP DSL for stripe-shaped, scoped data; not generic SQL. 
+EQL AOSP DSL for stripe-shaped, scoped data; not generic SQL. 
 FAE Focus/Attention/Execution boundary for model calls. 
 MONL Operator layer over parsed stripes. 
 Error Truth Typed failure semantics; failure must not become false proof. 
@@ -112,7 +112,7 @@ fallback/demo/local = proof Must fail closed.
 model memory = SSOT Provider is replaceable processor. 
 raw query success = proof Requires explicit scope and EQLQueryReceipt. 
 4. Canonical stack and repository geometry 
-A-OSP v3 is defined as a 4-layer architecture: CORE, GENERATOR, ADAPTER and GOVERNANCE, with text files as the single source of 
+AOSP v3 is defined as a 4-layer architecture: CORE, GENERATOR, ADAPTER and GOVERNANCE, with text files as the single source of 
 truth, database as queryable cache, and a pipeline from unstructured knowledge to auditable artifacts. ARCHITECTURE.md is canonical 
 at the live anchor [E01]. 
 Layer Responsibility Representative technology / surface 
@@ -127,7 +127,7 @@ governance.
 
 ## Page 3
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 Surface Canonical status Rule 
 .aosp.txt Durable source / SSOT All domain data lives in append-only text stripes. 
 Parser-service Custom API + Stripe Engine Primary backend; not a thin no-code wrapper. 
@@ -173,14 +173,14 @@ backend/parser-service/test/proof-d1.test.js validates the proof seam: happy pat
 idempotency token is deterministic, failed readback yields FAIL and never PASS, append error yields FAIL, stale/tampered atom 
 mismatch does not converge [E05]. 
 6.4 EQL proof boundary 
-EQL remains the primary open seam. The contract defines EQL as an A-OSP DSL, not small SQL. EQL-Proof requires explicit scope and 
+EQL remains the primary open seam. The contract defines EQL as an AOSP DSL, not small SQL. EQL-Proof requires explicit scope and 
 receipt semantics, but the inspected runtime search for EQLRunResult / EQLQueryReceipt / eqlQueryService did not expose a 
 comparable runtime proof implementation. Issue #3488 still defines EQL proof as EQLQueryReceipt + queryHash + resultHash + explicit 
 scope [E06, E07].
 
 ## Page 4
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 7. End-to-end workflows 
 7.1 D1 live path 
 Step Runtime status Mechanism 
@@ -246,7 +246,7 @@ types should be kept in sync.
 
 ## Page 5
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 d1_receipt_ persistence RUNTIME-WIRED persistReceipt [E04] Receipt schema consistency and 
 EQL view bridge. 
 D1 negative tests LANDED proof-d1.test.js [E05] CI inclusion must be confirmed. 
@@ -323,7 +323,7 @@ D1 workflow API, D1 capability and proof D1 route mounts. open
 
 ## Page 6
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 13. CTO and engineering checklist 
 Question Expected answer before pilot 
 Where is truth? .aosp.txt stripes are SSOT; DB/cache/UI/model/export are not truth. 
@@ -336,16 +336,16 @@ Are bundle/perf economics measured? Not yet; no quote until artefacts are genera
 Is the cross-reference to (ii) clear? Yes; (ii) is architecture/topology; this is live implementation due 
 diligence. 
 14. Final posture statement 
-As-is posture: A-OSP1 main contains a coherent canonical architecture, substantial proof contracts, a dedicated D1 proof route, a 
+As-is posture: AOSP1 main contains a coherent canonical architecture, substantial proof contracts, a dedicated D1 proof route, a 
 D1ProofAppendService, d1_receipt_ persistence, read-after-write evidence and D1 negative tests. 
-Candidate posture: A-OSP1 is credible as an enterprise MVP candidate for proof-sensitive AI-assisted work only if it keeps the claim 
+Candidate posture: AOSP1 is credible as an enterprise MVP candidate for proof-sensitive AI-assisted work only if it keeps the claim 
 bounded to the D1/EQL proof seam and completes EQL receipt/routing, C1 artefacts, downstream gates and measured pilot evidence. 
 Recommended next action: proceed to a scoped proof-seam closure sprint. Do not use production readiness, compliance certification 
 or complete proof-grade language until P0/P1 gates pass.
 
 ## Page 7
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 Appendix A — Resolved evidence hyperlinks 
 All links below are commit-pinned to main@e492290b128eb89af44a488d8600d9862f30db0b. They require repository access if the 
 repository is private. 
@@ -365,7 +365,7 @@ E10 — backend/parser-service/src/server.ts#L122-L135: D1 workflow API, D1 capa
 
 ## Page 8
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 Appendix B — Open issue snapshot (roadmap evidence) 
  
 # Area Where it intervenes What it does 
@@ -438,7 +438,7 @@ Appendix B — Open issue snapshot (roadmap evidence)
 
 ## Page 9
 
-A-OSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
+AOSP1 Technical Due Diligence v1-live · posture/candidate · main@e492290b 
 #3470 DoC / Living Contracts Milestone Ledger / MVP chain Governance control tower for convergence and proof chain. 
 #3471 D2-D5 receipts PhaseReceipt / PipelineReceipt Receipts and lineage for D2-D5. 
 #3472 Artifact Witness ArtifactWorkstation / witness ArtifactWitness MVP; export is not witness. 

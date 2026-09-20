@@ -252,12 +252,12 @@ class BuildManifestTestCase(unittest.TestCase):
 
     def test_normalize_filename_tag_prefix(self):
         self.assertEqual(
-            build_manifest.normalize_filename("(1) [WP] A-OSP Whitepaper.pdf"),
-            "A-OSP Whitepaper.pdf",
+            build_manifest.normalize_filename("(1) [WP] AOSP Whitepaper.pdf"),
+            "AOSP Whitepaper.pdf",
         )
         self.assertEqual(
-            build_manifest.normalize_filename("[TechDD] A-OSP Due Diligence.pdf"),
-            "A-OSP Due Diligence.pdf",
+            build_manifest.normalize_filename("[TechDD] AOSP Due Diligence.pdf"),
+            "AOSP Due Diligence.pdf",
         )
 
     def test_normalize_dir_strips_numeric_prefix(self):
