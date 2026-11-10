@@ -1,9 +1,11 @@
-[![ROA Research Programme](https://img.shields.io/badge/ROA-Research_Programme-1f6feb)](https://github.com/Luke883i/academics)
-[![Programme Role](https://img.shields.io/badge/role-THEORY_FRAMEWORK-6f42c1)](https://github.com/Luke883i/academics#repository-map)
+<!-- programme-header:v2 -->
+> **ROA Research Programme · A-OSP ecosystem** — [Author & programme hub](https://github.com/Luke883i/academics) · [ROA theory](https://github.com/Luke883i/ROA) · [CORA assurance](https://github.com/Luke883i/cora). Every repository is independently readable. Membership does not imply formal derivation, shared runtime, scientific validation, certification, or production readiness. Repository-local code, evidence, and governance remain authoritative.
 
-<!-- roa-programme-header:v1 hub=Luke883i/academics framework=Luke883i/ROA role=THEORY_FRAMEWORK -->
+## Independent entrypoint
 
-> **ROA Research Programme.** This repository is a component of the **ROA Research Programme — Computational Epistemics, Semantic Architectures & Governable AI Systems**, coordinated in [`Luke883i/academics`](https://github.com/Luke883i/academics) and theoretically anchored by [`Luke883i/ROA`](https://github.com/Luke883i/ROA). **Programme membership is a coordination/topology statement:** repository-local contracts and evidence remain authoritative for this repository, and membership alone does not imply formal derivation from ROA, conformance to ROA, empirical validation of ROA theory, or production readiness.
+**Purpose:** theoretical and critical research on bounded observation, semantics and epistemic governance. Start with the core paper or the corpus index below; no proof of general validity or scientific acceptance is asserted. **CORA and the applications can be used without reading ROA.**
+
+---
 
 # Reticular Observer Architectures for Governable AI-Assisted Work
 
